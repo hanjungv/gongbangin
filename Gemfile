@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 
+# Login api https://github.com/plataformatec/devise
+gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
