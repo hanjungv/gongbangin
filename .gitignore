@@ -92,7 +92,7 @@ Procfile.dev
 
 # RubyMine project files
 .idea
-
+.idea/workspace.xml
 # Textmate project files
 /*.tmproj
 
