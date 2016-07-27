@@ -22,8 +22,10 @@ class DeviseCreateUsers < ActiveRecord::Migration
 
       #Level (master - maker - user, default : user)´
       t.string :level, default: "user"
+      #tier (red-orange-yellow-green-blue-navy-purple-black, black is user. purple is maker's default value)
+      t.string :tier, default: "black"
       ## Confirmable
-      # t.string   :confirmation_token
+      # t.string   :confirmation_token©©
       # t.datetime :confirmed_at
       # t.datetime :confirmation_sent_at
       # t.string   :unconfirmed_email # Only if using reconfirmable
