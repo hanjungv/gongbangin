@@ -24,6 +24,9 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :level, default: "user"
       #tier (red-orange-yellow-green-blue-navy-purple-black, black is user. purple is maker's default value)
       t.string :tier, default: "black"
+      #profile_image
+      t.string :profile_image_url, default: ""
+
       ## Confirmable
       # t.string   :confirmation_token©©
       # t.datetime :confirmed_at
