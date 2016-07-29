@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160727110821) do
+ActiveRecord::Schema.define(version: 20160727113140) do
 
   create_table "brand_comment_replies", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -73,6 +73,11 @@ ActiveRecord::Schema.define(version: 20160727110821) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "reservations", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",      null: false
     t.string   "encrypted_password",     default: "",      null: false
@@ -86,6 +91,7 @@ ActiveRecord::Schema.define(version: 20160727110821) do
     t.string   "last_sign_in_ip"
     t.string   "level",                  default: "user"
     t.string   "tier",                   default: "black"
+    t.string   "profile_image_url",      default: ""
     t.datetime "created_at",                               null: false
     t.datetime "updated_at",                               null: false
   end
