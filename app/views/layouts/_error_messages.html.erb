@@ -1,0 +1,18 @@
+<% if object.errors.any? %>
+  <div id="error_explanation" onload="OpenWindow()">
+    <div class="alert alert-danger alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <center style = "font-size:20px;"><strong>다음의 에러가 발생했습니다.</strong></center>
+      <center>
+        <% object.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </center>
+    </div>
+  </div>
+<% end %>
+<script>
+function OpenWindow() {
+    window.open("insa-hi.html","_blank","top=0,left=0,width=470,height=340,resizable=1,scrollbars=no");
+}
+</script>
