@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160730061245) do
+ActiveRecord::Schema.define(version: 20160730071252) do
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "flea_markets", force: :cascade do |t|
     t.string   "application_period"
@@ -24,7 +30,28 @@ ActiveRecord::Schema.define(version: 20160730061245) do
     t.datetime "updated_at",            null: false
   end
 
+  create_table "item_images", force: :cascade do |t|
+    t.string   "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "price"
+    t.string   "material"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "participations", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "production_images", force: :cascade do |t|
+    t.string   "url"
+    t.string   "process"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -55,7 +82,7 @@ ActiveRecord::Schema.define(version: 20160730061245) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.string   "name",                   default: "",      null: false
-    t.string   "phonenumber",            default: "",      null: false
+    t.string   "phone_number",           default: "",      null: false
     t.string   "address",                default: "",      null: false
     t.string   "level",                  default: "user"
     t.string   "tier",                   default: "black"
