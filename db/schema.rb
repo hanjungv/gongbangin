@@ -11,66 +11,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160727110821) do
+ActiveRecord::Schema.define(version: 20160730061245) do
 
-  create_table "brand_comment_replies", force: :cascade do |t|
+  create_table "flea_markets", force: :cascade do |t|
+    t.string   "application_period"
+    t.integer  "number_of_recruitment"
+    t.string   "remark"
+    t.string   "place"
+    t.string   "event_date"
+    t.string   "entrance_fee"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
+
+  create_table "participations", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "brand_comments", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "brand_likes", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "brands", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "categories", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "item_comment_replies", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "item_comments", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "item_review_replies", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "item_reviews", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "items", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "purchases", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "ratings", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "resumes", force: :cascade do |t|
+    t.integer  "career"
+    t.string   "price_range"
+    t.string   "brand_introduction"
+    t.string   "item_introduction"
+    t.string   "self_introduction"
+    t.integer  "age"
+    t.integer  "number_of_participants"
+    t.string   "brand_name"
+    t.string   "sns_url"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -86,6 +56,10 @@ ActiveRecord::Schema.define(version: 20160727110821) do
     t.string   "last_sign_in_ip"
     t.string   "level",                  default: "user"
     t.string   "tier",                   default: "black"
+    t.string   "profile_image_url",      default: ""
+    t.string   "nickname"
+    t.string   "phone_number"
+    t.string   "name"
     t.datetime "created_at",                               null: false
     t.datetime "updated_at",                               null: false
   end

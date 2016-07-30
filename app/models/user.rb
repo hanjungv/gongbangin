@@ -4,13 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :purchases, through: :items
-  has_many :item_comments
-  has_many :item_reviews
-  has_many :item_review_replies
-  belongs_to :brand
-  has_many :brand_likes
-  has_many :brand_comments
-  has_many :brand_comment_replies
-  has_many :reservations, through: :Items
+  has_many :participations
+  has_many :flea_markets
+  has_many :flea_markets, through: :participations
+  has_one :resume
 end
