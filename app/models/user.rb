@@ -8,4 +8,7 @@ class User < ActiveRecord::Base
   has_many :flea_markets
   has_many :flea_markets, through: :participations
   has_one :resume
+  has_many :items
+  has_many :categories, through: :items
 end
+
