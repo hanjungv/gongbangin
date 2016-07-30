@@ -73,14 +73,11 @@
 
 .login-social-link {
     display: inline-block;
-    margin-bottom: 15px;
     width: 100%;
 }
 
 .login-social-link a.facebook {
     background: #3b5999;
-    margin-right: 22px;
-    float: left;
 }
 
 .login-social-link a.facebook:hover {
@@ -90,9 +87,9 @@
 
 .login-social-link a {
     color: #fff;
-    padding: 10px 38px;
+    padding: 10px 95px;
     border-radius: 4px;
-    width: 47%;
+    width: 100%;
     text-align: center;
 }
 
