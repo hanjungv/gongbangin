@@ -1382,7 +1382,7 @@ header.nav-block-left {
 
 
 .full-banner {
-    background-image: url('../img/banner/creative-banner.jpg');
+    background: url("../app/assets/images/fullimage.jpg")
     -moz-background-size: cover;
     -o-background-size: cover;
     -webkit-background-size: cover;
