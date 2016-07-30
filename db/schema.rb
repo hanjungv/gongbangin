@@ -91,6 +91,7 @@ ActiveRecord::Schema.define(version: 20160727113140) do
     t.string   "last_sign_in_ip"
     t.string   "name",                   default: "",      null: false
     t.string   "phonenumber",            default: "",      null: false
+    t.string   "address",                default: "",      null: false
     t.string   "level",                  default: "user"
     t.string   "tier",                   default: "black"
     t.string   "profile_image_url",      default: ""
