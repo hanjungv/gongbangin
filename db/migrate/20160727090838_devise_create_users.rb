@@ -4,7 +4,6 @@ class DeviseCreateUsers < ActiveRecord::Migration
       ## Database authenticatable
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
-
       ## Recoverable
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at
@@ -19,17 +18,18 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string   :current_sign_in_ip
       t.string   :last_sign_in_ip
 
-      #Level (master - location_provider - artist - user, default : user)´
+      ########################################################################################################
+      #personal_information
+      t.string :name, null: false, default: ""
+      t.string :phonenumber, null: false,  default: ""
+      t.string :address, null:false, default:""
+      #Level (master - maker - user, default : user)´
       t.string :level, default: "user"
-      #tier (red-orange-yellow-green-blue-navy-purple-black,
-      # black is user&location_provider.
-      # purple is maker's default value)
+      #tier (red-orange-yellow-green-blue-navy-purple-black, black is user. purple is maker's default value)
       t.string :tier, default: "black"
       #profile_image
       t.string :profile_image_url, default: ""
-      t.string :nickname
-      t.string :phone_number
-      t.string :name
+      ########################################################################################################
       ## Confirmable
       # t.string   :confirmation_token©©
       # t.datetime :confirmed_at
