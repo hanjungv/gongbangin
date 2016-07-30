@@ -1,7 +1,7 @@
 <div class = "container">
   <h1>가입자들 정보를 출력해보겠습니다</h1>
   <p><%=current_user.email%></p>
-  <p style = "color:<%=current_user.tier%>;"><%=current_user.name%></p>
+  <p style = "color:<%=current_user.tier%>; font-weight:bold;"><%=current_user.name%></p>
   <p><%=current_user.phonenumber%></p>
   <a href= "/users/sign_out">Log out</a>
 </div>
