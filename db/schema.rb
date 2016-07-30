@@ -54,12 +54,12 @@ ActiveRecord::Schema.define(version: 20160730061245) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "name",                   default: "",      null: false
+    t.string   "phonenumber",            default: "",      null: false
+    t.string   "address",                default: "",      null: false
     t.string   "level",                  default: "user"
     t.string   "tier",                   default: "black"
     t.string   "profile_image_url",      default: ""
-    t.string   "nickname"
-    t.string   "phone_number"
-    t.string   "name"
     t.datetime "created_at",                               null: false
     t.datetime "updated_at",                               null: false
   end
