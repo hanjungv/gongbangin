@@ -20,6 +20,9 @@ class CreateResumes < ActiveRecord::Migration
       t.string :brand_name
       # sns 주소
       t.string :sns_url
+      # 공개여부(todo: 나중에 이부분은 좀 더 세밀하게 나눠야 할 수도)
+      t.boolean :is_public
+
       t.timestamps null: false
     end
   end

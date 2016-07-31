@@ -14,6 +14,7 @@ class CreateFleaMarkets < ActiveRecord::Migration
       t.string :event_date
       # 참가비
       t.integer :entrance_fee
+
       t.timestamps null: false
     end
   end

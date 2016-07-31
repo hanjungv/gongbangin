@@ -11,4 +11,9 @@ class User < ActiveRecord::Base
   has_one :resume
   has_many :items
   has_many :categories, through: :items
+  has_many :like_flea_markets
+  has_many :flea_markets, through: :like_flea_markets
+  has_many :comment_flea_markets
+  has_many :flea_markets, through: :comment_flea_markets
+  has_many :recomment_flea_markets
 end
