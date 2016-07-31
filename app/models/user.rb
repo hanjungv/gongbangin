@@ -17,3 +17,4 @@ class User < ActiveRecord::Base
   has_many :flea_markets, through: :comment_flea_markets
   has_many :recomment_flea_markets
 end
+

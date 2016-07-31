@@ -1,4 +1,4 @@
-# 플리마켓에 참여한 셀러들을 참조하기 위한
+# 어떤 셀러가 어떤 플리마켓에 참여했는가
 class Participation < ActiveRecord::Base
   belongs_to :flea_market
   belongs_to :user
