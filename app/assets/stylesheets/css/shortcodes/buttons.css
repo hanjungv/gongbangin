@@ -136,6 +136,7 @@
     background: transparent;
     border: 1px solid #fff;
     color: #fff;
+    font-weight:bold;
 }
 
 .btn-light-border.btn-transparent {

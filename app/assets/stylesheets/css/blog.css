@@ -2,6 +2,11 @@
 /* ----------------------------------------------------------------
      standard blog list
 -----------------------------------------------------------------*/
+.erb-image-wrapper img{
+    max-width:100%;
+    height:auto;
+    display:block;
+}
 
 .blog-classic {
     margin-bottom: 70px;
