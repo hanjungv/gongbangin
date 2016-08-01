@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 
 # Login api https://github.com/plataformatec/devise
+
+gem 'omniauth-facebook'
 gem 'devise'
 gem 'devise-i18n'
 gem 'devise-bootstrap-views'

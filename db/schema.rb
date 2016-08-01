@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20160731142150) do
     t.string   "remark"
     t.string   "place"
     t.string   "event_date"
-    t.integer  "entrance_fee"
+    t.string   "entrance_fee"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
   end
@@ -81,7 +81,6 @@ ActiveRecord::Schema.define(version: 20160731142150) do
     t.integer  "number_of_participants"
     t.string   "brand_name"
     t.string   "sns_url"
-    t.boolean  "is_public"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
