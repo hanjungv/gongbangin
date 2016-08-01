@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
+  get 'market/add_flea_market'
+
+  get 'market/delete_flea_market'
+
+  get 'market/update_flea_market'
+
+  get 'market/real_update_flea_market'
+
   get 'home/index'
+  get 'home/blog'
   root 'home#index'
   devise_for :users, :controllers => { registrations: 'registrations' }
   # The priority is based upon order of creation: first created -> highest priority.

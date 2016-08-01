@@ -1380,6 +1380,7 @@ header.nav-block-left {
     background-position: 50% 50%;
 }
 .full-banner {
+    background: transparent url(image_path('maintest.jpg'));
     -moz-background-size: cover;
     -o-background-size: cover;
     -webkit-background-size: cover;
@@ -3938,7 +3939,7 @@ address p {
 }
 
 .banner-06 {
-    background-image: url("../img/banner/06.jpg")!important;
+    	background: url(image_path('maintest.jpg'));
 }
 
 

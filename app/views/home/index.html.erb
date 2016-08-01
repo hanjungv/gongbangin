@@ -19,6 +19,7 @@
 
         <!--header start-->
         <header id="header" class=" header-full-width  transparent-header ">
+          <div class="col-md-12">
             <div class="header-sticky light-header  ">
                 <div class="container">
                     <div id="massive-menu" class="menuzord">
@@ -29,7 +30,7 @@
                         <!--logo end-->
                         <!--mega menu start-->
                         <ul class="menuzord-menu pull-right">
-                            <li><a href="#">소개</a></li>
+                            <li><a href="/home/blog">소개</a></li>
                             <li><a href="#">오늘의 마켓</a></li>
                               <%if user_signed_in?%>
                                 <%if current_user.level ="master"%>
@@ -61,18 +62,17 @@
                     </div>
                 </div>
             </div>
-
+          </div>
         </header>
         <!--header end-->
 
         <!--hero section-->
         <div id="fullscreen-banner" class="full-banner vertical-align banner-06">
-          <%=image_tag("maintest.jpg")%>
             <div class="container-mid">
                 <div class="container">
                   <div class="banner-title light-txt">
                       <h1 class="text-uppercase">플리마켓에 참여하세요!</h1>
-                      <h3 class="text-uppercase m-top-10">공방인을 통해 쉽게 할 수 있습니다. 가입하세요!</h3>
+                      <h3 class="text-uppercase m-top-10">공방인으로 쉽게 할 수 있습니다. 지금 바로 가입하세요!</h3>
                       <div class="m-top-30 inline-block">
                           <%if user_signed_in?%>
                             <a href="#" class="btn btn-medium btn-light-border">구경하러가기</a>

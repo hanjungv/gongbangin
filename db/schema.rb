@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20160731142150) do
     t.string   "remark"
     t.string   "place"
     t.string   "event_date"
-    t.string   "entrance_fee"
+    t.integer  "entrance_fee"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
   end
@@ -50,9 +50,14 @@ ActiveRecord::Schema.define(version: 20160731142150) do
   end
 
   create_table "like_flea_markets", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.integer  "flea_market_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
+
+  add_index "like_flea_markets", ["flea_market_id"], name: "index_like_flea_markets_on_flea_market_id"
+  add_index "like_flea_markets", ["user_id"], name: "index_like_flea_markets_on_user_id"
 
   create_table "participations", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -81,29 +86,30 @@ ActiveRecord::Schema.define(version: 20160731142150) do
     t.integer  "number_of_participants"
     t.string   "brand_name"
     t.string   "sns_url"
+    t.boolean  "is_public"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",                  default: "",      null: false
-    t.string   "encrypted_password",     default: "",      null: false
+    t.string   "email",                  default: "",       null: false
+    t.string   "encrypted_password",     default: "",       null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,       null: false
+    t.integer  "sign_in_count",          default: 0,        null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.string   "name",                   default: "",      null: false
-    t.string   "phone_number",           default: "",      null: false
-    t.string   "address",                default: "",      null: false
-    t.string   "level",                  default: "user"
+    t.string   "name",                   default: "",       null: false
+    t.string   "phone_number",           default: "",       null: false
+    t.string   "address",                default: "",       null: false
+    t.string   "level",                  default: "seller"
     t.string   "tier",                   default: "black"
     t.string   "profile_image_url",      default: ""
-    t.datetime "created_at",                               null: false
-    t.datetime "updated_at",                               null: false
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
