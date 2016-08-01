@@ -39,7 +39,7 @@
 }
 
 .login-parallax {
-    background-image: url("../../img/parallax/3.jpg");
+    background-image: url("../images/maintest.jpg")
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
