@@ -23,21 +23,21 @@ Table of contents
    ------------------------------- */
 
 @media screen and (max-width: 1366px) {
-	
 
-	
-}  
+
+
+}
 
 @media screen and (max-width: 1200px) {
-	
 
-    
+
+
 }
 
 @media screen and (max-width: 1199px) {
-    
 
-    
+
+
 }
 
 /* -------------------------------
@@ -51,7 +51,7 @@ Table of contents
     }
 
 }
-  
+
 @media screen and (max-width: 992px) {
 
 
@@ -156,11 +156,11 @@ Table of contents
 
 }
 
-  
+
 /* -------------------------------
    Tablet Portrait
    ------------------------------- */
-  
+
 @media screen and (max-width: 768px) {
 
     header {
@@ -836,7 +836,7 @@ Table of contents
 /* -------------------------------
    Phone
    ------------------------------- */
-  
+
 @media screen and (max-width: 480px) {
 
     /*portfolio   grid*/
@@ -885,7 +885,7 @@ Table of contents
 /* -------------------------------
    Small Phone
    ------------------------------- */
-  
+
 @media screen and (max-width: 479px) {
     .clients.grid-2 li, .clients.grid-3 li, .clients.grid-4 li, .clients.grid-5 li, .clients.grid-6 li, .testimonial.grid-2 li {
         width: 100%;
@@ -993,4 +993,3 @@ Table of contents
     }
 
 }
-

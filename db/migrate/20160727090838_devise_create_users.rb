@@ -23,8 +23,8 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :name, null: false, default: ""
       t.string :phone_number, null: false,  default: ""
       t.string :address, null:false, default:""
-      #Level (master - maker - user, default : user)´
-      t.string :level, default: "user"
+      #Level (master - planner - seller, default : seller)´
+      t.string :level, default: "seller"
       #tier (red-orange-yellow-green-blue-navy-purple-black, black is user. purple is maker's default value)
       t.string :tier, default: "black"
       #profile_image

@@ -1380,12 +1380,11 @@ header.nav-block-left {
     background-position: 50% 50%;
 }
 .full-banner {
-    background-image: url(asset-path('maintest.jpg'));
     -moz-background-size: cover;
     -o-background-size: cover;
     -webkit-background-size: cover;
     background-size: cover;
-    position: relative;
+    position:fixed;
     background-position: 50% 50%;
 }
 .page-content {

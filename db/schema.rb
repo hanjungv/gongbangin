@@ -11,10 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160730071252) do
+ActiveRecord::Schema.define(version: 20160731142150) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "comment_flea_markets", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -25,7 +30,7 @@ ActiveRecord::Schema.define(version: 20160730071252) do
     t.string   "remark"
     t.string   "place"
     t.string   "event_date"
-    t.string   "entrance_fee"
+    t.integer  "entrance_fee"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
   end
@@ -44,6 +49,11 @@ ActiveRecord::Schema.define(version: 20160730071252) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "like_flea_markets", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "participations", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -52,6 +62,11 @@ ActiveRecord::Schema.define(version: 20160730071252) do
   create_table "production_images", force: :cascade do |t|
     t.string   "url"
     t.string   "process"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "recomment_flea_markets", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -66,6 +81,7 @@ ActiveRecord::Schema.define(version: 20160730071252) do
     t.integer  "number_of_participants"
     t.string   "brand_name"
     t.string   "sns_url"
+    t.boolean  "is_public"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
