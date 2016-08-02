@@ -17,54 +17,6 @@
 
 <div class="wrapper">
 
-        <!--header start-->
-        <header id="header" class=" header-full-width  transparent-header ">
-          <div class="col-xs-12">
-            <div class="header-sticky light-header  ">
-                <div class="container">
-                    <div id="massive-menu" class="menuzord">
-                        <!--logo start-->
-                        <a href="index.html" class="logo-brand">
-                            <img class="retina" src="img/logo.png" alt=""/>
-                        </a>
-                        <!--logo end-->
-                        <!--mega menu start-->
-                        <ul class="menuzord-menu pull-right">
-                            <li><a href="/home/blog">소개</a></li>
-                            <li><a href="#">오늘의 마켓</a></li>
-                              <%if user_signed_in?%>
-                                <%if current_user.level ="master"%>
-                                  <li><a href="#">셀러모집</a></li>
-                                  <li><a href="#">마켓등록</a></li>
-                                  <li><a href="#">관리자메뉴</a></li>
-                                <%else%>
-                                  <%if current_user.level = "seller"%>
-                                    <li><a href="#">셀러모집</a></li>
-                                  <%else%>
-                                    <li><a href="#">마켓등록</a></li>
-                                  <%end%>
-                                <%end%>
-                              <%end%>
-                            </li>
-
-                            <li  class="nav-icon nav-divider">
-                                <a href="javascript:void(0)">|</a>
-                            </li>
-                            <%if user_signed_in?%>
-                              <li><a href="/users/sign_out">로그아웃</a></li>
-                              <li><a href="/users/edit"><%=current_user.level%> <%=current_user.name%>님</a></li>
-                            <%else%>
-                              <li><a href="/users/sign_in">로그인</a></li>
-                            <%end%>
-                        </ul>
-                        <!--mega menu end-->
-
-                    </div>
-                </div>
-            </div>
-            </div>
-        </header>
-        <!--header end-->
       <section class="body-content">
 
 
