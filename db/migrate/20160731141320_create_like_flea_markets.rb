@@ -3,7 +3,7 @@ class CreateLikeFleaMarkets < ActiveRecord::Migration
     create_table :like_flea_markets do |t|
 
       t.references :user, index: true, foreign_key: true
-      t.references :flea_market, index: true, foreign_key: true
+      t.references :flea, index: true, foreign_key: true
 
       t.timestamps null: false
     end

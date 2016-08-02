@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  get 'market/add_flea_market'
+  resources :fleas do
+    member do
+      post 'like'
+      post 'dislike'
+    end
+  end
 
-  get 'market/delete_flea_market'
-
-  get 'market/update_flea_market'
-
-  get 'market/real_update_flea_market'
 
   get 'home/index'
   get 'home/blog'

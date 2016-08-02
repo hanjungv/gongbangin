@@ -1,0 +1,41 @@
+<%= form_for(@flea) do |f| %>
+  <% if @flea.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@flea.errors.count, "error") %> prohibited this flea from being saved:</h2>
+
+      <ul>
+      <% @flea.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :application_period %><br>
+    <%= f.text_field :application_period %>
+  </div>
+  <div class="field">
+    <%= f.label :number_of_recruitment %><br>
+    <%= f.number_field :number_of_recruitment %>
+  </div>
+  <div class="field">
+    <%= f.label :remark %><br>
+    <%= f.text_field :remark %>
+  </div>
+  <div class="field">
+    <%= f.label :place %><br>
+    <%= f.text_field :place %>
+  </div>
+  <div class="field">
+    <%= f.label :event_date %><br>
+    <%= f.text_field :event_date %>
+  </div>
+  <div class="field">
+    <%= f.label :entrance_fee %><br>
+    <%= f.number_field :entrance_fee %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

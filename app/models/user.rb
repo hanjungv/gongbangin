@@ -6,15 +6,14 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :participations
-  has_many :flea_markets
-  has_many :flea_markets, through: :participations
+  has_many :fleas
+  has_many :fleas, through: :participations
   has_one :resume
   has_many :items
   has_many :categories, through: :items
   has_many :like_flea_markets
   has_many :flea_markets, through: :like_flea_markets
   has_many :comment_flea_markets
-  has_many :flea_markets, through: :comment_flea_markets
+  has_many :fleas, through: :comment_flea_markets
   has_many :recomment_flea_markets
 end
-

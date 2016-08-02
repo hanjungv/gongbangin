@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160731142150) do
+ActiveRecord::Schema.define(version: 20160802091648) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -25,6 +25,17 @@ ActiveRecord::Schema.define(version: 20160731142150) do
   end
 
   create_table "flea_markets", force: :cascade do |t|
+    t.string   "application_period"
+    t.integer  "number_of_recruitment"
+    t.string   "remark"
+    t.string   "place"
+    t.string   "event_date"
+    t.integer  "entrance_fee"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
+
+  create_table "fleas", force: :cascade do |t|
     t.string   "application_period"
     t.integer  "number_of_recruitment"
     t.string   "remark"
@@ -51,12 +62,12 @@ ActiveRecord::Schema.define(version: 20160731142150) do
 
   create_table "like_flea_markets", force: :cascade do |t|
     t.integer  "user_id"
-    t.integer  "flea_market_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.integer  "flea_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  add_index "like_flea_markets", ["flea_market_id"], name: "index_like_flea_markets_on_flea_market_id"
+  add_index "like_flea_markets", ["flea_id"], name: "index_like_flea_markets_on_flea_id"
   add_index "like_flea_markets", ["user_id"], name: "index_like_flea_markets_on_user_id"
 
   create_table "participations", force: :cascade do |t|

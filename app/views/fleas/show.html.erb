@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1>
+  <%= "좋아요 갯수 #{@flea.like_flea_markets.count}" %>
+</h1>
+
+<%= likeBtn(@hasLike) %>
+
+<p>
+  <strong>Application period:</strong>
+  <%= @flea.application_period %>
+</p>
+
+<p>
+  <strong>Number of recruitment:</strong>
+  <%= @flea.number_of_recruitment %>
+</p>
+
+<p>
+  <strong>Remark:</strong>
+  <%= @flea.remark %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @flea.place %>
+</p>
+
+<p>
+  <strong>Event date:</strong>
+  <%= @flea.event_date %>
+</p>
+
+<p>
+  <strong>Entrance fee:</strong>
+  <%= @flea.entrance_fee %>
+</p>
+
+<%= link_to 'Edit', edit_flea_path(@flea) %> |
+<%= link_to 'Back', fleas_path %>
