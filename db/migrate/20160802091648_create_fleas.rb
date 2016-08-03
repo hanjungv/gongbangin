@@ -11,7 +11,9 @@ class CreateFleas < ActiveRecord::Migration
       # 장소
       t.string :place
       # 행사날짜
-      t.string :event_date
+      t.datetime :event_start_date
+      # 행사끝날짜
+      t.datetime :event_end_date
       # 참가비
       t.integer :entrance_fee
 

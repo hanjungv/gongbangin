@@ -28,8 +28,12 @@
     <%= f.text_field :place %>
   </div>
   <div class="field">
-    <%= f.label :event_date %><br>
-    <%= f.text_field :event_date %>
+    <%= f.label :event_start_date %><br>
+    <%= f.datetime_select :event_start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :event_end_date %><br>
+    <%= f.datetime_select :event_end_date %>
   </div>
   <div class="field">
     <%= f.label :entrance_fee %><br>
