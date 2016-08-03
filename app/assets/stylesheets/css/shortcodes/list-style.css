@@ -4,7 +4,7 @@
 
 
 .circle-list {
-    padding-left: 0px;
+    padding-left: 0;
     list-style: none;
 }
 
@@ -15,7 +15,7 @@
 
 .circle-list li:before {
     content:"\f10c";
-    font-family: 'fontawesome';
+    font-family: 'fontawesome', serif;
     font-size: 14px;
     float: left;
     padding-right: 10px;

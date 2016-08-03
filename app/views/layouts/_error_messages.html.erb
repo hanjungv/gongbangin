@@ -2,12 +2,12 @@
   <div id="error_explanation">
     <div class="alert alert-danger alert-dismissable">
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-      <center style = "font-size:20px;"><strong>다음의 에러가 발생했습니다.</strong></center>
-      <center>
+      <div style = "font-size:20px; text-align: center;"><strong>다음의 에러가 발생했습니다.</strong></div>
+      <div style="text-align: center;">
         <% object.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
-      </center>
+      </div>
     </div>
   </div>
 <% end %>

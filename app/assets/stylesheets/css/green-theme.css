@@ -15,11 +15,6 @@ green theme  Stylesheet
     text-shadow: none;
 }
 
-::-webkit-selection {
-    background: #bcbb35; /* Safari */
-    color: #FFF;
-    text-shadow: none;
-}
 
 a,
 .menuzord .menuzord-menu>li.active>a,

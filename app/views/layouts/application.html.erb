@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="Mosaddek">
+  <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js" integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/color/jquery.color-2.1.2.js" integrity="sha256-1Cn7TdfHiMcEbTuku97ZRSGt2b3SvZftEIn68UMgHC8=" crossorigin="anonymous"></script>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <!-- Optional theme -->
@@ -13,7 +16,7 @@
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 
@@ -31,70 +34,70 @@
 
 </head>
 <body>
-  <!--header start-->
-  <header id="header" class=" header-full-width  transparent-header ">
-    <div class="col-md-12">
-      <div class="header-sticky light-header  ">
-          <div class="container">
-              <div id="massive-menu" class="menuzord">
-                  <!--logo start-->
-                  <a href="index.html" class="logo-brand">
-                      <img class="retina" src="img/logo.png" alt=""/>
-                  </a>
-                  <!--logo end-->
-                  <!--mega menu start-->
-                  <ul class="menuzord-menu pull-right">
-                      <li><a href="/home/blog">소개</a></li>
-                      <li><a href="/fleas">오늘의 마켓</a></li>
-                        <%if user_signed_in?%>
-                          <%if current_user.level ="master"%>
-                            <li><a href="#">셀러모집</a></li>
-                            <li><a href="#">마켓등록</a></li>
-                            <li><a href="#">관리자메뉴</a></li>
-                          <%else%>
-                            <%if current_user.level = "seller"%>
-                              <li><a href="#">셀러모집</a></li>
-                            <%else%>
-                              <li><a href="#">마켓등록</a></li>
-                            <%end%>
-                          <%end%>
-                        <%end%>
-                      </li>
+<!--header start-->
+<header id="header" class=" header-full-width  transparent-header ">
+  <div class="col-md-12">
+    <div class="header-sticky light-header  ">
+      <div class="container">
+        <div id="massive-menu" class="menuzord">
+          <!--logo start-->
+          <a href="index.html" class="logo-brand">
+            <img class="retina" src="img/logo.png" alt=""/>
+          </a>
+          <!--logo end-->
+          <!--mega menu start-->
+          <ul class="menuzord-menu pull-right">
+            <li><a href="/home/blog">소개</a></li>
+            <li><a href="/fleas">오늘의 마켓</a></li>
+            <% if user_signed_in? %>
+                <% if current_user.level =='master' %>
+                    <li><a href="#">셀러모집</a></li>
+                    <li><a href="#">마켓등록</a></li>
+                    <li><a href="#">관리자메뉴</a></li>
+                <% else %>
+                    <% if current_user.level == 'seller' %>
+                        <li><a href="#">셀러모집</a></li>
+                    <% else %>
+                        <li><a href="#">마켓등록</a></li>
+                    <% end %>
+                <% end %>
+            <% end %>
+            </li>
 
-                      <li  class="nav-icon nav-divider">
-                          <a href="javascript:void(0)">|</a>
-                      </li>
-                      <%if user_signed_in?%>
-                        <li><a href="/users/sign_out">로그아웃</a></li>
-                        <li><a href="/users/edit"><%=current_user.level%> <%=current_user.name%>님</a></li>
-                      <%else%>
-                        <li><a href="/users/sign_in">로그인</a></li>
-                      <%end%>
-                  </ul>
-                  <!--mega menu end-->
+            <li class="nav-icon nav-divider">
+              <a href="javascript:void(0)">|</a>
+            </li>
+            <% if user_signed_in? %>
+                <li><a href="/users/sign_out">로그아웃</a></li>
+                <li><a href="/users/edit"><%= current_user.level %> <%= current_user.name %>님</a></li>
+            <% else %>
+                <li><a href="/users/sign_in">로그인</a></li>
+            <% end %>
+          </ul>
+          <!--mega menu end-->
 
-              </div>
-          </div>
+        </div>
       </div>
     </div>
-  </header>
-  <!--header end-->
+  </div>
+</header>
+<!--header end-->
 <%= yield %>
-    <!-- Placed js at the end of the document so the pages load faster -->
-    <script src="js/jquery-1.10.2.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/menuzord.js"></script>
-    <script src="js/jquery.flexslider-min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.isotope.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.countTo.js"></script>
-    <script src="js/visible.js"></script>
-    <script src="js/smooth.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/imagesloaded.js"></script>
-    <!--common scripts-->
-    <script src="js/scripts.js?8"></script>
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/menuzord.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.isotope.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery.countTo.js"></script>
+<script src="js/visible.js"></script>
+<script src="js/smooth.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/imagesloaded.js"></script>
+<!--common scripts-->
+<script src="js/scripts.js?8"></script>
 
 </body>
 

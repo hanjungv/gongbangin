@@ -334,7 +334,7 @@ Table of contents
     }
 
     header.transparent-header + #fullscreen-banner {
-        margin-top: 0px;
+        margin-top: 0;
     }
 
     header + #fullscreen-banner {
@@ -526,7 +526,7 @@ Table of contents
     }
 
     .promo-info {
-        padding-right: 0px;
+        padding-right: 0;
     }
 
     .promo-btn {
@@ -719,7 +719,7 @@ Table of contents
     header.transparent-header.sticky + #fullscreen-banner,
     header.transparent-header + #fullscreen-banner,
     header + #fullscreen-banner {
-        top: 0px;
+        top: 0;
     }
 
 
@@ -749,7 +749,7 @@ Table of contents
     }
 
     .travel-form .form-group {
-        margin-bottom: 0px;
+        margin-bottom: 0;
     }
 
     .travel-form label {
@@ -784,8 +784,8 @@ Table of contents
 
     .bs-hero.full-screen .carousel.slide .carousel-control {
         width: 30%;
-        margin-top: 0px;
-        margin-bottom: 0px;
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
     .fashion-title h1 {
@@ -826,7 +826,7 @@ Table of contents
 
     .bs-hero.full-screen .carousel-inner .item .bs-info-right {
         top: 45%;
-        right: 0%;
+        right: 0;
         left: 0;
         text-align: center;
     }
@@ -956,12 +956,12 @@ Table of contents
 
     .count-down.circle .c-grid,
     .count-down-alt.circle .c-grid  {
-        border-radius: 0% !important;
+        border-radius: 0 !important;
     }
 
     .count-down.round .c-grid,
     .count-down-alt.round .c-grid  {
-        border-radius: 0px !important;
+        border-radius: 0 !important;
     }
 
     .tp-caption .btn {

@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-
+# Calender gem
+gem "simple_calendar", "~> 2.0"
 # Login api https://github.com/plataformatec/devise
-
 gem 'omniauth-facebook'
 gem 'devise'
 gem 'devise-i18n'

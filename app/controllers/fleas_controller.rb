@@ -7,7 +7,7 @@ class FleasController < ApplicationController
   end
 
   def show
-    @hasLike = @flea.like_flea_markets.where(flea_id: @flea.id, user_id: current_user.id).blank? if current_user
+    @has_like = @flea.like_flea_markets.where(flea_id: @flea.id, user_id: current_user.id).blank? if current_user
   end
 
   def like
@@ -59,7 +59,7 @@ class FleasController < ApplicationController
   # DELETE /fleas/1.json
   def destroy
     @flea.destroy
-    redirect_to "/"
+    redirect_to '/'
   end
 
   private

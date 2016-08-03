@@ -173,7 +173,7 @@ body.left-nav-fixed {
 }
 
 .side-nav-close .wrapper {
-    margin-left: 0px !important;
+    margin-left: 0 !important;
 }
 
 .side-nav-close #header {
@@ -186,7 +186,7 @@ body.left-nav-fixed {
 }
 
 .side-nav-open #header {
-    left: 0px;
+    left: 0;
 }
 
 /*side-push-nav*/

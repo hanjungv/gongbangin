@@ -209,8 +209,8 @@ p, li {
 }
 
 hr {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
     border: 0;
     border-top: 1px solid #eee;
 }
@@ -218,7 +218,7 @@ hr {
 
 pre {
     display: block;
-    padding: 9.5px;
+    padding: 10px;
     margin: 0 0 30px;
     font-size: 13px;
     line-height: 1.42857143;
@@ -319,7 +319,7 @@ header.transparent-header.sticky + #fullscreen-banner {
 }
 
 header.transparent-header + #fullscreen-banner {
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 header + #fullscreen-banner {
@@ -332,7 +332,7 @@ header + #fullscreen-banner {
 /*}*/
 
 .left-nav-fixed header + #fullscreen-banner {
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 
@@ -350,7 +350,7 @@ header.sticky{
     height: 60px;
     z-index: 1000;
     position: fixed;
-    top:0px;
+    top:0;
 }
 
 
@@ -457,7 +457,7 @@ header.sticky .menuzord-menu>li>a {
 
 
 .logo-brand {
-    margin: 0px 30px 0 0;
+    margin: 0 30px 0 0;
     line-height: 100px;
 }
 
@@ -499,7 +499,7 @@ header.sticky .logo-brand {
     -webkit-box-sizing: border-box;
     font-family: 'Source Sans Pro', sans-serif;
     text-transform: uppercase;
-    letter-spacing: .5px;
+    letter-spacing: 1px;
     font-weight: normal;
 }
 .menuzord {
@@ -612,7 +612,7 @@ header .dark-header .menuzord-menu>li>a>i
     /*background: rgba(255,255,255,.06);*/
 }
 .menuzord-menu ul.dropdown.dropdown-left {
-    left: none;
+    left: auto;
 }
 .menuzord-menu ul.dropdown li ul.dropdown.dropdown-left {
     left: -100%
@@ -623,7 +623,7 @@ header .dark-header .menuzord-menu>li>a>i
 }
 
 .menuzord-menu li .indicator i{
-    font-family: FontAwesome;
+    font-family: FontAwesome, serif;
 }
 
 .menuzord-menu li .indicator i.fa-angle-down:before{
@@ -740,7 +740,7 @@ header .dark-header .menuzord-menu>li>a>i
 .menuzord .showhide em {
     width: 20px;
     height: 3px;
-    margin: 3.5px 0px 0;
+    margin: 4px 0 0;
     float: right;
     background: #777
 }
@@ -749,7 +749,7 @@ header .dark-header .menuzord-menu>li>a>i
     font-size: 18px;
     float: left;
     line-height: 20px;
-    font-family: FontAwesome
+    font-family: FontAwesome, serif
 }
 .menuzord-menu>li.search form {
     float: left;
@@ -923,7 +923,7 @@ header li.nav-icon input {
 
 
 .nav-boxed-color .menuzord-menu > li > a {
-    margin: 30px 0px;
+    margin: 30px 0;
 }
 
 .nav-boxed-color .menuzord-menu>li>a,
@@ -961,7 +961,7 @@ header.sticky .nav-boxed-color .menuzord-menu > li > a {
 
 
 .nav-border-box .menuzord-menu > li > a {
-    margin: 30px 0px;
+    margin: 30px 0;
 }
 
 .nav-border-box .menuzord-menu>li>a,
@@ -1115,7 +1115,7 @@ header.nav-block-left {
     top:2px;
     background: none !important;
     width: 300px !important;
-    right: 0% !important;
+    right: 0 !important;
     padding: 30px 0 !important;
     border: none !important;
 }
@@ -1153,7 +1153,7 @@ header.nav-block-left {
 /*margin top*/
 
 .m-top-0{
-    margin-top: 0px !important;
+    margin-top: 0 !important;
 }
 
 .m-top-5 {
@@ -1199,7 +1199,7 @@ header.nav-block-left {
 /*margin bottom*/
 
 .m-bot-0 {
-    margin-bottom: 0px !important;
+    margin-bottom: 0 !important;
 }
 .m-bot-10 {
     margin-bottom: 10px;
@@ -1249,7 +1249,7 @@ header.nav-block-left {
 /*padding top*/
 
 .p-top-0{
-    padding-top: 0px !important;
+    padding-top: 0 !important;
 }
 .p-top-10 {
     padding-top: 10px;
@@ -1407,7 +1407,7 @@ header.nav-block-left {
 .full-content {
     display: inline-block;
     width: 100%;
-    padding: 0px 0 !important;
+    padding: 0 0 !important;
 }
 
 .overlay-dark {
@@ -1501,7 +1501,7 @@ header.nav-block-left {
 
 .portfolio-hover .portfolio-description {
     position: absolute;
-    bottom: 0%;
+    bottom: 0;
     width: 100%;
     opacity: 0;
     -webkit-transform: translateY(-55%);
@@ -1594,8 +1594,8 @@ header.nav-block-left {
 }
 
 .portfolio-filter {
-    margin:0px;
-    padding: 0px;
+    margin:0;
+    padding: 0;
     list-style: none;
 }
 
@@ -1631,7 +1631,7 @@ header.nav-block-left {
 }
 
 .portfolio-with-title .portfolio-title {
-    padding: 15px 0px;
+    padding: 15px 0;
 }
 
 .portfolio-with-title .portfolio-title h4,
@@ -1900,7 +1900,7 @@ header.nav-block-left {
 
 
 .portfolio-gap-less .portfolio {
-    margin: 0px;
+    margin: 0;
 }
 
 /* ----------------------------------------------------------------
@@ -2078,7 +2078,7 @@ header.nav-block-left {
 }
 
 .flex-direction-nav a:before {
-    font-family: "fontawesome";
+    font-family: "fontawesome", serif;
     font-size: 16px;
     display: block;
     content: '\f104';
@@ -2092,11 +2092,11 @@ header.nav-block-left {
 }
 
 .flex-direction-nav .flex-prev {
-    left: 0px;
+    left: 0;
 }
 
 .flex-direction-nav .flex-next {
-    right: 0px;
+    right: 0;
     text-align: right;
 }
 
@@ -2164,13 +2164,13 @@ header.nav-block-left {
     .post-slider .flex-direction-nav .flex-prev,
     .post-slider-thumb .flex-direction-nav .flex-prev {
         opacity: 1;
-        left: 0px;
+        left: 0;
     }
     .flex-direction-nav .flex-next,
     .post-slider .flex-direction-nav .flex-next,
     .post-slider-thumb .flex-direction-nav .flex-next{
         opacity: 1;
-        right: 0px;
+        right: 0;
     }
 }
 
@@ -2801,8 +2801,8 @@ header + .vertical-align .banner-title {
     width:100%;
     height: 100%;
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     background-color: rgba(0,0,0,.7);
     /*background-image: url("../img/stripe.png");*/
     z-index: 200;
@@ -2812,8 +2812,8 @@ header + .vertical-align .banner-title {
     width:100%;
     height: 100%;
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     background-color: rgba(0,0,0,.45);
     /*background-image: url("../img/stripe.png");*/
     z-index: 200;
@@ -3330,7 +3330,7 @@ header li.nav-icon .cart-table-list a {
 
 
 address p {
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 
@@ -4305,7 +4305,7 @@ address p {
 }
 
 .travel-form-bg ul {
-    margin-bottom: 0px;
+    margin-bottom: 0;
     margin-left: 15px;
 }
 
@@ -4334,7 +4334,7 @@ address p {
 }
 
 .travel-form.icon-tabs .nav>li {
-    padding: 0px ;
+    padding: 0;
     margin-left: 0;
 }
 

@@ -42,8 +42,8 @@
 .featured-item.border-box:hover,
 .featured-item.border-box h4,
 .featured-item.border-box:hover h4,
-.featured-item.border-box .icon i
-.featured-item.border-box:hover .icon i{
+.featured-item.border-box .icon i,
+.featured-item.border-box:hover .icon i {
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     transition: all 0.3s ease;
@@ -102,8 +102,8 @@
 .feature-box-grid .col-xs-7,
 .feature-box-grid .col-xs-8,
 .feature-box-grid .col-xs-9 {
-    padding-left:0px;
-    padding-right:0px;
+    padding-left:0;
+    padding-right:0;
 }
 
 
@@ -181,7 +181,7 @@
     background: #222222;
     border-radius: 4px;
     text-align: center;
-    box-shadow: 0 0 0px 10px #fff;
+    box-shadow: 0 0 0 10px #fff;
 }
 
 .featured-item.feature-border-box .icon i {
@@ -228,7 +228,7 @@
     background: #fff;
     border-radius: 50%;
     text-align: center;
-    box-shadow: 0 0 0px 5px #f6f6f6;
+    box-shadow: 0 0 0 5px #f6f6f6;
 }
 
 .featured-item.feature-bg-box .icon i {
@@ -247,7 +247,7 @@
 .featured-box .one-third {
     width: 33.3333333%;
     float: left;
-    padding: 10px 0px;
+    padding: 10px 0;
 }
 
 .featured-box .one-third:nth-child(2) {

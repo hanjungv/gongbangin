@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="Mosaddek">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="Mosaddek">
 
-    <!--favicon icon-->
-    <link rel="icon" type="image/png" href="img/favicon.png">
-
-    <title>Creative 3</title>
+  <title>Creative 3</title>
 
 </head>
 
@@ -18,109 +15,111 @@
 <div class="wrapper">
 
 
-
-        <!--hero section-->
-        <div id="fullscreen-banner" class="full-banner vertical-align banner-06">
-            <div class="container-mid">
-                <div class="container">
-                  <div class="banner-title light-txt">
-                      <h1 class="text-uppercase">플리마켓에 참여하세요!</h1>
-                      <h3 class="text-uppercase m-top-10">공방인으로 쉽게 할 수 있습니다. 지금 바로 가입하세요!</h3>
-                      <div class="m-top-30 inline-block">
-                          <%if user_signed_in?%>
-                            <a href="#" class="btn btn-medium btn-light-border">구경하러가기</a>
-                            <a href="#" class="btn btn-medium btn-light-border">마켓보러가기</a>
-                          <%else%>
-                            <a href="/users/sign_up" class="btn btn-medium btn-light-border">가입하기</a>
-                            <a href="/users/sign_in" class="btn btn-medium btn-light-border">로그인하기</a>
-                          <%end%>
-                      </div>
-                    </div>
-                </div>
-            </div>
+  <!--hero section-->
+  <div id="fullscreen-banner" class="full-banner vertical-align banner-06">
+    <div class="container-mid">
+      <div class="container">
+        <div class="banner-title light-txt">
+          <h1 class="text-uppercase">플리마켓에 참여하세요!</h1>
+          <h3 class="text-uppercase m-top-10">공방인으로 쉽게 할 수 있습니다. 지금 바로 가입하세요!</h3>
+          <div class="m-top-30 inline-block">
+            <% if user_signed_in? %>
+                <a href="#" class="btn btn-medium btn-light-border">구경하러가기</a>
+                <a href="#" class="btn btn-medium btn-light-border">마켓보러가기</a>
+            <% else %>
+                <a href="/users/sign_up" class="btn btn-medium btn-light-border">가입하기</a>
+                <a href="/users/sign_in" class="btn btn-medium btn-light-border">로그인하기</a>
+            <% end %>
+          </div>
         </div>
-        <!--hero section-->
-
-        <!--body content start-->
-        <section class="body-content">
-            <!--fun factor-->
-                  <div class="dark dark-bg page-content ">
-                    <div class="container">
-                      <div class="row">
-                        <div class=" inline-block">
-                          <div class="col-md-3 ">
-                            <div class="fun-factor fun-icon-text-parallel alt">
-                              <div class="icon">
-                                <i class="icon-layers"></i>
-                                <h1 class="timer theme-color" data-from="0" data-to="14263" data-speed="1000">14263</h1>
-                              </div>
-                              <div class="fun-info">
-                                <span>마켓등록갯수</span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-md-3">
-                            <div class="fun-factor fun-icon-text-parallel alt">
-                              <div class="icon">
-                                <i class="icon-computer_imac_slim"></i>
-                                <h1 class="timer theme-color" data-from="0" data-to="43021" data-speed="1000">43021</h1>
-                              </div>
-                              <div class="fun-info">
-                                <span>총 셀러 회원수</span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-md-3">
-                            <div class="fun-factor fun-icon-text-parallel alt">
-                              <div class="icon">
-                                <i class="icon-database"></i>
-                                <h1 class="timer theme-color" data-from="0" data-to="94211" data-speed="1000">94211</h1>
-                              </div>
-                              <div class="fun-info">
-                                <span>등록되어있는 아이템</span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-md-3">
-                            <div class="fun-factor fun-icon-text-parallel alt">
-                              <div class="icon">
-                                <i class="icon-linegraph"></i>
-                                <h1 class="timer theme-color" data-from="0" data-to="342" data-speed="1000">342</h1>
-                              </div>
-                              <div class="fun-info">
-                                <span>총 카테고리 수</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!--fun factor-->
-        </section>
-        <!--body content end-->
-
-        <!--footer 1 start -->
-        <footer id="footer" class="dark">
-          <div class="secondary-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <span class="m-top-10">Copyright 2016 - 공방인 by <a href="#" class="f-link">TeamGongBang</a> | All Rights Reserved</span>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="social-link circle pull-right">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!--footer 1 end-->
+      </div>
     </div>
+  </div>
+  <!--hero section-->
+
+  <!--body content start-->
+  <section class="body-content">
+    <!--fun factor-->
+    <div class="dark dark-bg page-content ">
+      <div class="container">
+        <div class="row">
+          <div class=" inline-block">
+            <div class="col-md-3 ">
+              <div class="fun-factor fun-icon-text-parallel alt">
+                <div class="icon">
+                  <i class="icon-layers"></i>
+                  <h1 class="timer theme-color" data-from="0" data-to="14263" data-speed="1000">14263</h1>
+                </div>
+                <div class="fun-info">
+                  <span>마켓등록갯수</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="fun-factor fun-icon-text-parallel alt">
+                <div class="icon">
+                  <i class="icon-computer_imac_slim"></i>
+                  <h1 class="timer theme-color" data-from="0" data-to="43021" data-speed="1000">43021</h1>
+                </div>
+                <div class="fun-info">
+                  <span>총 셀러 회원수</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="fun-factor fun-icon-text-parallel alt">
+                <div class="icon">
+                  <i class="icon-database"></i>
+                  <h1 class="timer theme-color" data-from="0" data-to="94211" data-speed="1000">94211</h1>
+                </div>
+                <div class="fun-info">
+                  <span>등록되어있는 아이템</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="fun-factor fun-icon-text-parallel alt">
+                <div class="icon">
+                  <i class="icon-linegraph"></i>
+                  <h1 class="timer theme-color" data-from="0" data-to="342" data-speed="1000">342</h1>
+                </div>
+                <div class="fun-info">
+                  <span>총 카테고리 수</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--fun factor-->
+  </section>
+  <!--body content end-->
+
+  <!--footer 1 start -->
+  <footer id="footer" class="dark">
+    <div class="secondary-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <span class="m-top-10">Copyright 2016 - 공방인 by <a href="#" class="f-link">TeamGongBang</a> | All Rights Reserved</span>
+          </div>
+          <div class="col-md-6">
+            <div class="social-link circle pull-right">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--footer 1 end-->
+</div>
+<%= week_calendar number_of_weeks: 2 do |date| %>
+    <%= date %>
+<% end %>
 
 </body>
 </html>

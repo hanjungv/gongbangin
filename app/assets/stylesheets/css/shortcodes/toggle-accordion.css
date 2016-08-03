@@ -47,7 +47,7 @@
     position: absolute;
     top: 50%;
     right: 10px;
-    font-family: 'icomoon';
+    font-family: 'icomoon', serif;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -127,7 +127,7 @@ dl.accordion.time-line:before {
     position: absolute;
     top: 50%;
     left: 0;
-    font-family: 'icomoon';
+    font-family: 'icomoon', serif;
     speak: none;
     font-style: normal;
     font-weight: bold;
@@ -213,7 +213,7 @@ dl.accordion.time-line:before {
     position: absolute;
     top: 50%;
     right: 10px;
-    font-family: 'icomoon';
+    font-family: 'icomoon', serif;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -281,7 +281,7 @@ dl.toggle.time-line:before {
     position: absolute;
     top: 50%;
     left: 0;
-    font-family: 'icomoon';
+    font-family: 'icomoon', serif;
     speak: none;
     font-style: normal;
     font-weight: bold;

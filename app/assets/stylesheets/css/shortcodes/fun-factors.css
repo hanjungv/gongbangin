@@ -88,13 +88,13 @@
 }
 
 .fun-factor.alt .fun-info {
-    padding-left: 0px;
+    padding-left: 0;
 }
 
 .fun-factor.alt .icon {
     float: none;
     display: inline-block;
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 10px;
 }
 

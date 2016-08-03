@@ -55,7 +55,7 @@
 
 .portfolio-hover .portfolio-description {
     position: absolute;
-    bottom: 0%;
+    bottom: 0;
     width: 100%;
     opacity: 0;
     -webkit-transform: translateY(-55%);
@@ -148,8 +148,8 @@
 }
 
 .portfolio-filter {
-    margin:0px;
-    padding: 0px;
+    margin:0;
+    padding: 0;
     list-style: none;
 }
 
@@ -185,7 +185,7 @@
 }
 
 .portfolio-with-title .portfolio-title {
-    padding: 15px 0px;
+    padding: 15px 0;
 }
 
 .portfolio-with-title .portfolio-title h4,

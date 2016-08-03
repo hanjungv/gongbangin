@@ -39,7 +39,7 @@
 }
 
 .text-center .promo-info {
-    padding-right: 0px;
+    padding-right: 0;
 }
 
 
@@ -49,7 +49,7 @@
 .promo-info h4 span,
 .promo-info h5 span,
 .promo-info h6 span {
-    margin-top: 0px;
+    margin-top: 0;
     display:inline;
 }
 
@@ -83,7 +83,7 @@
 }
 
 .promo-btn a.btn {
-    margin-right: 0px;
+    margin-right: 0;
 }
 
 .text-center .promo-info span {
@@ -106,7 +106,7 @@
 
 
 .full-width.promo-box .promo-btn {
-    right: 0px;
+    right: 0;
 }
 
 .promo-pattern {

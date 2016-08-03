@@ -29,7 +29,7 @@
 .blog-classic .date.right {
     float: right;
     margin-left: 40px;
-    margin-right: 0px;
+    margin-right: 0;
 }
 
 .blog-classic .date span {
@@ -80,7 +80,7 @@
 .blog-post blockquote {
     padding: 0;
     margin: 0 0 20px;
-    font-size: 17.5px;
+    font-size: 18px;
     border-left: none;
     font-style: italic;
 }
@@ -88,7 +88,7 @@
 .quote-post p:before {
     content: "\f10d";
     padding-right: 10px;
-    font-family: 'FontAwesome';
+    font-family: 'FontAwesome', serif;
     color: #837f7e;
 }
 
@@ -96,7 +96,7 @@
 .quote-post p:after {
     content: "\f10e";
     padding-left: 10px;
-    font-family: 'FontAwesome';
+    font-family: 'FontAwesome', serif;
     color: #837f7e;
 }
 
@@ -260,18 +260,18 @@
 .widget-category li a:before {
     content: "\f105";
     padding-right: 10px;
-    font-family: 'FontAwesome';
+    font-family: 'FontAwesome', serif;
 }
 
 .widget-comments li:before {
     content: "\f0e6";
     padding-right: 10px;
-    font-family: 'FontAwesome';
+    font-family: 'FontAwesome', serif;
     color: #837f7e;
 }
 
 .widget-latest-post li:last-child {
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 .widget-latest-post .thumb {

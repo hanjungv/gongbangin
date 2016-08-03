@@ -263,7 +263,7 @@
 /*---------------*/
 
 #owl-slider .owl-item div{
-    padding:0px;
+    padding:0;
 }
 
 #owl-slider .owl-item img{
@@ -284,8 +284,8 @@
     margin: 5px 7px;
     filter: Alpha(Opacity=50);
     opacity: 0.5;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
     border-radius: 0;
 }
 

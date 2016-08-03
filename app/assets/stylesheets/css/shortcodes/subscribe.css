@@ -62,7 +62,7 @@
 }
 
 .text-center .subscribe-info {
-    padding-right: 0px;
+    padding-right: 0;
 }
 
 .subscribe-box.text-center .subscribe-info,
@@ -95,7 +95,7 @@
 .subscribe-info h4 span,
 .subscribe-info h5 span,
 .subscribe-info h6 span {
-    margin-top: 0px;
+    margin-top: 0;
     display:inline;
 }
 
@@ -142,7 +142,7 @@
 
 
 .full-width.subscribe-box .promo-btn {
-    right: 0px;
+    right: 0;
 }
 
 

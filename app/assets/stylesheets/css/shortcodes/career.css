@@ -25,7 +25,7 @@ a.show-detail {
 
 a.show-detail:after{
     content:"\f178";
-    font-family: 'FontAwesome';
+    font-family: 'FontAwesome', serif;
     padding-left: 10px;
 }
 

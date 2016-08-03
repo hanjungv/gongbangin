@@ -151,8 +151,6 @@
         this.offsets.current.index = 0;
       } else if (this.offsets.current.index === 0) {
         this.offsets.current.index = this.variations.length;
-      } else {
-        this.offsets.current.index = this.offsets.current.index;
       }
       return this.newText.length = 0;
     };

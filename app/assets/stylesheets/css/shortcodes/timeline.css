@@ -23,7 +23,7 @@
 
 .timeline:before {
     background-color:#d8d9df;
-    bottom:0px;
+    bottom:0;
     content:"";
     left:50%;
     position:absolute;
@@ -211,7 +211,7 @@ h3.timeline-title {
 
 .timeline.dark:before {
     background-color:#fff;
-    bottom:0px;
+    bottom:0;
     content:"";
     left:50%;
     position:absolute;

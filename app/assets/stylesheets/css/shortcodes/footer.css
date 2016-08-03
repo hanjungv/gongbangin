@@ -132,7 +132,7 @@
 
 #footer .f-list li a:before {
     content:"\f105";
-    font-family: 'fontawesome';
+    font-family: 'fontawesome', serif;
     padding-right: 15px;
 }
 
