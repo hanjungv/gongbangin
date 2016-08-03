@@ -1,3 +1,4 @@
+# 플리마켓
 class Flea < ActiveRecord::Base
   has_many :participations
   has_many :users, through: :participations
@@ -7,3 +8,4 @@ class Flea < ActiveRecord::Base
   has_many :comment_flea_markets
   has_many :users, through: :comment_flea_markets
 end
+
