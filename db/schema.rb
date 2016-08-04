@@ -108,6 +108,8 @@ ActiveRecord::Schema.define(version: 20160802091648) do
     t.string   "address",                default: "",       null: false
     t.string   "level",                  default: "seller"
     t.string   "tier",                   default: "black"
+    t.string   "brand",                  default: ""
+    t.string   "brand_number",           default: ""
     t.string   "profile_image_url",      default: ""
     t.datetime "created_at",                                null: false
     t.datetime "updated_at",                                null: false
