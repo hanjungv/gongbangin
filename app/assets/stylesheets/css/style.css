@@ -78,30 +78,6 @@ Table of contents
     display: block;
     background: #fff;
 }
-.tb-preloader-wave {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 60px;
-    height: 60px;
-    margin: -30px 0 0 -30px;
-}
-.tb-preloader-wave:before,
-.tb-preloader-wave:after {
-    position: absolute;
-    display: inline-block;
-    content: "";
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: #222;
-    -webkit-animation: preloader-wave 1.6s linear infinite;
-    animation: preloader-wave 1.6s linear infinite;
-}
-.tb-preloader-wave:after {
-    animation-delay: -0.8s;
-    -webkit-animation-delay: -0.8s;
-}
 @keyframes preloader-wave {
     0% {
         -webkit-transform: scale(0, 0);
@@ -1381,15 +1357,6 @@ header.nav-block-left {
 }
 
 
-.full-banner {
-    background-image: image-url("test.png");
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
-    position: relative;
-    background-position: 50% 50%;
-}
 
 
 .page-content {
