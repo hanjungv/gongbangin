@@ -27,6 +27,9 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :level, default: "seller"
       #tier (red-orange-yellow-green-blue-navy-purple-black, black is user. purple is maker's default value)
       t.string :tier, default: "black"
+      #사업자명, 사업자 번호(있는 경우만)
+      t.string :brand, default:""
+      t.string :brand_number, default:""
       #profile_image
       t.string :profile_image_url, default: ""
       ########################################################################################################
