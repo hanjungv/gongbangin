@@ -18,10 +18,12 @@
   <tbody>
     <% @fleas.each do |flea| %>
       <tr>
-        <td><%= flea.application_period %></td>
+        <td><%= flea.application_start_period %></td>
+        <td><%= flea.application_end_period %></td>
         <td><%= flea.number_of_recruitment %></td>
         <td><%= flea.remark %></td>
-        <td><%= flea.place %></td>
+        <td><%= flea.city_place %></td>
+        <td><%= flea.detail_place %></td>
         <td><%= flea.event_start_date %></td>
         <td><%= flea.event_end_date %></td>
         <td><%= flea.entrance_fee %></td>
