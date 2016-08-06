@@ -9,20 +9,20 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//= js/require jquery
-//= js/require jquery_ujs
-//= js/require jquery-1.10.2.min
-//= js/require bootstrap.min
-//= js/jquery-1.10.2.min
-//= js/bootstrap.min
-//= js/menuzord
-//= js/jquery.flexslider-min
-//= js/owl.carousel.min
-//= js/jquery.isotope
-//= js/jquery.magnific-popup.min
-//= js/jquery.countTo
-//= js/visible
-//= js/smooth
-//= js/wow.min
-//= js/imagesloaded
-//= js/scripts
+//= require jquery
+//= require jquery_ujs
+//= require js/jquery-1.10.2.min
+//= require js/bootstrap.min
+//= require js/jquery-1.10.2.min
+//= require js/bootstrap.min
+//= require js/menuzord
+//= require js/jquery.flexslider-min
+//= require js/owl.carousel.min
+//= require js/jquery.isotope
+//= require js/jquery.magnific-popup.min
+//= require js/jquery.countTo
+//= require js/visible
+//= require js/smooth
+//= require js/wow.min
+//= require js/imagesloaded
+//= require js/scripts.js
