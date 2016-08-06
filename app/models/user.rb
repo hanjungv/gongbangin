@@ -16,4 +16,6 @@ class User < ActiveRecord::Base
   has_many :comment_flea_markets
   has_many :fleas, through: :comment_flea_markets
   has_many :recomment_flea_markets
+
+  validates :phone_number, presence: {message: "전화번호를 입력해주세요!"}
 end
