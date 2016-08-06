@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# Upload form gem https://github.com/carrierwaveuploader/carrierwave
+gem 'fog-aws'
+gem 'carrierwave'
 # Calender gem
 gem "simple_calendar", "~> 2.0"
 # Login api https://github.com/plataformatec/devise

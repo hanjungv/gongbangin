@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     end
   end
 
-
+  post 'home/upload'
   get 'home/index'
   get 'home/blog'
   root 'home#index'
