@@ -4,7 +4,7 @@ class AwsS3Uploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
-  # include CarrierWave::MiniMagick
+  include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
   storage :file
@@ -32,9 +32,19 @@ class AwsS3Uploader < CarrierWave::Uploader::Base
   # end
 
   # Create different versions of your uploaded files:
-  # version :thumb do
-  #   process :resize_to_fit => [50, 50]
-  # end
+  version :thumb_small do
+    process :resize_to_fit => [100, 100]
+  end
+
+  version :thumb_middle do
+    process :resize_to_fit => [200, 200]
+  end
+
+  version :thumb_large do
+    process :resize_to_fit => [400, 400]
+  end
+
+
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
@@ -48,7 +58,7 @@ class AwsS3Uploader < CarrierWave::Uploader::Base
   #   "something.jpg" if original_filename
   # end
   def filename
-    SecureRandom.hex(10) + file.extension if original_filename
+    SecureRandom.hex(10) + "." + file.extension if original_filename
   end
 
 end
