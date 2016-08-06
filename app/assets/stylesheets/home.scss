@@ -2,3 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "font-awesome";
+//main_page full banner
+.full-banner {
+    background: url(maintest.jpg);
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: relative;
+    background-position: 50% 50%;
+}
