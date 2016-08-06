@@ -13,11 +13,11 @@
             <% if user_signed_in? %>
                 <% if current_user.level =='master' %>
                     <li><a href="#">셀러모집</a></li>
-                    <li><a href="#">마켓등록</a></li>
+                    <li><a href="/fleas/new">마켓등록</a></li>
                     <li><a href="#">관리자메뉴</a></li>
                 <% else %>
                     <% if current_user.level == 'planner'%>
-                        <li><a href="#">마켓등록</a></li>
+                        <li><a href="/fleas/new">마켓등록</a></li>
                     <% else %>
                         <li><a href="#">셀러모집</a></li>
                     <% end %>
