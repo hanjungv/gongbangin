@@ -12,8 +12,8 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  *= require css/bootstrap.min.css
- *= require css/font-awesome.min.css
  *= require css/magnific-popup.css
  *= require css/shortcodes/shortcodes.css
  *= require css/owl.carousel.css
@@ -22,5 +22,3 @@
  *= require css/style-responsive.css
  *= require css/default-theme.css
  */
- @import "font-awesome-sprockets";
- @import "font-awesome";
