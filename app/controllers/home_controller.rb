@@ -10,4 +10,5 @@ class HomeController < ApplicationController
     flash[:notice] = "전송되었습니다!"
     redirect_to '#'
   end
+
 end
