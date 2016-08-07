@@ -36,6 +36,10 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :brand_number, default:"없음"
       #profile_image
       t.string :profile_image_url, default: ""
+      #url
+      t.string :facebook_url, default:""
+      t.string :twitter_url, default:""
+      t.string :instagram_url,default:""
       ########################################################################################################
       ## Confirmable
       # t.string   :confirmation_token©©
