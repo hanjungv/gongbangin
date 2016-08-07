@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'myinfo/showinfo'
   resources :fleas do
     member do
       post 'like'

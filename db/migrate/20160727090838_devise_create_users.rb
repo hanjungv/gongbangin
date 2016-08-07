@@ -23,15 +23,23 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :name, null: false, default: ""
       t.string :phone_number, null: false,  default: ""
       t.string :address, null:false, default:""
-      #Level (master - planner - standby - seller, default : seller)´
+      #Level (master - planner - standby - seller, default : seller)
       t.string :level, default: "seller"
+      #자기소개
+      t.string :introduce, default: "안녕하세요!만나서 반가워요!"
       #tier (red-orange-yellow-green-blue-navy-purple-black, black is user. purple is maker's default value)
       t.string :tier, default: "black"
+      t.integer :score, default: 0
+      t.string :skills, default: "없음"
       #사업자명, 사업자 번호(있는 경우만)
-      t.string :brand, default:""
-      t.string :brand_number, default:""
+      t.string :brand, default:"없음"
+      t.string :brand_number, default:"없음"
       #profile_image
       t.string :profile_image_url, default: ""
+      #url
+      t.string :facebook_url, default:""
+      t.string :twitter_url, default:""
+      t.string :instagram_url,default:""
       ########################################################################################################
       ## Confirmable
       # t.string   :confirmation_token©©
