@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
-  get 'myinfo/showinfo'
+  get 'info/show'
+
   resources :fleas do
     member do
       post 'like'
       post 'dislike'
     end
   end
-
+  
   get 'home/index'
   get 'home/blog'
   root 'home#index'

@@ -6,7 +6,7 @@
                 <div class="container">
                     <div id="massive-menu" class="menuzord">
                         <!--logo start-->
-                        <a href="index.html" class="logo-brand">
+                        <a href="/" class="logo-brand">
                             <img class="retina" src="img/logo-dark.png" alt=""/>
                         </a>
                         <!--logo end-->
@@ -51,10 +51,10 @@
                             <a href="/users/sign_out">로그아웃</a>
                         </li>
                         <li>
-                            <a href="/myinfo/showinfo"><%= current_user.level %>
+                            <a href="/info/show"><%= current_user.level %>
                                 <%= current_user.name %>님</a>
                         </li>
-                    <% else %>
+                        <% else %>
                         <li>
                             <a href="/users/sign_in">로그인</a>
                         </li>
