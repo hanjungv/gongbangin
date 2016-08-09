@@ -7,7 +7,6 @@ class HomeController < ApplicationController
     uploader = AwsS3Uploader.new
     uploader.store!(file)
 
-    flash[:notice] = "전송되었습니다!"
     redirect_to '#'
   end
 

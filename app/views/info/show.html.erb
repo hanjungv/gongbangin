@@ -30,8 +30,7 @@
                     <div class="m-bot-100">
                         <div class="col-md-8">
                             <div class="full-width">
-                                <img src="<%=current_user.profile_image_url%>" alt="">
-                                <%=image_tag("maintest.jpg")%>
+                                <%=image_tag("#{current_user.profile_image_url}")%>
                             </div>
                         </div>
                         <div class="col-md-4">
