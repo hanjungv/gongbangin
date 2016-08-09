@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
   has_many :fleas, through: :comment_flea_markets
   has_many :recomment_flea_markets
 
+  mount_uploader :profile_image_url, AwsS3Uploader
+
   validates :nickname, presence:{message:"닉네임을 입력해주세요!"}, length:{maximum:15, message:"닉네임이 너무 깁니다!"}, uniqueness: true
-  validates :name, presence:{message:"이름을 입력해주세요!"}, length:{maximum:100, message:"이름이 너무 깁니다!"}
-  validates :phone_number, presence: {message: "전화번호를 입력해주세요!"}
 end

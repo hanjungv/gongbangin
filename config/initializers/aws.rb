@@ -7,5 +7,4 @@ CarrierWave.configure do |config|
       endpoint:              'https://s3.ap-northeast-2.amazonaws.com' # optional, defaults to nil
   }
   config.fog_directory  = 'test-gongbang'                          # required
-  config.fog_public     = true                                        # optional, defaults to true
 end
