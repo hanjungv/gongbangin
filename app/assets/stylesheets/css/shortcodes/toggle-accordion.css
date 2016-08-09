@@ -2,8 +2,7 @@
     accordions
 -------------------------------------------------------------------*/
 
-
-.accordion > dt{
+.accordion > dt {
     margin-bottom: 10px;
     font-size: 14px;
     font-weight: 400;
@@ -11,10 +10,11 @@
     letter-spacing: 0.2em;
 }
 
-.accordion.time-line > dt > a{
+.accordion.time-line > dt > a {
     background: none;
 }
-.accordion > dt > a{
+
+.accordion > dt > a {
     display: block;
     position: relative;
     color: #222222;
@@ -32,7 +32,7 @@
 }
 
 .accordion > dt > a:hover,
-.accordion > dt > a.active{
+.accordion > dt > a.active {
     color: #fff;
     border-color: #222;
     background: #222;
@@ -61,24 +61,23 @@
 }
 
 .accordion > dt > a.active:after,
-.accordion > dt > a.active:hover:after{
+.accordion > dt > a.active:hover:after {
 
     content: "\e641";
     color: #fff;
 }
 
-.accordion > dt > a:hover:after{
+.accordion > dt > a:hover:after {
     color: #fff;
 }
 
-.accordion > dd{
+.accordion > dd {
     margin-bottom: 10px;
     padding: 10px 20px 20px;
     font-size: 14px;
     line-height: 1.8;
     color: #777;
 }
-
 
 .accordion > dt > a,
 .accordion > dt > a:after,
@@ -90,7 +89,6 @@
     -ms-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
     transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
 }
-
 
 /*------------------------------------------------------------------
     timeline accordions
@@ -147,14 +145,13 @@ dl.accordion.time-line:before {
     color: #fff;
 }
 
-
 .accordion.time-line > dt > a {
     display: block;
     position: relative;
     color: #222222;
     text-decoration: none;
     padding: 14px 20px 14px 40px;
-    border:none;
+    border: none;
     /*font-family: 'Abel', sans-serif;*/
     letter-spacing: 2px;
 }
@@ -164,12 +161,11 @@ dl.accordion.time-line:before {
     background: none !important;
 }
 
-
 /*------------------------------------------------------------------
     Toggle
 -------------------------------------------------------------------*/
 
-.toggle > dt{
+.toggle > dt {
     margin-bottom: 10px;
     font-size: 13px;
     font-weight: 400;
@@ -193,12 +189,12 @@ dl.accordion.time-line:before {
     background: none;
 }
 
-.toggle > dt > a:hover{
+.toggle > dt > a:hover {
     text-decoration: none;
 }
 
 .toggle > dt > a:hover,
-.toggle > dt > a.active{
+.toggle > dt > a.active {
     color: #fff;
     border-color: #222;
     background: #222;
@@ -225,24 +221,24 @@ dl.accordion.time-line:before {
     color: #696969;
     -webkit-font-smoothing: antialiased;
 }
+
 .toggle > dt > a.active:after,
-.toggle > dt > a.active:hover:after{
+.toggle > dt > a.active:hover:after {
     content: "\e641";
     color: #fff;
 }
 
-.toggle > dt > a:hover:after{
+.toggle > dt > a:hover:after {
     color: #fff;
 }
 
-.toggle > dd{
+.toggle > dd {
     margin-bottom: 10px;
     padding: 10px 20px 20px;
     font-size: 14px;
     line-height: 1.8;
     color: #777;
 }
-
 
 /*------------------------------------------------------------------
     timeline toggle
@@ -301,14 +297,13 @@ dl.toggle.time-line:before {
     color: #fff;
 }
 
-
 .toggle.time-line > dt > a {
     display: block;
     position: relative;
     color: #222222;
     text-decoration: none;
     padding: 14px 20px 14px 40px;
-    border:none;
+    border: none;
     /*font-family: 'Abel', sans-serif;*/
     letter-spacing: 3px;
 }

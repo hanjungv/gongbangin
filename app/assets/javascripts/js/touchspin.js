@@ -3,7 +3,7 @@
  * Spinner
  * https://github.com/istvan-ujjmeszaros/bootstrap-touchspin
  * */
-! function(t) {
+!function (t) {
     "use strict";
 
     function o(t, o) {
@@ -11,13 +11,14 @@
     }
 
     function n(n, s) {
-        return t.map(n, function(t) {
+        return t.map(n, function (t) {
             return o(t, s)
         })
     }
+
     var s = 0;
-    t.fn.TouchSpin = function(o) {
-        if ("destroy" === o) return void this.each(function() {
+    t.fn.TouchSpin = function (o) {
+        if ("destroy" === o) return void this.each(function () {
             var o = t(this),
                 s = o.data();
             t(document).off(n(["mouseup", "touchend", "touchcancel", "mousemove", "touchmove", "scroll", "scrollstart"], s.spinnerid).join(" "))
@@ -68,7 +69,7 @@
                 buttondown_class: "button-down-class",
                 buttonup_class: "button-up-class"
             };
-        return this.each(function() {
+        return this.each(function () {
             function e() {
                 if (!E.data("alreadyinitialized")) {
                     if (E.data("alreadyinitialized", !0), s += 1, E.data("spinnerid", s), !E.is("input")) return void console.log("Must be an input.");
@@ -92,7 +93,7 @@
 
             function c() {
                 var o = {};
-                return t.each(a, function(t, n) {
+                return t.each(a, function (t, n) {
                     var s = "bts-" + n;
                     E.is("[data-" + s + "]") && (o[t] = E.data(s))
                 }), o
@@ -137,47 +138,47 @@
             }
 
             function m() {
-                E.on("keydown", function(t) {
+                E.on("keydown", function (t) {
                     var o = t.keyCode || t.which;
                     38 === o ? ("up" !== O && (_(), k()), t.preventDefault()) : 40 === o && ("down" !== O && (C(), D()), t.preventDefault())
-                }), E.on("keyup", function(t) {
+                }), E.on("keyup", function (t) {
                     var o = t.keyCode || t.which;
                     38 === o ? F() : 40 === o && F()
-                }), E.on("blur", function() {
+                }), E.on("blur", function () {
                     w()
-                }), P.down.on("keydown", function(t) {
+                }), P.down.on("keydown", function (t) {
                     var o = t.keyCode || t.which;
                     (32 === o || 13 === o) && ("down" !== O && (C(), D()), t.preventDefault())
-                }), P.down.on("keyup", function(t) {
+                }), P.down.on("keyup", function (t) {
                     var o = t.keyCode || t.which;
                     (32 === o || 13 === o) && F()
-                }), P.up.on("keydown", function(t) {
+                }), P.up.on("keydown", function (t) {
                     var o = t.keyCode || t.which;
                     (32 === o || 13 === o) && ("up" !== O && (_(), k()), t.preventDefault())
-                }), P.up.on("keyup", function(t) {
+                }), P.up.on("keyup", function (t) {
                     var o = t.keyCode || t.which;
                     (32 === o || 13 === o) && F()
-                }), P.down.on("mousedown.touchspin", function(t) {
+                }), P.down.on("mousedown.touchspin", function (t) {
                     P.down.off("touchstart.touchspin"), E.is(":disabled") || (C(), D(), t.preventDefault(), t.stopPropagation())
-                }), P.down.on("touchstart.touchspin", function(t) {
+                }), P.down.on("touchstart.touchspin", function (t) {
                     P.down.off("mousedown.touchspin"), E.is(":disabled") || (C(), D(), t.preventDefault(), t.stopPropagation())
-                }), P.up.on("mousedown.touchspin", function(t) {
+                }), P.up.on("mousedown.touchspin", function (t) {
                     P.up.off("touchstart.touchspin"), E.is(":disabled") || (_(), k(), t.preventDefault(), t.stopPropagation())
-                }), P.up.on("touchstart.touchspin", function(t) {
+                }), P.up.on("touchstart.touchspin", function (t) {
                     P.up.off("mousedown.touchspin"), E.is(":disabled") || (_(), k(), t.preventDefault(), t.stopPropagation())
-                }), P.up.on("mouseout touchleave touchend touchcancel", function(t) {
+                }), P.up.on("mouseout touchleave touchend touchcancel", function (t) {
                     O && (t.stopPropagation(), F())
-                }), P.down.on("mouseout touchleave touchend touchcancel", function(t) {
+                }), P.down.on("mouseout touchleave touchend touchcancel", function (t) {
                     O && (t.stopPropagation(), F())
-                }), P.down.on("mousemove touchmove", function(t) {
+                }), P.down.on("mousemove touchmove", function (t) {
                     O && (t.stopPropagation(), t.preventDefault())
-                }), P.up.on("mousemove touchmove", function(t) {
+                }), P.up.on("mousemove touchmove", function (t) {
                     O && (t.stopPropagation(), t.preventDefault())
-                }), t(document).on(n(["mouseup", "touchend", "touchcancel"], s).join(" "), function(t) {
+                }), t(document).on(n(["mouseup", "touchend", "touchcancel"], s).join(" "), function (t) {
                     O && (t.preventDefault(), F())
-                }), t(document).on(n(["mousemove", "touchmove", "scroll", "scrollstart"], s).join(" "), function(t) {
+                }), t(document).on(n(["mousemove", "touchmove", "scroll", "scrollstart"], s).join(" "), function (t) {
                     O && (t.preventDefault(), F())
-                }), E.on("mousewheel DOMMouseScroll", function(t) {
+                }), E.on("mousewheel DOMMouseScroll", function (t) {
                     if (M.mousewheel && E.is(":focus")) {
                         var o = t.originalEvent.wheelDelta || -t.originalEvent.deltaY || -t.originalEvent.detail;
                         t.stopPropagation(), t.preventDefault(), 0 > o ? C() : _()
@@ -186,17 +187,17 @@
             }
 
             function g() {
-                E.on("touchspin.uponce", function() {
+                E.on("touchspin.uponce", function () {
                     F(), _()
-                }), E.on("touchspin.downonce", function() {
+                }), E.on("touchspin.downonce", function () {
                     F(), C()
-                }), E.on("touchspin.startupspin", function() {
+                }), E.on("touchspin.startupspin", function () {
                     k()
-                }), E.on("touchspin.startdownspin", function() {
+                }), E.on("touchspin.startdownspin", function () {
                     D()
-                }), E.on("touchspin.stopspin", function() {
+                }), E.on("touchspin.stopspin", function () {
                     F()
-                }), E.on("touchspin.updatesettings", function(t, o) {
+                }), E.on("touchspin.updatesettings", function (t, o) {
                     p(o)
                 })
             }
@@ -242,16 +243,16 @@
             }
 
             function D() {
-                F(), A = 0, O = "down", E.trigger("touchspin.on.startspin"), E.trigger("touchspin.on.startdownspin"), I = setTimeout(function() {
-                    T = setInterval(function() {
+                F(), A = 0, O = "down", E.trigger("touchspin.on.startspin"), E.trigger("touchspin.on.startdownspin"), I = setTimeout(function () {
+                    T = setInterval(function () {
                         A++, C()
                     }, M.stepinterval)
                 }, M.stepintervaldelay)
             }
 
             function k() {
-                F(), A = 0, O = "up", E.trigger("touchspin.on.startspin"), E.trigger("touchspin.on.startupspin"), B = setTimeout(function() {
-                    j = setInterval(function() {
+                F(), A = 0, O = "up", E.trigger("touchspin.on.startspin"), E.trigger("touchspin.on.startupspin"), B = setTimeout(function () {
+                    j = setInterval(function () {
                         A++, _()
                     }, M.stepinterval)
                 }, M.stepintervaldelay)
@@ -267,6 +268,7 @@
                 }
                 A = 0, O = !1
             }
+
             var M, N, P, S, T, j, I, B, E = t(this),
                 z = E.data(),
                 A = 0,

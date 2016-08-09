@@ -7,7 +7,6 @@
     white-space: nowrap;
 }
 
-
 /* No Touch devices */
 .cd-nav-trigger {
     display: none;
@@ -25,21 +24,25 @@
     transform: translateY(-50%);
     z-index: 300;
 }
+
 .no-touch #cd-vertical-nav li {
     text-align: right;
     list-style: none;
 }
+
 .no-touch #cd-vertical-nav a {
     display: inline-block;
     /* prevent weird movements on hover when you use a CSS3 transformation - webkit browsers */
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
+
 .no-touch #cd-vertical-nav a:after {
     content: "";
     display: table;
     clear: both;
 }
+
 .no-touch #cd-vertical-nav a span {
     float: right;
     display: inline-block;
@@ -49,20 +52,24 @@
     -o-transform: scale(0.6);
     transform: scale(0.6);
 }
+
 .no-touch #cd-vertical-nav a:hover span,
-.no-touch #cd-vertical-nav li.active span{
+.no-touch #cd-vertical-nav li.active span {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
     -o-transform: scale(1);
     transform: scale(1);
 }
+
 .no-touch #cd-vertical-nav a:hover .cd-label {
     opacity: 1;
 }
+
 .no-touch #cd-vertical-nav a.is-selected .cd-dot {
     background-color: white;
 }
+
 .no-touch #cd-vertical-nav .cd-dot {
     position: relative;
     /* we set a top value in order to align the dot with the label. If you change label's font, you may need to change this top value*/
@@ -80,6 +87,7 @@
     -o-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
 }
+
 .no-touch #cd-vertical-nav .cd-label {
     position: relative;
     margin-right: 10px;
@@ -109,6 +117,7 @@
     border-radius: 0.25em;
     background: rgba(255, 255, 255, 0.9);
 }
+
 .touch .cd-nav-trigger span {
     position: absolute;
     height: 4px;
@@ -125,6 +134,7 @@
     -o-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
 }
+
 .touch .cd-nav-trigger span::before, .touch .cd-nav-trigger span::after {
     content: '';
     height: 100%;
@@ -134,9 +144,11 @@
     background-color: inherit;
     border-radius: inherit;
 }
+
 .touch .cd-nav-trigger span::before {
     top: -9px;
 }
+
 .touch .cd-nav-trigger span::after {
     bottom: -9px;
 }
@@ -170,17 +182,21 @@
     border-radius: 0.25em;
     background-color: rgba(255, 255, 255, 0.9);
 }
+
 .touch #cd-vertical-nav a {
     display: block;
     padding: 1em;
     border-bottom: 1px solid rgba(62, 57, 71, 0.1);
 }
+
 .touch #cd-vertical-nav a span:first-child {
     display: none;
 }
+
 .touch #cd-vertical-nav a.is-selected span:last-child {
     color: #7e7e7e;
 }
+
 .touch #cd-vertical-nav.open {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
@@ -188,12 +204,15 @@
     -o-transform: scale(1);
     transform: scale(1);
 }
+
 .touch #cd-vertical-nav.open + .cd-nav-trigger {
     background-color: transparent;
 }
+
 .touch #cd-vertical-nav.open + .cd-nav-trigger span {
     background-color: rgba(62, 57, 71, 0);
 }
+
 .touch #cd-vertical-nav.open + .cd-nav-trigger span::before, .touch #cd-vertical-nav.open + .cd-nav-trigger span::after {
     background-color: #3e3947;
     height: 3px;
@@ -201,6 +220,7 @@
     border-radius: 0;
     left: -8px;
 }
+
 .touch #cd-vertical-nav.open + .cd-nav-trigger span::before {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
@@ -209,6 +229,7 @@
     transform: rotate(45deg);
     top: 1px;
 }
+
 .touch #cd-vertical-nav.open + .cd-nav-trigger span::after {
     -webkit-transform: rotate(135deg);
     -moz-transform: rotate(135deg);
@@ -217,6 +238,7 @@
     transform: rotate(135deg);
     bottom: 0;
 }
+
 .touch #cd-vertical-nav li:last-child a {
     border-bottom: none;
 }

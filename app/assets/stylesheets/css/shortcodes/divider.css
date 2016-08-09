@@ -84,7 +84,6 @@
     content: '';
 }
 
-
 .text-right .dot:before {
     left: -13px;
 }
@@ -130,7 +129,7 @@
 .d-border i {
     width: 30px;
     height: 30px;
-    border:1px solid #e2e2e2;
+    border: 1px solid #e2e2e2;
     border-radius: 50%;
     position: absolute;
     top: -15px;

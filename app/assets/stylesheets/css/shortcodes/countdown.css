@@ -1,4 +1,3 @@
-
 /* ----------------------------------------------------------------
 	countdown
 -----------------------------------------------------------------*/
@@ -25,15 +24,15 @@
 }
 
 .count-down-alt .c-grid {
-    border: 5px solid rgba(0,0,0,.2);
+    border: 5px solid rgba(0, 0, 0, .2);
 }
 
-.count-down .c-grid  {
+.count-down .c-grid {
     border: 1px solid #e0e0e0;
 }
 
 .count-down .c-grid,
-.count-down.light .c-grid  {
+.count-down.light .c-grid {
     border: 1px solid #fff;
 }
 
@@ -63,12 +62,12 @@
 }
 
 .count-down.circle .c-grid,
-.count-down-alt.circle .c-grid  {
+.count-down-alt.circle .c-grid {
     border-radius: 50% !important;
 }
 
 .count-down.round .c-grid,
-.count-down-alt.round .c-grid  {
+.count-down-alt.round .c-grid {
     border-radius: 5px !important;
 }
 
@@ -83,7 +82,6 @@
 .relative {
     position: relative;
 }
-
 
 .count-icon {
     position: absolute;

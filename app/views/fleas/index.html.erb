@@ -3,7 +3,7 @@
 <h1>Listing Fleas</h1>
 
 <table>
-    <% @fleas.each do |flea| %>
+  <% @fleas.each do |flea| %>
       <tr>
         <p><%= flea.application_start_period %></p>
         <p><%= flea.application_end_period %></p>
@@ -16,9 +16,9 @@
         <p><%= flea.entrance_fee %></p>
         <p><%= link_to 'Show', flea %></p>
         <p><%= link_to 'Edit', edit_flea_path(flea) %></p>
-        <p><%= link_to 'Destroy', flea, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        <p><%= link_to 'Destroy', flea, method: :delete, data: {confirm: 'Are you sure?'} %></p>
       </tr>
-    <% end %>
+  <% end %>
 </table>
 
 <br>

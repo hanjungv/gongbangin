@@ -35,10 +35,10 @@
 }
 
 /*.btn.focus, .btn:focus, .btn:hover{*/
-    /*color: #fff !important;*/
+/*color: #fff !important;*/
 /*}*/
 
-.btn.btn-default.focus, .btn.btn-default:focus, .btn.btn-default:hover{
+.btn.btn-default.focus, .btn.btn-default:focus, .btn.btn-default:hover {
     color: #222;
 }
 
@@ -61,7 +61,6 @@
     color: #fff;
 }
 
-
 .btn-theme-color,
 .btn-dark-solid:hover,
 .btn-dark-solid:focus,
@@ -82,7 +81,7 @@
 }
 
 .btn-dark-solid.btn-transparent {
-    background: rgba(0,0,0,.10);
+    background: rgba(0, 0, 0, .10);
     color: #222;
 }
 
@@ -96,7 +95,7 @@
 
 .btn-dark-border.btn-transparent {
     background: transparent;
-    border: 1px solid rgba(0,0,0,.15);
+    border: 1px solid rgba(0, 0, 0, .15);
     color: #222;
 }
 
@@ -107,7 +106,6 @@
 }
 
 /*light*/
-
 
 .btn-light-solid {
     background: #fff;
@@ -120,7 +118,7 @@
 }
 
 .btn-light-solid.btn-transparent {
-    background: rgba(255,255,255,.20);
+    background: rgba(255, 255, 255, .20);
     color: #fff;
 }
 
@@ -129,19 +127,18 @@
     color: #fff !important;
 }
 
-
 /*light border button*/
 
 .btn-light-border {
     background: transparent;
     border: 1px solid #fff;
     color: #fff;
-    font-weight:bold;
+    font-weight: bold;
 }
 
 .btn-light-border.btn-transparent {
     background: transparent;
-    border: 1px solid rgba(255,255,255,.15);
+    border: 1px solid rgba(255, 255, 255, .15);
     color: #fff;
 }
 

@@ -24,7 +24,6 @@
     letter-spacing: 1px;
 }
 
-
 .text-center .subscribe-info span,
 .text-center .subscribe-info {
     display: inline-block;
@@ -75,19 +74,17 @@
 }
 
 .subscribe-box.text-center .subscribe-form input,
-.subscribe-box.text-center .subscribe-form .btn{
+.subscribe-box.text-center .subscribe-form .btn {
     display: inline-block;
     float: none;
     border: none;
     margin: 0 5px;
 }
 
-
 .subscribe-box.dark-bg .subscribe-form input,
-.subscribe-box.border-box .subscribe-form input{
+.subscribe-box.border-box .subscribe-form input {
     border: none;
 }
-
 
 .subscribe-info h1 span,
 .subscribe-info h2 span,
@@ -96,7 +93,7 @@
 .subscribe-info h5 span,
 .subscribe-info h6 span {
     margin-top: 0;
-    display:inline;
+    display: inline;
 }
 
 .subscribe-info span {
@@ -127,7 +124,6 @@
     width: 100%;
 }
 
-
 .subscribe-box a.btn {
     padding: 15px 30px;
 }
@@ -140,11 +136,9 @@
     padding: 40px 0;
 }
 
-
 .full-width.subscribe-box .promo-btn {
     right: 0;
 }
-
 
 .radius-less {
     border-radius: 0 !important;

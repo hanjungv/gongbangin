@@ -17,26 +17,19 @@ Table of contents
 5. Small Phone
 -------------------------------------------------------------------*/
 
-
 /* -------------------------------
    Small desktop
    ------------------------------- */
 
 @media screen and (max-width: 1366px) {
 
-
-
 }
 
 @media screen and (max-width: 1200px) {
 
-
-
 }
 
 @media screen and (max-width: 1199px) {
-
-
 
 }
 
@@ -53,8 +46,6 @@ Table of contents
 }
 
 @media screen and (max-width: 992px) {
-
-
 
     /*portfolio   grid*/
     .portfolio.col-2 .portfolio-item,
@@ -79,15 +70,13 @@ Table of contents
         margin-bottom: 40px !important;
     }
 
-
     .clients.grid-2 li {
         width: 50%;
     }
 
-    .clients.grid-3 li, .clients.grid-4 li, .clients.grid-5 li, .clients.grid-6 li  {
+    .clients.grid-3 li, .clients.grid-4 li, .clients.grid-5 li, .clients.grid-6 li {
         width: 33.33%;
     }
-
 
     .clients.angle-box.grid-2 li {
         width: 46%;
@@ -101,13 +90,9 @@ Table of contents
         margin-bottom: 50px;
     }
 
-
-
 }
 
 @media screen and (max-width: 800px) {
-
-
 
     /*portfolio   grid*/
     .portfolio.col-2 .portfolio-item,
@@ -156,7 +141,6 @@ Table of contents
 
 }
 
-
 /* -------------------------------
    Tablet Portrait
    ------------------------------- */
@@ -164,46 +148,57 @@ Table of contents
 @media screen and (max-width: 768px) {
 
     header {
-        top:0;
+        top: 0;
     }
-    .page-title{
+
+    .page-title {
         margin-top: 47px;
     }
+
     .menuzord-responsive.menuzord {
         padding: 0
     }
+
     .menuzord-responsive .logo-brand {
         font-size: 20px;
         line-height: 2.55;
     }
+
     .menuzord-responsive .showhide {
         margin: 0
     }
+
     .menuzord-responsive .menuzord-menu {
         width: 100%;
-        float: left!important
+        float: left !important
     }
+
     .menuzord-responsive .menuzord-menu.scrollable {
         overflow-y: auto;
         -webkit-overflow-scrolling: touch
     }
-    .menuzord-responsive .menuzord-menu.scrollable>.scrollable-fix {
+
+    .menuzord-responsive .menuzord-menu.scrollable > .scrollable-fix {
         display: block
     }
-    .menuzord-responsive .menuzord-menu>li {
+
+    .menuzord-responsive .menuzord-menu > li {
         width: 100%;
         display: block;
         position: relative
     }
-    .menuzord-responsive .menuzord-menu>li>a {
+
+    .menuzord-responsive .menuzord-menu > li > a {
         width: 100%;
         padding: 12px 20px;
         display: block;
         border-bottom: solid 1px #f0f0f0
     }
-    .menuzord-responsive .menuzord-menu>li:first-child>a {
+
+    .menuzord-responsive .menuzord-menu > li:first-child > a {
         border-top: solid 1px #f0f0f0
     }
+
     .menuzord-responsive .menuzord-menu ul.dropdown,
     .menuzord-responsive .menuzord-menu ul.dropdown li ul.dropdown {
         width: 100%;
@@ -213,30 +208,39 @@ Table of contents
         background: #fff;
         float: left
     }
+
     .menuzord-responsive .menuzord-menu ul.dropdown li {
         position: relative
     }
+
     .menuzord-responsive .menuzord-menu ul.dropdown li a {
         border-bottom: solid 1px #f0f0f0
     }
-    .menuzord-responsive .menuzord-menu.menuzord-indented>li>ul.dropdown>li>a {
-        padding-left: 40px!important
+
+    .menuzord-responsive .menuzord-menu.menuzord-indented > li > ul.dropdown > li > a {
+        padding-left: 40px !important
     }
-    .menuzord-responsive .menuzord-menu.menuzord-indented>li>ul.dropdown>li>ul.dropdown>li>a {
-        padding-left: 60px!important
+
+    .menuzord-responsive .menuzord-menu.menuzord-indented > li > ul.dropdown > li > ul.dropdown > li > a {
+        padding-left: 60px !important
     }
-    .menuzord-responsive .menuzord-menu.menuzord-indented>li>ul.dropdown>li>ul.dropdown>li>ul.dropdown>li>a {
-        padding-left: 80px!important
+
+    .menuzord-responsive .menuzord-menu.menuzord-indented > li > ul.dropdown > li > ul.dropdown > li > ul.dropdown > li > a {
+        padding-left: 80px !important
     }
-    .menuzord-responsive .menuzord-menu.menuzord-indented>li>ul.dropdown>li:hover>a {
+
+    .menuzord-responsive .menuzord-menu.menuzord-indented > li > ul.dropdown > li:hover > a {
         /*padding-left: 50px!important*/
     }
-    .menuzord-responsive .menuzord-menu.menuzord-indented>li>ul.dropdown>li>ul.dropdown>li:hover>a {
-        padding-left: 70px!important
+
+    .menuzord-responsive .menuzord-menu.menuzord-indented > li > ul.dropdown > li > ul.dropdown > li:hover > a {
+        padding-left: 70px !important
     }
-    .menuzord-responsive .menuzord-menu.menuzord-indented>li>ul.dropdown>li>ul.dropdown>li>ul.dropdown>li:hover>a {
-        padding-left: 90px!important
+
+    .menuzord-responsive .menuzord-menu.menuzord-indented > li > ul.dropdown > li > ul.dropdown > li > ul.dropdown > li:hover > a {
+        padding-left: 90px !important
     }
+
     .menuzord-responsive .menuzord-menu li .indicator {
         width: 60px;
         height: 45px;
@@ -248,6 +252,7 @@ Table of contents
         line-height: 43px;
         border-left: solid 1px #f5f5f5
     }
+
     .menuzord-responsive .menuzord-menu li ul.dropdown li .indicator {
         height: 38px;
         right: 0;
@@ -255,30 +260,35 @@ Table of contents
         font-size: 18px;
         line-height: 36px
     }
-    .menuzord-responsive .menuzord-menu>li>.megamenu {
-        width: 100%!important;
-        left: 0!important;
+
+    .menuzord-responsive .menuzord-menu > li > .megamenu {
+        width: 100% !important;
+        left: 0 !important;
         position: static;
         border-top: none;
         border-bottom: solid 1px #f0f0f0
     }
-    .menuzord-responsive .menuzord-menu>li>.megamenu .megamenu-row [class*=col] {
+
+    .menuzord-responsive .menuzord-menu > li > .megamenu .megamenu-row [class*=col] {
         float: none;
         display: block;
-        width: 100%!important;
+        width: 100% !important;
         margin-left: 0;
         margin-top: 15px
     }
-    .menuzord-responsive .menuzord-menu>li>.megamenu .megamenu-row,
-    .menuzord-responsive .menuzord-menu>li>.megamenu .megamenu-row:first-child [class*=col]:first-child {
+
+    .menuzord-responsive .menuzord-menu > li > .megamenu .megamenu-row,
+    .menuzord-responsive .menuzord-menu > li > .megamenu .megamenu-row:first-child [class*=col]:first-child {
         margin-top: 0
     }
-    .menuzord-responsive .menuzord-menu>li.search form {
+
+    .menuzord-responsive .menuzord-menu > li.search form {
         width: 100%;
         margin: 4px 0;
-        padding: 10px 16px!important
+        padding: 10px 16px !important
     }
-    .menuzord-responsive .menuzord-menu>li.search form input[type=text],
+
+    .menuzord-responsive .menuzord-menu > li.search form input[type=text],
     .menuzord-responsive .menuzord-tabs-content,
     .menuzord-responsive .menuzord-tabs-nav {
         width: 100%
@@ -289,29 +299,31 @@ Table of contents
         background: #fff !important;
     }
 
-    #header.transparent-header .dark-header  {
+    #header.transparent-header .dark-header {
         background: rgba(10, 10, 10, 1) !important;
     }
 
     /*-------------------------*/
     /* Mneu items */
     /*-------------------------*/
-
-    .menuzord-responsive .menuzord-menu > li > a{
+    .menuzord-responsive .menuzord-menu > li > a {
         padding: 12px 20px !important;
         line-height: 20px;
     }
+
     /* Dropdown indicators */
-    .menuzord-responsive .menuzord-menu li ul.dropdown li .indicator{
+    .menuzord-responsive .menuzord-menu li ul.dropdown li .indicator {
         border: none;
     }
+
     /* Dropdown */
     .menuzord-responsive .menuzord-menu ul.dropdown,
-    .menuzord-responsive .menuzord-menu ul.dropdown li ul.dropdown{
+    .menuzord-responsive .menuzord-menu ul.dropdown li ul.dropdown {
         background: #fff;
     }
+
     /* Dropdown items */
-    .menuzord-responsive .menuzord-menu ul.dropdown li a{
+    .menuzord-responsive .menuzord-menu ul.dropdown li a {
         border: none;
     }
 
@@ -319,15 +331,13 @@ Table of contents
         color: #333;
     }
 
-    header.sticky .menuzord-menu>li>a {
+    header.sticky .menuzord-menu > li > a {
         line-height: 20px;
     }
-
 
     header .logo-brand img, header.nav-center-align .logo-brand img {
         height: 50px;
     }
-
 
     header.transparent-header.sticky + #fullscreen-banner {
         margin-top: -50px;
@@ -347,13 +357,11 @@ Table of contents
         border: none;
     }
 
-
     .menuzord-menu li .indicator i.fa-angle-down:before {
         content: "\f107";
     }
 
     /*----*/
-
     header {
         height: auto;
         position: fixed;
@@ -389,9 +397,7 @@ Table of contents
     .nav-block-left.m-bot-20,
     .nav-block-left.m-bot-25,
     .nav-block-left.m-bot-30,
-    .nav-block-left.m-bot-40
-
-    {
+    .nav-block-left.m-bot-40 {
         display: inline;
     }
 
@@ -404,7 +410,7 @@ Table of contents
     .nav-center-align .menuzord-menu > li > a,
     header.nav-center-align li.nav-icon i,
     .nav-block-left .menuzord-menu > li > a,
-    header.nav-block-left li.nav-icon i{
+    header.nav-block-left li.nav-icon i {
         line-height: 20px;
     }
 
@@ -416,12 +422,10 @@ Table of contents
         height: auto;
     }
 
-
     .portfolio-filter li {
         display: inline-block;
         line-height: 40px;
     }
-
 
     ul.menuzord-menu {
         background: #fff;
@@ -451,7 +455,7 @@ Table of contents
         margin-bottom: 10px;
     }
 
-    .catering-form .form-group, header.nav-center-align .logo-brand img  {
+    .catering-form .form-group, header.nav-center-align .logo-brand img {
         margin: 0;
     }
 
@@ -499,13 +503,9 @@ Table of contents
     }
 
     /**/
-
     .travel-form.icon-tabs .nav > li > a {
         padding: 30px 25px;
     }
-
-
-
 
 }
 
@@ -544,6 +544,7 @@ Table of contents
     .post-grid {
         margin: 0;
     }
+
     .post-grid .col-lg-1, .post-grid .col-lg-10, .post-grid .col-lg-11, .post-grid .col-lg-12, .post-grid .col-lg-2, .post-grid .col-lg-3, .post-grid .col-lg-4, .post-grid .col-lg-5, .post-grid .col-lg-6, .post-grid .col-lg-7, .post-grid .col-lg-8, .post-grid .col-lg-9, .post-grid .col-md-1, .post-grid .col-md-10, .post-grid .col-md-11, .post-grid .col-md-12, .post-grid .col-md-2, .post-grid .col-md-3, .post-grid .col-md-4, .post-grid .col-md-5, .post-grid .col-md-6, .post-grid .col-md-7, .post-grid .col-md-8, .post-grid .col-md-9, .post-grid .col-sm-1, .post-grid .col-sm-10, .post-grid .col-sm-11, .post-grid .col-sm-12, .post-grid .col-sm-2, .post-grid .col-sm-3, .post-grid .col-sm-4, .post-grid .col-sm-5, .post-grid .col-sm-6, .post-grid .col-sm-7, .post-grid .col-sm-8, .post-grid .col-sm-9, .post-grid .col-xs-1, .post-grid .col-xs-10, .post-grid .col-xs-11, .post-grid .col-xs-12, .post-grid .col-xs-2, .post-grid .col-xs-3, .post-grid .col-xs-4, .post-grid .col-xs-5, .post-grid .col-xs-6, .post-grid .col-xs-7, .post-grid .col-xs-8, .post-grid .col-xs-9 {
         padding-left: 15px;
         padding-right: 15px;
@@ -572,10 +573,9 @@ Table of contents
     }
 
     .footer-3 .f-logo-center,
-    .footer-4 .f-logo-center{
+    .footer-4 .f-logo-center {
         left: 40px !important;
     }
-
 
     .clients.grid-2 li, .clients.grid-3 li, .clients.grid-4 li, .clients.grid-5 li, .clients.grid-6 li {
         width: 50%;
@@ -594,17 +594,15 @@ Table of contents
         width: 100%;
     }
 
-
     .half-txt {
         width: 80%;
     }
-
 
     .icon-box-tabs .nav-pills > li + li {
         margin-left: 0;
     }
 
-    .icon-box-tabs .nav-pills > li  {
+    .icon-box-tabs .nav-pills > li {
         margin-bottom: 10px;
         text-align: center;
     }
@@ -620,11 +618,9 @@ Table of contents
         display: inline-block;
     }
 
-
     .subscribe-form input, .subscribe-form .btn {
         width: 100% !important;
     }
-
 
     .error-info {
         display: inline-block;
@@ -648,7 +644,7 @@ Table of contents
     }
 
     #portfolio-carousel.owl-theme .owl-controls,
-    #portfolio-carousel-alt.owl-theme .owl-controls{
+    #portfolio-carousel-alt.owl-theme .owl-controls {
         bottom: -48px;
         left: 0;
         margin-top: 10px;
@@ -657,7 +653,6 @@ Table of contents
         text-align: center;
         top: auto;
     }
-
 
     .count-down .c-grid, .count-down-alt .c-grid {
         margin: 20px;
@@ -715,22 +710,18 @@ Table of contents
         font-size: 10px;
     }
 
-
     header.transparent-header.sticky + #fullscreen-banner,
     header.transparent-header + #fullscreen-banner,
     header + #fullscreen-banner {
         top: 0;
     }
 
-
-
     /**/
-
     .travel-form .form-group {
         width: 100%;
     }
 
-    .travel-form.icon-tabs .nav>li>a {
+    .travel-form.icon-tabs .nav > li > a {
         padding: 10px 5px;
         font-size: 12px;
     }
@@ -781,7 +772,6 @@ Table of contents
     }
 
     /**/
-
     .bs-hero.full-screen .carousel.slide .carousel-control {
         width: 30%;
         margin-top: 0;
@@ -823,7 +813,6 @@ Table of contents
         width: 100%;
     }
 
-
     .bs-hero.full-screen .carousel-inner .item .bs-info-right {
         top: 45%;
         right: 0;
@@ -831,7 +820,6 @@ Table of contents
         text-align: center;
     }
 }
-
 
 /* -------------------------------
    Phone
@@ -845,7 +833,7 @@ Table of contents
     .portfolio.col-4 .portfolio-item,
     .portfolio.col-5 .portfolio-item,
     .portfolio.col-6 .portfolio-item,
-    .testimonial.grid-2 li{
+    .testimonial.grid-2 li {
         width: 100%;
         /*width: 50%;*/
     }
@@ -857,13 +845,13 @@ Table of contents
 
     .error-parallax .error-avatar {
         display: block;
-        margin-bottom:20px;
+        margin-bottom: 20px;
         margin-top: 80px;
     }
 
     .error-parallax .error-info {
         border-left: none;
-        border-top:  none;
+        border-top: none;
         display: inline-block;
         margin-top: 0;
         padding-left: 0;
@@ -881,7 +869,6 @@ Table of contents
 
 }
 
-
 /* -------------------------------
    Small Phone
    ------------------------------- */
@@ -895,7 +882,6 @@ Table of contents
         width: 96%;
     }
 
-
     .error-avatar img {
         width: 100%;
         height: auto;
@@ -908,13 +894,13 @@ Table of contents
 
     .error-parallax .error-avatar {
         display: block;
-        margin-bottom:20px;
+        margin-bottom: 20px;
         margin-top: 80px;
     }
 
     .error-parallax .error-info {
         border-left: none;
-        border-top:  none;
+        border-top: none;
         display: inline-block;
         margin-top: 0;
         padding-left: 0;
@@ -923,17 +909,17 @@ Table of contents
 
     .login-box, .login-social-link a,
     .c-info-row .c-info,
-    .c-info-row .c-slide{
+    .c-info-row .c-slide {
         width: 100%;
     }
 
     .login-social-link a {
-        margin-bottom:15px;
+        margin-bottom: 15px;
         display: block;
     }
 
     #portfolio-carousel.owl-theme .owl-controls,
-    #portfolio-carousel-alt.owl-theme .owl-controls{
+    #portfolio-carousel-alt.owl-theme .owl-controls {
         bottom: -48px;
         left: 0;
         margin-top: 10px;
@@ -953,14 +939,13 @@ Table of contents
         right: 40px;
     }
 
-
     .count-down.circle .c-grid,
-    .count-down-alt.circle .c-grid  {
+    .count-down-alt.circle .c-grid {
         border-radius: 0 !important;
     }
 
     .count-down.round .c-grid,
-    .count-down-alt.round .c-grid  {
+    .count-down-alt.round .c-grid {
         border-radius: 0 !important;
     }
 

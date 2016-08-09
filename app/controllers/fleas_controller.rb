@@ -39,7 +39,7 @@ class FleasController < ApplicationController
   def create
     @flea = Flea.new(flea_params)
     if @flea.save
-      redirect_to @flea, notice:'post was successfully created'
+      redirect_to @flea, notice: 'post was successfully created'
     else
       render :new
     end
@@ -63,13 +63,13 @@ class FleasController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_flea
-      @flea = Flea.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_flea
+    @flea = Flea.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def flea_params
-      params.require(:flea).permit(:application_start_period,:application_end_period, :number_of_recruitment, :remark, :city_place,:detail_place, :event_start_date, :event_end_date, :entrance_fee)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def flea_params
+    params.require(:flea).permit(:application_start_period, :application_end_period, :number_of_recruitment, :remark, :city_place, :detail_place, :event_start_date, :event_end_date, :entrance_fee)
+  end
 end

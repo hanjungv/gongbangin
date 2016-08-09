@@ -2,7 +2,6 @@
     pricing table
 -------------------------------------------------------------------*/
 
-
 .price-col {
     background: #fff;
     border: 1px solid #e8e8e8;
@@ -21,7 +20,7 @@
     margin-bottom: 30px;
 }
 
-.price-col  .p-value {
+.price-col .p-value {
     border-top: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
     padding: 25px 0;
@@ -29,23 +28,23 @@
 }
 
 .price-col.feature .p-value {
-    border-top: 1px solid rgba(255,255,255,.2);
-    border-bottom: 1px solid rgba(255,255,255,.2);
+    border-top: 1px solid rgba(255, 255, 255, .2);
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
     padding: 25px 0;
     margin-bottom: 40px;
 }
 
-.price-col  .dollar {
+.price-col .dollar {
     font-size: 42px;
     font-weight: normal;
 }
 
-.price-col  .dollar span {
+.price-col .dollar span {
     font-size: 16px;
     margin-left: -10px;
 }
 
-.price-col  .duration {
+.price-col .duration {
     font-size: 12px;
     text-transform: uppercase;
 }
@@ -54,7 +53,7 @@
     list-style: none;
     padding: 0;
     margin-bottom: 40px;
-    display:block;
+    display: block;
 
 }
 
@@ -94,8 +93,6 @@
 .price-col.feature {
     color: #fff;
 }
-
-
 
 .p-table-gutter-less .col-lg-1,
 .p-table-gutter-less .col-lg-10,
@@ -145,7 +142,6 @@
 .p-table-gutter-less .col-xs-7,
 .p-table-gutter-less .col-xs-8,
 .p-table-gutter-less .col-xs-9,
-
 .price-table-row .p-table-gutter-less .col-lg-1,
 .price-table-row .p-table-gutter-less .col-lg-10,
 .price-table-row .p-table-gutter-less .col-lg-11,
@@ -208,9 +204,6 @@
     background-attachment: fixed;
     background-size: cover;
 }
-
-
-
 
 .price-table-row .col-lg-1,
 .price-table-row .col-lg-10,

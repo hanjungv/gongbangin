@@ -2,10 +2,9 @@
     alert
 -------------------------------------------------------------------*/
 
-
-.alert{
+.alert {
     margin: 0 auto 10px;
-    padding:20px;
+    padding: 20px;
 
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -21,26 +20,26 @@
 
 }
 
-.alert-dismissable .close, .alert-dismissible .close{
+.alert-dismissable .close, .alert-dismissible .close {
     right: 0;
 }
 
-.success-border{
+.success-border {
     border-color: #d6e9c6;
     color: #3c763d;
 }
 
-.info-border{
+.info-border {
     border-color: #bce8f1;
     color: #31708f;
 }
 
-.warning-border{
+.warning-border {
     border-color: #faebcc;
     color: #8a6d3b;
 }
 
-.danger-border{
+.danger-border {
     border-color: #ebccd1;
     color: #a94442;
 }

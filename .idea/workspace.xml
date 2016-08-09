@@ -6,16 +6,88 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="970265b4-fe78-4acf-9e82-1aa57482fee9" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/layouts/devise.html.erb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/registrations_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/registrations_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/js/bootstrap.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/js/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/js/html5shiv.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/js/html5shiv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/js/imagesloaded.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/js/imagesloaded.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/js/jquery.countTo.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/js/jquery.countTo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/js/jquery.countdown.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/js/jquery.countdown.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/js/jquery.easing.1.3.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/js/jquery.easing.1.3.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/js/jquery.eislideshow.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/js/jquery.eislideshow.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/js/jquery.flexslider-min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/js/jquery.flexslider-min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/js/jquery.isotope.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/js/jquery.isotope.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/js/jquery.nav.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/js/jquery.nav.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/js/menuzord.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/js/menuzord.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/js/modernizr.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/js/modernizr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/js/scripts.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/js/scripts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/js/smooth.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/js/smooth.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/js/touchspin.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/js/touchspin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/js/typist.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/js/typist.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/js/visible.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/js/visible.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/animate.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/animate.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/blog.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/blog.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/bootstrap-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/bootstrap-theme.css.map" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/bootstrap-theme.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/bootstrap.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/bootstrap.css.map" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/bootstrap.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/default-theme.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/default-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/dotted-nav.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/dotted-nav.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/elastic.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/elastic.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/green-theme.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/green-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/linea-icon.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/linea-icon.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/magnific-popup.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/magnific-popup.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/owl.carousel.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/owl.carousel.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/owl.theme.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/owl.theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/push-nav.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/push-nav.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/red-theme.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/red-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/alert.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/alert.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/buttons.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/buttons.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/career.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/career.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/carousel.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/carousel.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/clients.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/clients.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/countdown.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/countdown.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/divider.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/divider.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/featured-box.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/featured-box.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/footer.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/footer.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/fun-factors.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/fun-factors.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/heading.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/heading.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/icon-list.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/icon-list.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/list-style.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/list-style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/login.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/login.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/page-title.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/page-title.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/portfolio.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/portfolio.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/post.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/post.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/pricing-table.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/pricing-table.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/progress-bar.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/progress-bar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/promo-box.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/promo-box.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/shortcodes.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/shortcodes.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/side-nav.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/side-nav.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/subscribe.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/subscribe.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/tabs.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/tabs.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/team.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/team.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/testimonial.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/testimonial.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/timeline.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/timeline.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/toggle-accordion.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/toggle-accordion.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/style-responsive.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/style-responsive.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/css/style.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/used.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/used.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/fleas_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/fleas_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/uploaders/aws_s3_uploader.rb" afterPath="$PROJECT_DIR$/app/uploaders/aws_s3_uploader.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/confirmations/new.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/confirmations/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/mailer/confirmation_instructions.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/mailer/confirmation_instructions.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/passwords/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/passwords/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/passwords/new.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/passwords/new.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/shared/_links.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/shared/_links.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/unlocks/new.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/unlocks/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fleas/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/fleas/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fleas/index.html.erb" afterPath="$PROJECT_DIR$/app/views/fleas/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/fleas/new.html.erb" afterPath="$PROJECT_DIR$/app/views/fleas/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/info/show.html.erb" afterPath="$PROJECT_DIR$/app/views/info/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/aws.rb" afterPath="$PROJECT_DIR$/config/initializers/aws.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_error_messages.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_error_messages.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
     </list>
     <ignored path="gongbangin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,8 +106,8 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/gongbangin@IRB_console__gongbangin.coverage" NAME="IRB console: gongbangin Coverage Results" MODIFIED="1470470791118" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="gongbangin" />
-    <SUITE FILE_PATH="coverage/gongbangin@Development__gongbangin.coverage" NAME="Development: gongbangin Coverage Results" MODIFIED="1470732581873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="gongbangin" />
     <SUITE FILE_PATH="coverage/gongbangin@Rails_console__gongbangin.coverage" NAME="Rails console: gongbangin Coverage Results" MODIFIED="1470733529211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="gongbangin" />
+    <SUITE FILE_PATH="coverage/gongbangin@Development__gongbangin.coverage" NAME="Development: gongbangin Coverage Results" MODIFIED="1470734533477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="gongbangin" />
     <SUITE FILE_PATH="coverage/gongbangin@db_drop__gongbangin.coverage" NAME="db:drop: gongbangin Coverage Results" MODIFIED="1470726598250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="gongbangin" />
     <SUITE FILE_PATH="coverage/gongbangin@db_migrate__gongbangin.coverage" NAME="db:migrate: gongbangin Coverage Results" MODIFIED="1470726601819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="gongbangin" />
   </component>
@@ -79,11 +151,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="aws.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="aws.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/initializers/aws.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+            <state relative-caret-position="90">
+              <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -99,11 +171,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.html.erb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="edit.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
+            <state relative-caret-position="72">
+              <caret line="54" column="25" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -132,8 +204,8 @@
       <file leaf-file-name="new.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+            <state relative-caret-position="159">
+              <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -143,7 +215,7 @@
         <entry file="file://$PROJECT_DIR$/db/migrate/20160727090838_devise_create_users.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="432">
-              <caret line="38" column="37" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
+              <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -569,7 +641,7 @@
       <recent name="$PROJECT_DIR$/app/assets" />
     </key>
   </component>
-  <component name="RunManager" selected="IRB console.Rails console: gongbangin">
+  <component name="RunManager" selected="Rails.Development: gongbangin">
     <configuration default="false" name="Rails console: gongbangin" type="IrbRunConfigurationType" factoryName="IRB console" temporary="true">
       <module name="gongbangin" />
       <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -909,12 +981,12 @@
       <workItem from="1470461666477" duration="5410000" />
       <workItem from="1470468920507" duration="2931000" />
       <workItem from="1470573033323" duration="57000" />
-      <workItem from="1470722417553" duration="9934000" />
+      <workItem from="1470722417553" duration="10281000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44888000" />
+    <option name="totallyTimeSpent" value="45235000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -927,19 +999,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25767368" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25767368" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287858" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25925925" sideWeight="0.51" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32804233" sideWeight="0.496875" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936507" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4484127" sideWeight="0.49" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4484127" sideWeight="0.49" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3968254" sideWeight="0.496875" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3968254" sideWeight="0.496875" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287858" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -968,8 +1040,13 @@
           <url>file://$PROJECT_DIR$/app/helpers/fleas_helper.rb</url>
           <line>8</line>
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/controllers/registrations_controller.rb</url>
+          <line>9</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1267,15 +1344,7 @@
     <entry file="file://$PROJECT_DIR$/db/migrate/20160727090838_devise_create_users.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
-          <caret line="38" column="37" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -1284,14 +1353,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="353">
           <caret line="55" column="31" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -1328,6 +1389,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/registrations_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -1341,8 +1410,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/initializers/aws.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+        <state relative-caret-position="90">
+          <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="54" column="25" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
           <folding />
         </state>
       </provider>

@@ -26,7 +26,6 @@
     letter-spacing: 1px;
 }
 
-
 .text-center .promo-btn,
 .text-center .promo-btn a,
 .text-center .promo-info span,
@@ -42,7 +41,6 @@
     padding-right: 0;
 }
 
-
 .promo-info h1 span,
 .promo-info h2 span,
 .promo-info h3 span,
@@ -50,7 +48,7 @@
 .promo-info h5 span,
 .promo-info h6 span {
     margin-top: 0;
-    display:inline;
+    display: inline;
 }
 
 .promo-info span {
@@ -103,7 +101,6 @@
 .full-width.promo-box {
     padding: 60px 0;
 }
-
 
 .full-width.promo-box .promo-btn {
     right: 0;

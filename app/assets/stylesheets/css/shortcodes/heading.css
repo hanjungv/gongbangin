@@ -2,7 +2,6 @@
     heading
 -------------------------------------------------------------------*/
 
-
 .heading-title {
     margin-bottom: 100px;
 }
@@ -64,7 +63,7 @@
     color: #fff;
 }
 
-.heading-title span.heading-sub-title ,
+.heading-title span.heading-sub-title,
 .heading-title-alt span.heading-sub-title {
     /*font-family: 'Abel', sans-serif;*/
     letter-spacing: 3px;
@@ -87,7 +86,7 @@
 .heading-title-side-border h3,
 .heading-title-side-border h4,
 .heading-title-side-border h5,
-.heading-title-side-border h6{
+.heading-title-side-border h6 {
     white-space: pre;
     padding: 0 10px 0 0;
     margin-bottom: 0;
@@ -98,14 +97,14 @@
 .heading-title-side-border.text-right h3,
 .heading-title-side-border.text-right h4,
 .heading-title-side-border.text-right h5,
-.heading-title-side-border.text-right h6{
+.heading-title-side-border.text-right h6 {
     white-space: pre;
     padding: 0 0 0 10px;
 }
 
 .heading-title-side-border h4,
 .heading-title-side-border h5,
-.heading-title-side-border h6{
+.heading-title-side-border h6 {
     padding: 0 10px 0 0;
 }
 
@@ -124,19 +123,19 @@
     top: 8px;
 }
 
-.heading-title-side-border h1 + .title-border-container .title-border  {
+.heading-title-side-border h1 + .title-border-container .title-border {
     top: 12px;
 }
 
-.heading-title-side-border h4 + .title-border-container .title-border  {
+.heading-title-side-border h4 + .title-border-container .title-border {
     top: 6px;
 }
 
-.heading-title-side-border h5 + .title-border-container .title-border  {
+.heading-title-side-border h5 + .title-border-container .title-border {
     top: 5px;
 }
 
-.heading-title-side-border h6 + .title-border-container .title-border  {
+.heading-title-side-border h6 + .title-border-container .title-border {
     top: 4px;
 }
 
@@ -146,7 +145,6 @@
 .heading-title.border h4,
 .heading-title.border h5,
 .heading-title.border h6,
-
 .heading-title-alt.border h1,
 .heading-title-alt.border h2,
 .heading-title-alt.border h3,
@@ -160,9 +158,8 @@
 }
 
 .heading-title.border span,
-.heading-title-alt.border span
-{
-    display:block;
+.heading-title-alt.border span {
+    display: block;
 }
 
 .border-short-bottom h1,
@@ -170,8 +167,7 @@
 .border-short-bottom h3,
 .border-short-bottom h4,
 .border-short-bottom h5,
-.border-short-bottom h6
-{
+.border-short-bottom h6 {
     position: relative;
     margin-bottom: 20px;
     padding-bottom: 10px;
@@ -182,8 +178,7 @@
 .border-short-bottom h3:after,
 .border-short-bottom h4:after,
 .border-short-bottom h5:after,
-.border-short-bottom h6:after
-{
+.border-short-bottom h6:after {
     width: 60px;
     height: 2px;
     background: #595959;

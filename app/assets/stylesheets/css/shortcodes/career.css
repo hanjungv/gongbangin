@@ -2,7 +2,6 @@
     career-box
 -------------------------------------------------------------------*/
 
-
 .career-list {
     position: relative;
 }
@@ -23,8 +22,8 @@ a.show-detail {
     font-size: 12px;
 }
 
-a.show-detail:after{
-    content:"\f178";
+a.show-detail:after {
+    content: "\f178";
     font-family: 'FontAwesome', serif;
     padding-left: 10px;
 }

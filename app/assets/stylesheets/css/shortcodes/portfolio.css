@@ -1,4 +1,3 @@
-
 /* ----------------------------------------------------------------
 	portfolio
 -----------------------------------------------------------------*/
@@ -15,7 +14,7 @@
     position: relative;
 }
 
-.portfolio .portfolio-item .thumb img{
+.portfolio .portfolio-item .thumb img {
     width: 100%;
     height: auto;
     display: block;
@@ -35,13 +34,11 @@
     transition: all 0.3s;
 }
 
-
 .portfolio-item:hover .portfolio-hover,
 .portfolio-item:hover .portfolio-hover .portfolio-description,
 .portfolio-item:hover .portfolio-hover .action-btn {
     opacity: 1;
 }
-
 
 .portfolio-item:hover .portfolio-hover .portfolio-description {
     bottom: 45%;
@@ -64,7 +61,6 @@
     -webkit-transition: all 0.3s 0.2s;
     transition: all 0.3s 0.2s;
 }
-
 
 .portfolio-hover .action-btn {
     position: absolute;
@@ -95,7 +91,7 @@
 }
 
 .portfolio-description p {
-    font-size:12px;
+    font-size: 12px;
     margin-bottom: 0;
     text-transform: uppercase;
     /*font-family: 'Abel', sans-serif;*/
@@ -115,13 +111,11 @@
     padding: 10px;
 }
 
-
 /*portfolio 2 grid*/
 
 .portfolio.col-2 .portfolio-item {
     width: 49.99%;
 }
-
 
 /*portfolio 3 grid*/
 
@@ -148,7 +142,7 @@
 }
 
 .portfolio-filter {
-    margin:0;
+    margin: 0;
     padding: 0;
     list-style: none;
 }
@@ -166,18 +160,14 @@
     letter-spacing: 3px;
 }
 
-
 .portfolio-filter li a:hover,
-.portfolio-filter li.active a{
+.portfolio-filter li.active a {
     color: #222222;
 }
-
-
 
 /* ----------------------------------------------------------------
 	portfolio with title
 -----------------------------------------------------------------*/
-
 
 .portfolio-with-title .portfolio-item:hover .portfolio-hover .action-btn {
     top: 50%;
@@ -194,7 +184,7 @@
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color:#222
+    color: #222
 }
 
 .portfolio-with-title .portfolio-title h3,
@@ -203,7 +193,7 @@
     font-size: 18px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color:#222
+    color: #222
 }
 
 .portfolio-with-title .portfolio-title p {
@@ -216,11 +206,9 @@
     color: #7e7e7e;
 }
 
-
 .portfolio-with-title.portfolio-masonry .portfolio-title {
     padding: 15px;
 }
-
 
 .portfolio-with-title.portfolio-masonry.gutter .portfolio-title {
     padding: 15px 0;
@@ -229,7 +217,6 @@
 /* ----------------------------------------------------------------
 	portfolio masonry
 -----------------------------------------------------------------*/
-
 
 .portfolio-masonry {
 
@@ -248,15 +235,17 @@
     float: left;
 }
 
-.portfolio-masonry .portfolio-item-width2 { width: 200px; }
-.portfolio-masonry .portfolio-item-height2 { height: 200px; }
+.portfolio-masonry .portfolio-item-width2 {
+    width: 200px;
+}
 
-
+.portfolio-masonry .portfolio-item-height2 {
+    height: 200px;
+}
 
 /* ----------------------------------------------------------------
 	Isotope Filtering
 -----------------------------------------------------------------*/
-
 
 .isotope-item {
     z-index: 2;
@@ -306,7 +295,6 @@
     transition-duration: 0s;
 }
 
-
 /* disable CSS transitions for containers with infinite scrolling*/
 .isotope.infinite-scrolling {
     -webkit-transition: none;
@@ -315,7 +303,6 @@
     -o-transition: none;
     transition: none;
 }
-
 
 /* ----------------------------------------------------------------
 	portfolio details
@@ -328,7 +315,7 @@
     overflow: hidden;
 }
 
-.video-parallax .container{
+.video-parallax .container {
     position: absolute;
     top: 50%;
     z-index: 100;
@@ -338,13 +325,13 @@
     margin-top: -80px;
 }
 
-.video-parallax .container i{
+.video-parallax .container i {
     font-size: 50px;
     margin-bottom: 30px;
     display: block;
 }
 
-.video-parallax .container+.video-wrap {
+.video-parallax .container + .video-wrap {
     z-index: 1;
 }
 
@@ -361,7 +348,7 @@
     top: 0;
     left: 0;
     z-index: 5;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     -webkit-backface-visibility: hidden;
 }
 
@@ -390,6 +377,7 @@
     margin-right: 10px;
     color: #cdcdcd;
 }
+
 .portfolio-meta li a:hover {
     color: #323232;
 }
@@ -435,7 +423,7 @@
 }
 
 .portfolio-nav a:hover,
-.portfolio-nav a:hover span{
+.portfolio-nav a:hover span {
     color: #323232;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;

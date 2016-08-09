@@ -1,149 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="Mosaddek">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="Mosaddek">
 
-    <!--favicon icon-->
-    <link rel="icon" type="image/png" href="img/favicon.png">
+  <!--favicon icon-->
+  <link rel="icon" type="image/png" href="img/favicon.png">
 
-    <title>portfolio single alt</title>
+  <title>portfolio single alt</title>
 
-    <!--common style-->
+  <!--common style-->
 </head>
 <body>
 
-    <!--  preloader start -->
+<!--  preloader start -->
 <div id="tb-preloader">
-    <div class="tb-preloader-wave"></div>
+  <div class="tb-preloader-wave"></div>
 </div>
 <!-- preloader end -->
 
 
 <div class="wrapper">
-        <!--body content start-->
-        <section class="body-content">
-            <div class="container">
-                <div class="row ">
-                    <div class="m-bot-100">
-                        <div class="col-md-8">
-                            <div class="full-width">
-                                <%=image_tag("#{current_user.profile_image_url}")%>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="heading-title-side-border text-left">
-                                <h4 class="text-uppercase"><%=current_user.level%> <%=current_user.name%> 입니다.</h4>
-                                <div class="title-border-container">
-                                    <div class="title-border"></div>
-                                </div>
-                            </div>
-                            <p>
-                              <%=current_user.introduction%>
-                            </p>
-
-                            <ul class="portfolio-meta m-bot-30">
-                                <li><span> Email </span> <%=current_user.email%> </li>
-                                <li><span> C.P Number </span> <%=current_user.phone_number%> </li>
-                                <li style = "color:<%=current_user.tier%>"><span> Tier </span> <%=current_user.tier%></li>
-                                <li><span> 사업자명 </span> <%=current_user.brand%></li>
-                                <li><span> 사업자번호 </span> <%=current_user.brand_number%></li>
-                                <li><span> Skills </span> </li>
-                                <li><span> SHARE </span> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
+  <!--body content start-->
+  <section class="body-content">
+    <div class="container">
+      <div class="row ">
+        <div class="m-bot-100">
+          <div class="col-md-8">
+            <div class="full-width">
+              <%= image_tag("#{current_user.profile_image_url}") %>
             </div>
-
-            <hr/>
-
-            <div class="page-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-
-                            <div class="heading-title-alt text-left ">
-                                <h4 class="text-uppercase">내 아이템(품목)</h4>
-                                <span class="text-uppercase">Lid est laborum dolo rumes fugats untras.</span>
-                            </div>
-
-                            <!--show my item-->
-
-                            <div id="portfolio-carousel" class=" portfolio-with-title col-3 ">
-                                <div class="portfolio-item">
-                                    <div class="thumb">
-                                        <%=image_tag("maintest.jpg")%>
-                                        <div class="portfolio-hover">
-                                            <div class="action-btn">
-                                                <a href="img/portfolio/01.jpg" class="popup-link" title="lightbox view"> <i class="icon-basic_magnifier"></i>  </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="portfolio-title">
-                                        <h4><a href="img/portfolio/01.jpg" class="popup-link" title="lightbox view">perspiciatis unde omnis</a></h4>
-                                        <p><a href="#">category 1</a> , <a href="#">category 3</a> </p>
-                                    </div>
-                                </div>
-
-                                <div class="portfolio-item">
-                                    <div class="thumb">
-                                      <%=image_tag("maintest.jpg")%>
-                                        <div class="portfolio-hover">
-                                            <div class="action-btn">
-                                                <a href="img/portfolio/02.jpg" class="popup-link" title="lightbox view"> <i class="icon-basic_magnifier"></i>  </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="portfolio-title">
-                                        <h4><a href="img/portfolio/02.jpg" class="popup-link" title="lightbox view">denouncing pleasure</a></h4>
-                                        <p><a href="#">category 1</a> , <a href="#">category 3</a> </p>
-                                    </div>
-                                </div>
-
-                                <div class="portfolio-item">
-                                    <div class="thumb">
-                                        <%=image_tag("maintest.jpg")%>
-                                        <div class="portfolio-hover">
-                                            <div class="action-btn">
-                                                <a href="img/portfolio/03.jpg" class="popup-link" title="lightbox view"> <i class="icon-basic_magnifier"></i>  </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="portfolio-title">
-                                        <h4><a href="img/portfolio/03.jpg" class="popup-link" title="lightbox view">annoyances accepted</a></h4>
-                                        <p><a href="#">category 1</a> , <a href="#">category 3</a> </p>
-                                    </div>
-                                </div>
-
-                                <div class="portfolio-item">
-                                    <div class="thumb">
-                                        <%=image_tag("maintest.jpg")%>
-                                        <div class="portfolio-hover">
-                                            <div class="action-btn">
-                                                <a href="img/portfolio/04.jpg" class="popup-link" title="lightbox view"> <i class="icon-basic_magnifier"></i>  </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="portfolio-title">
-                                        <h4><a href="img/portfolio/04.jpg" class="popup-link" title="lightbox view">annoyances accepted</a></h4>
-                                        <p><a href="#">category 1</a> , <a href="#">category 3</a> </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--portfolio carousel-->
-
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div class="col-md-4">
+            <div class="heading-title-side-border text-left">
+              <h4 class="text-uppercase"><%= current_user.level %> <%= current_user.name %> 입니다.</h4>
+              <div class="title-border-container">
+                <div class="title-border"></div>
+              </div>
             </div>
+            <p>
+              <%= current_user.introduction %>
+            </p>
 
+            <ul class="portfolio-meta m-bot-30">
+              <li><span> Email </span> <%= current_user.email %> </li>
+              <li><span> C.P Number </span> <%= current_user.phone_number %> </li>
+              <li style="color:<%= current_user.tier %>"><span> Tier </span> <%= current_user.tier %></li>
+              <li><span> 사업자명 </span> <%= current_user.brand %></li>
+              <li><span> 사업자번호 </span> <%= current_user.brand_number %></li>
+              <li><span> Skills </span></li>
+              <li><span> SHARE </span> <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
 
-        </section>
-        <!--body content end-->
+      </div>
     </div>
+
+    <hr/>
+
+    <div class="page-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+
+            <div class="heading-title-alt text-left ">
+              <h4 class="text-uppercase">내 아이템(품목)</h4>
+              <span class="text-uppercase">Lid est laborum dolo rumes fugats untras.</span>
+            </div>
+
+            <!--show my item-->
+
+            <div id="portfolio-carousel" class=" portfolio-with-title col-3 ">
+              <div class="portfolio-item">
+                <div class="thumb">
+                  <%= image_tag("maintest.jpg") %>
+                  <div class="portfolio-hover">
+                    <div class="action-btn">
+                      <a href="img/portfolio/01.jpg" class="popup-link" title="lightbox view">
+                        <i class="icon-basic_magnifier"></i> </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-title">
+                  <h4>
+                    <a href="img/portfolio/01.jpg" class="popup-link" title="lightbox view">perspiciatis unde omnis</a>
+                  </h4>
+                  <p><a href="#">category 1</a> , <a href="#">category 3</a></p>
+                </div>
+              </div>
+
+              <div class="portfolio-item">
+                <div class="thumb">
+                  <%= image_tag("maintest.jpg") %>
+                  <div class="portfolio-hover">
+                    <div class="action-btn">
+                      <a href="img/portfolio/02.jpg" class="popup-link" title="lightbox view">
+                        <i class="icon-basic_magnifier"></i> </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-title">
+                  <h4><a href="img/portfolio/02.jpg" class="popup-link" title="lightbox view">denouncing pleasure</a>
+                  </h4>
+                  <p><a href="#">category 1</a> , <a href="#">category 3</a></p>
+                </div>
+              </div>
+
+              <div class="portfolio-item">
+                <div class="thumb">
+                  <%= image_tag("maintest.jpg") %>
+                  <div class="portfolio-hover">
+                    <div class="action-btn">
+                      <a href="img/portfolio/03.jpg" class="popup-link" title="lightbox view">
+                        <i class="icon-basic_magnifier"></i> </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-title">
+                  <h4><a href="img/portfolio/03.jpg" class="popup-link" title="lightbox view">annoyances accepted</a>
+                  </h4>
+                  <p><a href="#">category 1</a> , <a href="#">category 3</a></p>
+                </div>
+              </div>
+
+              <div class="portfolio-item">
+                <div class="thumb">
+                  <%= image_tag("maintest.jpg") %>
+                  <div class="portfolio-hover">
+                    <div class="action-btn">
+                      <a href="img/portfolio/04.jpg" class="popup-link" title="lightbox view">
+                        <i class="icon-basic_magnifier"></i> </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-title">
+                  <h4><a href="img/portfolio/04.jpg" class="popup-link" title="lightbox view">annoyances accepted</a>
+                  </h4>
+                  <p><a href="#">category 1</a> , <a href="#">category 3</a></p>
+                </div>
+              </div>
+            </div>
+            <!--portfolio carousel-->
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+  <!--body content end-->
+</div>
 </body>
 </html>

@@ -19,5 +19,5 @@ class User < ActiveRecord::Base
 
   mount_uploader :profile_image_url, AwsS3Uploader
 
-  validates :nickname, presence:{message:"닉네임을 입력해주세요!"}, length:{maximum:15, message:"닉네임이 너무 깁니다!"}, uniqueness: true
+  validates :nickname, presence: {message: "닉네임을 입력해주세요!"}, length: {maximum: 15, message: "닉네임이 너무 깁니다!"}, uniqueness: true
 end

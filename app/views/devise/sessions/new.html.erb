@@ -1,4 +1,3 @@
-
 <div class="login login-bg login-parallax">
   <div class="login-logo text-center">
   </div>
@@ -8,42 +7,42 @@
         <h3><%= t('.sign_in', :default => 'Sign in') %></h3>
       </div>
       <div class="panel-body">
-        <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { role: 'form'}) do |f| %>
-          <div class="form-group">
-            <div class="input-group">
-              <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
-            <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: 'Email' %>
-          </div>
-          </div>
-          <div class="form-group">
-            <div class="input-group">
-              <span class="input-group-addon"><i class="fa fa-lock" aria-hidden="true"></i></span>
-            <%= f.password_field :password, autocomplete: 'off', class: 'form-control', placeholder: 'Password' %>
-        </div>
-        </div>
-          <% if devise_mapping.rememberable? %>
-            <div class="checkbox">
-              <%= f.label :remember_me do %>
-                <%= f.check_box :remember_me %>저장할까요?
-              <% end %>
-              <a class="pull-right" data-toggle="modal" href="/users/password/new">비밀번호를 잊으셨나요?</a>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {role: 'form'}) do |f| %>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: 'Email' %>
+              </div>
             </div>
-          <% end %>
-          <div>
-            <%= f.submit t('.sign_in', :default => 'Sign in'), class: 'btn btn-small btn-dark-solid full-width btn-rounded' %>
-          </div>
-          <div class="login-social-link text-center">
-            <br>
-            <a href="#" class="facebook full-width">Facebook으로 로그인하기</a>
-          </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                <%= f.password_field :password, autocomplete: 'off', class: 'form-control', placeholder: 'Password' %>
+              </div>
+            </div>
+            <% if devise_mapping.rememberable? %>
+                <div class="checkbox">
+                  <%= f.label :remember_me do %>
+                      <%= f.check_box :remember_me %>저장할까요?
+                  <% end %>
+                  <a class="pull-right" data-toggle="modal" href="/users/password/new">비밀번호를 잊으셨나요?</a>
+                </div>
+            <% end %>
+            <div>
+              <%= f.submit t('.sign_in', :default => 'Sign in'), class: 'btn btn-small btn-dark-solid full-width btn-rounded' %>
+            </div>
+            <div class="login-social-link text-center">
+              <br>
+              <a href="#" class="facebook full-width">Facebook으로 로그인하기</a>
+            </div>
         <% end %>
       </div>
     </div>
-    <div class = "text-center">
+    <div class="text-center">
       <a href="/users/sign_up" style="color:skyblue; font-weight:bold;">가입하기</a>
     </div>
   </div>
   <div class="copyright-row text-center">
-    Copyrights © All Rights Reserved by  <a href="#" style="color:pink; font-weight:bold;">Team공방</a>
+    Copyrights © All Rights Reserved by <a href="#" style="color:pink; font-weight:bold;">Team공방</a>
   </div>
 </div>

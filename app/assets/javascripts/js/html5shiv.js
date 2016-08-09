@@ -1,7 +1,7 @@
 /*
  HTML5 Shiv v3.6.2pre | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
-*/
-(function(l, f) {
+ */
+(function (l, f) {
     function m() {
         var a = e.elements;
         return "string" == typeof a ? a.split(" ") : a
@@ -23,14 +23,14 @@
 
     function t(a, b) {
         if (!b.cache) b.cache = {}, b.createElem = a.createElement, b.createFrag = a.createDocumentFragment, b.frag = b.createFrag();
-        a.createElement = function(c) {
+        a.createElement = function (c) {
             return !e.shivMethods ? b.createElem(c) : p(c, a, b)
         };
-        a.createDocumentFragment = Function("h,f", "return function(){var n=f.cloneNode(),c=n.createElement;h.shivMethods&&(" + m().join().replace(/\w+/g, function(a) {
-            b.createElem(a);
-            b.frag.createElement(a);
-            return 'c("' + a + '")'
-        }) + ");return n}")(e, b.frag)
+        a.createDocumentFragment = Function("h,f", "return function(){var n=f.cloneNode(),c=n.createElement;h.shivMethods&&(" + m().join().replace(/\w+/g, function (a) {
+                b.createElem(a);
+                b.frag.createElement(a);
+                return 'c("' + a + '")'
+            }) + ");return n}")(e, b.frag)
     }
 
     function q(a) {
@@ -47,6 +47,7 @@
         g || t(a, b);
         return a
     }
+
     var k = l.html5 || {},
         s = /^<|^(?:button|map|select|textarea|object|iframe|option|optgroup)$/i,
         r = /^(?:a|b|code|div|fieldset|h1|h2|h3|h4|h5|h6|i|label|li|ol|p|q|span|strong|style|table|tbody|td|th|tr|ul)$/i,
@@ -54,7 +55,7 @@
         h = 0,
         n = {},
         g;
-    (function() {
+    (function () {
         try {
             var a = f.createElement("a");
             a.innerHTML = "<xyz></xyz>";
@@ -80,7 +81,7 @@
         type: "default",
         shivDocument: q,
         createElement: p,
-        createDocumentFragment: function(a, b) {
+        createDocumentFragment: function (a, b) {
             a || (a = f);
             if (g) return a.createDocumentFragment();
             for (var b = b || i(a), c = b.frag.cloneNode(), d = 0, e = m(), h = e.length; d < h; d++) c.createElement(e[d]);

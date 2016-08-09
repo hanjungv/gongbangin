@@ -7,17 +7,17 @@
     padding-left: 20px;
 }
 
-.icon-list li{
+.icon-list li {
     line-height: 30px;
 }
 
-.icon-list li i{
+.icon-list li i {
     width: 20px;
     display: inline-block;
     margin-right: 10px;
 }
 
-.icon-border li i{
+.icon-border li i {
     border: 1px solid #ddd;
     width: 30px;
     height: 30px;
@@ -31,7 +31,7 @@
     margin-bottom: 10px;
 }
 
-.icon-bg-box li i{
+.icon-bg-box li i {
     background: #ddd;
     width: 30px;
     height: 30px;
@@ -40,7 +40,7 @@
 
 }
 
-.icon-dark li i{
+.icon-dark li i {
     background: #222;
     width: 30px;
     height: 30px;
@@ -49,10 +49,10 @@
     color: #fff;
 }
 
-.circle li i{
+.circle li i {
     border-radius: 50%;
 }
 
-.radius li i{
+.radius li i {
     border-radius: 4px;
 }

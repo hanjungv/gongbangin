@@ -7,7 +7,6 @@
     transform: translateX(100%);
 }
 
-
 .cd-nav-trigger {
     position: fixed;
     z-index: 1300;
@@ -15,7 +14,7 @@
     top: 20px;
     height: 40px;
     width: 40px;
-    background-color: rgba(0,0,0,.9);
+    background-color: rgba(0, 0, 0, .9);
     border-radius: 0;
     /* image replacement */
     overflow: hidden;
@@ -25,6 +24,7 @@
     -moz-transition: -moz-transform 0.5s;
     transition: transform 0.5s;
 }
+
 .cd-nav-trigger .cd-nav-icon {
     /* icon created in CSS */
     position: absolute;
@@ -41,6 +41,7 @@
     height: 2px;
     background-color: #ffffff;
 }
+
 .cd-nav-trigger .cd-nav-icon::before, .cd-nav-trigger .cd-nav-icon:after {
     /* upper and lower lines of the menu icon */
     content: '';
@@ -62,6 +63,7 @@
     -moz-transition: -moz-transform 0.5s, width 0.5s, top 0.3s;
     transition: transform 0.5s, width 0.5s, top 0.3s;
 }
+
 .cd-nav-trigger .cd-nav-icon::before {
     -webkit-transform-origin: right top;
     -moz-transform-origin: right top;
@@ -74,6 +76,7 @@
     -o-transform: translateY(-6px);
     transform: translateY(-6px);
 }
+
 .cd-nav-trigger .cd-nav-icon::after {
     -webkit-transform-origin: right bottom;
     -moz-transform-origin: right bottom;
@@ -86,23 +89,28 @@
     -o-transform: translateY(6px);
     transform: translateY(6px);
 }
+
 .no-touch .cd-nav-trigger:hover .cd-nav-icon::after {
     top: 2px;
 }
+
 .no-touch .cd-nav-trigger:hover .cd-nav-icon::before {
     top: -2px;
 }
+
 .cd-nav-trigger svg {
     position: absolute;
     top: 0;
     left: 0;
 }
+
 .cd-nav-trigger circle {
     /* circle border animation */
     -webkit-transition: stroke-dashoffset 0.4s 0s;
     -moz-transition: stroke-dashoffset 0.4s 0s;
     transition: stroke-dashoffset 0.4s 0s;
 }
+
 .navigation-is-open .cd-nav-trigger {
     /* rotate trigger when navigation becomes visible */
     -webkit-transform: rotate(180deg);
@@ -111,6 +119,7 @@
     -o-transform: rotate(180deg);
     transform: rotate(180deg);
 }
+
 .navigation-is-open .cd-nav-trigger .cd-nav-icon::after,
 .navigation-is-open .cd-nav-trigger .cd-nav-icon::before {
     /* animate arrow --> from hamburger to arrow */
@@ -119,6 +128,7 @@
     -moz-transition: -moz-transform 0.5s, width 0.5s;
     transition: transform 0.5s, width 0.5s;
 }
+
 .navigation-is-open .cd-nav-trigger .cd-nav-icon::before {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
@@ -126,6 +136,7 @@
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
 }
+
 .navigation-is-open .cd-nav-trigger .cd-nav-icon::after {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
@@ -133,15 +144,18 @@
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
 }
+
 .no-touch .navigation-is-open .cd-nav-trigger:hover .cd-nav-icon::after, .no-touch .navigation-is-open .cd-nav-trigger:hover .cd-nav-icon::before {
     top: 0;
 }
+
 .navigation-is-open .cd-nav-trigger circle {
     stroke-dashoffset: 0;
     -webkit-transition: stroke-dashoffset 0.4s 0.3s;
     -moz-transition: stroke-dashoffset 0.4s 0.3s;
     transition: stroke-dashoffset 0.4s 0.3s;
 }
+
 @media only screen and (min-width: 1170px) {
     .cd-nav-trigger {
         top: 40px;
@@ -155,12 +169,13 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0,0,0,.9);
+    background-color: rgba(0, 0, 0, .9);
     visibility: hidden;
     -webkit-transition: visibility 0s 0.7s;
     -moz-transition: visibility 0s 0.7s;
     transition: visibility 0s 0.7s;
 }
+
 .cd-nav .cd-navigation-wrapper {
     /* all navigation content */
     height: 100%;
@@ -187,12 +202,14 @@
     -moz-transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
     transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
 }
+
 .navigation-is-open .cd-nav {
     visibility: visible;
     -webkit-transition: visibility 0s 0s;
     -moz-transition: visibility 0s 0s;
     transition: visibility 0s 0s;
 }
+
 .navigation-is-open .cd-nav .cd-navigation-wrapper {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
@@ -206,6 +223,7 @@
     -moz-transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78);
     transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78);
 }
+
 .cd-nav h2 {
     position: relative;
     margin-bottom: 1.7em;
@@ -214,6 +232,7 @@
     color: #e8e8e8;
     text-transform: uppercase;
 }
+
 .cd-nav h2::after {
     /* bottom separation line */
     content: '';
@@ -224,14 +243,17 @@
     width: 60px;
     background-color: currentColor;
 }
+
 .cd-nav .cd-primary-nav {
     margin-top: 60px;
     padding: 0;
     list-style: none;
 }
+
 .cd-nav .cd-primary-nav li {
     margin: 1.6em 0;
 }
+
 .cd-nav .cd-primary-nav a {
     /*font-family: "Merriweather", serif;*/
     font-size: 2.4rem;
@@ -239,61 +261,74 @@
     display: inline-block;
 }
 
-
 .cd-nav .cd-contact-info {
     margin-top: 80px;
     padding: 0;
     list-style: none;
 }
+
 .cd-nav .cd-contact-info li {
     /*font-family: "Merriweather", serif;*/
     margin-bottom: 1.5em;
     line-height: 1.2;
     color: rgba(255, 255, 255, 0.6);
 }
+
 .cd-nav .cd-contact-info a {
     color: #ffffff;
 }
+
 .cd-nav .cd-contact-info span {
     display: block;
 }
+
 .cd-nav .cd-contact-info li, .cd-nav .cd-contact-info a, .cd-nav .cd-contact-info span {
     font-size: 1.6rem;
 }
+
 @media only screen and (min-width: 1170px) {
     .cd-nav .cd-navigation-wrapper {
         padding: 62px 20%;
     }
+
     .cd-nav .cd-navigation-wrapper::after {
         clear: both;
         content: "";
         display: table;
     }
+
     .cd-nav .cd-half-block {
         width: 50%;
         float: left;
     }
+
     .cd-nav .cd-primary-nav {
         margin-top: 0;
     }
+
     .cd-nav h2 {
         font-size: 1.5rem;
         margin-bottom: 5.6em;
     }
+
     .cd-nav .cd-primary-nav li {
         margin: 1em 0;
     }
+
     .cd-nav .cd-primary-nav a {
         font-size: 2.5rem;
         font-weight: 300;
     }
+
     .cd-nav .cd-contact-info {
         margin-top: 120px;
         text-align: right;
     }
+
     .cd-nav .cd-contact-info li {
         margin-bottom: 2.4em;
     }
+
     .cd-nav .cd-contact-info li, .cd-nav .cd-contact-info a, .cd-nav .cd-contact-info span {
         font-size: 1.6rem;
         line-height: 25px;
@@ -309,6 +344,7 @@
     position: static;
     visibility: visible;
 }
+
 .no-js .cd-nav .cd-navigation-wrapper {
     height: auto;
     overflow: visible;
