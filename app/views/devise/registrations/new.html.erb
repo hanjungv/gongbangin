@@ -7,41 +7,20 @@
         <div class="panel-body">
           <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { role: 'form'}) do |f| %>
             <div class="form-group col-xs-12">
-              <%= f.label :email %>
+              <%= f.label :이메일 %>
               <%= f.email_field :email, autofocus: true, class: 'form-control ', placeholder: 'e-mail 양식을 지켜주세요'%>
             </div>
-            <div class="form-group col-xs-6">
-              <%= f.label :password %><br />
+            <div class="form-group col-xs-4">
+              <%= f.label :패스워드 %><br />
               <%= f.password_field :password, class: 'form-control', placeholder: '6글자 이상으로 구성해주세요' %>
             </div>
-            <div class="form-group col-xs-6">
-              <%= f.label :password_confirmation %>
+            <div class="form-group col-xs-4">
+              <%= f.label :확인 패스워드%>
               <%= f.password_field :password_confirmation, class: 'form-control', placeholder: '다시한번 입력해주세요' %>
             </div>
-
             <div class="form-group col-xs-4">
-              <%= f.label :이름 %>
-              <%= f.text_field :name, class: 'form-control', placeholder: '이름을 입력해주세요' %>
-            </div>
-            <div class="form-group col-xs-4">
-              <%= f.label :전화번호 %>
-              <%= f.text_field :phone_number, class: 'form-control', placeholder: '전화번호를 입력해주세요' %>
-            </div>
-            <div class="form-group col-xs-4">
-              <%= f.label :주소 %>
-              <%= f.text_field :address, class: 'form-control', placeholder: '주소를 입력해주세요' %>
-            </div>
-            <div class="form-group col-xs-12">
-              <%= f.label :자기소개 %>
-              <%= f.text_field :introduce, class: 'form-control', placeholder: '한줄 자기소개를 입력해 주세요' %>
-            </div>
-            <div class="form-group col-xs-6">
-              <%= f.label :사업자명 %>
-              <%= f.text_field :brand, class: 'form-control', placeholder: '사업자명을 입력해주세요' %>
-            </div>
-            <div class="form-group col-xs-6">
-              <%= f.label :사업자번호 %>
-              <%= f.text_field :brand_number, class: 'form-control', placeholder: '사업자번호를 입력해주세요' %>
+              <%= f.label :닉네임 %>
+              <%= f.text_field :nickname, class: 'form-control', placeholder: '사용하실 닉네임을 입력해주세요' %>
             </div>
             <%= f.submit t('.sign_up', :default => 'Sign up'), class: 'btn btn-primary' %>
           <% end %>
