@@ -30,7 +30,9 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :introduction, default: "안녕하세요!만나서 반가워요!"
       #tier (red-orange-yellow-green-blue-navy-purple-black, black is user. purple is maker's default value)
       t.string :tier, default: "black"
+      #score
       t.integer :score, default: 0
+
       t.string :skills, default: "없음"
       #사업자명, 사업자 번호(있는 경우만)
       t.string :brand, default:"없음"
