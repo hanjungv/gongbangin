@@ -53,7 +53,7 @@ class AwsS3Uploader < CarrierWave::Uploader::Base
   #   "something.jpg" if original_filename
   # end
   def filename
-    SecureRandom.hex(10) + "." + file.extension if original_filename
+    String(Time.now.to_f) + SecureRandom.hex(6) + "." + file.extension if original_filename
   end
 
 end
