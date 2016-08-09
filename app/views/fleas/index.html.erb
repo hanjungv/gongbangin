@@ -3,36 +3,22 @@
 <h1>Listing Fleas</h1>
 
 <table>
-  <thead>
-    <tr>
-      <th>Application period</th>
-      <th>Number of recruitment</th>
-      <th>Remark</th>
-      <th>Place</th>
-      <th>Event date</th>
-      <th>Entrance fee</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
     <% @fleas.each do |flea| %>
       <tr>
-        <td><%= flea.application_start_period %></td>
-        <td><%= flea.application_end_period %></td>
-        <td><%= flea.number_of_recruitment %></td>
-        <td><%= flea.remark %></td>
-        <td><%= flea.city_place %></td>
-        <td><%= flea.detail_place %></td>
-        <td><%= flea.event_start_date %></td>
-        <td><%= flea.event_end_date %></td>
-        <td><%= flea.entrance_fee %></td>
-        <td><%= link_to 'Show', flea %></td>
-        <td><%= link_to 'Edit', edit_flea_path(flea) %></td>
-        <td><%= link_to 'Destroy', flea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <p><%= flea.application_start_period %></p>
+        <p><%= flea.application_end_period %></p>
+        <p><%= flea.number_of_recruitment %></p>
+        <p><%= flea.remark %></p>
+        <p><%= flea.city_place %></p>
+        <p><%= flea.detail_place %></p>
+        <p><%= flea.event_start_date %></p>
+        <p><%= flea.event_end_date %></p>
+        <p><%= flea.entrance_fee %></p>
+        <p><%= link_to 'Show', flea %></p>
+        <p><%= link_to 'Edit', edit_flea_path(flea) %></p>
+        <p><%= link_to 'Destroy', flea, method: :delete, data: { confirm: 'Are you sure?' } %></p>
       </tr>
     <% end %>
-  </tbody>
 </table>
 
 <br>

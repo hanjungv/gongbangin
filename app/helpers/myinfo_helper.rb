@@ -1,2 +1,0 @@
-module MyinfoHelper
-end

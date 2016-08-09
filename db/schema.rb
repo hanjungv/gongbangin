@@ -111,9 +111,14 @@ ActiveRecord::Schema.define(version: 20160802091648) do
     t.string   "level",                  default: "seller"
     t.string   "introduce",              default: "안녕하세요!만나서 반가워요!"
     t.string   "tier",                   default: "black"
-    t.string   "brand",                  default: ""
-    t.string   "brand_number",           default: ""
+    t.integer  "score",                  default: 0
+    t.string   "skills",                 default: "없음"
+    t.string   "brand",                  default: "없음"
+    t.string   "brand_number",           default: "없음"
     t.string   "profile_image_url",      default: ""
+    t.string   "facebook_url",           default: ""
+    t.string   "twitter_url",            default: ""
+    t.string   "instagram_url",          default: ""
     t.datetime "created_at",                                         null: false
     t.datetime "updated_at",                                         null: false
   end
