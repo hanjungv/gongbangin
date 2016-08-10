@@ -26,8 +26,12 @@
 <body>
 
   <div class = "wrapper">
-     <%= render partial: '/layouts/header.html.erb' %>
-     <%= yield %>
+    <% if current_page?(root_path) %>
+        <%= render 'layouts/homeheader' %>
+    <% else %>
+        <%= render 'layouts/anotherheader' %>
+    <% end %>
+    <%= yield %>
   </div>
   <!--footer 1 start -->
   <footer id="footer" class="dark">
