@@ -1,52 +1,66 @@
 //main_page full banner
 .full-banner {
-  background: url(maintest.jpg);
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
-  position: relative;
-  background-position: 50% 50%;
+    background: url(wallpaper.jpg);
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: relative;
+    background-position: 50% 50%;
 }
 
 //preloader
 .tb-preloader-wave {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 60px;
-  height: 60px;
-  margin: -30px 0 0 -30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    margin: -30px 0 0 -30px;
 }
-
 .tb-preloader-wave:before,
 .tb-preloader-wave:after {
-  position: absolute;
-  display: inline-block;
-  content: "";
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: #222;
-  -webkit-animation: preloader-wave 1.6s linear infinite;
-  animation: preloader-wave 1.6s linear infinite;
+    position: absolute;
+    display: inline-block;
+    content: "";
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #222;
+    -webkit-animation: preloader-wave 1.6s linear infinite;
+    animation: preloader-wave 1.6s linear infinite;
+}
+.tb-preloader-wave:after {
+    animation-delay: -0.8s;
+    -webkit-animation-delay: -0.8s;
 }
 
-.tb-preloader-wave:after {
-  animation-delay: -0.8s;
-  -webkit-animation-delay: -0.8s;
-}
+
 
 //devise
 .login-bg {
-  background: #f5f5f5;
-  height: 100vh;
+    background: #f5f5f5;
+    height: 100vh;
 }
 
 .login-parallax {
-  background: url(maintest.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
+    background: url(loginwall.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
 }
+
+//search bar
+.searchquery {
+        padding-right: 3px;
+        padding-right: 4px \9;
+        padding-left: 3px;
+        padding-left: 4px \9;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+  }

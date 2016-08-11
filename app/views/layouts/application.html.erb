@@ -17,7 +17,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
   <%= stylesheet_link_tag 'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
+  <%= javascript_include_tag 'application'%>
   <%= csrf_meta_tags %>
 
   <link href='http://fonts.googleapis.com/css?family=Abel|Source+Sans+Pro:400,300,300italic,400italic,600,600italic,700,700italic,900,900italic,200italic,200' rel='stylesheet' type='text/css'>
@@ -25,29 +25,33 @@
 </head>
 <body>
 
-<div class="wrapper">
-  <%= render partial: '/layouts/header.html.erb' %>
-  <%= yield %>
-</div>
-<!--footer 1 start -->
-<footer id="footer" class="dark">
-  <div class="secondary-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <span class="m-top-10">Copyright 2016 - 공방인 by <a href="#" class="f-link">TeamGongBang</a> | All Rights Reserved</span>
-        </div>
-        <div class="col-md-6">
-          <div class="social-link circle pull-right">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-github"></i></a>
+  <div class = "wrapper">
+    <% if current_page?(root_path) %>
+        <%= render 'layouts/homeheader' %>
+    <% else %>
+        <%= render 'layouts/anotherheader' %>
+    <% end %>
+    <%= yield %>
+  </div>
+  <!--footer 1 start -->
+  <footer id="footer" class="dark">
+    <div class="secondary-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <span class="m-top-10">Copyright 2016 - 공방인 by <a href="#" class="f-link">TeamGongBang</a> | All Rights Reserved</span>
+          </div>
+          <div class="col-md-6">
+            <div class="social-link circle pull-right">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-github"></i></a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
-<!--footer 1 end-->
+  </footer>
+  <!--footer 1 end-->
 </body>
 </html>

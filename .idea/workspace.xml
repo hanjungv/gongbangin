@@ -5,14 +5,7 @@
     <option name="CUSTOM_SCOPE_NAME" value="Unnamed" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="970265b4-fe78-4acf-9e82-1aa57482fee9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gongbangin.iml" afterPath="$PROJECT_DIR$/.idea/gongbangin.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
-    </list>
+    <list default="true" id="970265b4-fe78-4acf-9e82-1aa57482fee9" name="Default" comment="" />
     <ignored path="gongbangin.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -931,12 +924,12 @@
       <workItem from="1470722417553" duration="10311000" />
       <workItem from="1470735295180" duration="559000" />
       <workItem from="1470766806398" duration="1099000" />
-      <workItem from="1470925582122" duration="1243000" />
+      <workItem from="1470925582122" duration="1271000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48166000" />
+    <option name="totallyTimeSpent" value="48194000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">

@@ -48,6 +48,9 @@ ActiveRecord::Schema.define(version: 20160802091648) do
     t.string   "name"
     t.integer  "price"
     t.string   "material"
+    t.string   "period"
+    t.integer  "user_id"
+    t.string   "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,0 +1,9 @@
+<div class= "container" style = "margin-bottom:30px;">
+  <p class = "text-center">검색결과(이메일만 나옴)</p>
+  <%= form_tag("/user", method: "get") do %>
+    <%= text_field_tag "search",nil,:placeholder => 'Search for..',:class =>"form-control searchquery" %>
+  <% end %>
+  <% @search.each do |p| %>
+    <%=p.email%>
+  <% end %>
+</div>

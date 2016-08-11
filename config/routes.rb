@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+
+  get 'search/user'
+  get 'search/search_main'
+  get 'user' =>"search#user"
+  get 'search/flea'
+
+  get 'item/create'
+  post 'create_item' => "item#create_item"
+  get 'destroy_item/:item_id' =>"item#destroy"
+  get 'update_item/:item_id' => "item#update"
+  post 'real_update_item/:item_id'=>"item#real_update"
+  get 'item/show'
+  get 'item/real_update'
+  get 'item/destroy'
   get 'info/show'
 
   resources :fleas do

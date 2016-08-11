@@ -1,0 +1,73 @@
+<!--header start-->
+    <header id="header" class=" header-full-width ">
+
+        <div class="header-sticky light-header ">
+
+            <div class="container">
+                <div id="massive-menu" class="menuzord">
+                    <!--logo start-->
+                    <a href="/" class="logo-brand">
+                        <img class="retina" src="img/logo-dark.png" alt=""/>
+                    </a>
+                    <!--logo end-->
+                    <!--mega menu start-->
+                    <ul class="menuzord-menu pull-right">
+                        <li>
+                            <a href="/home/blog">소개말</a>
+                        </li>
+                        <li>
+                            <a href="/fleas">오늘의 마켓</a>
+                        </li>
+                        <li>
+                          <a href="/search/search_main">검색하기</a>
+                        </li>
+                        <% if user_signed_in? %>
+                          <% if current_user.level =='master' %>
+                            <li>
+                              <a href="#">셀러모집</a>
+                            </li>
+                            <li>
+                              <a href="/fleas/new">마켓등록</a>
+                            </li>
+                            <li>
+                              <a href="#">관리자메뉴</a>
+                            </li>
+                          <% else %>
+                            <% if current_user.level == 'planner'%>
+                              <li>
+                                <a href="/fleas/new">마켓등록</a>
+                              </li>
+                            <% else %>
+                              <li>
+                                <a href="#">셀러모집</a>
+                              </li>
+                            <% end %>
+                          <% end %>
+                        <% end %>
+                    </li>
+
+                    <li class="nav-icon nav-divider">
+                        <a href="javascript:void(0)">|</a>
+                    </li>
+                    <% if user_signed_in? %>
+                    <li>
+                        <a href="/users/sign_out">로그아웃</a>
+                    </li>
+                    <li>
+                        <a href="/info/show"><%= current_user.level %>
+                            <%= current_user.nickname %>님</a>
+                    </li>
+                <% else %>
+                    <li>
+                        <a href="/users/sign_in">로그인</a>
+                    </li>
+                    <% end %>
+                </ul>
+                <!--mega menu end-->
+
+            </div>
+        </div>
+
+    </div>
+</header>
+<!--header end-->
