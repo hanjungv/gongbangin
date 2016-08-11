@@ -1,6 +1,6 @@
 class SearchController < ApplicationController
   def user
-    @search = User.where('nickname = ?', params[:search])
+    @search = User.where('nickname LIKE ?', "%#{params[:search]}%")
     render "search/user"
   end
 
