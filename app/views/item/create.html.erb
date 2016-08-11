@@ -1,0 +1,30 @@
+<div class ="container">
+  <form action = "/create_item" method="post" enctype="multipart/form-data">
+    <input type = "hidden" value = "<%=current_user.id%>" name =user_id>
+    <div class="form-group">
+      <label>아이템 이름은 무엇인가요?</label>
+      <input type="text" class="form-control" name = "item_name" id="item_name" placeholder="이름을 입력해주세요">
+    </div>
+    <div class="form-group">
+      <label>가격은 어떤가요?</label>
+      <input type="number" class="form-control" name ="item_price" id="item_price" placeholder="가격을 입력해주세요">
+    </div>
+    <div class="form-group">
+      <label>제작기간은 얼마나 걸리나요?</label>
+      <select class="form-control" id="period" name = "item_period">
+        <option>1일~2일</option>
+        <option>3일~7일</option>
+        <option>1주~2주</option>
+        <option>2주 이상</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>주 재료가 무엇인가요?</label>
+      <input type="text" class="form-control" name ="item_material" id="item_material" placeholder="주 재료를 간단히 입력해주세요">
+    </div>
+    <div class = "form-group">
+      <input type="file" name="pic" accept="image/*">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
