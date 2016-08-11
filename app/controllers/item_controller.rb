@@ -10,6 +10,11 @@ class ItemController < ApplicationController
     @item.period = params[:item_period]
     @item.user_id = params[:user_id]
 
+    file = params[:pic]
+    uploader = ItemPicUploader.new
+    uploader.store!(file)
+    @item.url = uploader.url
+
     if @item.save
       redirect_to '/item/show'
     else

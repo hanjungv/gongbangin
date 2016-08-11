@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  get 'search/user'
+  get 'search/search_main'
+  get 'user' =>"search#user"
+  get 'search/flea'
+
   get 'item/create'
   post 'create_item' => "item#create_item"
   get 'destroy_item/:item_id' =>"item#destroy"

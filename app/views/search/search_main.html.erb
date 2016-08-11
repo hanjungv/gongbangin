@@ -1,0 +1,18 @@
+<div class = "container text-center">
+  <div class = "col-md-6">
+    <p>닉네임으로 유저검색하기</p>
+      <%= form_tag("/user", method: "get") do %>
+        <%= label_tag(:search, "Search for:") %>
+        <%= text_field_tag(:search) %>
+        <%= submit_tag("Search") %>
+      <% end %>
+    </div>
+    <div class = "col-md-6">
+      <p>조건으로 유저검색하기(아직 안됨)</p>
+        <%= form_tag("/user", method: "get") do %>
+          <%= label_tag(:search, "Search for:") %>
+          <%= text_field_tag(:search) %>
+          <%= submit_tag("Search") %>
+        <% end %>
+      </div>
+</div>
