@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# make it easy to securely configure Rails applications
+gem "figaro"
 # Upload form gem https://github.com/carrierwaveuploader/carrierwave
 gem 'fog-aws'
 gem 'carrierwave'
