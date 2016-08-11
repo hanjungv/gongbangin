@@ -2,6 +2,7 @@
 
 class AwsS3Uploader < CarrierWave::Uploader::Base
 
+  require 'devise'
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
@@ -53,7 +54,9 @@ class AwsS3Uploader < CarrierWave::Uploader::Base
   #   "something.jpg" if original_filename
   # end
   def filename
-    Time.now.to_f.to_s + "." + file.extension if original_filename
+    # u = current_user
+    # current_user.email + file.extention if original_filename
+    # Time.now.to_f.to_s + "." + file.extension if original_filename
   end
 
 end
