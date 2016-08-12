@@ -1,15 +1,26 @@
-
-<div class = "container text-center" style ="margin-bottom:30px;">
-  <div class = "col-md-6">
-    <p>닉네임으로 유저검색하기</p>
-    <%= form_tag("/user", method: "get") do %>
-      <%= text_field_tag "search", nil, :placeholder => 'Search for..', :class =>"form-control searchquery" %>
-    <% end %>
+<section class="page-title">
+    <div class="container">
+        <h4 class="text-uppercase"> Search / Ranking</h4>
     </div>
-    <div class = "col-md-6">
-      <p>조건으로 유저검색하기(아직 안됨)</p>
+</section>
+<div class="container text-center" style="margin-bottom:30px;">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <p>닉네임(이메일)로 유저검색하기</p>
         <%= form_tag("/user", method: "get") do %>
-          <%= text_field_tag "search", nil ,:placeholder => 'Search for..', :class => "form-control searchquery" %>
+        <div class="input-group">
+            <%= text_field_tag "search",nil,:placeholder => 'Search for..', :class =>'form-control'%>
+            <div class="input-group-btn">
+                <%= button_tag(type: 'submit', class: "btn btn-warning") do %>
+                <span class="glyphicon glyphicon-search"></span>
+                <% end %>
+            </div>
+        </div>
         <% end %>
+        <p>모든유저 스코어 순으로 출력 </p>
+        <%@all_user.each do |v|%>
+          email:<%=v.email%> / score:<%=v.score%><br>
+        <%end%>
     </div>
+    <div class="col-md-4"></div>
 </div>

@@ -1,9 +1,27 @@
-<div class= "container" style = "margin-bottom:30px;">
-  <p class = "text-center">검색결과(이메일만 나옴)</p>
-  <%= form_tag("/user", method: "get") do %>
-    <%= text_field_tag "search",nil,:placeholder => 'Search for..',:class =>"form-control searchquery" %>
-  <% end %>
-  <% @search.each do |p| %>
-    <%=p.email%>
-  <% end %>
+<section class="page-title">
+    <div class="container">
+        <h4 class="text-uppercase"> Search / Ranking</h4>
+    </div>
+</section>
+<div class ="container text-center">
+  <div class ="col-md-4"></div>
+  <div class = "col-md-4">
+    <p>닉네임(이메일)으로 유저검색하기</p>
+    <%= form_tag("/user", method: "get") do %>
+      <div class="input-group">
+      <%= text_field_tag "search",nil,:placeholder => 'Search for..', :class =>'form-control'%>
+      <div class = "input-group-btn">
+        <%= button_tag(type: 'submit', class: "btn btn-warning") do %>
+          <span class="glyphicon glyphicon-search"></span>
+        <% end %>
+      </div>
+    </div>
+    <% end %>
+    <% @search.each do |p| %>
+      email:<%=p.email%> / score:<%=p.score%><br>
+    <% end %>
+    </div>
+    <div class ="col-md-4">  </div>
+    <br>
+
 </div>
