@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-
+  #search#
   get 'search/user'
   get 'search/search_main'
   get 'user' =>"search#user"
   get 'search/flea'
-
+  #item#
   get 'item/create'
   post 'create_item' => "item#create_item"
   get 'destroy_item/:item_id' =>"item#destroy"
@@ -13,18 +13,22 @@ Rails.application.routes.draw do
   get 'item/show'
   get 'item/real_update'
   get 'item/destroy'
-  get 'info/show'
-
+  #info#
+  get 'info/myinfo'
+  get 'otherinfo/:user_id' => "info#otherinfo"
+  #flea#
   resources :fleas do
     member do
       post 'like'
       post 'dislike'
     end
   end
+  #home#
   post 'home/upload'
   get 'home/index'
   get 'home/blog'
   root 'home#index'
+  #devise#
   devise_for :users, :controllers => { registrations: 'registrations' }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
