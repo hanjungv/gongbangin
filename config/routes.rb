@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'search/search_main'
   get 'user' =>"search#user"
   get 'search/flea'
+  get 'search/'
 
   get 'item/create'
   post 'create_item' => "item#create_item"

@@ -2,6 +2,8 @@ class CreateFleas < ActiveRecord::Migration
   def change
     create_table :fleas do |t|
 
+      # 이름
+      t.string :name
       # 모집 시작기간
       t.datetime :application_start_period
       # 모집 종료기간
