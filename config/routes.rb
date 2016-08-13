@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  #master menu#
+  get 'mastermenu/levelup/:user_id' => 'mastermenu#levelup'
+  get 'mastermenu/leveldown/:user_id' =>"mastermenu#leveldown"
+  get 'mastermenu/otherinfo/:user_id' =>"info#otherinfo"
+  get 'mastermenu/destroyuser'
+  get 'mastermenu/index'
   #search#
   get 'search/user'
   get 'search/search_main'

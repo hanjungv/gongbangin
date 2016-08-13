@@ -1,0 +1,29 @@
+<div class ="container">
+  <p style = "font-size:40px;">마스터 페이지 메인화면</p>
+  <h4>master_list</h4>
+  <% @master_user.each do |p|%>
+    <%=p.nickname%><br>
+  <%end%>
+  <hr>
+
+  <h4>planner_list</h4>
+  <% @planner_user.each do |p|%>
+    <%=p.nickname%>
+    <a href = "/otherinfo/<%=p.id%>">정보 보러가기</a>
+    <a href = "/mastermenu/leveldown/<%=p.id%>">강등하기</a>
+  <%end%>
+
+  <h4>standby_list</h4>
+  <% @standby_user.each do |p|%>
+    <%=p.nickname%>
+    <a href = "/mastermenu/levelup/<%=p.id%>">플래너로 승급하기</a>
+    <a href = "/otherinfo/<%=p.id%>">정보 보러가기</a>
+    <a href = "/mastermenu/leveldown/<%=p.id%>">강등하기</a>
+  <%end%>
+  <hr>
+
+  <h4>seller_user</h4>
+  <% @seller_user.each do |p|%>
+    <%=p.nickname%>
+  <%end%>
+</div>

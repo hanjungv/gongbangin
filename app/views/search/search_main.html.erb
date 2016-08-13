@@ -1,6 +1,6 @@
 <section class="page-title">
     <div class="container">
-        <h4 class="text-uppercase"> Search / Ranking</h4>
+        <h4 class="text-uppercase"> Total Ranking</h4>
     </div>
 </section>
 <div class="container">
@@ -23,8 +23,9 @@
         <thead>
           <tr>
             <th style = "width:6%;">등수</th>
+            <th style = "width:10%;">Who?</th>
             <th style = "width:15%;">닉네임</th>
-            <th style = "width:59%">자기소개</th>
+            <th style = "width:49%">자기소개</th>
             <th style = "width:10%;">티어</th>
             <th style = "width:10%;">점수</th>
           </tr>
@@ -33,6 +34,7 @@
           <% @all_user.each_with_index do |p,index| %>
             <tr>
               <th scope="row"><%=index+1%></th>
+              <td><%=p.level%></td>
               <td><a href = "/otherinfo/<%=p.id%>" , style = "font-weight: bold; color:<%=p.tier%>"><%=p.nickname%></a></td>
               <td><%=p.introduction%></td>
               <td style = "color:<%=p.tier%>"><%=p.tier%></td>
