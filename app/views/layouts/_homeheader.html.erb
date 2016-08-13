@@ -30,7 +30,7 @@
                               <a href="/fleas/new">마켓등록</a>
                             </li>
                             <li>
-                              <a href="#">관리자메뉴</a>
+                              <a href="/mastermenu/index">관리자메뉴</a>
                             </li>
                           <% else %>
                             <% if current_user.level == 'planner'%>
@@ -54,7 +54,7 @@
                         <a href="/users/sign_out">로그아웃</a>
                     </li>
                     <li>
-                        <a href="/info/show"><%= current_user.level %>
+                        <a href="/info/myinfo"><%= current_user.level %>
                             <%= current_user.nickname %>님</a>
                     </li>
                 <% else %>

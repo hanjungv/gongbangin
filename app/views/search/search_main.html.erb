@@ -1,14 +1,47 @@
-<div class="container text-center" style="margin-bottom:30px;">
-  <div class="col-md-6">
-    <p>닉네임으로 유저검색하기</p>
-    <%= form_tag("/user", method: "get") do %>
-        <%= text_field_tag "search", nil, :placeholder => 'Search for..', :class => "form-control searchquery" %>
-    <% end %>
-  </div>
-  <div class="col-md-6">
-    <p>조건으로 유저검색하기(아직 안됨)</p>
-    <%= form_tag("/user", method: "get") do %>
-        <%= text_field_tag "search", nil, :placeholder => 'Search for..', :class => "form-control searchquery" %>
-    <% end %>
-  </div>
+<section class="page-title">
+    <div class="container">
+        <h4 class="text-uppercase"> Total Ranking</h4>
+    </div>
+</section>
+<div class="container">
+    <div class="col-md-4"></div>
+    <div class="col-md-4"  style ="margin-top:20px;">
+        <%= form_tag("/user", method: "get") do %>
+        <div class="input-group">
+            <%= text_field_tag "search",nil,:placeholder => 'Search for..', :class =>'form-control'%>
+            <div class="input-group-btn">
+                <%= button_tag(type: 'submit', class: "btn btn-warning") do %>
+                <span class="glyphicon glyphicon-search"></span>
+                <% end %>
+            </div>
+        </div>
+        <% end %>
+    </div>
+    <div class="col-md-4"></div>
+    <div class = "col-md-12" style ="margin-top:20px;">
+      <table class="table able table-striped table-bordered">
+        <thead>
+          <tr>
+            <th style = "width:6%;">등수</th>
+            <th style = "width:10%;">Who?</th>
+            <th style = "width:15%;">닉네임</th>
+            <th style = "width:49%">자기소개</th>
+            <th style = "width:10%;">티어</th>
+            <th style = "width:10%;">점수</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @all_user.each_with_index do |p,index| %>
+            <tr>
+              <th scope="row"><%=index+1%></th>
+              <td><%=p.level%></td>
+              <td><a href = "/otherinfo/<%=p.id%>" , style = "font-weight: bold; color:<%=p.tier%>"><%=p.nickname%></a></td>
+              <td><%=p.introduction%></td>
+              <td style = "color:<%=p.tier%>"><%=p.tier%></td>
+              <td><%=p.score%></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
 </div>

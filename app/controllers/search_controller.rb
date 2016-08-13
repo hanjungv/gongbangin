@@ -1,22 +1,13 @@
 class SearchController < ApplicationController
   def user
-    @search = User.where('nickname LIKE ?', "%#{params[:search]}%")
+    @search = User.where('nickname LIKE :search OR email LIKE :search', search: "%#{params[:search]}%").order('score desc')
     render "search/user"
   end
 
-  def flea_by_city_place
-    @search_flea_by_city_place = Flea.where('city_place LIKE ?', "%#{params[:search_flea_by_city_place]}")
-    render "fleas/index.html.erb"
+  def flea
   end
 
-  # def flea_by_period
-  #   @search_flea_by_city_place = Flea.where('city_place LIKE ?', "%#{params[:search_flea_by_city_place]}")
-  #   render "search/flea"
-  # end
-  #
-  # def flea_by_date
-  #   @search_flea_by_city_place = Flea.where('city_place LIKE ?', "%#{params[:search_flea_by_city_place]}")
-  #   render "search/flea"
-  # end
-
+  def search_main
+    @all_user = User.order('score desc')
+  end
 end

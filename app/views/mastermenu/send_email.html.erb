@@ -1,0 +1,12 @@
+<p>이메일 보내기 페이지</p>
+<form action = "/masteremail/<%=@receiver.id%>" method = "get">
+  <textarea class="form-control" name = "content" rows="5" id="comment">
+    안녕하세요!
+    편리한 플리마켓 매칭 서비스를 제공하는 공방인입니다.
+    -------------------------------------------
+
+    --------------------------------------------
+    <%=Time.now%>, Thanks. 즐거운 하루 보내세요! 공방인.
+  </textarea>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>

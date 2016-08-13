@@ -1,4 +1,8 @@
 class InfoController < ApplicationController
-  def show
+  def myinfo
+  end
+  def otherinfo
+    @user = User.find(params[:user_id])
+    render '/info/other'
   end
 end

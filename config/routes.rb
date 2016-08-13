@@ -1,11 +1,19 @@
 Rails.application.routes.draw do
-
+  #master menu#
+  get 'mastermenu/user_manage'
+  get 'mastermenu/levelup/:user_id' => 'mastermenu#levelup'
+  get 'mastermenu/leveldown/:user_id' =>"mastermenu#leveldown"
+  get 'mastermenu/otherinfo/:user_id' =>"info#otherinfo"
+  get 'mastermenu/destroy/:user_id' =>"mastermenu#destroy"
+  get 'mastermenu/index'
+  get 'mastermenu/send_email/:user_id' => "mastermenu#write_email"
+  get 'masteremail/:user_id'=>'mastermenu#send_email'
+  #search#
   get 'search/user'
   get 'search/search_main'
   get 'user' =>"search#user"
   get 'search/flea'
-  get 'search/'
-
+  #item#
   get 'item/create'
   post 'create_item' => "item#create_item"
   get 'destroy_item/:item_id' =>"item#destroy"
@@ -14,18 +22,22 @@ Rails.application.routes.draw do
   get 'item/show'
   get 'item/real_update'
   get 'item/destroy'
-  get 'info/show'
-
+  #info#
+  get 'info/myinfo'
+  get 'otherinfo/:user_id' => "info#otherinfo"
+  #flea#
   resources :fleas do
     member do
       post 'like'
       post 'dislike'
     end
   end
+  #home#
   post 'home/upload'
   get 'home/index'
   get 'home/blog'
   root 'home#index'
+  #devise#
   devise_for :users, :controllers => { registrations: 'registrations' }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
