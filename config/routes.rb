@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
   #master menu#
+  get 'mastermenu/user_manage'
   get 'mastermenu/levelup/:user_id' => 'mastermenu#levelup'
   get 'mastermenu/leveldown/:user_id' =>"mastermenu#leveldown"
   get 'mastermenu/otherinfo/:user_id' =>"info#otherinfo"
-  get 'mastermenu/destroyuser'
+  get 'mastermenu/destroy/:user_id' =>"mastermenu#destroy"
   get 'mastermenu/index'
+  get 'mastermenu/send_email/:user_id' => "mastermenu#write_email"
+  get 'masteremail/:user_id'=>'mastermenu#send_email'
   #search#
   get 'search/user'
   get 'search/search_main'
