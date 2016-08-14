@@ -9,12 +9,14 @@
       <thead>
           <tr>
               <th style="width:10%;">닉네임</th>
-              <th style="width:20%;">email</th>
+              <th style="width:15%;">email</th>
               <th style="width:10%;">티어</th>
               <th style="width:10%;">활동점수</th>
-              <th style="width:20%">정보보러가기</th>
+              <th style="width:10%">정보보러가기</th>
               <th style="width:15%">강등하기</th>
-              <th style="width:15%">삭제하기</th>
+              <th style="width:10%">삭제하기</th>
+              <th style="width:10%">이메일보내기</th>
+              <th style="width:10%">sms보내기</th>
           </tr>
       </thead>
       <tbody>
@@ -29,6 +31,8 @@
               </th>
               <th>강등불가</th>
               <th>삭제불가</th>
+              <th><a href ="/mastermenu/write_email/<%=p.id%>">이메일</a></th>
+              <th><a href ="/mastermenu/write_sms/<%=p.id%>">SMS</a></th>
           </tr>
           <%end%>
       </tbody>

@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 # email gem
 gem 'mailgun-ruby'
+# sms gem
+gem 'coolsms-client'
 # make it easy to securely configure Rails applications
 gem "figaro"
 # Upload form gem https://github.com/carrierwaveuploader/carrierwave

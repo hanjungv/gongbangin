@@ -6,8 +6,13 @@ Rails.application.routes.draw do
   get 'mastermenu/otherinfo/:user_id' =>"info#otherinfo"
   get 'mastermenu/destroy/:user_id' =>"mastermenu#destroy"
   get 'mastermenu/index'
-  get 'mastermenu/send_email/:user_id' => "mastermenu#write_email"
-  get 'masteremail/:user_id'=>'mastermenu#send_email'
+
+  get 'mastermenu/write_email/:user_id' => "mastermenu#write_email"
+  post 'send_email/:user_id'=>'mastermenu#send_email'
+
+  get 'mastermenu/write_sms/:user_id' =>"mastermenu#write_sms"
+  post 'send_sms/:user_id'=>'mastermenu#send_sms'
+
   #search#
   get 'search/user'
   get 'search/search_main'
