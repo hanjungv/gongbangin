@@ -62,17 +62,12 @@ class MastermenuController < ApplicationController
 
   def write_sms
     @receiver = User.find(params[:user_id])
-    if @receiver.phone_number.nil ?
-      redirect_to '/mastermenu/user_manage'
-    end
   end
 
   def send_sms
     @receiver = User.find(params[:user_id]).phone_number
     @content = params[:content]
-    if @receiver.phone_number.nil ?
-      redirect_to '/mastermenu/user_manage'
-    end
+    
     client = Coolsms::Client.new :api_key => '',
                                  :api_secret => '', :sender => ""
 

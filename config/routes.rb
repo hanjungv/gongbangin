@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   get 'search/search_main'
   get 'user' =>"search#user"
   get 'search/flea'
+  get 'search/planner'
+  get 'search/seller'
   #item#
   get 'item/create'
   post 'create_item' => "item#create_item"
@@ -30,6 +32,8 @@ Rails.application.routes.draw do
   #info#
   get 'info/myinfo'
   get 'otherinfo/:user_id' => "info#otherinfo"
+  get 'info/levelup'
+  get 'standby/:user_id' => "info#standby"
   #flea#
   resources :fleas do
     member do

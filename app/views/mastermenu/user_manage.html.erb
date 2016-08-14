@@ -84,7 +84,8 @@
               <th style="width:20%;">email</th>
               <th style="width:10%;">티어</th>
               <th style="width:10%;">활동점수</th>
-              <th style="width:20%">정보보러가기</th>
+              <th style="width:10%">정보보러가기</th>
+              <th style="width:10%">승급하기</th>
               <th style="width:15%">강등하기</th>
               <th style="width:15%">삭제하기</th>
           </tr>
@@ -98,6 +99,9 @@
               <th><%=p.score%></th>
               <th>
                   <a href="/otherinfo/<%=p.id%>">정보 보러가기</a>
+              </th>
+              <th>
+                  <a href="/mastermenu/levelup/<%=p.id%>">승급하기</a>
               </th>
               <th>
                   <a href="/mastermenu/leveldown/<%=p.id%>">강등하기</a>
