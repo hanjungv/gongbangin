@@ -1,3 +1,4 @@
+require 'mailgun'
 class MastermenuController < ApplicationController
   def index
     if current_user.level != "master"
@@ -40,13 +41,14 @@ class MastermenuController < ApplicationController
 
   def send_email
     @receiver = User.find(params[:user_id]).email
+    #test때문에 hanjungv@gmail.com으로 해놓음. 나중에 domain등록 후 recevier를 to로 하면 됨
     @content = params[:content]
 
     mg_client = Mailgun::Client.new("key-7deeff1d41a305f9f58c09a0875254a8")
 
     message_params =  {
-                       from: "Gongbangin_admin",
-                       to:   @receiver,
+                       from: "admin@gongbang.in",
+                       to:   "hanjungv@gmail.com",
                        subject: @content,
                        text:    @content
                       }
@@ -55,6 +57,23 @@ class MastermenuController < ApplicationController
 
     message_id = result['id']
     message = result['message']
-    redirect_to '/home/index'
+    redirect_to '/mastermenu/user_manage'
+  end
+
+  def write_sms
+    @receiver = User.find(params[:user_id])
+  end
+
+  def send_sms
+    @receiver = User.find(params[:user_id]).phone_number
+    @content = params[:content]
+    
+    client = Coolsms::Client.new :api_key => '',
+                                 :api_secret => '', :sender => ""
+
+    client.send_message :to => @receiver, :text => @content
+
+
+    redirect_to '/mastermenu/user_manage'
   end
 end

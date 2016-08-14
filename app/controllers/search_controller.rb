@@ -10,4 +10,12 @@ class SearchController < ApplicationController
   def search_main
     @all_user = User.order('score desc')
   end
+
+  def planner
+    @all_user = User.where(level:'planner').order('score desc')
+  end
+
+  def seller
+    @all_user = User.where(level:'seller').order('score desc')
+  end
 end

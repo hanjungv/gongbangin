@@ -6,13 +6,20 @@ Rails.application.routes.draw do
   get 'mastermenu/otherinfo/:user_id' =>"info#otherinfo"
   get 'mastermenu/destroy/:user_id' =>"mastermenu#destroy"
   get 'mastermenu/index'
-  get 'mastermenu/send_email/:user_id' => "mastermenu#write_email"
-  get 'masteremail/:user_id'=>'mastermenu#send_email'
+
+  get 'mastermenu/write_email/:user_id' => "mastermenu#write_email"
+  post 'send_email/:user_id'=>'mastermenu#send_email'
+
+  get 'mastermenu/write_sms/:user_id' =>"mastermenu#write_sms"
+  post 'send_sms/:user_id'=>'mastermenu#send_sms'
+
   #search#
   get 'search/user'
   get 'search/search_main'
   get 'user' =>"search#user"
   get 'search/flea'
+  get 'search/planner'
+  get 'search/seller'
   #item#
   get 'item/create'
   post 'create_item' => "item#create_item"
@@ -25,6 +32,8 @@ Rails.application.routes.draw do
   #info#
   get 'info/myinfo'
   get 'otherinfo/:user_id' => "info#otherinfo"
+  get 'info/levelup'
+  get 'standby/:user_id' => "info#standby"
   #flea#
   resources :fleas do
     member do
