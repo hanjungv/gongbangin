@@ -1,29 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Fleas</h1>
-<div class= "container" style = "margin-bottom:30px;">
-  <%= form_tag("/flea_by_city_place", method: "get") do %>
-      <%= text_field_tag "search_flea_by_city_place",nil,:placeholder => '지역으로 검색하기',:class =>"form-control searchquery" %>
-  <% end %>
-  <% @search_flea_by_city_place.each do |p| %>
-      <%=p.name%>
-  <% end %>
-</div>
 
-<!--<div class= "container" style = "margin-bottom:30px;">-->
-  <!--<%= form_tag("/flea", method: "get") do %>-->
-      <!--<%= text_field_tag "search",nil,:placeholder => '날짜로 검색하기',:class =>"form-control searchquery" %>-->
-  <!--<% end %>-->
-  <!--<% @search.each do |p| %>-->
-      <!--<%=p.name%>-->
-  <!--<% end %>-->
-<!--</div>-->
+<!--<script type="text/javascript">-->
+//  $(document).ready(function () {
+//    $("#contents").load("search/flea.html");
+//  });
+<!--</script>-->
+
+<div id="contents"></div>
+
+<%= link_to 'New Flea', new_flea_path %>
+
+<h1>Listing Fleas</h1>
 
 <table>
   <% @fleas.each do |flea| %>
       <tr>
-        <p><%= flea.application_start_period %></p>
-        <p><%= flea.application_end_period %></p>
+        <p><%= flea.application_start_date %></p>
+        <p><%= flea.application_end_date %></p>
         <p><%= flea.number_of_recruitment %></p>
         <p><%= flea.remark %></p>
         <p><%= flea.city_place %></p>
@@ -40,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Flea', new_flea_path %>
+

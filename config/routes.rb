@@ -17,7 +17,9 @@ Rails.application.routes.draw do
   get 'search/user'
   get 'search/search_main'
   get 'user' =>"search#user"
-  get 'search/flea'
+  get 'search/flea_application_date'
+  get 'search/flea_city_place'
+  get 'search/flea_event_date'
   get 'search/planner'
   get 'search/seller'
   #item#

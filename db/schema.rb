@@ -25,8 +25,9 @@ ActiveRecord::Schema.define(version: 20160802091648) do
   end
 
   create_table "fleas", force: :cascade do |t|
-    t.datetime "application_start_period"
-    t.datetime "application_end_period"
+    t.string   "name"
+    t.datetime "application_start_date"
+    t.datetime "application_end_date"
     t.integer  "number_of_recruitment"
     t.string   "remark"
     t.string   "city_place"
@@ -34,8 +35,8 @@ ActiveRecord::Schema.define(version: 20160802091648) do
     t.datetime "event_start_date"
     t.datetime "event_end_date"
     t.integer  "entrance_fee"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "item_images", force: :cascade do |t|
