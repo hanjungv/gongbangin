@@ -1,0 +1,156 @@
+<section class="page-title">
+    <div class="container">
+        <h4 class="text-uppercase"><a href="/mastermenu/index">manage</a> / 유저관리</h4>
+    </div>
+</section>
+<div class = "container">
+  <h4>마스터</h4>
+  <table class="table able table-striped table-bordered">
+      <thead>
+          <tr>
+              <th style="width:10%;">닉네임</th>
+              <th style="width:15%;">email</th>
+              <th style="width:10%;">티어</th>
+              <th style="width:10%;">활동점수</th>
+              <th style="width:10%">정보보러가기</th>
+              <th style="width:15%">강등하기</th>
+              <th style="width:10%">삭제하기</th>
+              <th style="width:10%">이메일보내기</th>
+              <th style="width:10%">sms보내기</th>
+          </tr>
+      </thead>
+      <tbody>
+          <% @master_user.each do |p|%>
+          <tr>
+              <th style="color:<%=p.tier%>"><%=p.nickname%></th>
+              <th><%=p.email%></th>
+              <th style="color:<%=p.tier%>"><%=p.tier%></th>
+              <th><%=p.score%></th>
+              <th>
+                  <a href="/otherinfo/<%=p.id%>">정보 보러가기</a>
+              </th>
+              <th>강등불가</th>
+              <th>삭제불가</th>
+              <th><a href ="/mastermenu/write_email/<%=p.id%>">이메일</a></th>
+              <th><a href ="/mastermenu/write_sms/<%=p.id%>">SMS</a></th>
+          </tr>
+          <%end%>
+      </tbody>
+  </table>
+</div>
+  <hr>
+<div class = "container">
+  <h4>플래너</h4>
+  <table class="table able table-striped table-bordered">
+      <thead>
+          <tr>
+              <th style="width:10%;">닉네임</th>
+              <th style="width:20%;">email</th>
+              <th style="width:10%;">티어</th>
+              <th style="width:10%;">활동점수</th>
+              <th style="width:20%">정보보러가기</th>
+              <th style="width:15%">강등하기</th>
+              <th style="width:15%">삭제하기</th>
+          </tr>
+      </thead>
+      <tbody>
+          <% @planner_user.each do |p|%>
+          <tr>
+              <th style="color:<%=p.tier%>"><%=p.nickname%></th>
+              <th><%=p.email%></th>
+              <th style="color:<%=p.tier%>"><%=p.tier%></th>
+              <th><%=p.score%></th>
+              <th>
+                  <a href="/otherinfo/<%=p.id%>">정보 보러가기</a>
+              </th>
+              <th>
+                  <a href="/mastermenu/leveldown/<%=p.id%>">강등하기</a>
+              </th>
+              <th>
+                  <a href="/mastermenu/destroy/<%=p.id%>" , class="confirmation">삭제하기</a>
+              </th>
+          </tr>
+          <%end%>
+      </tbody>
+  </table>
+</div>
+<hr>
+<div class = "container">
+  <h4>스탠바이(심사필요)</h4>
+  <table class="table able table-striped table-bordered">
+      <thead>
+          <tr>
+              <th style="width:10%;">닉네임</th>
+              <th style="width:20%;">email</th>
+              <th style="width:10%;">티어</th>
+              <th style="width:10%;">활동점수</th>
+              <th style="width:10%">정보보러가기</th>
+              <th style="width:10%">승급하기</th>
+              <th style="width:15%">강등하기</th>
+              <th style="width:15%">삭제하기</th>
+          </tr>
+      </thead>
+      <tbody>
+          <% @standby_user.each do |p|%>
+          <tr>
+              <th style="color:<%=p.tier%>"><%=p.nickname%></th>
+              <th><%=p.email%></th>
+              <th style="color:<%=p.tier%>"><%=p.tier%></th>
+              <th><%=p.score%></th>
+              <th>
+                  <a href="/otherinfo/<%=p.id%>">정보 보러가기</a>
+              </th>
+              <th>
+                  <a href="/mastermenu/levelup/<%=p.id%>">승급하기</a>
+              </th>
+              <th>
+                  <a href="/mastermenu/leveldown/<%=p.id%>">강등하기</a>
+              </th>
+              <th>
+                  <a href="/mastermenu/destroy/<%=p.id%>" , class="confirmation">삭제하기</a>
+              </th>
+          </tr>
+          <%end%>
+      </tbody>
+  </table>
+</div>
+<hr>
+<div class ="container">
+  <h4>셀러</h4>
+  <table class="table able table-striped table-bordered">
+      <thead>
+          <tr>
+              <th style="width:10%;">닉네임</th>
+              <th style="width:20%;">email</th>
+              <th style="width:10%;">티어</th>
+              <th style="width:10%;">활동점수</th>
+              <th style="width:20%">정보보러가기</th>
+              <th style="width:15%">강등하기</th>
+              <th style="width:15%">삭제하기</th>
+          </tr>
+      </thead>
+      <tbody>
+          <% @seller_user.each do |p|%>
+          <tr>
+              <th style="color:<%=p.tier%>"><%=p.nickname%></th>
+              <th><%=p.email%></th>
+              <th style="color:<%=p.tier%>"><%=p.tier%></th>
+              <th><%=p.score%></th>
+              <th>
+                  <a href="/otherinfo/<%=p.id%>">정보 보러가기</a>
+              </th>
+              <th>강등불가</th>
+              <th>
+                  <a href="/mastermenu/destroy/<%=p.id%>" , class="confirmation">삭제하기</a>
+              </th>
+          </tr>
+          <%end%>
+      </tbody>
+  </table>
+</div>
+
+<script type="text/javascript">
+  $('.confirmation').on('click', function () {
+      return confirm('Are you sure?');
+  });
+</script>

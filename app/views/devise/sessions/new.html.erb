@@ -12,13 +12,13 @@
           <div class="form-group">
             <div class="input-group">
               <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
-            <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: 'Email' %>
+              <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: 'Email' %>
           </div>
           </div>
           <div class="form-group">
             <div class="input-group">
               <span class="input-group-addon"><i class="fa fa-lock" aria-hidden="true"></i></span>
-            <%= f.password_field :password, autocomplete: 'off', class: 'form-control', placeholder: 'Password' %>
+              <%= f.password_field :password, autocomplete: 'off', class: 'form-control', placeholder: 'Password' %>
         </div>
         </div>
           <% if devise_mapping.rememberable? %>
