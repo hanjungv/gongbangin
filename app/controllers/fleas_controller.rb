@@ -48,7 +48,7 @@ class FleasController < ApplicationController
   # PATCH/PUT /fleas/1
   # PATCH/PUT /fleas/1.json
   def update
-    if @flea.update(post_params)
+    if @flea.update(flea_params)
       redirect_to @flea, notice: 'Post was successfully updated.'
     else
       render :edit
