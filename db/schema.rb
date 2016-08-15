@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20160802091648) do
   end
 
   create_table "fleas", force: :cascade do |t|
+    t.string   "market_name"
     t.datetime "application_start_period"
     t.datetime "application_end_period"
     t.integer  "number_of_recruitment"
