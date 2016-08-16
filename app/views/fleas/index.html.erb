@@ -1,12 +1,23 @@
 <p id="notice"><%= notice %></p>
 
+
+<!--<script type="text/javascript">-->
+//  $(document).ready(function () {
+//    $("#contents").load("search/flea.html");
+//  });
+<!--</script>-->
+
+<div id="contents"></div>
+
+<%= link_to 'New Flea', new_flea_path %>
+
 <h1>Listing Fleas</h1>
 
 <table>
   <% @fleas.each do |flea| %>
       <tr>
-        <p><%= flea.application_start_period %></p>
-        <p><%= flea.application_end_period %></p>
+        <p><%= flea.application_start_date %></p>
+        <p><%= flea.application_end_date %></p>
         <p><%= flea.number_of_recruitment %></p>
         <p><%= flea.remark %></p>
         <p><%= flea.city_place %></p>
@@ -23,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Flea', new_flea_path %>
+

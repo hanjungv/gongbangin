@@ -2,10 +2,12 @@ class CreateFleas < ActiveRecord::Migration
   def change
     create_table :fleas do |t|
 
-      # 모집 시작기간
-      t.datetime :application_start_period
-      # 모집 종료기간
-      t.datetime :application_end_period
+      # 이름
+      t.string :name
+      # 모집 시작날짜
+      t.date :application_start_date
+      # 모집 종료날짜
+      t.date :application_end_date
       # 모집인원
       t.integer :number_of_recruitment
       # 비고
@@ -14,10 +16,10 @@ class CreateFleas < ActiveRecord::Migration
       t.string :city_place
       # 상세장소
       t.string :detail_place
-      # 행사날짜
-      t.datetime :event_start_date
-      # 행사끝날짜
-      t.datetime :event_end_date
+      # 행사 시작날짜
+      t.date :event_start_date
+      # 행사 종료날짜
+      t.date :event_end_date
       # 참가비
       t.integer :entrance_fee
 

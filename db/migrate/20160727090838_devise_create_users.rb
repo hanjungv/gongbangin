@@ -28,9 +28,9 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :level, default: "seller"
       #자기소개
       t.string :introduction, default: "안녕하세요!만나서 반가워요!"
-      # tier (red-orange-yellow-green-blue-navy-purple-gray. purple is maker's default value)
+      # tier (red-orange-yellow-green-blue-navy-purple-black, black is seller. purple is maker's default value)
       # planner는 별도의 티어가 필요할 것이라 생각됨
-      t.string :tier, default: "gray"
+      t.string :tier, default: "black"
       #score
       t.integer :score, default: 0
 
