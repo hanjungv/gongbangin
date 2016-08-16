@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160815051418) do
+ActiveRecord::Schema.define(version: 20160816072353) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -26,14 +26,14 @@ ActiveRecord::Schema.define(version: 20160815051418) do
 
   create_table "fleas", force: :cascade do |t|
     t.string   "name"
-    t.datetime "application_start_date"
-    t.datetime "application_end_date"
+    t.date     "application_start_date"
+    t.date     "application_end_date"
     t.integer  "number_of_recruitment"
     t.string   "remark"
     t.string   "city_place"
     t.string   "detail_place"
-    t.datetime "event_start_date"
-    t.datetime "event_end_date"
+    t.date     "event_start_date"
+    t.date     "event_end_date"
     t.integer  "entrance_fee"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
@@ -72,6 +72,15 @@ ActiveRecord::Schema.define(version: 20160815051418) do
 
   add_index "like_flea_markets", ["flea_id"], name: "index_like_flea_markets_on_flea_id"
   add_index "like_flea_markets", ["user_id"], name: "index_like_flea_markets_on_user_id"
+
+  create_table "notices", force: :cascade do |t|
+    t.string   "title"
+    t.string   "content"
+    t.string   "url"
+    t.integer  "view_count", default: 0
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "participations", force: :cascade do |t|
     t.datetime "created_at", null: false

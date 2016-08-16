@@ -13,6 +13,13 @@ Rails.application.routes.draw do
   get 'mastermenu/write_sms/:user_id' =>"mastermenu#write_sms"
   post 'send_sms/:user_id'=>'mastermenu#send_sms'
 
+  get 'mastermenu/write_notice'
+  post 'create_notice' =>"mastermenu#create_notice"
+  get 'destroy_notice/:notice_id' =>"mastermenu#destroy_notice"
+  get 'update_item/:notice_id' => "mastermenu#update_notice"
+  post 'real_update_item/:notice_id'=>"mastermenu#real_update_notice"
+
+  get 'show_notice/:notice_id' => "mastermenu#show_notice"
   #search#
   get 'search/user'
   get 'search/search_main'
@@ -29,8 +36,6 @@ Rails.application.routes.draw do
   get 'update_item/:item_id' => "item#update"
   post 'real_update_item/:item_id'=>"item#real_update"
   get 'item/show'
-  get 'item/real_update'
-  get 'item/destroy'
   #info#
   get 'info/myinfo'
   get 'otherinfo/:user_id' => "info#otherinfo"

@@ -25,69 +25,74 @@
 
     <!--body content start-->
     <section class="body-content ">
-
         <div class="page-content">
             <div class="container">
                 <div class="row">
-                  <div class ="container">
-                    <!--title-->
-                    <div class="heading-title-alt border-short-bottom text-center ">
-                        <h3 class="text-uppercase">공지사항</h3>
-                        <div class="half-txt">공방인의 소식을 얻어가세요!</div>
-                        <br><br><br>
+                    <div class="container">
+                        <!--title-->
+                        <div class="heading-title-alt border-short-bottom text-center ">
+                            <h3 class="text-uppercase">공지사항</h3>
+                            <br>
+                        </div>
+                        <!--title-->
+                        <div class="col-md-1"></div>
+                        <div class="table-responsive col-md-10">
+                            <table class="table cart-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width:10%;">#</th>
+                                        <th style="width:55%;">제목</th>
+                                        <th style="width:20%;">올린날짜</th>
+                                        <th style="width:15%;">조회수</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <%@notice.each_with_index do |p,index|%>
+                                    <tr>
+                                        <td><%=index+1%></td>
+                                        <td><a href ="/show_notice/<%=p.id%>"><%=p.title%></a></td>
+                                        <td><%=p.created_at.strftime("%Y-%m-%d %H:%M")%></td>
+                                        <td><%=p.view_count%></td>
+                                    </tr>
+                                    <%end%>
+                                </tbody>
+                            </table>
+                            <%if user_signed_in? %>
+                              <%if current_user.level == "master"%>
+                                <a href="/mastermenu/write_notice" class="btn btn-xs btn-theme-color ">공지작성</a>
+                              <%end%>
+                            <%end%>
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="text-center col-md-12">
+                            <ul class="pagination custom-pagination">
+                                <li>
+                                    <a href="#">Prev</a>
+                                </li>
+                                <li class="active">
+                                    <a href="#">1</a>
+                                </li>
+                                <li>
+                                    <a href="#">2</a>
+                                </li>
+                                <li>
+                                    <a href="#">3</a>
+                                </li>
+                                <li>
+                                    <a href="#">4</a>
+                                </li>
+                                <li>
+                                    <a href="#">5</a>
+                                </li>
+                                <li>
+                                    <a href="#">Next</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <!--title-->
-                    <div class ="col-md-1"></div>
-                    <div class="table-responsive col-md-10">
-                        <table class="table cart-table">
-                            <thead>
-                                <tr>
-                                    <th style="width:10%;">#</th>
-                                    <th style="width:55%;">제목</th>
-                                    <th style="width:20%;">올린날짜</th>
-                                    <th style="width:15%;">조회수</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>테스트입니다.</td>
-                                    <td><%=Time.now.to_s%></td>
-                                    <td>405</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class ="col-md-1"></div>
-                    <div class="text-center col-md-12">
-                        <ul class="pagination custom-pagination">
-                            <li>
-                                <a href="#">Prev</a>
-                            </li>
-                            <li class="active">
-                                <a href="#">1</a>
-                            </li>
-                            <li>
-                                <a href="#">2</a>
-                            </li>
-                            <li>
-                                <a href="#">3</a>
-                            </li>
-                            <li>
-                                <a href="#">4</a>
-                            </li>
-                            <li>
-                                <a href="#">5</a>
-                            </li>
-                            <li>
-                                <a href="#">Next</a>
-                            </li>
-                        </ul>
-                    </div>
-                  </div>
 
                     <!--title-->
-                    <div class="heading-title-alt border-short-bottom text-center " style = "margin-top:15px;">
+                    <div class="heading-title-alt border-short-bottom text-center " style="margin-top:15px;">
                         <h3 class="text-uppercase">도움이 필요하신가요?</h3>
                         <div class="half-txt">민주평화통일자문회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다. 국가안전보장회의는 대통령이 주재한다. 모든 국민은 근로의 의무를 진다. 국가는 근로의 의무의 내용과 조건을 민주주의원칙에 따라 법률로 정한다.</div>
                         <div class="m-top-50 inline-block">
@@ -102,7 +107,6 @@
                     <!--title-->
 
                     <div class="col-md-8 col-md-offset-2">
-
                         <div class="page-content">
                             <div class="text-center">
                                 <h3 class="text-uppercase">Basic (5)</h3>
@@ -151,7 +155,7 @@
                             </dl>
                             <!-- accordion 2 end-->
                         </div>
-                        <div class="">
+                        <div>
                             <div class="text-center">
                                 <h3 class="text-uppercase">Technical (5)</h3>
                             </div>
