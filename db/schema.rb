@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160802091648) do
+ActiveRecord::Schema.define(version: 20160815051418) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -51,6 +51,13 @@ ActiveRecord::Schema.define(version: 20160802091648) do
     t.string   "period"
     t.integer  "user_id"
     t.string   "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "joined_flealists", force: :cascade do |t|
+    t.integer  "flea_id"
+    t.string   "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

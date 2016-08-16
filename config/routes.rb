@@ -44,7 +44,7 @@ Rails.application.routes.draw do
   #home#
   post 'home/upload'
   get 'home/index'
-  get 'home/blog'
+  get 'home/faq'
   root 'home#index'
   #devise#
   devise_for :users, :controllers => { registrations: 'registrations' }

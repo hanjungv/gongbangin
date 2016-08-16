@@ -16,7 +16,8 @@ class MastermenuController < ApplicationController
   def levelup
     @user = User.find(params[:user_id])
     @user.level = "planner"
-    @user.tier = "pink"
+    @user.tier = "bronze"
+    @user.score = 0
     @user.save
     redirect_to '/mastermenu/user_manage'
   end
@@ -67,7 +68,7 @@ class MastermenuController < ApplicationController
   def send_sms
     @receiver = User.find(params[:user_id]).phone_number
     @content = params[:content]
-    
+
     client = Coolsms::Client.new :api_key => '',
                                  :api_secret => '', :sender => ""
 

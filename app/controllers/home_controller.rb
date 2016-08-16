@@ -10,4 +10,6 @@ class HomeController < ApplicationController
     redirect_to '#'
   end
 
+  def faq
+  end
 end
