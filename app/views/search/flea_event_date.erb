@@ -1,6 +1,12 @@
+<h3> 행사날짜로 검색 </h3>
+
 <%= form_tag('/search/flea_event_date', method: 'get') do %>
     <div class="input-group">
-      <%= text_field_tag 'search', nil, :placeholder => 'Search for..', :class => 'form-control' %>
+      <% if @search.nil? %>
+          <%= date_field_tag(:search, :date, value: Date.today.to_s) %>
+      <% else %>
+          <%= date_field_tag(:search, :date, value: @search) %>
+      <% end %>
       <div class="input-group-btn">
         <%= button_tag(type: 'submit', class: 'btn btn-warning') do %>
             <span class="glyphicon glyphicon-search"></span>
@@ -9,7 +15,8 @@
     </div>
 <% end %>
 
-<% @search_flea_e.each_with_index do |p, index| %>
+
+<% @search_flea.each_with_index do |p, index| %>
     <table>
       <tr>
         <p><%= p.application_start_date %></p>

@@ -22,11 +22,31 @@ class SearchController < ApplicationController
   end
 
   def flea_application_date
-    @search_flea_a = Flea.where('application_start_date <= :search', search: "%#{params[:search]}%")
+    @search = params[:search]
+    date = @search.to_s.to_date
+    @search_flea_a = Flea.all
+    @search_flea = Array.new
+    unless @search.nil?
+      @search_flea_a.each do |p|
+        if p.application_start_date.to_date <= date && date <= p.application_end_date.to_date
+          @search_flea.append(p)
+        end
+      end
+    end
   end
 
   def flea_event_date
-    @search_flea_e = Flea.where('event_start_date <= :search AND :search <= event_end_date', search: "%#{params[:search]}%")
+    @search = params[:search]
+    date = @search.to_s.to_date
+    @search_flea_a = Flea.all
+    @search_flea = Array.new
+    unless @search.nil?
+      @search_flea_a.each do |p|
+        if p.event_start_date.to_date <= date && date <= p.event_end_date.to_date
+          @search_flea.append(p)
+        end
+      end
+    end
   end
 
 end
