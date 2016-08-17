@@ -1,49 +1,84 @@
 <p id="notice"><%= notice %></p>
-<div class = "container">
-<h1>Listing Fleas</h1>
-<br/>
+<section class="page-title">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4 class="text-uppercase">Blog Listing</h4>
+                        <ol class="breadcrumb">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li class="active">Blog Listing</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--page title end-->
 
-<label class="col-xs-2 control-label"><b>플리마켓 명으로 검색</b></label>
 
-<table class = "table table-hover">
-  <thead>
-      <tr>
-        <th>플리마켓 명</th>
-        <th>모집 시작일자</th>
-        <th>모집 종료일자</th>
-        <th>모집 인원</th>
-        <th>비고</th>
-        <th>지역</th>
-        <th>상세장소</th>
-        <th>행사 시작일자</th>
-        <th>행사 종료일자</th>
-        <th>참가비</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @fleas.each do |flea| %>
-          <tr>
-            <td><p><%= flea.market_name %> </p></td>
-            <td><p><%= flea.application_start_period %></p></td>
-            <td><p><%= flea.application_end_period %></p></td>
-            <td><p><%= flea.number_of_recruitment %></p></td>
-            <td><p><%= flea.remark %></p></td>
-            <td><p><%= flea.city_place %></p></td>
-            <td><p><%= flea.detail_place %></p></td>
-            <td><p><%= flea.event_start_date %></p></td>
-            <td><p><%= flea.event_end_date %></p></td>
-            <td><p><%= flea.entrance_fee %></p></td>
-            <td>
-              <p><%= link_to 'Show', flea %></p>
-              <p><%= link_to 'Edit', edit_flea_path(flea) %></p>
-              <p><%= link_to 'Destroy', flea, method: :delete, data: {confirm: 'Are you sure?'} %></p>
-            </td>
-          </tr>
-      <% end %>
-    </tbody>
-</table>
-</div>
-<br>
+        <% @flea.each do |f| %>
+        <!--body content start-->
+        <section class="body-content ">
+
+            <div class="page-content">
+                <div class="container">
+                    <div class="row">
+
+                        <!--blog list-->
+                        <div class="post-list-aside">
+                            <div class="post-single">
+                                <div class="col-md-5">
+                                    <div class="post-img">
+                                        <img src="img/post/p6.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-7">
+                                    <div class="post-desk text-center">
+                                        <ul class="post-cat">
+                                            <li><a href="#">interface</a></li>
+                                            <li><a href="#">standard</a></li>
+                                        </ul>
+                                        <h4 class="text-uppercase">
+                                            <a href="blog-single.html">we work together for fun</a>
+                                        </h4>
+                                        <div class="date">
+                                            <a href="#" class="author">martin smith</a> july 29, 2015
+                                        </div>
+                                        <p>
+                                            Phasellus fringilla suscipit risus nec eleifend. Pellentesque eu quam sem, ac malesuada leo sem quam pellente. Awesome sliders give you the opportunity to showcase your content.
+                                            fringilla suscipit risus nec eleifend. Pellentesque eu quam sem, ac malesuada leo sem quam pellente. Awesome sliders give you the opportunity to showcase your content.
+                                        </p>
+                                        <a href="blog-single.html" class="p-read-more">Read More <i class="icon-arrows_slim_right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--blog list-->
+
+                    </div>
+                </div>
+            </div>
+            <%end%>
+            <hr/>
+
+            <!--pagination-->
+            <div class="text-center page-content">
+                <ul class="pagination custom-pagination">
+                    <li><a href="#">Prev</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">Next</a></li>
+                </ul>
+            </div>
+            <!--pagination-->
+
+
+        </section>
+        <!--body content end-->
+
 
 <%= link_to 'New Flea', new_flea_path %>

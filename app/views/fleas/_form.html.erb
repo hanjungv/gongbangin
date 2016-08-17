@@ -1,5 +1,5 @@
 <div class="container">
-
+  <h2>새로운 플리마켓 등록</h2>
   <%= form_for(@flea) do |f| %>
       <% if @flea.errors.any? %>
           <div id="error_explanation">
@@ -13,43 +13,49 @@
       <% end %>
 
       <div class="field">
-        <%= f.label :application_period%><br>
+        <%= f.label :"플리마켓 명" %><br />
+        <%= f.text_field :market_name %>
+      </div>
+      <div class="field">
+        <%= f.label :"접수 시작일시"%><br>
         <%= f.datetime_select :application_start_period %>
       </div>
       <div class="field">
-        <%= f.label :application_period %><br>
+      <%= f.label :"접수 종료일시" %><br>
         <%= f.datetime_select :application_end_period %>
       </div>
       <div class="field">
-        <%= f.label :number_of_recruitment %><br>
+        <%= f.label :"모집 인원" %><br>
         <%= f.number_field :number_of_recruitment %>
       </div>
       <div class="field">
-        <%= f.label :remark %><br>
+        <%= f.label :"플리마켓 설명" %><br>
         <%= f.text_field :remark %>
       </div>
       <div class="field">
-        <%= f.label :city_place %><br>
-        <%= f.text_field :city_place %>
+        <%= f.label :"지역" %>
+          <%= f.select(:city_place,
+          ['서울','인천','대전','대구','부산','광주','울산',
+            '경기','충남','충북','전남','전북','경남','경북','제주']) %>
       </div>
       <div class="field">
-        <%= f.label :deatil_place %><br>
+        <%= f.label :"상세 주소" %><br>
         <%= f.text_field :detail_place %>
       </div>
       <div class="field">
-        <%= f.label :event_start_date %><br>
+        <%= f.label :"플리마켓 시작일시" %><br>
         <%= f.datetime_select :event_start_date %>
       </div>
       <div class="field">
-        <%= f.label :event_end_date %><br>
+        <%= f.label :"플리마켓 종료일시" %><br>
         <%= f.datetime_select :event_end_date %>
       </div>
       <div class="field">
-        <%= f.label :entrance_fee %><br>
+        <%= f.label :"참가비" %><br>
         <%= f.number_field :entrance_fee %>
       </div>
       <div class="actions">
-        <%= f.submit %>
+        <%= f.submit '마켓 등록하기', :class => 'btn btn-default btn-small btn-rounded' %>
       </div>
   <% end %>
 </div>
