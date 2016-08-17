@@ -50,4 +50,12 @@ class ItemController < ApplicationController
     @item.destroy
     redirect_to '/item/show'
   end
+
+  def production_process
+
+    @item = Item.find(params[:item_id])
+
+
+
+  end
 end

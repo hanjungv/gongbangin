@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   get 'item/show'
   get 'item/real_update'
   get 'item/destroy'
+  get 'production_process/:item_id' => "item#production_process"
   #info#
   get 'info/myinfo'
   get 'otherinfo/:user_id' => "info#otherinfo"
@@ -43,6 +44,7 @@ Rails.application.routes.draw do
       post 'dislike'
     end
   end
+
   #home#
   post 'home/upload'
   get 'home/index'
