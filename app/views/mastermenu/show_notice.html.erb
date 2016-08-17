@@ -22,7 +22,13 @@
                 <h3><%=@notice.title%></h3>
                 <p><%=image_tag(@notice.url)%>
                     <%=simple_format(@notice.content, {}, :sanitize => false)%>
-                  </p>
+                </p>
+                <%if user_signed_in? %>
+                  <%if current_user.level == "master"%>
+                    <a href="/destroy_notice/<%=@notice.id%>" class="btn btn-xs btn-theme-color ">삭제하기</a>
+                    <a href="/mastermenu/update_notice/<%=@notice.id%>" class="btn btn-xs btn-theme-color ">수정하기</a>
+                  <%end%>
+                <%end%>
                 <div class="divider d-solid d-single "></div>
             </div>
             <div class="col-md-1"></div>
@@ -60,11 +66,23 @@
                     </tbody>
                 </table>
                 <%if user_signed_in? %>
-                <%if current_user.level == "master"%>
-                <a href="/mastermenu/write_notice" class="btn btn-xs btn-theme-color ">공지작성</a>
+                  <%if current_user.level == "master"%>
+                    <a href="/mastermenu/write_notice" class="btn btn-xs btn-theme-color ">공지작성</a>
+                  <%end%>
                 <%end%>
-                <%end%>
+                <div class="text-center col-md-12">
+                    <ul class="pagination custom-pagination">
+                        <li><a href="#">Prev</a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">Next</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="col-md-1"></div>
         </div>
     </section>
+</div>
