@@ -25,4 +25,10 @@ Notice.create(title:"[공지사항]안녕하세요! 채민균입니다.",content
 Notice.create(title:"[공지사항]안녕하세요! 한정입니다.",content:"국무총리·국무위원 또는 정부위원은 국회나 그 위원회에 출석하여 국정처리상황을 보고하거나 의견을 진술하고 질문에 응답할 수 있다. 형사피고인은 유죄의 판결이 확정될 때까지는 무죄로 추정된다.
 
 행정각부의 설치·조직과 직무범위는 법률로 정한다. 국가는 전통문화의 계승·발전과 민족문화의 창달에 노력하여야 한다. 이 헌법중 공무원의 임기 또는 중임제한에 관한 규정은 이 헌법에 의하여 그 공무원이 최초로 선출 또는 임명된 때로부터 적용한다.")
-#
+
+#item seed
+Item.create(name:"대단히좋은아이템1", price:"102030", material:"나무", period:"1일~2일", user_id:1)
+Item.create(name:"대단히좋은아이템2", price:"130", material:"금속", period:"1일~2일", user_id:1)
+Item.create(name:"좋은아이템3", price:"5030", material:"실", period:"1일~2일", user_id:1)
+Item.create(name:"대단한아이템4", price:"10", material:"끈", period:"1일~2일", user_id:1)
+Item.create(name:"대단히좋은아이템5", price:"911110", material:"없음", period:"1일~2일", user_id:1)
