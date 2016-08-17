@@ -25,8 +25,8 @@
                 </p>
                 <%if user_signed_in? %>
                   <%if current_user.level == "master"%>
-                    <a href="/destroy_notice/<%=@notice.id%>" class="btn btn-xs btn-theme-color ">삭제하기</a>
-                    <a href="/mastermenu/update_notice/<%=@notice.id%>" class="btn btn-xs btn-theme-color ">수정하기</a>
+                    <a href="/destroy_notice/<%=@notice.id%>" class="btn btn-xs btn-light-solid">삭제하기</a>
+                    <a href="/mastermenu/update_notice/<%=@notice.id%>" class="btn btn-xs btn-light-solid ">수정하기</a>
                   <%end%>
                 <%end%>
                 <div class="divider d-solid d-single "></div>
@@ -67,7 +67,7 @@
                 </table>
                 <%if user_signed_in? %>
                   <%if current_user.level == "master"%>
-                    <a href="/mastermenu/write_notice" class="btn btn-xs btn-theme-color ">공지작성</a>
+                    <a href="/mastermenu/write_notice" class="btn btn-xs btn-light-solid ">공지작성</a>
                   <%end%>
                 <%end%>
                 <div class="text-center col-md-12">

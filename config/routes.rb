@@ -37,8 +37,7 @@ Rails.application.routes.draw do
   post 'real_update_item/:item_id'=>"item#real_update"
   get 'item/show'
   #info#
-  get 'info/myinfo'
-  get 'otherinfo/:user_id' => "info#otherinfo"
+  get 'showinfo/:user_id' => "info#showinfo"
   get 'info/levelup'
   get 'standby/:user_id' => "info#standby"
   #flea#
