@@ -39,6 +39,8 @@ class DeviseCreateUsers < ActiveRecord::Migration
       #사업자명, 사업자 번호(있는 경우만)
       t.string :brand, default:"없음"
       t.string :brand_number, default:"없음"
+
+      t.string :brand_place, dafault:"없음"
       #profile_image
       t.string :profile_image_url, default: ""
       #url

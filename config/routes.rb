@@ -43,6 +43,7 @@ Rails.application.routes.draw do
   get 'info/levelup'
   get 'standby/:user_id' => "info#standby"
 
+  get 'levelupForm' => "info#levelupForm"
   get 'info/add_prize/:user_id' =>"info#add_prize"
   post 'create_prize/:user_id' => "info#create_prize"
   get 'info/add_activity/:user_id' =>"info#add_activity"
@@ -51,6 +52,9 @@ Rails.application.routes.draw do
   get 'destroy_activity/:user_id/:activity_id' =>"info#destroy_activity"
   get 'destroy_prize/:user_id/:prize_id' =>"info#destroy_prize"
 
+=======
+>>>>>>> bbead160ebfdccd4aaac41603e0852ff64abecc8
+>>>>>>> 3212c7dc4e9a5213a00cb845bc7e92ba5fa6e23f
   #flea#
   resources :fleas do
     member do

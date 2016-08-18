@@ -1,3 +1,78 @@
-<div class = "container">
-  <a href = "/standby/<%=current_user.id%>">등업신청하기</a>
+<section class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="text-uppercase">플래너 신청하기</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="alert warning-border">
+    <i class="fa fa-lg fa-warning"></i>
+    <strong>이것만은 지켜줘요!</strong>블라블라
+    <div class="checkbox">
+        <label>
+          <form>
+            <input type="radio" name="agree" id="check1">
+            동의 해주세요 :)
+            <input type="radio" name="agree" id="check2">
+            동의 안해요 :(
+          </form>
+        </label>
+    </div>
 </div>
+
+<div class="container">
+
+    <form action="/standby/<%=current_user.id%>" method="get">
+        <input type="hidden" value="<%=current_user.id%>" name=user_id>
+        <div class="page-content">
+
+            <div class="row">
+                <div class="col-xs-offset-4 col-xs-4">
+                    <div class="form-group">
+                        <label>사업자명을 무엇인가요?</label>
+                        <input type="text" class="form-control text-center" name="brand" id="brand" placeholder="사업자명를 입력해주세요">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-offset-4 col-xs-4">
+                    <div class="form-group">
+                        <label>사업자 등록 번호는요?
+                        </label>
+                        <input type="text" class="form-control text-center" name="brand_brand_number" id="brand_number" placeholder="사업자 등록 번호를 입력해주세요">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-offset-4 col-xs-4">
+                    <div class="form-group">
+                        <label>장소는 어디인가요?</label>
+                        <input type="text" class="form-control text-center" name="brand_place" id="brand_place" placeholder="장소를 입력해주세요">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-offset-4 col-xs-4">
+                    <button type="submit" class="btn btn-primary" disabled="true" id="sub">Submit</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <a href="/levelupForm">등업신청하기</a>
+    <!--<a href = "/standby/<%=current_user.id%>">등업신청하기</a>-->
+</div>
+
+<script>
+    $("#check1").click(function () {
+      $("#sub").attr("disabled", false);
+    });
+    $("#check2").click(function () {
+      $("#sub").attr("disabled", true);
+    });
+</script>
