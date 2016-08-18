@@ -37,6 +37,7 @@ Rails.application.routes.draw do
   post 'real_update_item/:item_id'=>"item#real_update"
   get 'item/show'
   get 'production_process/:item_id' => "item#production_process"
+  post 'pp_edit/:item_id' => "item#pp_create"
   #info#
   get 'showinfo/:user_id' => "info#showinfo"
   get 'info/levelup'
