@@ -13,6 +13,13 @@ Rails.application.routes.draw do
   get 'mastermenu/write_sms/:user_id' =>"mastermenu#write_sms"
   post 'send_sms/:user_id'=>'mastermenu#send_sms'
 
+  get 'mastermenu/write_notice'
+  post 'create_notice' =>"mastermenu#create_notice"
+  get 'destroy_notice/:notice_id' =>"mastermenu#destroy_notice"
+  get 'mastermenu/update_notice/:notice_id' => "mastermenu#update_notice"
+  post 'real_update_notice/:notice_id'=>"mastermenu#real_update_notice"
+
+  get 'show_notice/:notice_id' => "mastermenu#show_notice"
   #search#
   get 'search/user'
   get 'search/search_main'
@@ -29,12 +36,9 @@ Rails.application.routes.draw do
   get 'update_item/:item_id' => "item#update"
   post 'real_update_item/:item_id'=>"item#real_update"
   get 'item/show'
-  get 'item/real_update'
-  get 'item/destroy'
   get 'production_process/:item_id' => "item#production_process"
   #info#
-  get 'info/myinfo'
-  get 'otherinfo/:user_id' => "info#otherinfo"
+  get 'showinfo/:user_id' => "info#showinfo"
   get 'info/levelup'
   get 'standby/:user_id' => "info#standby"
   #flea#
@@ -48,7 +52,7 @@ Rails.application.routes.draw do
   #home#
   post 'home/upload'
   get 'home/index'
-  get 'home/blog'
+  get 'home/faq'
   root 'home#index'
   #devise#
   devise_for :users, :controllers => { registrations: 'registrations' }

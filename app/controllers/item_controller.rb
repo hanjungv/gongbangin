@@ -23,6 +23,7 @@ class ItemController < ApplicationController
 
   end
   def show
+    
   end
 
   def update
@@ -54,7 +55,6 @@ class ItemController < ApplicationController
   def production_process
 
     @item = Item.find(params[:item_id])
-
 
 
   end

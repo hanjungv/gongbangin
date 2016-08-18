@@ -1,0 +1,88 @@
+<div class="wrapper">
+    <section class="page-title">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="text-uppercase">공지사항 / FAQ</h4>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li><a href ="/home/faq">공지사항 / faq</a></li>
+                        <li class = "active"> 내용보기</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="body-content page-content">
+        <div class="container">
+            <div class="col-md-1"></div>
+            <div class="container col-md-10">
+                <h3><%=@notice.title%></h3>
+                <p><%=image_tag(@notice.url)%>
+                    <%=simple_format(@notice.content, {}, :sanitize => false)%>
+                </p>
+                <%if user_signed_in? %>
+                  <%if current_user.level == "master"%>
+                    <a href="/destroy_notice/<%=@notice.id%>" class="btn btn-xs btn-light-solid">삭제하기</a>
+                    <a href="/mastermenu/update_notice/<%=@notice.id%>" class="btn btn-xs btn-light-solid ">수정하기</a>
+                  <%end%>
+                <%end%>
+                <div class="divider d-solid d-single "></div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+
+        <div class="container">
+            <!--title-->
+            <div class="heading-title-alt border-short-bottom text-center ">
+                <h3 class="text-uppercase">공지사항</h3>
+                <br>
+            </div>
+            <!--title-->
+            <div class="col-md-1"></div>
+            <div class="table-responsive col-md-10">
+                <table class="table cart-table">
+                    <thead>
+                        <tr>
+                            <th style="width:10%;">#</th>
+                            <th style="width:55%;">제목</th>
+                            <th style="width:20%;">올린날짜</th>
+                            <th style="width:15%;">조회수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%@all_notice.each_with_index do |p,index|%>
+                        <tr>
+                            <td><%=index+1%></td>
+                            <td>
+                                <a href="/show_notice/<%=p.id%>"><%=p.title%></a>
+                            </td>
+                            <td><%=p.created_at.strftime("%Y-%m-%d %H:%M")%></td>
+                            <td><%=p.view_count%></td>
+                        </tr>
+                        <%end%>
+                    </tbody>
+                </table>
+                <%if user_signed_in? %>
+                  <%if current_user.level == "master"%>
+                    <a href="/mastermenu/write_notice" class="btn btn-xs btn-light-solid ">공지작성</a>
+                  <%end%>
+                <%end%>
+                <div class="text-center col-md-12">
+                    <ul class="pagination custom-pagination">
+                        <li><a href="#">Prev</a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">Next</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </section>
+</div>

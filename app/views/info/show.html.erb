@@ -1,0 +1,242 @@
+<div class="wrapper">
+    <!--page title start-->
+    <section class="page-title">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="text-uppercase">Info</h4>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a>Info</a>
+                        </li>
+                        <li class="active">
+                            <a>Detail</a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--page title end-->
+
+    <!--body content start-->
+    <section class="body-content">
+        <div class="page-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="post-list-aside">
+                            <div class="post-single">
+                                <div class="post-slider-thumb post-img text-center">
+                                    <a href="javascript:;" title="Freshness Photo"><%=image_tag('product.jpg')%></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="product-title">
+                            <h2 class="text-uppercase">
+                                <span style="color:<%=@user.tier%>"><%=@user.level%></span>
+                                <%=@user.nickname%></h2>
+                        </div>
+
+                        <ul class="portfolio-meta m-bot-10 m-top-10 ">
+                            <li>
+                                <span>email</span><%=@user.email%></li>
+                            <li>
+                                <span>Address</span><%=@user.address%></li>
+                            <li>
+                                <span>Phone</span><%=@user.phone_number%></li>
+                            <li>
+                                <span>Skill</span><%=@user.skills%></li>
+                            <li>
+                                <span class="text-uppercase">tier</span><%=@user.tier%></li>
+                            <li>
+                                <span>score</span><%=@user.score%></li>
+                        </ul>
+                        <p><%=simple_format(@user.introduction, {}, :sanitize => false)%></p>
+                        <ul class="portfolio-meta m-bot-10 stock">
+                            <li>
+                                <span>
+                                    <strong class="number-item"><%=@items.count%></strong>개의 Item</span>
+                                <span class="status">등록됨</span>
+                            </li>
+                            <li>
+                                <%if user_signed_in?%>
+                                  <%if current_user.id == @user.id%>
+                                    <div class="clearfix">
+                                        <a href="/users/edit" class="btn btn-small btn-dark-solid">
+                                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>수정하기
+                                        </a>
+                                    </div>
+                                  <%end%>
+                                <%end%>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--fun factor-->
+                <div class="page-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class=" ">
+                                <div class="col-md-4 ">
+                                    <div class="fun-factor">
+                                        <div class="icon">
+                                            <i class="icon-happy"></i>
+                                        </div>
+                                        <div class="fun-info">
+                                            <h1 class="timer" data-from="0" data-to="36" data-speed="1000"> </h1>
+                                            <span>다음티어까지 몇점</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="fun-factor">
+                                        <div class="icon">
+                                            <i class="icon-flag"></i>
+                                        </div>
+                                        <div class="fun-info">
+                                            <h1 class="timer" data-from="0" data-to="<%=@items.count%>" data-speed="1000"> </h1>
+                                            <span>판매가능한 아이템 수</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="fun-factor">
+                                        <div class="icon">
+                                            <i class="icon-ribbon"></i>
+                                        </div>
+                                        <div class="fun-info">
+                                            <h1 class="timer" data-from="0" data-to="17" data-speed="1000"> </h1>
+                                            <span>참여했던 마켓 수</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--fun factor-->
+                <div class="divider divider-small d-solid d-single text-center">
+                    <span class="dot"></span>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="heading-title-alt text-center">
+                        <h3 class="text-uppercase">WHO AM I</h3>
+                        <span class="text-uppercase">much more Details</span>
+                    </div>
+                    <br/><br/>
+                    <!-- toggle 2 start-->
+                    <dl class="toggle">
+                        <dt>
+                            <a href="">주 활동분야</a>
+                        </dt>
+                        <dd>
+                            <div class="progress massive-progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                    목공 DESIGN
+                                    <span>75%</span>
+                                </div>
+                            </div>
+                            <div class="progress massive-progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="59" aria-valuemin="0" aria-valuemax="100">
+                                    금속 공예
+                                    <span>59%</span>
+                                </div>
+                            </div>
+                            <div class="progress massive-progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
+                                    컴퓨터 디자인
+                                    <span>35%</span>
+                                </div>
+                            </div>
+                        </dd>
+                        <dt>
+                            <a href="">주 활동지역</a>
+                        </dt>
+                        <dd>구글 지도가 들어가면?</dd>
+                        <dt>
+                            <a href="">수상 실적</a>
+                        </dt>
+                        <dd>테이블로 할까..</dd>
+                        <dt>
+                            <a href="">기타 자랑할것</a>
+                        </dt>
+                        <dd>뭐가 들어갈지 아직 안정함</dd>
+                    </dl>
+                    <!-- toggle 2 end-->
+                    <br/>
+                    <div class="divider divider-small d-solid d-single text-center">
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                      <div class="heading-title-alt text-center">
+                        <h3 class="text-uppercase">
+                              my item
+                        </h3>
+                        <span class="text-uppercase">현재 판매가능한 item들 입니다.</span>
+                      </div>
+
+                        <!--portfolio carousel-->
+
+                        <div id="portfolio-carousel"  class=" portfolio-with-title col-3 portfolio-gallery">
+                          <% @items.each do |i|%>
+                            <div class="portfolio-item">
+                                <div class="thumb">
+                                  <%=image_tag('thumb.jpg')%>
+                                    <div class="portfolio-hover">
+                                        <div class="action-btn">
+                                            <a href="img/product/5.jpg" class="popup-link" title="lightbox view">
+                                                <i class="icon-basic_magnifier"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-title">
+                                    <h4>
+                                        <a href="img/product/5.jpg" class="popup-link" title="lightbox view"><%=i.name%></a>
+                                    </h4>
+                                    <p class="txt-xl">₩<%=i.price%>
+                                    </p>
+                                </div>
+                            </div>
+                          <%end%>
+                        </div>
+                        <!--portfolio carousel-->
+
+
+                        <div class="divider divider-small d-solid d-single text-center">
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                      <div class="heading-title-alt text-center">
+                        <h3 class="text-uppercase">
+                              Flea market
+                        </h3>
+                        <span class="text-uppercase">참여했던 플리마켓 리스트들 입니다. 클릭하면 자세한 설명을 볼 수 있습니다.</span>
+                      </div>
+                      <br/><br/>
+                      <!--image carousel-->
+                      <div id="img-carousel">
+                        <div class="item"><a href="#"><%=image_tag('product.jpg')%></a></div>
+                        <div class="item"><a href="#"><%=image_tag('product.jpg')%></a></div>
+                        <div class="item"><a href="#"><%=image_tag('product.jpg')%></a></div>
+                        <div class="item"><a href="#"><%=image_tag('product.jpg')%></a></div>
+                        <div class="item"><a href="#"><%=image_tag('product.jpg')%></a></div>
+                      </div>
+                      <!--image carousel-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--body content end-->
+</div>

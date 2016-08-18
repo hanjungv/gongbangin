@@ -1,10 +1,8 @@
 class InfoController < ApplicationController
-  def myinfo
-  end
-
-  def otherinfo
+  def showinfo
     @user = User.find(params[:user_id])
-    render '/info/other'
+    @items = Item.where(user_id:params[:user_id])
+    render '/info/show'
   end
 
   def levelup

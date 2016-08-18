@@ -16,7 +16,8 @@ class MastermenuController < ApplicationController
   def levelup
     @user = User.find(params[:user_id])
     @user.level = "planner"
-    @user.tier = "pink"
+    @user.tier = "bronze"
+    @user.score = 0
     @user.save
     redirect_to '/mastermenu/user_manage'
   end
@@ -67,7 +68,7 @@ class MastermenuController < ApplicationController
   def send_sms
     @receiver = User.find(params[:user_id]).phone_number
     @content = params[:content]
-    
+
     client = Coolsms::Client.new :api_key => '',
                                  :api_secret => '', :sender => ""
 
@@ -76,4 +77,60 @@ class MastermenuController < ApplicationController
 
     redirect_to '/mastermenu/user_manage'
   end
+
+
+
+  def create_notice
+    @notice = Notice.new
+    @notice.title = params[:title]
+    @notice.content = params[:content]
+
+    file = params[:pic]
+    uploader = NoticePicUploader.new
+    uploader.store!(file)
+    @notice.url = uploader.url
+
+    if @notice.save
+      redirect_to '/home/faq'
+    else
+      render :show, notice:"실패했어요! 다시 한번 해보는게 어때요?"
+    end
+  end
+
+  def show_notice
+    @all_notice = Notice.all.order('created_at desc')
+    @notice = Notice.find(params[:notice_id])
+    @notice.view_count = @notice.view_count + 1
+    @notice.save
+    render '/mastermenu/show_notice'
+  end
+
+  def update_notice
+    @notice = Notice.find(params[:notice_id])
+  end
+
+  def real_update_notice
+    @notice = Notice.find(params[:notice_id])
+
+    @notice.title = params[:title]
+    @notice.content = params[:content]
+
+    file = params[:pic]
+    uploader = NoticePicUploader.new
+    uploader.store!(file)
+    @notice.url = uploader.url
+
+    if @notice.save
+      redirect_to '/home/faq'
+    else
+      render :show, notice:"실패했어요! 다시 한번 해보는게 어때요?"
+    end
+  end
+
+  def destroy_notice
+    @notice = Notice.find(params[:notice_id])
+    @notice.destroy
+    redirect_to '/home/faq'
+  end
+
 end

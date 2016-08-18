@@ -13,7 +13,7 @@
                     <!--mega menu start-->
                     <ul class="menuzord-menu pull-right">
                         <li>
-                            <a href="/home/blog">소개말</a>
+                            <a href="/home/faq">공지/FAQ</a>
                         </li>
                         <li>
                             <a href="/fleas">오늘의 마켓</a>
@@ -57,7 +57,7 @@
                         <a href="/users/sign_out">로그아웃</a>
                     </li>
                     <li>
-                        <a href="/info/myinfo"><%= current_user.level %>
+                        <a href="/showinfo/<%=current_user.id%>"><%= current_user.level %>
                         <%= current_user.nickname %>님</a>
                     </li>
                 <% else %>
