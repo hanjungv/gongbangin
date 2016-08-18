@@ -7,6 +7,8 @@
 # Ignore bundler config.
 /.bundle
 
+
+
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-journal
@@ -155,3 +157,4 @@ $RECYCLE.BIN/
 *.lnk
 # Ignore application configuration
 /config/application.yml
+/config/initializers/aws.rb
