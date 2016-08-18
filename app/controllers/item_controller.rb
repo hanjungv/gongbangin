@@ -23,6 +23,7 @@ class ItemController < ApplicationController
 
   end
   def show
+    
   end
 
   def update
@@ -49,5 +50,12 @@ class ItemController < ApplicationController
     @item = Item.find(params[:item_id])
     @item.destroy
     redirect_to '/item/show'
+  end
+
+  def production_process
+
+    @item = Item.find(params[:item_id])
+
+
   end
 end

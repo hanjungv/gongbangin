@@ -36,6 +36,7 @@ Rails.application.routes.draw do
   get 'update_item/:item_id' => "item#update"
   post 'real_update_item/:item_id'=>"item#real_update"
   get 'item/show'
+  get 'production_process/:item_id' => "item#production_process"
   #info#
   get 'showinfo/:user_id' => "info#showinfo"
   get 'info/levelup'
@@ -47,6 +48,7 @@ Rails.application.routes.draw do
       post 'dislike'
     end
   end
+
   #home#
   post 'home/upload'
   get 'home/index'

@@ -1,3 +1,5 @@
+<%= tinymce_assets %>
+
 <div class = "container">
   <h1>Item#show</h1>
   <%current_user.items.each do |p|%>
@@ -8,6 +10,7 @@
     사진 : <img src = "<%=p.url%>" alt="">
     <a href = "/destroy_item/<%=p.id%>">삭제</a>
     <a href = "/update_item/<%=p.id%>">수정</a>
+    <a href = "/production_process/<%=p.id%>" >제작과정</a>
     <br></p>
   <%end%>
 </div>
