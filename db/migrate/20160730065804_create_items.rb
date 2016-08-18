@@ -10,10 +10,12 @@ class CreateItems < ActiveRecord::Migration
       t.string :material
       # 제작 기간
       t.string :period
-      #id 부여
+      # id 부여
       t.integer :user_id
       # 사진 메인 이미지
       t.string :url
+      # 아이템 분류
+      t.string :classification
 
       t.timestamps null: false
     end
