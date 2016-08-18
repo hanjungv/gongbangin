@@ -13,6 +13,7 @@
       <% end %>
 
       <div class="field">
+<<<<<<< HEAD
         <%= f.label :"플리마켓 명" %><br />
         <%= f.text_field :market_name %>
       </div>
@@ -23,6 +24,14 @@
       <div class="field">
       <%= f.label :"접수 종료일시" %><br>
         <%= f.datetime_select :application_end_period %>
+=======
+        <%= f.label :application_date%><br>
+        <%= f.datetime_select :application_start_date %>
+      </div>
+      <div class="field">
+        <%= f.label :application_date %><br>
+        <%= f.datetime_select :application_end_date %>
+>>>>>>> 4cf850ea97a02b4957f4ff0e248a53105a2c1f23
       </div>
       <div class="field">
         <%= f.label :"모집 인원" %><br>

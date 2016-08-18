@@ -4,6 +4,8 @@ class FleasController < ApplicationController
   # GET /fleas.json
   def index
     @fleas = Flea.all
+    @current_time = Time.now
+
   end
 
   def show
@@ -48,7 +50,7 @@ class FleasController < ApplicationController
   # PATCH/PUT /fleas/1
   # PATCH/PUT /fleas/1.json
   def update
-    if @flea.update(post_params)
+    if @flea.update(flea_params)
       redirect_to @flea, notice: 'Post was successfully updated.'
     else
       render :edit
@@ -70,6 +72,6 @@ class FleasController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def flea_params
-    params.require(:flea).permit(:application_start_period, :application_end_period, :number_of_recruitment, :remark, :city_place, :detail_place, :event_start_date, :event_end_date, :entrance_fee)
+    params.require(:flea).permit(:application_start_date, :application_end_date, :number_of_recruitment, :remark, :city_place, :detail_place, :event_start_date, :event_end_date, :entrance_fee)
   end
 end
