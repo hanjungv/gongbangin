@@ -26,3 +26,4 @@
 //= require js/wow.min
 //= require js/imagesloaded
 //= require js/scripts.js
+//= require tinymce

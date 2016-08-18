@@ -23,6 +23,7 @@ class ItemController < ApplicationController
 
   end
   def show
+
   end
 
   def update
@@ -50,4 +51,17 @@ class ItemController < ApplicationController
     @item.destroy
     redirect_to '/item/show'
   end
+
+  def production_process
+    @item = Item.find(params[:item_id])
+  end
+
+  def pp_create
+
+    #@item = Item.find(params[:item_id])
+    #@pp=ProductionImage.new
+    #@pp.process = params[:production_content]
+    #@pp.save
+  end
+
 end
