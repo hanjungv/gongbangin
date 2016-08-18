@@ -5,7 +5,8 @@ class CreateProductionImages < ActiveRecord::Migration
       # 아이템 제작 과정 사진
       t.string :url
       # 아이템 제작 과정 단계의 설명
-      t.string :process
+      t.text :process
+      t.integer :item_id
 
       t.timestamps null: false
     end

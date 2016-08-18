@@ -1,7 +1,7 @@
 <p>제작과정</p>
 <!--<%= text_area_tag :content, "", :class => "tinymce", :rows => 40, :cols => 120 %>-->
 
-<form action="#" method="post">
+<form action="/pp_edit/<%=@item.id%>" method="post" >
     <textarea>Your content here</textarea>
     <input type="submit" value="Submit">
 </form>
