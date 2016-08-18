@@ -7,6 +7,8 @@
 # Ignore bundler config.
 /.bundle
 
+
+
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-journal
@@ -141,6 +143,7 @@ ehthumbs.db
 # Folder config file
 Desktop.ini
 
+
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 
@@ -154,3 +157,4 @@ $RECYCLE.BIN/
 *.lnk
 # Ignore application configuration
 /config/application.yml
+/config/initializers/aws.rb

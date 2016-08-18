@@ -42,7 +42,15 @@ Rails.application.routes.draw do
   get 'showinfo/:user_id' => "info#showinfo"
   get 'info/levelup'
   get 'standby/:user_id' => "info#standby"
+<<<<<<< HEAD
   get 'levelupForm' => "info#levelupForm"
+=======
+  
+  get 'info/add_prize/:user_id' =>"info#add_prize"
+  post 'create_prize/:user_id' => "info#create_prize"
+  get 'info/add_activity/:user_id' =>"info#add_activity"
+  post 'create_activity/:user_id'=>"info#create_activity"
+>>>>>>> bbead160ebfdccd4aaac41603e0852ff64abecc8
   #flea#
   resources :fleas do
     member do
