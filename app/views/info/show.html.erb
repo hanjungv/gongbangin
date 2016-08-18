@@ -48,7 +48,7 @@
                             <li>
                                 <span>Phone</span><%=@user.phone_number%></li>
                             <li>
-                                <span>활동지역</span><%=@user.ac%></li>
+                                <span>활동지역</span><%=@user.activity_area%></li>
                             <li>
                                 <span class="text-uppercase">tier</span><%=@user.tier%></li>
                             <li>
@@ -134,55 +134,41 @@
                             <a href="">주 활동분야</a>
                         </dt>
                         <dd>
-                            <div class="progress massive-progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                                    목공 DESIGN
-                                    <span>75%</span>
-                                </div>
-                            </div>
-                            <div class="progress massive-progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="59" aria-valuemin="0" aria-valuemax="100">
-                                    금속 공예
-                                    <span>59%</span>
-                                </div>
-                            </div>
-                            <div class="progress massive-progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
-                                    컴퓨터 디자인
-                                    <span>35%</span>
-                                </div>
-                            </div>
+                            <%@activity.each do |a|%>
+                              <div class="progress massive-progress">
+                                  <div class="progress-bar" role="progressbar" aria-valuenow="<%=a.percentage%>" aria-valuemin="0" aria-valuemax="100">
+                                    <%if a.name == "etc1"%>
+                                      <%=a.etc_name%>
+                                    <%else%>
+                                      <%=a.name%>
+                                    <%end%>
+                                    <%if a.skill_part == "etc2"%>
+                                      <%=a.etc_part%>
+                                    <%else%>
+                                      <%=a.skill_part%>
+                                    <%end%>
+                                      <span><%=a.percentage%>%</span>
+                                  </div>
+                              </div>
+                            <%end%>
                             <div class="clearfix">
-                              <a href="/item/create" class="btn btn-xs btn-dark-solid">
+                              <a href="/info/add_activity/<%=current_user.id%>" class="btn btn-xs btn-dark-solid">
                                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i>추가하기
                               </a>
-                              <a href="/item/create" class="btn btn-xs btn-dark-solid">
+                              <a href="/#" class="btn btn-xs btn-dark-solid">
                                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i>수정하기
                               </a>
                             </div>
-                        </dd>
-                        <dt>
-                            <a href="">주 활동지역</a>
-                        </dt>
-                        <dd>
-                          <div class="clearfix">
-                            <a href="/item/create" class="btn btn-xs btn-dark-solid">
-                              <i class="fa fa-pencil-square-o" aria-hidden="true"></i>추가하기
-                            </a>
-                            <a href="/item/create" class="btn btn-xs btn-dark-solid">
-                              <i class="fa fa-pencil-square-o" aria-hidden="true"></i>수정하기
-                            </a>
-                          </div>
                         </dd>
                         <dt>
                             <a href="">수상 실적</a>
                         </dt>
                         <dd>
                           <div class="clearfix">
-                            <a href="/item/create" class="btn btn-xs btn-dark-solid">
+                            <a href="/info/add_prize/<%=current_user.id%>" class="btn btn-xs btn-dark-solid">
                               <i class="fa fa-pencil-square-o" aria-hidden="true"></i>추가하기
                             </a>
-                            <a href="/item/create" class="btn btn-xs btn-dark-solid">
+                            <a href="/#" class="btn btn-xs btn-dark-solid">
                               <i class="fa fa-pencil-square-o" aria-hidden="true"></i>수정하기
                             </a>
                           </div>

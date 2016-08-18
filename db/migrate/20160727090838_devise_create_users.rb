@@ -34,7 +34,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       #score
       t.integer :score, default: 0
       #주요 활동지역
-      t.string :active_area, default: "서울"
+      t.string :activity_area, default: "서울"
 
       #사업자명, 사업자 번호(있는 경우만)
       t.string :brand, default:"없음"
