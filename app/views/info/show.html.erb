@@ -180,6 +180,19 @@
                               my item
                         </h3>
                         <span class="text-uppercase">현재 판매가능한 item들 입니다.</span>
+                        <%if user_signed_in?%>
+                          <%if current_user.id == @user.id%>
+                            <br/>
+                            <div class="clearfix">
+                              <a href="/item/create" class="btn btn-xs btn-dark-solid">
+                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>추가하기
+                              </a>
+                              <a href="/item/show" class="btn btn-xs btn-dark-solid">
+                                  <i class="fa fa-pencil-square-o" aria-hidden="true"></i>수정하기
+                              </a>
+                            </div>
+                          <%end%>
+                        <%end%>
                       </div>
 
                         <!--portfolio carousel-->
@@ -201,12 +214,12 @@
                                     <h4>
                                         <a href="img/product/5.jpg" class="popup-link" title="lightbox view"><%=i.name%></a>
                                     </h4>
-                                    <p class="txt-xl">₩<%=i.price%>
-                                    </p>
+                                    <p class="txt-xl">₩<%=i.price%></p>
                                 </div>
                             </div>
                           <%end%>
                         </div>
+
                         <!--portfolio carousel-->
 
 
