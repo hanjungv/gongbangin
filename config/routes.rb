@@ -42,11 +42,15 @@ Rails.application.routes.draw do
   get 'showinfo/:user_id' => "info#showinfo"
   get 'info/levelup'
   get 'standby/:user_id' => "info#standby"
-  
+
   get 'info/add_prize/:user_id' =>"info#add_prize"
   post 'create_prize/:user_id' => "info#create_prize"
   get 'info/add_activity/:user_id' =>"info#add_activity"
   post 'create_activity/:user_id'=>"info#create_activity"
+
+  get 'destroy_activity/:user_id/:activity_id' =>"info#destroy_activity"
+  get 'destroy_prize/:user_id/:prize_id' =>"info#destroy_prize"
+
   #flea#
   resources :fleas do
     member do

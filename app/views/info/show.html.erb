@@ -150,27 +150,56 @@
                                       <span><%=a.percentage%>%</span>
                                   </div>
                               </div>
+                              <%if user_signed_in?%>
+                                <%if current_user.id == @user.id%>
+                                    <a href="/destroy_activity/<%=current_user.id%>/<%=a.id%>" class="btn btn-xs btn-dark-solid">
+                                      삭제하기
+                                    </a>
+                                <%end%>
+                              <%end%>
                             <%end%>
-                            <div class="clearfix">
-                              <a href="/info/add_activity/<%=current_user.id%>" class="btn btn-xs btn-dark-solid">
-                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>추가하기
-                              </a>
-                              <a href="/#" class="btn btn-xs btn-dark-solid">
-                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>수정하기
-                              </a>
-                            </div>
+                            <%if user_signed_in?%>
+                              <%if current_user.id == @user.id%>
+                                <div class="clearfix">
+                                  <a href="/info/add_activity/<%=current_user.id%>" class="btn btn-xs btn-dark-solid">
+                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>추가하기
+                                  </a>
+                                <%end%>
+                              <%end%>
                         </dd>
                         <dt>
                             <a href="">수상 실적</a>
                         </dt>
                         <dd>
                           <div class="clearfix">
-                            <a href="/info/add_prize/<%=current_user.id%>" class="btn btn-xs btn-dark-solid">
-                              <i class="fa fa-pencil-square-o" aria-hidden="true"></i>추가하기
-                            </a>
-                            <a href="/#" class="btn btn-xs btn-dark-solid">
-                              <i class="fa fa-pencil-square-o" aria-hidden="true"></i>수정하기
-                            </a>
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th style ="width:10%">#</th>
+                                    <th style ="width:30%">대회명</th>
+                                    <th style ="width:25%">상명</th>
+                                    <th style ="width:35%">수상날짜</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                  <%@prize.each_with_index do |p,index|%>
+                                    <tr>
+                                        <th scope="row"><%=index+1%></th>
+                                        <td><%=p.contest_name%></td>
+                                        <td><%=p.prize_name%></td>
+                                        <td><%=p.prize_date.strftime("%Y-%m-%d")%></td>
+                                    </tr>
+                                  <%end%>
+                                </tbody>
+                            </table>
+                            <%if user_signed_in?%>
+                              <%if current_user.id == @user.id%>
+                                <a href="/info/add_prize/<%=current_user.id%>" class="btn btn-xs btn-dark-solid">
+                                  <i class="fa fa-pencil-square-o" aria-hidden="true"></i>추가하기
+                                </a>
+                              <%end%>
+                            <%end%>
+
                           </div>
                         </dd>
                     </dl>
@@ -227,9 +256,7 @@
                             </div>
                           <%end%>
                         </div>
-
                         <!--portfolio carousel-->
-
 
                         <div class="divider divider-small d-solid d-single text-center">
                             <span class="dot"></span>
