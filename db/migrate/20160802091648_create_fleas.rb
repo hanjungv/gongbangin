@@ -22,6 +22,8 @@ class CreateFleas < ActiveRecord::Migration
       t.date :event_end_date
       # 참가비
       t.integer :entrance_fee
+      # 포스터 주소
+      t.string :poster_url,  default: "poster.png"
 
       t.timestamps null: false
     end
