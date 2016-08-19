@@ -21,9 +21,8 @@ Rails.application.routes.draw do
 
   get 'show_notice/:notice_id' => "mastermenu#show_notice"
   #search#
-  get 'search/user'
   get 'search/search_main'
-  get 'user' =>"search#user"
+  get 'user' => "search#user"
   get 'search/flea_application_date'
   get 'search/flea_city_place'
   get 'search/flea_event_date'
@@ -52,9 +51,6 @@ Rails.application.routes.draw do
   get 'destroy_activity/:user_id/:activity_id' =>"info#destroy_activity"
   get 'destroy_prize/:user_id/:prize_id' =>"info#destroy_prize"
 
-=======
->>>>>>> bbead160ebfdccd4aaac41603e0852ff64abecc8
->>>>>>> 3212c7dc4e9a5213a00cb845bc7e92ba5fa6e23f
   #flea#
   resources :fleas do
     member do
