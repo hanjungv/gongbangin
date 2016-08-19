@@ -21,9 +21,8 @@ Rails.application.routes.draw do
 
   get 'show_notice/:notice_id' => "mastermenu#show_notice"
   #search#
-  get 'search/user'
   get 'search/search_main'
-  get 'user' =>"search#user"
+  get 'user' => "search#user"
   get 'search/flea_application_date'
   get 'search/flea_city_place'
   get 'search/flea_event_date'
@@ -42,6 +41,16 @@ Rails.application.routes.draw do
   get 'showinfo/:user_id' => "info#showinfo"
   get 'info/levelup'
   get 'standby/:user_id' => "info#standby"
+
+  get 'levelupForm' => "info#levelupForm"
+  get 'info/add_prize/:user_id' =>"info#add_prize"
+  post 'create_prize/:user_id' => "info#create_prize"
+  get 'info/add_activity/:user_id' =>"info#add_activity"
+  post 'create_activity/:user_id'=>"info#create_activity"
+
+  get 'destroy_activity/:user_id/:activity_id' =>"info#destroy_activity"
+  get 'destroy_prize/:user_id/:prize_id' =>"info#destroy_prize"
+
   #flea#
   resources :fleas do
     member do

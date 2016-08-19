@@ -1,0 +1,44 @@
+<!--page title start-->
+<section class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="text-uppercase">수상실적 추가</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <form action="/create_prize/<%=current_user.id%>" method="post" enctype="multipart/form-data">
+        <div class="page-content">
+            <div class="row">
+                <div class="col-xs-offset-4 col-xs-4">
+                    <div class="form-group">
+                        <label>어느 대회에서 수상했나요?</label>
+                        <input type="text" class="form-control" name="contest_name" id="contest_name" placeholder="대회 이름을 입력해주세요">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-offset-4 col-xs-4">
+                    <div class="form-group">
+                        <label>어떤 상을 수상했나요?</label>
+                        <input type="text" class="form-control" name="prize_name" id="prize_name" placeholder="상 이름을 입력해주세요">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-offset-4 col-xs-4">
+                    <div class="form-group">
+                        <label>언제 수상 했나요?</label><br/>
+                        <input id="meeting" class="form-control" type="date" name ="prize_date" value="<%=Time.now%>">
+                    </div>
+                </div>
+            </div>
+            <div class ="text-center">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+    </form>
+</div>

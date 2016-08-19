@@ -7,6 +7,7 @@ class ItemController < ApplicationController
     @item.name = params[:item_name]
     @item.price = params[:item_price]
     @item.material = params[:item_material]
+    @item.classification = params[:item_classification]
     @item.period = params[:item_period]
     @item.user_id = params[:user_id]
 

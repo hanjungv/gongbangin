@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160816072353) do
+ActiveRecord::Schema.define(version: 20160818070643) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -73,6 +73,17 @@ ActiveRecord::Schema.define(version: 20160816072353) do
   add_index "like_flea_markets", ["flea_id"], name: "index_like_flea_markets_on_flea_id"
   add_index "like_flea_markets", ["user_id"], name: "index_like_flea_markets_on_user_id"
 
+  create_table "main_activities", force: :cascade do |t|
+    t.string   "name"
+    t.string   "etc_name",   default: ""
+    t.string   "skill_part"
+    t.string   "etc_part",   default: ""
+    t.integer  "percentage", default: 0
+    t.integer  "user_id"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
+
   create_table "notices", force: :cascade do |t|
     t.string   "title"
     t.string   "content"
@@ -115,6 +126,15 @@ ActiveRecord::Schema.define(version: 20160816072353) do
     t.datetime "updated_at",             null: false
   end
 
+  create_table "user_prizes", force: :cascade do |t|
+    t.string   "prize_name"
+    t.string   "contest_name"
+    t.datetime "prize_date"
+    t.integer  "user_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",                null: false
     t.string   "encrypted_password",     default: "",                null: false
@@ -134,7 +154,7 @@ ActiveRecord::Schema.define(version: 20160816072353) do
     t.string   "introduction",           default: "안녕하세요!만나서 반가워요!"
     t.string   "tier",                   default: "black"
     t.integer  "score",                  default: 0
-    t.string   "skills",                 default: "없음"
+    t.string   "activity_area",          default: "서울"
     t.string   "brand",                  default: "없음"
     t.string   "brand_number",           default: "없음"
     t.string   "profile_image_url",      default: ""

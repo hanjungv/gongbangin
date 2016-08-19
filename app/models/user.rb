@@ -17,6 +17,8 @@ class User < ActiveRecord::Base
   has_many :fleas, through: :comment_flea_markets
   has_many :recomment_flea_markets
   has_many :joined_flealists
+  has_many :main_activities
+  has_many :user_prizes
 
   mount_uploader :profile_image_url, AwsS3Uploader
 

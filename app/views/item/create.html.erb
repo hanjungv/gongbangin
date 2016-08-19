@@ -4,72 +4,94 @@
         <div class="row">
             <div class="col-md-12">
                 <h4 class="text-uppercase">아이템 추가하기</h4>
-
             </div>
         </div>
     </div>
 </section>
 
+<div class="container">
+    <form action="/create_item" method="post" enctype="multipart/form-data">
+        <input type="hidden" value="<%=current_user.id%>" name=user_id>
+        <div class="page-content">
+            <div class="row">
+                <div class="col-xs-offset-4 col-xs-4">
+                    <div class="form-group">
+                        <label>아이템 이름은 무엇인가요?</label>
+                        <input type="text" class="form-control text-center" name="item_name" id="item_name" placeholder="이름을 입력해주세요">
+                    </div>
+                </div>
+            </div>
 
-<div class ="container">
-  <form action = "/create_item" method="post" enctype="multipart/form-data">
-  <input type = "hidden" value = "<%=current_user.id%>" name =user_id>
-</div>
-  <div class="page-content">
-    <div class="row">
-      <div class="col-xs-offset-4 col-xs-4">
-        <div class="form-group">
-          <label>아이템 이름은 무엇인가요?</label>
-          <input type="text" class="form-control text-center" name = "item_name" id="item_name" placeholder="이름을 입력해주세요">
+            <div class="row">
+                <div class="col-xs-offset-4 col-xs-4">
+                    <div class="form-group">
+                        <label>가격은 어떤가요?</label>
+                        <input type="number" class="form-control text-center" name="item_price" id="item_price" min="0" step="100" placeholder="가격을 입력해주세요">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-offset-4 col-xs-4">
+                    <div class="form-group">
+                        <label>제작기간은 얼마나 걸리나요?</label>
+                        <select class="form-control" id="period" name="item_period">
+                            <option>1일~2일</option>
+                            <option>3일~7일</option>
+                            <option>1주~2주</option>
+                            <option>2주 이상</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-offset-4 col-xs-4">
+                    <div class="form-group">
+                        <label>주 재료가 무엇인가요?</label>
+                        <input type="text" class="form-control text-center" name="item_material" id="item_material" placeholder="주 재료를 간단히 입력해주세요">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-offset-4 col-xs-4">
+                    <div class="form-group">
+<<<<<<< HEAD
+                        <label>아이템 품목은 무엇인가요?</label>
+                        <select class="form-control" id="item_classification" name="item_classification">
+                            <option>도자</option>
+                            <option>유리</option>
+                            <option>석/금속</option>
+                            <option>귀금속보석</option>
+                            <option>목/죽세</option>
+                            <option>종이·한지</option>
+                            <option>섬유</option>
+                            <option>가죽</option>
+                            <option>기타</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-offset-4 col-xs-4">
+                    <div class="form-group">
+                        <label>아이템 메인 이미지를 넣어주세요</label>
+                        <input type="file" class="filestyle text-center" data-icon="false" name="pic" accept="image/*">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+=======
+                        <label>아이템 메인 이미지를 넣어주세요</label>
+                        <input type="file" class="filestyle text-center" data-icon="false" name="pic" accept="image/*">
+
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+>>>>>>> bbead160ebfdccd4aaac41603e0852ff64abecc8
         </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-xs-offset-4 col-xs-4">
-        <div class="form-group">
-          <label>가격은 어떤가요?</label>
-          <input type="number" class="form-control text-center" name ="item_price" id="item_price"
-            min="0" step="100" placeholder="가격을 입력해주세요">
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-xs-offset-4 col-xs-4">
-        <div class="form-group">
-          <label>제작기간은 얼마나 걸리나요?</label>
-          <select class="form-control" id="period" name = "item_period">
-            <option>1일~2일</option>
-            <option>3일~7일</option>
-            <option>1주~2주</option>
-            <option>2주 이상</option>
-          </select>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-xs-offset-4 col-xs-4">
-        <div class="form-group">
-          <label>주 재료가 무엇인가요?</label>
-          <input type="text" class="form-control text-center" name ="item_material" id="item_material" placeholder="주 재료를 간단히 입력해주세요">
-        </div>
-      </div>
-    </div>
-
-
-    <div class="row">
-      <div class="col-xs-offset-4 col-xs-4">
-        <div class = "form-group">
-          <label>아이템 메인 이미지를 넣어주세요</label>
-          <input type="file" class="filestyle text-center" data-icon="false" name="pic" accept="image/*">
-
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </div>
-    </div>
-
-  </form>
-</div>
+    </form>
 </div>
