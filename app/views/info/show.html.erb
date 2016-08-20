@@ -1,0 +1,290 @@
+<div class="wrapper">
+    <!--page title start-->
+    <section class="page-title">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="text-uppercase">Info</h4>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a>Info</a>
+                        </li>
+                        <li class="active">
+                            <a>Detail</a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--page title end-->
+
+    <!--body content start-->
+    <section class="body-content">
+        <div class="page-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="post-list-aside">
+                            <div class="post-single">
+                                <div class="post-slider-thumb post-img text-center">
+                                    <a href="javascript:;" title="Freshness Photo"><%=image_tag('product.jpg')%></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="product-title">
+                            <h2 class="text-uppercase">
+                                <span style="color:<%=@user.tier%>"><%=@user.level%></span>
+                                <%=@user.nickname%></h2>
+                        </div>
+
+                        <ul class="portfolio-meta m-bot-10 m-top-10 ">
+                            <li>
+                                <span>email</span><%=@user.email%></li>
+                            <li>
+                                <span>Address</span><%=@user.address%></li>
+                            <li>
+                                <span>Phone</span><%=@user.phone_number%></li>
+                            <li>
+                                <span>활동지역</span><%=@user.activity_area%></li>
+                            <li>
+                                <span class="text-uppercase">tier</span><%=@user.tier%></li>
+                            <li>
+                                <span>score</span><%=@user.score%></li>
+                        </ul>
+                        <p><%=simple_format(@user.introduction, {}, :sanitize => false)%></p>
+                        <ul class="portfolio-meta m-bot-10 stock">
+                            <li>
+                                <span>
+                                    <strong class="number-item"><%=@items.count%></strong>개의 Item</span>
+                                <span class="status">등록됨</span>
+                            </li>
+                            <li>
+                                <%if user_signed_in?%>
+                                  <%if current_user.id == @user.id%>
+                                    <div class="clearfix">
+                                        <a href="/users/edit" class="btn btn-small btn-dark-solid">
+                                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>수정하기
+                                        </a>
+                                    </div>
+                                  <%end%>
+                                <%end%>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--fun factor-->
+                <div class="page-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class=" ">
+                                <div class="col-md-4 ">
+                                    <div class="fun-factor">
+                                        <div class="icon">
+                                            <i class="icon-happy"></i>
+                                        </div>
+                                        <div class="fun-info">
+                                            <h1 class="timer" data-from="0" data-to="36" data-speed="1000"> </h1>
+                                            <span>다음티어까지 몇점</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="fun-factor">
+                                        <div class="icon">
+                                            <i class="icon-flag"></i>
+                                        </div>
+                                        <div class="fun-info">
+                                            <h1 class="timer" data-from="0" data-to="<%=@items.count%>" data-speed="1000"> </h1>
+                                            <span>판매가능한 아이템 수</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="fun-factor">
+                                        <div class="icon">
+                                            <i class="icon-ribbon"></i>
+                                        </div>
+                                        <div class="fun-info">
+                                            <h1 class="timer" data-from="0" data-to="17" data-speed="1000"> </h1>
+                                            <span>참여했던 마켓 수</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--fun factor-->
+                <div class="divider divider-small d-solid d-single text-center">
+                    <span class="dot"></span>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="heading-title-alt text-center">
+                        <h3 class="text-uppercase">WHO AM I</h3>
+                        <span class="text-uppercase">much more Details</span>
+                    </div>
+                    <br/><br/>
+                    <!-- toggle 2 start-->
+                    <dl class="toggle">
+                        <dt>
+                            <a href="">주 활동분야</a>
+                        </dt>
+                        <dd>
+                            <%@activity.each do |a|%>
+                              <div class="progress massive-progress">
+                                  <div class="progress-bar" role="progressbar" aria-valuenow="<%=a.percentage%>" aria-valuemin="0" aria-valuemax="100">
+                                    <%if a.name == "etc1"%>
+                                      <%=a.etc_name%>
+                                    <%else%>
+                                      <%=a.name%>
+                                    <%end%>
+                                    <%if a.skill_part == "etc2"%>
+                                      <%=a.etc_part%>
+                                    <%else%>
+                                      <%=a.skill_part%>
+                                    <%end%>
+                                      <span><%=a.percentage%>%</span>
+                                  </div>
+                              </div>
+                              <%if user_signed_in?%>
+                                <%if current_user.id == @user.id%>
+                                    <a href="/destroy_activity/<%=current_user.id%>/<%=a.id%>" class="btn btn-xs btn-dark-solid">
+                                      삭제하기
+                                    </a>
+                                <%end%>
+                              <%end%>
+                            <%end%>
+                            <%if user_signed_in?%>
+                              <%if current_user.id == @user.id%>
+                                <div class="clearfix">
+                                  <a href="/info/add_activity/<%=current_user.id%>" class="btn btn-xs btn-dark-solid">
+                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>추가하기
+                                  </a>
+                                <%end%>
+                              <%end%>
+                        </dd>
+                        <dt>
+                            <a href="">수상 실적</a>
+                        </dt>
+                        <dd>
+                          <div class="clearfix">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th style ="width:10%">#</th>
+                                    <th style ="width:30%">대회명</th>
+                                    <th style ="width:25%">상명</th>
+                                    <th style ="width:35%">수상날짜</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                  <%@prize.each_with_index do |p,index|%>
+                                    <tr>
+                                        <th scope="row"><%=index+1%></th>
+                                        <td><%=p.contest_name%></td>
+                                        <td><%=p.prize_name%></td>
+                                        <td><%=p.prize_date.strftime("%Y-%m-%d")%></td>
+                                    </tr>
+                                  <%end%>
+                                </tbody>
+                            </table>
+                            <%if user_signed_in?%>
+                              <%if current_user.id == @user.id%>
+                                <a href="/info/add_prize/<%=current_user.id%>" class="btn btn-xs btn-dark-solid">
+                                  <i class="fa fa-pencil-square-o" aria-hidden="true"></i>추가하기
+                                </a>
+                              <%end%>
+                            <%end%>
+
+                          </div>
+                        </dd>
+                    </dl>
+                    <!-- toggle 2 end-->
+                    <br/>
+                    <div class="divider divider-small d-solid d-single text-center">
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                      <div class="heading-title-alt text-center">
+                        <h3 class="text-uppercase">
+                              my item
+                        </h3>
+                        <span class="text-uppercase">현재 판매가능한 item들 입니다.</span>
+                        <%if user_signed_in?%>
+                          <%if current_user.id == @user.id%>
+                            <br/>
+                            <div class="clearfix">
+                              <a href="/item/create" class="btn btn-xs btn-dark-solid">
+                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>추가하기
+                              </a>
+                              <a href="/item/show" class="btn btn-xs btn-dark-solid">
+                                  <i class="fa fa-pencil-square-o" aria-hidden="true"></i>수정하기
+                              </a>
+                            </div>
+                          <%end%>
+                        <%end%>
+                      </div>
+
+                        <!--portfolio carousel-->
+
+                        <div id="portfolio-carousel"  class=" portfolio-with-title col-3 portfolio-gallery">
+                          <% @items.each do |i|%>
+                            <div class="portfolio-item">
+                                <div class="thumb">
+                                  <%=image_tag('thumb.jpg')%>
+                                    <div class="portfolio-hover">
+                                        <div class="action-btn">
+                                            <a href="img/product/5.jpg" class="popup-link" title="lightbox view">
+                                                <i class="icon-basic_magnifier"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-title">
+                                    <h4>
+                                        <a href="img/product/5.jpg" class="popup-link" title="lightbox view"><%=i.name%></a>
+                                    </h4>
+                                    <p class="txt-xl">₩<%=i.price%></p>
+                                </div>
+                            </div>
+                          <%end%>
+                        </div>
+                        <!--portfolio carousel-->
+
+                        <div class="divider divider-small d-solid d-single text-center">
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                      <div class="heading-title-alt text-center">
+                        <h3 class="text-uppercase">
+                              Flea market
+                        </h3>
+                        <span class="text-uppercase">참여했던 플리마켓 리스트들 입니다. 클릭하면 자세한 설명을 볼 수 있습니다.</span>
+                      </div>
+                      <br/><br/>
+                      <!--image carousel-->
+                      <div id="img-carousel">
+                        <div class="item"><a href="#"><%=image_tag('product.jpg')%></a></div>
+                        <div class="item"><a href="#"><%=image_tag('product.jpg')%></a></div>
+                        <div class="item"><a href="#"><%=image_tag('product.jpg')%></a></div>
+                        <div class="item"><a href="#"><%=image_tag('product.jpg')%></a></div>
+                        <div class="item"><a href="#"><%=image_tag('product.jpg')%></a></div>
+                      </div>
+                      <!--image carousel-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--body content end-->
+</div>

@@ -1,90 +1,46 @@
-<p id="notice"><%= notice %></p>
+<section class="page-title">
+  <div class="container">
+    <h4 class="text-uppercase">
+      Today market</h4>
+    <p>진행중인 플리마켓</p>
+  </div>
+</section>
+  <section class="body-content">
+    <div class="page-content product-grid">
+        <div class="container">
+<% @today_flea.each do |p| %>
 
-<div id="contents"></div>
+          <div class="col-md-3">
+              <!--product list-->
+              <div class="product-list">
+                  <div>
+                      <a href="#"><%=image_tag p.poster_url, size: '260x400' %></a>
+                  </div>
+                  <br />
+                  <div class="product-title">
+                      <h4><a href="#"><%=p.name%></a></h4>
+                  </div>
+                  <div class="product-title">
+                      <%=p.event_start_date%> ~ <%=p.event_end_date%>
+                  </div>
+                  <div class="product-rating">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star-half-o"></i>
+                  </div>
+                  <!--
+                  일반유저 노쓸모
+                  <div class="product-btn">
+                      <a href="#" class="btn btn-extra-small btn-dark-border  "><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                  </div> -->
 
-<% @flag = 'default' %>
-<script>
-  function now() {
-    <% @flag = 'now' %>
-  }
+              </div>
+            </div>
+<%end%>
+</div>
 
-  function future() {
-    <% @flag = 'future' %>
-  }
+</div>
 
-  function past() {
-    <% @flag = 'past' %>
-  }
-</script>
-
-<%= link_to 'New Flea', new_flea_path %>
-
-<button class="btn btn-default" type="submit" onclick="now()">진행중인 플리마켓</button>
-<button class="btn btn-default" type="submit" onclick="future()">다가올 플리마켓</button>
-<button class="btn btn-default" type="submit" onclick="past()">종료된 플리마켓</button>
-
-
-<% if @flag == 'now' || @flag == 'default' %>
-    <table>
-      <% @now_fleas.each do |flea| %>
-          <tr>
-            <p><%= flea.application_start_date %></p>
-            <p><%= flea.application_end_date %></p>
-            <p><%= flea.number_of_recruitment %></p>
-            <p><%= flea.remark %></p>
-            <p><%= flea.city_place %></p>
-            <p><%= flea.detail_place %></p>
-            <p><%= flea.event_start_date %></p>
-            <p><%= flea.event_end_date %></p>
-            <p><%= flea.entrance_fee %></p>
-            <p><%= link_to 'Show', flea %></p>
-            <p><%= link_to 'Edit', edit_flea_path(flea) %></p>
-            <p><%= link_to 'Destroy', flea, method: :delete, data: {confirm: 'Are you sure?'} %></p>
-          </tr>
-      <% end %>
-    </table>
-    <br>
-<% elsif @flag == 'future' %>
-    <table>
-      <% @future_fleas.each do |flea| %>
-          <tr>
-            <p><%= flea.application_start_date %></p>
-            <p><%= flea.application_end_date %></p>
-            <p><%= flea.number_of_recruitment %></p>
-            <p><%= flea.remark %></p>
-            <p><%= flea.city_place %></p>
-            <p><%= flea.detail_place %></p>
-            <p><%= flea.event_start_date %></p>
-            <p><%= flea.event_end_date %></p>
-            <p><%= flea.entrance_fee %></p>
-            <p><%= link_to 'Show', flea %></p>
-            <p><%= link_to 'Edit', edit_flea_path(flea) %></p>
-            <p><%= link_to 'Destroy', flea, method: :delete, data: {confirm: 'Are you sure?'} %></p>
-          </tr>
-      <% end %>
-    </table>
-    <br>
-<% elsif @flag == 'past' %>
-    <table>
-      <% @past_fleas.each do |flea| %>
-          <tr>
-            <p><%= flea.application_start_date %></p>
-            <p><%= flea.application_end_date %></p>
-            <p><%= flea.number_of_recruitment %></p>
-            <p><%= flea.remark %></p>
-            <p><%= flea.city_place %></p>
-            <p><%= flea.detail_place %></p>
-            <p><%= flea.event_start_date %></p>
-            <p><%= flea.event_end_date %></p>
-            <p><%= flea.entrance_fee %></p>
-            <p><%= link_to 'Show', flea %></p>
-            <p><%= link_to 'Edit', edit_flea_path(flea) %></p>
-            <p><%= link_to 'Destroy', flea, method: :delete, data: {confirm: 'Are you sure?'} %></p>
-          </tr>
-      <% end %>
-    </table>
-    <br>
-<% end %>
-
-
-
+</section>

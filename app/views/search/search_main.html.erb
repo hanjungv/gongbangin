@@ -27,7 +27,7 @@
         <li class="nav-item"><a href="/search/seller" class="nav-link">seller</a></li>
       </ul>
     </div>
-    <table class="table able table-striped table-bordered">
+    <table class="table cart-table">
       <thead>
       <tr>
         <th style="width:6%;">등수</th>
@@ -43,7 +43,11 @@
           <tr>
             <th scope="row"><%= index+1 %></th>
             <td>
-              <a href="/otherinfo/<%= p.id %>" , style="font-weight: bold; color:<%= p.tier %>"><%= p.nickname %></a>
+              <a href="/showinfo/<%= p.id %>" , style="font-weight: bold; color:<%= p.tier %>">
+                <%if index <= 10 %>
+                  <%=image_tag('medal.png',height:'20',width:'20')%>
+                <%end%>
+                <%= p.nickname %></a>
             </td>
             <td><%= p.level %></td>
             <td><%= p.introduction %></td>

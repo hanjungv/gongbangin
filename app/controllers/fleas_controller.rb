@@ -4,33 +4,19 @@ class FleasController < ApplicationController
   # GET /fleas.json
   def index
     @fleas = Flea.all
-    # 반환할 배열을 생성한다
-    @past_fleas = Array.new
-    @now_fleas = Array.new
-    @future_fleas = Array.new
-    # 오늘의 날짜를 생성한다
-    d = Date.today
-    # 모든 플리마켓들을 돌면서 각 조건별로 플리마켓들을 분류한다
-    @fleas.each do |p|
-      if p.event_end_date < d
-        @past_fleas.append(p)
-      elsif p.event_start_date.to_date <= d && d <= p.event_end_date
-        @now_fleas.append(p)
-      elsif d < p.event_start_date
-        @future_fleas.append(p)
+    @current_time = Time.now
+    date = @current_time.to_s.to_date
+    @today_flea_a = Flea.all
+    @today_flea = Array.new
+    unless @current_time.nil?
+      @today_flea_a.each do |p|
+        if date <= p.event_end_date.to_date
+          @today_flea.append(p)
+        end
       end
     end
-    # 뽑은 플리마켓들을 행사 종료날짜가 빠른순으로 정렬한다
-    unless @past_fleas.empty?
-      @past_fleas.sort_by { |p| p[:event_end_date] }
-    end
-    unless @now_fleas.empty?
-      @now_fleas.sort_by { |p| p[:event_end_date] }
-    end
-    unless @future_fleas.empty?
-      @future_fleas.sort_by { |p| p[:event_end_date] }
-    end
   end
+
 
   def show
     @has_like = @flea.like_flea_markets.where(flea_id: @flea.id, user_id: current_user.id).blank? if current_user

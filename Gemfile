@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# editor
+gem 'tinymce-rails'
+
 # email gem
 gem 'mailgun-ruby'
 # sms gem
