@@ -4,6 +4,32 @@ class FleasController < ApplicationController
   # GET /fleas.json
   def index
     @fleas = Flea.all
+    # 반환할 배열을 생성한다
+    @past_fleas = Array.new
+    @now_fleas = Array.new
+    @future_fleas = Array.new
+    # 오늘의 날짜를 생성한다
+    d = Date.today
+    # 모든 플리마켓들을 돌면서 각 조건별로 플리마켓들을 분류한다
+    @fleas.each do |p|
+      if p.event_end_date < d
+        @past_fleas.append(p)
+      elsif p.event_start_date.to_date <= d && d <= p.event_end_date
+        @now_fleas.append(p)
+      elsif d < p.event_start_date
+        @future_fleas.append(p)
+      end
+    end
+    # 뽑은 플리마켓들을 행사 종료날짜가 빠른순으로 정렬한다
+    unless @past_fleas.empty?
+      @past_fleas.sort_by { |p| p[:event_end_date] }
+    end
+    unless @now_fleas.empty?
+      @now_fleas.sort_by { |p| p[:event_end_date] }
+    end
+    unless @future_fleas.empty?
+      @future_fleas.sort_by { |p| p[:event_end_date] }
+    end
   end
 
   def show

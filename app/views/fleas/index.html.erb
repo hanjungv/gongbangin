@@ -1,37 +1,90 @@
 <p id="notice"><%= notice %></p>
 
-
-<!--<script type="text/javascript">-->
-//  $(document).ready(function () {
-//    $("#contents").load("search/flea.html");
-//  });
-<!--</script>-->
-
 <div id="contents"></div>
+
+<% @flag = 'default' %>
+<script>
+  function now() {
+    <% @flag = 'now' %>
+  }
+
+  function future() {
+    <% @flag = 'future' %>
+  }
+
+  function past() {
+    <% @flag = 'past' %>
+  }
+</script>
 
 <%= link_to 'New Flea', new_flea_path %>
 
-<h1>Listing Fleas</h1>
+<button class="btn btn-default" type="submit" onclick="now()">진행중인 플리마켓</button>
+<button class="btn btn-default" type="submit" onclick="future()">다가올 플리마켓</button>
+<button class="btn btn-default" type="submit" onclick="past()">종료된 플리마켓</button>
 
-<table>
-  <% @fleas.each do |flea| %>
-      <tr>
-        <p><%= flea.application_start_date %></p>
-        <p><%= flea.application_end_date %></p>
-        <p><%= flea.number_of_recruitment %></p>
-        <p><%= flea.remark %></p>
-        <p><%= flea.city_place %></p>
-        <p><%= flea.detail_place %></p>
-        <p><%= flea.event_start_date %></p>
-        <p><%= flea.event_end_date %></p>
-        <p><%= flea.entrance_fee %></p>
-        <p><%= link_to 'Show', flea %></p>
-        <p><%= link_to 'Edit', edit_flea_path(flea) %></p>
-        <p><%= link_to 'Destroy', flea, method: :delete, data: {confirm: 'Are you sure?'} %></p>
-      </tr>
-  <% end %>
-</table>
 
-<br>
+<% if @flag == 'now' || @flag == 'default' %>
+    <table>
+      <% @now_fleas.each do |flea| %>
+          <tr>
+            <p><%= flea.application_start_date %></p>
+            <p><%= flea.application_end_date %></p>
+            <p><%= flea.number_of_recruitment %></p>
+            <p><%= flea.remark %></p>
+            <p><%= flea.city_place %></p>
+            <p><%= flea.detail_place %></p>
+            <p><%= flea.event_start_date %></p>
+            <p><%= flea.event_end_date %></p>
+            <p><%= flea.entrance_fee %></p>
+            <p><%= link_to 'Show', flea %></p>
+            <p><%= link_to 'Edit', edit_flea_path(flea) %></p>
+            <p><%= link_to 'Destroy', flea, method: :delete, data: {confirm: 'Are you sure?'} %></p>
+          </tr>
+      <% end %>
+    </table>
+    <br>
+<% elsif @flag == 'future' %>
+    <table>
+      <% @future_fleas.each do |flea| %>
+          <tr>
+            <p><%= flea.application_start_date %></p>
+            <p><%= flea.application_end_date %></p>
+            <p><%= flea.number_of_recruitment %></p>
+            <p><%= flea.remark %></p>
+            <p><%= flea.city_place %></p>
+            <p><%= flea.detail_place %></p>
+            <p><%= flea.event_start_date %></p>
+            <p><%= flea.event_end_date %></p>
+            <p><%= flea.entrance_fee %></p>
+            <p><%= link_to 'Show', flea %></p>
+            <p><%= link_to 'Edit', edit_flea_path(flea) %></p>
+            <p><%= link_to 'Destroy', flea, method: :delete, data: {confirm: 'Are you sure?'} %></p>
+          </tr>
+      <% end %>
+    </table>
+    <br>
+<% elsif @flag == 'past' %>
+    <table>
+      <% @past_fleas.each do |flea| %>
+          <tr>
+            <p><%= flea.application_start_date %></p>
+            <p><%= flea.application_end_date %></p>
+            <p><%= flea.number_of_recruitment %></p>
+            <p><%= flea.remark %></p>
+            <p><%= flea.city_place %></p>
+            <p><%= flea.detail_place %></p>
+            <p><%= flea.event_start_date %></p>
+            <p><%= flea.event_end_date %></p>
+            <p><%= flea.entrance_fee %></p>
+            <p><%= link_to 'Show', flea %></p>
+            <p><%= link_to 'Edit', edit_flea_path(flea) %></p>
+            <p><%= link_to 'Destroy', flea, method: :delete, data: {confirm: 'Are you sure?'} %></p>
+          </tr>
+      <% end %>
+    </table>
+    <br>
+<% end %>
+
 
 
