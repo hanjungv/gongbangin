@@ -154,7 +154,7 @@ ActiveRecord::Schema.define(version: 20160818070643) do
     t.string   "introduction",           default: "안녕하세요!만나서 반가워요!"
     t.string   "tier",                   default: "black"
     t.integer  "score",                  default: 0
-    t.string   "activity_area",          default: "서울"
+    t.string   "skills",                 default: "없음"
     t.string   "brand",                  default: "없음"
     t.string   "brand_number",           default: "없음"
     t.string   "profile_image_url",      default: ""
