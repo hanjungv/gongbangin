@@ -1,41 +1,53 @@
-<%@fleas.each do |f|%>
-  <%=f.name%>
-<%end%>
-
+<!--page title start-->
+<section class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="text-uppercase">내가올린마켓</h4>
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li class="active">내가올린마켓</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+<!--page title end-->
 <section class="body-content page-content">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
+                <h3>모집중인 플리마켓</h3>
+                <%@fleas.each do |f|%>
+                  <% if f.application_end_date >= Time.now%>
+                    <!--promo theme color box start-->
+                    <div class="promo-box theme-bg  round-5 m-bot-50">
+                        <div class="promo-info">
+                            <span class="light-txt text-uppercase m-top-0"><%=f.remark%></span>
+                            <h3 class="light-txt"><%=f.name%></h3>
+                        </div>
+                        <div class="promo-btn">
+                          <a href="/judge_fleas/judge/<%=f.id%>" class="btn btn-medium btn-dark-solid btn-rounded  btn-transparent light-txt  text-uppercase">심사하기</a>
+                        </div>
+                    </div>
+                    <!--promo theme color box end-->
+                  <% else %>
+                    <!--promo default box start-->
+                    <div class="promo-box gray-bg round-5 m-bot-50">
+                        <div class="promo-info">
+                            <h4><%=f.name%></h4>
+                            <span><%=f.remark%></span>
+                        </div>
+                        <div class="promo-btn">
+                            <a href="#" class="btn btn-medium btn-rounded btn-dark-solid  text-uppercase">읽어보기</a>
+                        </div>
+                    </div>
+                    <!--promo default box end-->
+                  <% end %>
+                <%end%>
 
-                <!--promo default box start-->
-                <div class="promo-box gray-bg round-5 m-bot-50">
-                    <div class="promo-info">
-                        <h4>new
-                            <span class="theme-color">offer</span>
-                            for this
-                            <span class="theme-color">summer</span>
-                        </h4>
-                        <span>Nullam ut consectetur dolor. Sed sit amet iaculis nisi. Mauris ridiculus elementum non felis etewe blandit.
-                        </span>
-                    </div>
-                    <div class="promo-btn">
-                        <a href="#" class="btn btn-medium btn-rounded btn-dark-solid  text-uppercase">purchase now</a>
-                    </div>
-                </div>
-                <!--promo default box end-->
-
-                <!--promo theme color box start-->
-                <div class="promo-box theme-bg  round-5 m-bot-50">
-                    <div class="promo-info">
-                        <span class="light-txt text-uppercase m-top-0">Are you impressed with our creative work?
-                        </span>
-                        <h3 class="light-txt">start building your project with massive</h3>
-                    </div>
-                    <div class="promo-btn">
-                        <a href="#" class="btn btn-medium btn-dark-solid btn-rounded  btn-transparent light-txt  text-uppercase">purchase now</a>
-                    </div>
-                </div>
-                <!--promo theme color box end-->
             </div>
         </div>
     </div>

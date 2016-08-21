@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   #judge menu
   get 'judge_fleas/index'
-  get 'judge_fleas/judge'
+  get 'judge_fleas/judge/:flea_id'
 
   #master menu#
   get 'mastermenu/user_manage'
