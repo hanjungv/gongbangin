@@ -1,37 +1,46 @@
-<p id="notice"><%= notice %></p>
+<section class="page-title">
+  <div class="container">
+    <h4 class="text-uppercase">
+      Today market</h4>
+    <p>진행중인 플리마켓</p>
+  </div>
+</section>
+  <section class="body-content">
+    <div class="page-content product-grid">
+        <div class="container">
+<% @today_flea.each do |p| %>
 
+          <div class="col-md-3">
+              <!--product list-->
+              <div class="product-list">
+                  <div>
+                      <a href="#"><%=image_tag p.poster_url, size: '260x400' %></a>
+                  </div>
+                  <br />
+                  <div class="product-title">
+                      <h4><a href="#"><%=p.name%></a></h4>
+                  </div>
+                  <div class="product-title">
+                      <%=p.event_start_date%> ~ <%=p.event_end_date%>
+                  </div>
+                  <div class="product-rating">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star-half-o"></i>
+                  </div>
+                  <!--
+                  일반유저 노쓸모
+                  <div class="product-btn">
+                      <a href="#" class="btn btn-extra-small btn-dark-border  "><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                  </div> -->
 
-<!--<script type="text/javascript">-->
-//  $(document).ready(function () {
-//    $("#contents").load("search/flea.html");
-//  });
-<!--</script>-->
+              </div>
+            </div>
+<%end%>
+</div>
 
-<div id="contents"></div>
+</div>
 
-<%= link_to 'New Flea', new_flea_path %>
-
-<h1>Listing Fleas</h1>
-
-<table>
-  <% @fleas.each do |flea| %>
-      <tr>
-        <p><%= flea.application_start_date %></p>
-        <p><%= flea.application_end_date %></p>
-        <p><%= flea.number_of_recruitment %></p>
-        <p><%= flea.remark %></p>
-        <p><%= flea.city_place %></p>
-        <p><%= flea.detail_place %></p>
-        <p><%= flea.event_start_date %></p>
-        <p><%= flea.event_end_date %></p>
-        <p><%= flea.entrance_fee %></p>
-        <p><%= link_to 'Show', flea %></p>
-        <p><%= link_to 'Edit', edit_flea_path(flea) %></p>
-        <p><%= link_to 'Destroy', flea, method: :delete, data: {confirm: 'Are you sure?'} %></p>
-      </tr>
-  <% end %>
-</table>
-
-<br>
-
-
+</section>

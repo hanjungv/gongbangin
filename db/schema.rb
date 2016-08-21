@@ -35,8 +35,9 @@ ActiveRecord::Schema.define(version: 20160818070643) do
     t.date     "event_start_date"
     t.date     "event_end_date"
     t.integer  "entrance_fee"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.string   "poster_url",             default: "poster.png"
+    t.datetime "created_at",                                    null: false
+    t.datetime "updated_at",                                    null: false
   end
 
   create_table "item_images", force: :cascade do |t|
@@ -52,8 +53,9 @@ ActiveRecord::Schema.define(version: 20160818070643) do
     t.string   "period"
     t.integer  "user_id"
     t.string   "url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "classification"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "joined_flealists", force: :cascade do |t|
@@ -157,6 +159,7 @@ ActiveRecord::Schema.define(version: 20160818070643) do
     t.string   "activity_area",          default: "서울"
     t.string   "brand",                  default: "없음"
     t.string   "brand_number",           default: "없음"
+    t.string   "brand_place"
     t.string   "profile_image_url",      default: ""
     t.string   "facebook_id",            default: ""
     t.string   "twitter_id",             default: ""
