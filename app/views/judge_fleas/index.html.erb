@@ -1,2 +1,42 @@
-<h1>JudgeFleas#index</h1>
-<p>Find me in app/views/judge_fleas/index.html.erb</p>
+<%@fleas.each do |f|%>
+  <%=f.name%>
+<%end%>
+
+<section class="body-content page-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <!--promo default box start-->
+                <div class="promo-box gray-bg round-5 m-bot-50">
+                    <div class="promo-info">
+                        <h4>new
+                            <span class="theme-color">offer</span>
+                            for this
+                            <span class="theme-color">summer</span>
+                        </h4>
+                        <span>Nullam ut consectetur dolor. Sed sit amet iaculis nisi. Mauris ridiculus elementum non felis etewe blandit.
+                        </span>
+                    </div>
+                    <div class="promo-btn">
+                        <a href="#" class="btn btn-medium btn-rounded btn-dark-solid  text-uppercase">purchase now</a>
+                    </div>
+                </div>
+                <!--promo default box end-->
+
+                <!--promo theme color box start-->
+                <div class="promo-box theme-bg  round-5 m-bot-50">
+                    <div class="promo-info">
+                        <span class="light-txt text-uppercase m-top-0">Are you impressed with our creative work?
+                        </span>
+                        <h3 class="light-txt">start building your project with massive</h3>
+                    </div>
+                    <div class="promo-btn">
+                        <a href="#" class="btn btn-medium btn-dark-solid btn-rounded  btn-transparent light-txt  text-uppercase">purchase now</a>
+                    </div>
+                </div>
+                <!--promo theme color box end-->
+            </div>
+        </div>
+    </div>
+</section>

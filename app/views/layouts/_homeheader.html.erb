@@ -30,12 +30,18 @@
                               <a href="/fleas/new">마켓등록</a>
                             </li>
                             <li>
+                              <a href="/judge_fleas/index">내가올린마켓</a>
+                            </li>
+                            <li>
                               <a href="/mastermenu/index">관리자메뉴</a>
                             </li>
                           <% else %>
                             <% if current_user.level == 'planner'%>
                               <li>
                                 <a href="/fleas/new">마켓등록</a>
+                              </li>
+                              <li>
+                                <a href="/judge_fleas/index">내가올린마켓</a>
                               </li>
                             <% else %>
                               <li>
