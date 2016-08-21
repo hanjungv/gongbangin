@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'mastermenu/leveldown/:user_id' =>"mastermenu#leveldown"
   get 'mastermenu/otherinfo/:user_id' =>"info#otherinfo"
   get 'mastermenu/destroy/:user_id' =>"mastermenu#destroy"
+  get 'mastermenu/judge/:user_id' => "mastermenu#judge"
   get 'mastermenu/index'
 
   get 'mastermenu/write_email/:user_id' => "mastermenu#write_email"

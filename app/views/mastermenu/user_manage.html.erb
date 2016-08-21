@@ -80,13 +80,12 @@
   <table class="table able table-striped table-bordered">
       <thead>
           <tr>
-              <th style="width:10%;">닉네임</th>
-              <th style="width:15%;">email</th>
+              <th style="width:15%;">닉네임</th>
+              <th style="width:20%;">email</th>
               <th style="width:5%;">티어</th>
               <th style="width:10%;">활동점수</th>
-              <th style="width:10%">정보보러가기</th>
-              <th style="width:15%">사업자번호확인</th>
-              <th style="width:15%">승급하기</th>
+              <th style="width:15%">정보보러가기</th>
+              <th style="width:15%">승급심사하기</th>
               <th style="width:10%">강등하기</th>
               <th style="width:10%">삭제하기</th>
           </tr>
@@ -102,13 +101,7 @@
                   <a href="/otherinfo/<%=p.id%>">정보 보러가기</a>
               </th>
               <th>
-                <form name="frm1">
-                  <input name="wrkr_no" type="text" value="<%=p.brand_number%>"/>
-                  <input type="button" value="팝업" onclick="onopen();"/>
-                </form>
-              </th>
-              <th>
-                  <a href="/mastermenu/levelup/<%=p.id%>">승급하기</a>
+                  <a href="/mastermenu/judge/<%=p.id%>">심사하러가기</a>
               </th>
               <th>
                   <a href="/mastermenu/leveldown/<%=p.id%>">강등하기</a>
@@ -160,13 +153,4 @@
   $('.confirmation').on('click', function () {
       return confirm('Are you sure?');
   });
-</script>
-
-<script language="JavaScript">
-function onopen()
-{
-  var url =
-  "http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no="+frm1.wrkr_no.value;
-  window.open(url, "communicationViewPopup", "width=750, height=700;");
-}
 </script>
