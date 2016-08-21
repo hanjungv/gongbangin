@@ -1,0 +1,2 @@
+module JudgeFleasHelper
+end

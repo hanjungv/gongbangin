@@ -46,5 +46,5 @@ MainActivity.create(name:"귀금속", skill_part:"제작", percentage:35,user_id
 MainActivity.create(name:"유리", skill_part:"제작", percentage:90,user_id:1)
 
 #flea seed
-Flea.create(name:"라밍플리마켓",application_start_date:"2016-08-20",application_end_date:"2016-08-20",number_of_recruitment:10,remark:"한강물따뜻해",city_place:"서울",detail_place:"한강",event_start_date:"2016-08-24",event_end_date:"2016-08-25",entrance_fee:10000,poster_url:"poster.png")
-Flea.create(name:"라밍한강마켓",application_start_date:"2016-08-18",application_end_date:"2016-08-18",number_of_recruitment:10,remark:"한강물따뜻해",city_place:"서울",detail_place:"한강",event_start_date:"2016-08-24",event_end_date:"2016-08-24",entrance_fee:10000,poster_url:"gangposter.jpg")
+Flea.create(name:"라밍플리마켓",application_start_date:"2016-08-20",application_end_date:"2016-08-20",number_of_recruitment:10,remark:"한강물따뜻해",city_place:"서울",detail_place:"한강",event_start_date:"2016-08-24",event_end_date:"2016-08-25",entrance_fee:10000,poster_url:"poster.png",user_id:1)
+Flea.create(name:"라밍한강마켓",application_start_date:"2016-08-18",application_end_date:"2016-08-18",number_of_recruitment:10,remark:"한강물따뜻해",city_place:"서울",detail_place:"한강",event_start_date:"2016-08-24",event_end_date:"2016-08-24",entrance_fee:10000,poster_url:"gangposter.jpg",user_id:1)
