@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20160818070643) do
     t.date     "event_end_date"
     t.integer  "entrance_fee"
     t.string   "poster_url",             default: "poster.png"
+    t.integer  "user_id"
     t.datetime "created_at",                                    null: false
     t.datetime "updated_at",                                    null: false
   end
