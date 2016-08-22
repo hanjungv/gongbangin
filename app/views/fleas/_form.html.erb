@@ -54,6 +54,9 @@
         <%= f.label :"참가비" %><br>
         <%= f.number_field :entrance_fee %>
       </div>
+      <div class="field">
+        <%= f.label :"지역" %>
+          <%= f.select(:join_type,['선착순','심사']) %>
       <div class="actions">
         <%= f.submit '마켓 등록하기', :class => 'btn btn-default btn-small btn-rounded' %>
       </div>
