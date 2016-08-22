@@ -45,6 +45,36 @@
             <h3 class="text-uppercase">셀러 지원자 리스트</h3>
             <span class="text-uppercase"></span>
           </div>
+          <div class="heading-title-alt text-center">
+            <table class="table cart-table">
+              <thead>
+              <tr>
+                <th style="width:6%;">등수</th>
+                <th style="width:15%;">티어</th>
+                <th style="width:15%;">이름</th>
+                <th style="width:15%;">이메일</th>
+                <th style="width:15%;">정보보기</th>
+                <th style="width:10%;">심사하러가기</th>
+                <th style="width:10%;">Score</th>
+              </tr>
+              </thead>
+              <tbody>
+              <% @users.each_with_index do |p, index| %>
+                  <tr>
+                    <th scope="row"><%= index+1 %></th>
+                    <td style="color:<%= p.user_tier %>"><%= p.user_tier %></td>
+                    <td>
+                      <%=p.user_name%>
+                    </td>
+                    <td><%= p.user_email %></td>
+                    <td><a href = "/showinfo/<%=p.id%>">정보보기</a></td>
+                    <td><a href = "/judge_fleas/show/<%=p.id%>">심사하러가기</td>
+                    <td><%= p.score %></td>
+                  </tr>
+              <% end %>
+              </tbody>
+            </table>
+          </div>
         </div>
 
 

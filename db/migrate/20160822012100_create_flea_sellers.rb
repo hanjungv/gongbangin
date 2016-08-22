@@ -4,6 +4,9 @@ class CreateFleaSellers < ActiveRecord::Migration
 
       t.integer :user_id
       t.integer :flea_id
+      t.string :user_email
+      t.string :user_name
+      t.string :user_tier
       t.integer :score, default:0
 
       t.timestamps null: false
