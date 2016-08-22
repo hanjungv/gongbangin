@@ -1,2 +1,8 @@
 <h1>JoinFlea#join</h1>
+
+
 <p>Find me in app/views/join_flea/join.html.erb</p>
+
+<% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+<% end %>

@@ -1,46 +1,49 @@
 <section class="page-title">
-  <div class="container">
-    <h4 class="text-uppercase">
-      Today market</h4>
-    <p>진행중인 플리마켓</p>
-  </div>
+    <div class="container">
+        <h4 class="text-uppercase">
+            Today market</h4>
+        <p>진행중인 플리마켓</p>
+    </div>
 </section>
-  <section class="body-content">
+<section class="body-content">
     <div class="page-content product-grid">
         <div class="container">
-<% @today_flea.each do |p| %>
-
-          <div class="col-md-3">
-              <!--product list-->
-              <div class="product-list">
-                  <div>
-                      <a href="#"><%=image_tag p.poster_url, size: '260x400' %></a>
-                  </div>
-                  <br />
-                  <div class="product-title">
-                      <h4><a href="#"><%=p.name%></a></h4>
-                  </div>
-                  <div class="product-title">
-                      <%=p.event_start_date%> ~ <%=p.event_end_date%>
-                  </div>
-                  <div class="product-rating">
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star-half-o"></i>
-                  </div>
-                  <!--
+            <% @today_flea.each do |p| %>
+            <div class="col-md-3">
+                <!--product list-->
+                <div class="product-list">
+                    <div>
+                        <a href="#"><%=image_tag p.poster_url, size: '260x400' %></a>
+                    </div>
+                    <br/>
+                    <div class="product-title">
+                        <h4>
+                            <a href="#"><%=p.name%></a>
+                        </h4>
+                    </div>
+                    <div class="product-title">
+                        <%=p.event_start_date%>
+                        ~
+                        <%=p.event_end_date%>
+                    </div>
+                    <div class="product-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <!--
                   일반유저 노쓸모
                   <div class="product-btn">
                       <a href="#" class="btn btn-extra-small btn-dark-border  "><i class="fa fa-shopping-cart"></i> Add to cart</a>
                   </div> -->
 
-              </div>
+                </div>
             </div>
-<%end%>
-</div>
+            <%end%>
+        </div>
 
-</div>
+    </div>
 
 </section>

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'join_flea/index'
 
   get 'join_flea/join'
+  get 'join_flea/:flea_id' => "join_flea#join"
 
   #judge menu
   get 'judge_fleas/index'
