@@ -10,7 +10,7 @@ class FleasController < ApplicationController
     @today_flea = Array.new
     unless @current_time.nil?
       @today_flea_a.each do |p|
-        if date <= p.event_end_date.to_date
+        if p.event_start_date.to_date <= date && date <= p.event_end_date.to_date
           @today_flea.append(p)
         end
       end
