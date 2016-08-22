@@ -57,9 +57,9 @@
             <div class="row">
                 <div class="col-xs-offset-4 col-xs-4">
                     <div class="form-group">
-<<<<<<< HEAD
                         <label>아이템 품목은 무엇인가요?</label>
-                        <select class="form-control" id="item_classification" name="item_classification">
+                        <input type="text" id="item_classification" name="item_classification" class="form-control" placeholder="선택해 주세요" disabled=true>
+                        <select class="form-control" id="ic_select" name="ic_select">
                             <option>도자</option>
                             <option>유리</option>
                             <option>석/금속</option>
@@ -68,7 +68,7 @@
                             <option>종이·한지</option>
                             <option>섬유</option>
                             <option>가죽</option>
-                            <option>기타</option>
+                            <option value="1">직접 입력</option>
                         </select>
                     </div>
                 </div>
@@ -83,15 +83,25 @@
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
             </div>
-=======
-                        <label>아이템 메인 이미지를 넣어주세요</label>
-                        <input type="file" class="filestyle text-center" data-icon="false" name="pic" accept="image/*">
 
-                    </div>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
->>>>>>> bbead160ebfdccd4aaac41603e0852ff64abecc8
         </div>
     </form>
 </div>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+//이메일 입력방식 선택
+$('#ic_select').change(function(){
+   $("#ic_select option:selected").each(function () {
+
+        if($(this).val()== '1'){ //직접입력일 경우
+             $("#item_classification").val('');                        //값 초기화
+             $("#item_classification").attr("placeholder", "직접 입력하세요");
+             $("#item_classification").attr("disabled",false); //활성화
+        }else{ //직접입력이 아닐경우
+             $("#item_classification").val($(this).text());      //선택값 입력
+             $("#item_classification").attr("disabled",true); //비활성화
+        }
+   });
+});
+</script>
