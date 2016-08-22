@@ -13,25 +13,16 @@
       <% end %>
 
       <div class="field">
-<<<<<<< HEAD
         <%= f.label :"플리마켓 명" %><br />
-        <%= f.text_field :market_name %>
+        <%= f.text_field :name %>
       </div>
       <div class="field">
         <%= f.label :"접수 시작일시"%><br>
-        <%= f.datetime_select :application_start_period %>
-      </div>
-      <div class="field">
-      <%= f.label :"접수 종료일시" %><br>
-        <%= f.datetime_select :application_end_period %>
-=======
-        <%= f.label :application_date%><br>
         <%= f.datetime_select :application_start_date %>
       </div>
       <div class="field">
-        <%= f.label :application_date %><br>
+      <%= f.label :"접수 종료일시" %><br>
         <%= f.datetime_select :application_end_date %>
->>>>>>> 4cf850ea97a02b4957f4ff0e248a53105a2c1f23
       </div>
       <div class="field">
         <%= f.label :"모집 인원" %><br>
@@ -63,6 +54,9 @@
         <%= f.label :"참가비" %><br>
         <%= f.number_field :entrance_fee %>
       </div>
+      <div class="field">
+        <%= f.label :"지역" %>
+          <%= f.select(:join_type,['선착순','심사']) %>
       <div class="actions">
         <%= f.submit '마켓 등록하기', :class => 'btn btn-default btn-small btn-rounded' %>
       </div>

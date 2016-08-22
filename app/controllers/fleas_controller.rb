@@ -50,6 +50,8 @@ class FleasController < ApplicationController
   # POST /fleas.json
   def create
     @flea = Flea.new(flea_params)
+    @flea.user_id = current_user.id
+
     if @flea.save
       redirect_to @flea, notice: 'post was successfully created'
     else
@@ -82,6 +84,6 @@ class FleasController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def flea_params
-    params.require(:flea).permit(:application_start_date, :application_end_date, :number_of_recruitment, :remark, :city_place, :detail_place, :event_start_date, :event_end_date, :entrance_fee)
+    params.require(:flea).permit(:name, :application_start_date, :application_end_date, :number_of_recruitment, :remark, :city_place, :detail_place, :event_start_date, :event_end_date, :entrance_fee,:user_id, :join_type)
   end
 end

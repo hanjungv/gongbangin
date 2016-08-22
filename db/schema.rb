@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160818070643) do
+ActiveRecord::Schema.define(version: 20160822012100) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -22,6 +22,14 @@ ActiveRecord::Schema.define(version: 20160818070643) do
   create_table "comment_flea_markets", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "flea_sellers", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "flea_id"
+    t.integer  "score",      default: 0
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "fleas", force: :cascade do |t|
@@ -36,6 +44,9 @@ ActiveRecord::Schema.define(version: 20160818070643) do
     t.datetime "event_end_date"
     t.integer  "entrance_fee"
     t.string   "poster_url",             default: "poster.png"
+    t.integer  "user_id"
+    t.string   "join_type"
+    t.integer  "join_member",            default: 0
     t.datetime "created_at",                                    null: false
     t.datetime "updated_at",                                    null: false
   end

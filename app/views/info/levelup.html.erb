@@ -24,7 +24,7 @@
                     <li>저희는 플래너님의 개인정보는 절대로 다른목적으로 사용하지 않습니다.</li>
                     <li>플래너가 되실 경우 셀러들의 정보를 열람할 수 있습니다.<br/>
                         셀러들의 개인정보를 모집 외 다른 목적으로 사용하실 경우 탈퇴 조치 하겠습니다.</li>
-                    <li><strong>심사는 하루에서 이틀정도 걸릴 수 있습니다!</strong></li>
+                    <li><심사는 하루에서 이틀정도 걸릴 수 있습니다!</li>
                     <div class="checkbox">
                         <label>
                             <form>
@@ -34,7 +34,7 @@
                         </label>
                     </div>
                 </div>
-            </div>
+              </div>
         </div>
         <div class="row">
             <div class="col-xs-offset-4 col-xs-4">
@@ -49,7 +49,7 @@
             <div class="col-xs-offset-4 col-xs-4">
                 <div class="form-group">
                     <label>사업자 등록 번호는요?</label>
-                    <input type="text" class="form-control text-center" name="brand_brand_number" id="brand_number" placeholder="사업자 등록 번호를 입력해주세요">
+                    <input type="text" class="form-control text-center" name="brand_number" id="brand_number" placeholder="사업자 등록 번호를 입력해주세요">
                 </div>
             </div>
         </div>
@@ -64,17 +64,22 @@
         </div>
 
         <div class="text-center">
-            <button type="submit" class="btn btn-primary" disabled="true" id="sub">Submit</button>
+            <button type="submit" class="btn btn-primary confirmation" disabled="true" id="sub" >Submit</button>
         </div>
     </div>
   </form>
 </div>
 <script>
-
 $("#check1").click(function () {
     $("#sub").attr("disabled", false);
 });
 $("#check2").click(function () {
     $("#sub").attr("disabled", true);
 });
+</script>
+
+<script type="text/javascript">
+  $('.confirmation').on('click', function () {
+      return confirm('신청할까요?');
+  });
 </script>

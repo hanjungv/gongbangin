@@ -1,10 +1,19 @@
 Rails.application.routes.draw do
+  get 'join_flea/index'
+
+  get 'join_flea/join'
+
+  #judge menu
+  get 'judge_fleas/index'
+  get 'judge_fleas/judge/:flea_id' => "judge_fleas#judge"
+
   #master menu#
   get 'mastermenu/user_manage'
   get 'mastermenu/levelup/:user_id' => 'mastermenu#levelup'
   get 'mastermenu/leveldown/:user_id' =>"mastermenu#leveldown"
   get 'mastermenu/otherinfo/:user_id' =>"info#otherinfo"
   get 'mastermenu/destroy/:user_id' =>"mastermenu#destroy"
+  get 'mastermenu/judge/:user_id' => "mastermenu#judge"
   get 'mastermenu/index'
 
   get 'mastermenu/write_email/:user_id' => "mastermenu#write_email"
