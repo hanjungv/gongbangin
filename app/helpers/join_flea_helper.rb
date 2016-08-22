@@ -1,0 +1,2 @@
+module JoinFleaHelper
+end

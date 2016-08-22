@@ -22,6 +22,15 @@ class CreateFleas < ActiveRecord::Migration
       t.date :event_end_date
       # 참가비
       t.integer :entrance_fee
+      # 포스터 주소
+      t.string :poster_url,  default: "poster.png"
+      # 속하는 유저 번호(누가 만들었나)
+      t.integer :user_id
+
+      # 선착순? 심사?(judge - FIFO)
+      t.string :join_type
+      # 현재 몇명 지원했는지
+      t.integer :join_member, default:0
 
       t.timestamps null: false
     end

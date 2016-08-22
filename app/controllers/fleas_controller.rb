@@ -4,7 +4,19 @@ class FleasController < ApplicationController
   # GET /fleas.json
   def index
     @fleas = Flea.all
+    @current_time = Time.now
+    date = @current_time.to_s.to_date
+    @today_flea_a = Flea.all
+    @today_flea = Array.new
+    unless @current_time.nil?
+      @today_flea_a.each do |p|
+        if date <= p.event_end_date.to_date
+          @today_flea.append(p)
+        end
+      end
+    end
   end
+
 
   def show
     @has_like = @flea.like_flea_markets.where(flea_id: @flea.id, user_id: current_user.id).blank? if current_user
@@ -38,6 +50,8 @@ class FleasController < ApplicationController
   # POST /fleas.json
   def create
     @flea = Flea.new(flea_params)
+    @flea.user_id = current_user.id
+
     if @flea.save
       redirect_to @flea, notice: 'post was successfully created'
     else
@@ -70,6 +84,6 @@ class FleasController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def flea_params
-    params.require(:flea).permit(:application_start_date, :application_end_date, :number_of_recruitment, :remark, :city_place, :detail_place, :event_start_date, :event_end_date, :entrance_fee)
+    params.require(:flea).permit(:name, :application_start_date, :application_end_date, :number_of_recruitment, :remark, :city_place, :detail_place, :event_start_date, :event_end_date, :entrance_fee,:user_id, :join_type)
   end
 end
