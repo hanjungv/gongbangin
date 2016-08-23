@@ -102,7 +102,7 @@
           <div class="heading-title-alt text-center">
             <h4 class="text-uppercase">총점</h4>
           </div>
-          <input class = "form-control" type="number" name="total" id="total" min ="0" max ="30"/>
+          <input class = "form-control" type="number" name="total" id="total" min ="0" max ="30" disabled=true/>
         </div>
       </div>
     </div>
@@ -119,4 +119,6 @@ function findTotal(){
     }
     document.getElementById('total').value = tot;
 }
+
+$('#total').css({'cursor': '','background-color':'#fff'});
 </script>
