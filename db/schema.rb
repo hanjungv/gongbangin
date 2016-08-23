@@ -27,6 +27,9 @@ ActiveRecord::Schema.define(version: 20160822012100) do
   create_table "flea_sellers", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "flea_id"
+    t.string   "user_email"
+    t.string   "user_name"
+    t.string   "user_tier"
     t.integer  "score",      default: 0
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false

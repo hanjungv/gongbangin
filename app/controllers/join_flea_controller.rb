@@ -5,15 +5,20 @@ class JoinFleaController < ApplicationController
 
   def join
   end
-  
+
   def make
-    @isThere = FleaSeller.where(flea_id:params[:flea_id]).find(current_user.id)
-    unless @isThere.nil?
+    @isThere = FleaSeller.where(flea_id:params[:flea_id]).find_by(current_user.id)
+
+    unless @isThere.blank?
       redirect_to "/join_flea/join"
     else
       @flea_seller = FleaSeller.new
 
       @flea_seller.user_id = current_user.id
+      @flea_seller.user_email = current_user.email
+      @flea_seller.user_name = current_user.name
+      @flea_seller.user_tier = current_user.tier
+
       @flea_seller.flea_id = params[:flea_id]
 
       @flea_seller.save
