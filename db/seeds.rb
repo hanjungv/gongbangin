@@ -27,11 +27,11 @@ Notice.create(title:"[공지사항]안녕하세요! 한정입니다.",content:"�
 행정각부의 설치·조직과 직무범위는 법률로 정한다. 국가는 전통문화의 계승·발전과 민족문화의 창달에 노력하여야 한다. 이 헌법중 공무원의 임기 또는 중임제한에 관한 규정은 이 헌법에 의하여 그 공무원이 최초로 선출 또는 임명된 때로부터 적용한다.")
 
 #item seed
-Item.create(name:"대단히좋은아이템1", price:"102030", material:"나무", period:"1일~2일", user_id:1)
-Item.create(name:"대단히좋은아이템2", price:"130", material:"금속", period:"1일~2일", user_id:1)
-Item.create(name:"좋은아이템3", price:"5030", material:"실", period:"1일~2일", user_id:1)
-Item.create(name:"대단한아이템4", price:"10", material:"끈", period:"1일~2일", user_id:1)
-Item.create(name:"대단히좋은아이템5", price:"911110", material:"없음", period:"1일~2일", user_id:1)
+Item.create(name:"대단히좋은아이템1", price:"102030", material:"나무", classification:"목/죽세" period:"1일~2일", user_id:1)
+Item.create(name:"대단히좋은아이템2", price:"130", material:"금속", classification:"석/금속", period:"1일~2일", user_id:1)
+Item.create(name:"좋은아이템3", price:"5030", material:"실", classification:"섬유", period:"1일~2일", user_id:1)
+Item.create(name:"대단한아이템4", price:"10", material:"끈", classification:"섬유", period:"1일~2일", user_id:1)
+Item.create(name:"대단히좋은아이템5", price:"911110", material:"없음", classification:"모름", period:"1일~2일", user_id:1)
 
 #prize seed
 UserPrize.create(prize_name:"대상",contest_name:"서울시 이경용배 그림그리기",prize_date:Time.now,user_id:1)
@@ -46,7 +46,21 @@ MainActivity.create(name:"귀금속", skill_part:"제작", percentage:35,user_id
 MainActivity.create(name:"유리", skill_part:"제작", percentage:90,user_id:1)
 
 #flea seed
+<<<<<<< HEAD
 Flea.create(name:"라밍플리마켓",application_start_date:"2016-08-20",application_end_date:"2016-08-20",number_of_recruitment:10,remark:"한강물따뜻해",city_place:"서울",detail_place:"한강",event_start_date:"2016-08-24",event_end_date:"2016-08-25",entrance_fee:10000,poster_url:"poster.png",user_id:1,join_type:'선착순')
 Flea.create(name:"라밍한강마켓",application_start_date:"2016-08-18",application_end_date:"2016-08-18",number_of_recruitment:10,remark:"한강물따뜻해",city_place:"서울",detail_place:"한강",event_start_date:"2016-08-24",event_end_date:"2016-08-24",entrance_fee:10000,poster_url:"gangposter.jpg",user_id:1,join_type:'심사')
 Flea.create(name:"한강마켓",application_start_date:"2016-08-18",application_end_date:"2016-08-31",number_of_recruitment:10,remark:"한강괴물",city_place:"서울",detail_place:"한강",event_start_date:"2016-08-24",event_end_date:"2016-08-24",entrance_fee:10000,poster_url:"gangposter.jpg",user_id:1,join_type:'심사')
 Flea.create(name:"팔려면팔아봐",application_start_date:"2016-08-18",application_end_date:"2016-08-31",number_of_recruitment:10,remark:"한강괴물",city_place:"서울",detail_place:"한강",event_start_date:"2016-08-24",event_end_date:"2016-08-24",entrance_fee:10000,poster_url:"gangposter.jpg",user_id:1,join_type:'심사')
+=======
+Flea.create(name:"라밍플리마켓",application_start_date:"2016-08-20",application_end_date:"2016-09-20",number_of_recruitment:10,remark:"한강물따뜻해",city_place:"서울",detail_place:"한강",event_start_date:"2016-08-20",event_end_date:"2016-08-25",entrance_fee:10000,poster_url:"poster.png",user_id:1)
+Flea.create(name:"라밍한강마켓",application_start_date:"2016-08-18",application_end_date:"2016-08-18",number_of_recruitment:10,remark:"한강물따뜻해",city_place:"서울",detail_place:"한강",event_start_date:"2016-08-20",event_end_date:"2016-08-24",entrance_fee:10000,poster_url:"gangposter.jpg",user_id:1)
+Flea.create(name:"라밍제주마켓",application_start_date:"2016-08-18",application_end_date:"2016-08-29",number_of_recruitment:10,remark:"천안개죠아",city_place:"제주",detail_place:"충남천안시",event_start_date:"2016-08-20",event_end_date:"2016-08-24",entrance_fee:100000,poster_url:"gangposter.jpg",user_id:2)
+Flea.create(name:"라밍인천마켓",application_start_date:"2016-08-18",application_end_date:"2016-08-29",number_of_recruitment:10,remark:"천안개죠아",city_place:"인천",detail_place:"충남천안시",event_start_date:"2016-08-20",event_end_date:"2016-08-24",entrance_fee:100000,poster_url:"gangposter.jpg",user_id:2)
+Flea.create(name:"라밍울산마켓",application_start_date:"2016-08-18",application_end_date:"2016-08-29",number_of_recruitment:10,remark:"천안개죠아",city_place:"울산",detail_place:"충남천안시",event_start_date:"2016-08-20",event_end_date:"2016-08-24",entrance_fee:100000,poster_url:"gangposter.jpg",user_id:2)
+Flea.create(name:"라밍경기마켓",application_start_date:"2016-08-18",application_end_date:"2016-08-29",number_of_recruitment:10,remark:"천안개죠아",city_place:"경기",detail_place:"충남천안시",event_start_date:"2016-08-20",event_end_date:"2016-08-24",entrance_fee:100000,poster_url:"gangposter.jpg",user_id:2)
+Flea.create(name:"라밍인천마켓",application_start_date:"2016-08-18",application_end_date:"2016-08-29",number_of_recruitment:10,remark:"천안개죠아",city_place:"인천",detail_place:"충남천안시",event_start_date:"2016-08-20",event_end_date:"2016-08-24",entrance_fee:100000,poster_url:"gangposter.jpg",user_id:2)
+Flea.create(name:"라밍충남마켓",application_start_date:"2016-08-18",application_end_date:"2016-08-29",number_of_recruitment:10,remark:"천안개죠아",city_place:"충남",detail_place:"충남천안시",event_start_date:"2016-08-20",event_end_date:"2016-08-24",entrance_fee:100000,poster_url:"gangposter.jpg",user_id:2)
+Flea.create(name:"라밍경남마켓",application_start_date:"2016-08-18",application_end_date:"2016-08-29",number_of_recruitment:10,remark:"천안개죠아",city_place:"경남",detail_place:"충남천안시",event_start_date:"2016-08-20",event_end_date:"2016-08-24",entrance_fee:100000,poster_url:"gangposter.jpg",user_id:2)
+Flea.create(name:"라밍전북마켓",application_start_date:"2016-08-18",application_end_date:"2016-08-29",number_of_recruitment:10,remark:"천안개죠아",city_place:"전북",detail_place:"충남천안시",event_start_date:"2016-08-20",event_end_date:"2016-08-24",entrance_fee:100000,poster_url:"gangposter.jpg",user_id:2)
+Flea.create(name:"라밍광주마켓",application_start_date:"2016-08-18",application_end_date:"2016-08-29",number_of_recruitment:10,remark:"천안개죠아",city_place:"광주",detail_place:"충남천안시",event_start_date:"2016-08-20",event_end_date:"2016-08-24",entrance_fee:100000,poster_url:"gangposter.jpg",user_id:2)
+>>>>>>> 419ab2a8bb0c23fa23c23154b427b0c719ea2f35
