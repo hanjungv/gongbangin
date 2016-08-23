@@ -46,6 +46,12 @@ MainActivity.create(name:"귀금속", skill_part:"제작", percentage:35,user_id
 MainActivity.create(name:"유리", skill_part:"제작", percentage:90,user_id:1)
 
 #flea seed
+<<<<<<< HEAD
+Flea.create(name:"라밍플리마켓",application_start_date:"2016-08-20",application_end_date:"2016-08-20",number_of_recruitment:10,remark:"한강물따뜻해",city_place:"서울",detail_place:"한강",event_start_date:"2016-08-24",event_end_date:"2016-08-25",entrance_fee:10000,poster_url:"poster.png",user_id:1,join_type:'선착순')
+Flea.create(name:"라밍한강마켓",application_start_date:"2016-08-18",application_end_date:"2016-08-18",number_of_recruitment:10,remark:"한강물따뜻해",city_place:"서울",detail_place:"한강",event_start_date:"2016-08-24",event_end_date:"2016-08-24",entrance_fee:10000,poster_url:"gangposter.jpg",user_id:1,join_type:'심사')
+Flea.create(name:"한강마켓",application_start_date:"2016-08-18",application_end_date:"2016-08-31",number_of_recruitment:10,remark:"한강괴물",city_place:"서울",detail_place:"한강",event_start_date:"2016-08-24",event_end_date:"2016-08-24",entrance_fee:10000,poster_url:"gangposter.jpg",user_id:1,join_type:'심사')
+Flea.create(name:"팔려면팔아봐",application_start_date:"2016-08-18",application_end_date:"2016-08-31",number_of_recruitment:10,remark:"한강괴물",city_place:"서울",detail_place:"한강",event_start_date:"2016-08-24",event_end_date:"2016-08-24",entrance_fee:10000,poster_url:"gangposter.jpg",user_id:1,join_type:'심사')
+=======
 Flea.create(name:"라밍플리마켓",application_start_date:"2016-08-20",application_end_date:"2016-09-20",number_of_recruitment:10,remark:"한강물따뜻해",city_place:"서울",detail_place:"한강",event_start_date:"2016-08-20",event_end_date:"2016-08-25",entrance_fee:10000,poster_url:"poster.png",user_id:1)
 Flea.create(name:"라밍한강마켓",application_start_date:"2016-08-18",application_end_date:"2016-08-18",number_of_recruitment:10,remark:"한강물따뜻해",city_place:"서울",detail_place:"한강",event_start_date:"2016-08-20",event_end_date:"2016-08-24",entrance_fee:10000,poster_url:"gangposter.jpg",user_id:1)
 Flea.create(name:"라밍제주마켓",application_start_date:"2016-08-18",application_end_date:"2016-08-29",number_of_recruitment:10,remark:"천안개죠아",city_place:"제주",detail_place:"충남천안시",event_start_date:"2016-08-20",event_end_date:"2016-08-24",entrance_fee:100000,poster_url:"gangposter.jpg",user_id:2)
@@ -57,3 +63,4 @@ Flea.create(name:"라밍충남마켓",application_start_date:"2016-08-18",applic
 Flea.create(name:"라밍경남마켓",application_start_date:"2016-08-18",application_end_date:"2016-08-29",number_of_recruitment:10,remark:"천안개죠아",city_place:"경남",detail_place:"충남천안시",event_start_date:"2016-08-20",event_end_date:"2016-08-24",entrance_fee:100000,poster_url:"gangposter.jpg",user_id:2)
 Flea.create(name:"라밍전북마켓",application_start_date:"2016-08-18",application_end_date:"2016-08-29",number_of_recruitment:10,remark:"천안개죠아",city_place:"전북",detail_place:"충남천안시",event_start_date:"2016-08-20",event_end_date:"2016-08-24",entrance_fee:100000,poster_url:"gangposter.jpg",user_id:2)
 Flea.create(name:"라밍광주마켓",application_start_date:"2016-08-18",application_end_date:"2016-08-29",number_of_recruitment:10,remark:"천안개죠아",city_place:"광주",detail_place:"충남천안시",event_start_date:"2016-08-20",event_end_date:"2016-08-24",entrance_fee:100000,poster_url:"gangposter.jpg",user_id:2)
+>>>>>>> 419ab2a8bb0c23fa23c23154b427b0c719ea2f35
