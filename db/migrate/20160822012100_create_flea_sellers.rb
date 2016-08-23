@@ -7,6 +7,7 @@ class CreateFleaSellers < ActiveRecord::Migration
       t.string :user_email
       t.string :user_name
       t.string :user_tier
+      t.text :review
       t.integer :score, default:0
 
       t.timestamps null: false
