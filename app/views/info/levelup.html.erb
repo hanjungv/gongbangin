@@ -8,7 +8,7 @@
     </div>
 </section>
 <div class="container">
-    <form action="/standby/<%=current_user.id%>" method="get">
+    <form action="/standby/<%=current_user.id%>" method="get" name="formName">
         <input type="hidden" value="<%=current_user.id%>" name=user_id>
         <div class="page-content">
             <div class="row">
@@ -64,22 +64,44 @@
         </div>
 
         <div class="text-center">
-            <button type="submit" class="btn btn-primary confirmation" disabled="true" id="sub" >Submit</button>
+            <button type="submit" name="subMit" class="btn btn-primary confirmation" disabled="true" id="sub" onclick="return erchk();">Submit</button>
+
         </div>
     </div>
   </form>
 </div>
+
 <script>
+function erchk() {
+  if (document.getElementById("brand").value == "") {
+    alert("사업자명을 입력해주세요.");
+    document.getElementById("brand").focus();
+    return false;
+  }
+  if ( document.getElementById("brand_number").value == "") {
+    alert("사업자 등록 번호를 입력해 주세요.");
+    document.getElementById("brand_number").focus();
+    return false;
+  }
+  if ( document.getElementById("brand_place").value == "") {
+    alert("장소를 입력해 주세요.");
+    document.getElementById("brand_place").focus();
+    return false;
+  }
+  return confirm('신청할까요?');
+}
 $("#check1").click(function () {
     $("#sub").attr("disabled", false);
 });
 $("#check2").click(function () {
     $("#sub").attr("disabled", true);
 });
+
 </script>
 
+
 <script type="text/javascript">
-  $('.confirmation').on('click', function () {
+  $('.#').on('click', function () {
       return confirm('신청할까요?');
   });
 </script>
