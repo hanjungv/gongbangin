@@ -18,10 +18,12 @@ class JudgeFleasController < ApplicationController
   def confirm_join
     @flea = Flea.find(params[:flea_id])
     @user = User.find(params[:user_id])
-    @flea_seller = FleaSeller.where(flea_id:params[:flea_id]).find(params[:user_id])
-    @flea_seller.score = params[:total]
-    @flea_seller.review = params[:content]
-    @flea_seller.save
+
+    @flea_seller = FleaSeller.where("flea_id = ? AND user_id = ?", params[:flea_id],params[:user_id])
+    @sh = @flea_seller.first
+    @sh.score = params[:total]
+    @sh.review = params[:content]
+    @sh.save
 
     redirect_to controller: 'judge_fleas', action: 'judge', id: @flea.id, something: 'else'
   end
