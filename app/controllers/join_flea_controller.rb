@@ -30,6 +30,5 @@ class JoinFleaController < ApplicationController
 
       redirect_to "/join_flea/index"
     end
-
   end
 end

@@ -27,11 +27,11 @@ Notice.create(title:"[공지사항]안녕하세요! 한정입니다.",content:"�
 행정각부의 설치·조직과 직무범위는 법률로 정한다. 국가는 전통문화의 계승·발전과 민족문화의 창달에 노력하여야 한다. 이 헌법중 공무원의 임기 또는 중임제한에 관한 규정은 이 헌법에 의하여 그 공무원이 최초로 선출 또는 임명된 때로부터 적용한다.")
 
 #item seed
-Item.create(name:"대단히좋은아이템1", price:"102030", material:"나무", period:"1일~2일", user_id:1)
-Item.create(name:"대단히좋은아이템2", price:"130", material:"금속", period:"1일~2일", user_id:1)
-Item.create(name:"좋은아이템3", price:"5030", material:"실", period:"1일~2일", user_id:1)
-Item.create(name:"대단한아이템4", price:"10", material:"끈", period:"1일~2일", user_id:1)
-Item.create(name:"대단히좋은아이템5", price:"911110", material:"없음", period:"1일~2일", user_id:1)
+Item.create(name:"대단히좋은아이템1", price:"102030", material:"나무", classification:"목/죽세" period:"1일~2일", user_id:1)
+Item.create(name:"대단히좋은아이템2", price:"130", material:"금속", classification:"석/금속", period:"1일~2일", user_id:1)
+Item.create(name:"좋은아이템3", price:"5030", material:"실", classification:"섬유", period:"1일~2일", user_id:1)
+Item.create(name:"대단한아이템4", price:"10", material:"끈", classification:"섬유", period:"1일~2일", user_id:1)
+Item.create(name:"대단히좋은아이템5", price:"911110", material:"없음", classification:"모름", period:"1일~2일", user_id:1)
 
 #prize seed
 UserPrize.create(prize_name:"대상",contest_name:"서울시 이경용배 그림그리기",prize_date:Time.now,user_id:1)

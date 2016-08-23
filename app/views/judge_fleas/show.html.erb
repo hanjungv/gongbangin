@@ -27,7 +27,7 @@
         <div class = "row col-xs-offset-2 col-xs-8">
           <div class = "row">
             <div class="heading-title-alt text-center">
-              <h4 class="text-uppercase">개인정보확인</h4>
+              <h4 class="text-uppercase">개인정보확인(최대 10점)</h4>
               <span class="text-uppercase">구체적으로 작성했는지 판단해 보세요</span>
             </div>
             <div class="alert success-border text-center">
@@ -43,13 +43,17 @@
               <i class="fa fa-lg fa-check-circle-o"></i> <strong>트위터</strong> : <%=@user.twitter_id%><br>
             </div>
             <div class = "col-xs-offset-4 col-xs-4 text-center">
-              <input class = "form-control text-center" onblur="findTotal()" type="number" name="qty" id="qty2" min = "0" max = "10" placeholder="최대 10점"/><br>
-            </div>
+                <select class="form-control text-center" onblur="findTotal()" type="number" name="qty" id="qty2">
+                  <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+                  <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+                </select>
+                <br>
+              </div>
           </div>
           <br><br>
           <div class = "row">
             <div class="heading-title-alt text-center">
-              <h4 class="text-uppercase">수상경력</h4>
+              <h4 class="text-uppercase">수상경력(최대 10점)</h4>
               <span class="text-uppercase">수상 경력이 있을 경우 가산점을 주실 수 있습니다.</span>
             </div>
 
@@ -74,35 +78,101 @@
                 </tbody>
             </table>
 
-
             <div class = "col-xs-offset-4 col-xs-4 text-center">
-              <input class = "form-control text-center" onblur="findTotal()" type="number" name="qty" id="qty3" min="0" max = "10" placeholder="최대 10점"/><br>
+              <select class="form-control text-center" onblur="findTotal()" type="number" name="qty" id="qty3">
+                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+                <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+              </select>
+              <br>
             </div>
           </div>
           <br><br>
           <div class = "row">
             <div class="heading-title-alt text-center">
-              <h4 class="text-uppercase">참여 아이템 적합성</h4>
+              <h4 class="text-uppercase">참여 아이템 적합성(최대 20점)</h4>
               <span class="text-uppercase">아이템의 제작과정을 열람하고 심사하실 수 있습니다.</span>
             </div>
+            <br>
+            <div class="col-md-12">
+                <!--portfolio carousel-->
+                <div id="portfolio-carousel"  class=" portfolio-with-title col-3 portfolio-gallery">
+                  <% @items.each do |i|%>
+                    <div class="portfolio-item">
+                        <div class="thumb">
+                          <%=image_tag('thumb.jpg')%>
+                            <div class="portfolio-hover">
+                                <div class="action-btn">
+                                    <a href="img/product/5.jpg" class="popup-link" title="lightbox view">
+                                        <i class="icon-basic_magnifier"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-title">
+                            <h4>
+                                <a href="img/product/5.jpg" class="popup-link" title="lightbox view"><%=i.name%></a>
+                            </h4>
+                            <p class="txt-xl">₩<%=i.price%></p>
+                        </div>
+                    </div>
+                  <%end%>
+                </div>
+                <!--portfolio carousel-->
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th style ="width:10%">#</th>
+                        <th style ="width:20%">아이템명</th>
+                        <th style ="width:20%">품목</th>
+                        <th style ="width:15%">수량</th>
+                        <th style ="width:15%">판매가격</th>
+                        <th style ="width:20%">제작과정보기</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                      <%@items.each_with_index do |p,index|%>
+                        <tr>
+                            <th scope="row"><%=index+1%></th>
+                            <td><%=p.name%></td>
+                            <td><%=p.classification%></td>
+                            <td>10</td>
+                            <td><%=p.price%>원</td>
+                            <td><a href ="#">링크</a></td>
+                        </tr>
+                      <%end%>
+                    </tbody>
+                </table>
+            </div>
             <div class = "col-xs-offset-4 col-xs-4 text-center">
-              <input class = "form-control text-center" onblur="findTotal()" type="number" name="qty" id="qty4" min="0" max = "10" placeholder="최대 10점"/><br>
+              <select class="form-control" onblur="findTotal()" type="number" name="qty" id="qty4">
+                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+                <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+                <option>11</option><option>12</option><option>13</option><option>14</option><option>15</option>
+                <option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>
+              </select>
+              <br>
             </div>
           </div>
-          <div class = "row">
+          <form action = "/confirm_join/<%=@flea.id%>/<%=@user.id%>" method ="post" enctype="multipart/form-data">
+            <div class = "row">
+              <div class="heading-title-alt text-center">
+                <h4 class="text-uppercase">심사총평</h4>
+                <span class="text-uppercase"></span>
+              </div>
+              <textarea class="form-control" name = "content" rows="10" id="emailcontent"></textarea>
+            </div>
+            <div class="divider divider-small d-solid d-single text-center">
+                <span class="dot"></span>
+            </div>
             <div class="heading-title-alt text-center">
-              <h4 class="text-uppercase">심사총평</h4>
-              <span class="text-uppercase"></span>
+              <h4 class="text-uppercase">총점</h4>
             </div>
-            <textarea class="form-control" name = "content" rows="10" id="emailcontent"></textarea>
-          </div>
-          <div class="divider divider-small d-solid d-single text-center">
-              <span class="dot"></span>
-          </div>
-          <div class="heading-title-alt text-center">
-            <h4 class="text-uppercase">총점</h4>
-          </div>
-          <input class = "form-control" type="number" name="total" id="total" min ="0" max ="30" disabled=true/>
+            <input class = "form-control text-center" type="number" name="total" id="total" min ="0" max ="50"  readonly="readonly"/>
+            <div class ="text-center">
+              <br>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -119,6 +189,5 @@ function findTotal(){
     }
     document.getElementById('total').value = tot;
 }
-
 $('#total').css({'cursor': '','background-color':'#fff'});
 </script>
