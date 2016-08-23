@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20160822012100) do
     t.string   "user_email"
     t.string   "user_name"
     t.string   "user_tier"
+    t.text     "review"
     t.integer  "score",      default: 0
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false

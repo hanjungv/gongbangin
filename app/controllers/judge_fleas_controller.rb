@@ -5,6 +5,8 @@ class JudgeFleasController < ApplicationController
 
   def show
     @user = User.find(params[:user_id])
+    @prize = UserPrize.where(user_id:params[:user_id])
+    @judge = FleaSeller.where()
   end
 
   def judge
