@@ -1,10 +1,45 @@
-<section class="page-title">
+<body>
+  <section class="page-title">
     <div class="container">
-        <h4 class="text-uppercase">
-            Today market</h4>
-        <p>진행중인 플리마켓</p>
+      <h4 class="text-uppercase">
+        Today market</h4>
+      <p>진행중인 플리마켓</p>
     </div>
-</section>
+  </section>
+  <div class="container">
+<form>
+
+
+  <div class="form-group col-md-10" style="margin-top: 50px" >
+
+  <!--  '서울','인천','대전','대구','부산','광주','울산',
+      '경기','충남','충북','전남','전북','경남','경북','제주' -->
+  <sapn><p style="margin-bottom : 0px">
+    <i class="fa fa-search" aria-hidden="true"></i>지역 선택</p></span>
+    <div class="inline-group">
+      <input type="radio" name="city" checked="true" value="전체"/>전체
+      <input type="radio" name="city" value="서울" />서울
+      <input type="radio" name="city" value="인천"/>인천
+      <input type="radio" name="city" value="대전"/>대전
+      <input type="radio" name="city" value="대구"/>대구
+      <input type="radio" name="city" value="부산"/>부산
+      <input type="radio" name="city" value="광주"/>광주
+      <input type="radio" name="city" value="울산"/>울산
+      <input type="radio" name="city" value="경기"/>경기
+      <input type="radio" name="city" value="충남"/>충남
+      <input type="radio" name="city" value="충북"/>충북
+      <input type="radio" name="city" value="전남"/>전남
+      <input type="radio" name="city" value="전북"/>전북
+      <input type="radio" name="city" value="경남"/>경남
+      <input type="radio" name="city" value="경북"/>경북
+      <input type="radio" name="city" value="제주"/>제주
+      <button id="search" class="btn">검색</button>
+    </div>
+
+  </div>
+
+</form>
+
 <section class="body-content">
     <div class="page-content product-grid">
         <div class="container">
@@ -33,17 +68,31 @@
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star-half-o"></i>
                     </div>
-                    <!--
-                  일반유저 노쓸모
-                  <div class="product-btn">
-                      <a href="#" class="btn btn-extra-small btn-dark-border  "><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                  </div> -->
+
 
                 </div>
             </div>
-            <%end%>
-        </div>
 
-    </div>
+        <%end%>
 
-</section>
+  </div>
+
+  </section>
+
+  </div>
+
+</body>
+
+<script>
+$(document).ready(function() {
+
+  $('#search').click(function(){
+    $.ajax({
+      url : "/fleas",
+      data : {"city" : $('input[name=city]').val()},
+      type : "GET",
+      }
+    });
+  });
+});
+</script>

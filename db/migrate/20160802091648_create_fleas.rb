@@ -23,7 +23,7 @@ class CreateFleas < ActiveRecord::Migration
       # 참가비
       t.integer :entrance_fee
       # 포스터 주소
-      t.string :poster_url,  default: "poster.png"
+      t.string :poster_url,  default: "gangposter.png"
       # 속하는 유저 번호(누가 만들었나)
       t.integer :user_id
 
