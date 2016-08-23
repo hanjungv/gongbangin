@@ -46,12 +46,12 @@ ActiveRecord::Schema.define(version: 20160822012100) do
     t.date     "event_start_date"
     t.date     "event_end_date"
     t.integer  "entrance_fee"
-    t.string   "poster_url",             default: "poster.png"
+    t.string   "poster_url",             default: "gangposter.png"
     t.integer  "user_id"
     t.string   "join_type"
     t.integer  "join_member",            default: 0
-    t.datetime "created_at",                                    null: false
-    t.datetime "updated_at",                                    null: false
+    t.datetime "created_at",                                        null: false
+    t.datetime "updated_at",                                        null: false
   end
 
   create_table "item_images", force: :cascade do |t|

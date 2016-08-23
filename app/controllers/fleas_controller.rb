@@ -3,10 +3,16 @@ class FleasController < ApplicationController
   # GET /fleas
   # GET /fleas.json
   def index
-    @fleas = Flea.all
+    @search_city = params[:city]
+    if @search_city == '전체'
+      @today_flea_a = Flea.all
+    elsif @search_city == nil
+      @today_flea_a = Flea.all
+    else
+      @today_flea_a = Flea.where(city_place: @search_city)
+    end
     @current_time = Time.now
     date = @current_time.to_s.to_date
-    @today_flea_a = Flea.all
     @today_flea = Array.new
     unless @current_time.nil?
       @today_flea_a.each do |p|
@@ -15,8 +21,8 @@ class FleasController < ApplicationController
         end
       end
     end
-  end
 
+  end
 
   def show
     @has_like = @flea.like_flea_markets.where(flea_id: @flea.id, user_id: current_user.id).blank? if current_user
