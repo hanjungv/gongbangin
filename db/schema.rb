@@ -182,9 +182,9 @@ ActiveRecord::Schema.define(version: 20160822012100) do
     t.string   "brand_number",           default: "없음"
     t.string   "brand_place"
     t.string   "profile_image_url",      default: ""
-    t.string   "facebook_id",            default: ""
-    t.string   "twitter_id",             default: ""
-    t.string   "instagram_id",           default: ""
+    t.string   "facebook_id",            default: "없음"
+    t.string   "twitter_id",             default: "없음"
+    t.string   "instagram_id",           default: "없음"
     t.datetime "created_at",                                         null: false
     t.datetime "updated_at",                                         null: false
   end
