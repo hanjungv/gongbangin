@@ -90,6 +90,6 @@ class FleasController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def flea_params
-    params.require(:flea).permit(:name, :application_start_date, :application_end_date, :number_of_recruitment, :remark, :city_place, :detail_place, :event_start_date, :event_end_date, :entrance_fee,:user_id, :join_type)
+    params.require(:flea).permit(:name, :application_start_date, :application_end_date, :number_of_recruitment, :remark, :city_place, :detail_place, :event_start_date, :event_end_date, :entrance_fee,:user_id, :join_type, :item_count, :agree1,:agree2,:agree3,:agree4,:agree5)
   end
 end

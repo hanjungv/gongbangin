@@ -32,6 +32,16 @@ class CreateFleas < ActiveRecord::Migration
       # 현재 몇명 지원했는지
       t.integer :join_member, default:0
 
+      # 동의사항 입력하기(최대 5개)
+      t.string :agree1
+      t.string :agree2
+      t.string :agree3
+      t.string :agree4
+      t.string :agree5
+      # 최대 몇개의 아이템 지원가능한지(최대 5개)
+      t.integer :item_count
+
+
       t.timestamps null: false
     end
   end
