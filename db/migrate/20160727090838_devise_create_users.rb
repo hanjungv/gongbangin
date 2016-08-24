@@ -43,9 +43,9 @@ class DeviseCreateUsers < ActiveRecord::Migration
       #profile_image
       t.string :profile_image_url, default: ""
       #url
-      t.string :facebook_id, default:""
-      t.string :twitter_id, default:""
-      t.string :instagram_id,default:""
+      t.string :facebook_id, default:"없음"
+      t.string :twitter_id, default:"없음"
+      t.string :instagram_id,default:"없음"
       ########################################################################################################
       ## Confirmable
       # t.string   :confirmation_token©©
