@@ -6,6 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+#User
+User.create(:email => 'nnn@gmail.com', :password => 'foobar', :password_confirmation => 'foobar', :nickname => 'abcd', :level => 'master')
 
 #공지사항 seed
 Notice.create(title:"[공지사항]안녕하세요! 한정입니다",content:"재판의 전심절차로서 행정심판을 할 수 있다. 행정심판의 절차는 법률로 정하되, 사법절차가 준용되어야 한다. 제2항과 제3항의 처분에 대하여는 법원에 제소할 수 없다. 모든 국민은 사생활의 비밀과 자유를 침해받지 아니한다. 모든 국민은 법 앞에 평등하다. 누구든지 성별·종교 또는 사회적 신분에 의하여 정치적·경제적·사회적·문화적 생활의 모든 영역에 있어서 차별을 받지 아니한다.
