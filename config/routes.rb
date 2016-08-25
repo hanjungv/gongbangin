@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'join_flea/index'
   get 'join_flea/join' =>"join_flea#join"
   get 'join_flea/:flea_id' => "join_flea#make"
+  get 'apply/:flea_id' => "join_flea#apply"
   #judge menu
   get 'judge_fleas/index'
   get 'judge_fleas/judge/:flea_id' => "judge_fleas#judge"
@@ -47,7 +48,8 @@ Rails.application.routes.draw do
   post 'real_update_item/:item_id'=>"item#real_update"
   get 'item/show'
   get 'production_process/:item_id' => "item#production_process"
-  post 'pp_edit/:item_id' => "item#pp_create"
+  post 'pp_edit/:item_id' => "item#pp_edit"
+  get 'pp_edit/:item_id' => "item#pp_edit"
   #info#
   get 'showinfo/:user_id' => "info#showinfo"
   get 'info/levelup'

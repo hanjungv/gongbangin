@@ -122,7 +122,7 @@ ActiveRecord::Schema.define(version: 20160822012100) do
   end
 
   create_table "production_images", force: :cascade do |t|
-    t.string   "url"
+    t.text     "image"
     t.text     "process"
     t.integer  "item_id"
     t.datetime "created_at", null: false

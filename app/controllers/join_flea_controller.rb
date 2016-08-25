@@ -32,4 +32,10 @@ class JoinFleaController < ApplicationController
       redirect_to "/join_flea/index"
     end
   end
+
+  def apply
+    @flea_id = Flea.find(params[:flea_id])
+
+  end
+
 end
