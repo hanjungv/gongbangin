@@ -43,11 +43,17 @@ ActiveRecord::Schema.define(version: 20160825051357) do
     t.integer  "flea_id"
     t.string   "user_email"
     t.string   "user_name"
+    t.string   "num_of_member"
+    t.string   "card_or_not"
+    t.string   "career"
+    t.string   "classification"
+    t.string   "item"
+    t.string   "motivation"
     t.string   "user_tier"
     t.text     "review"
-    t.integer  "score",      default: 0
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.integer  "score",          default: 0
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "fleas", force: :cascade do |t|
@@ -139,6 +145,8 @@ ActiveRecord::Schema.define(version: 20160825051357) do
     t.text     "image"
     t.text     "process"
     t.integer  "item_id"
+    t.text     "title"
+    t.text     "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -189,13 +197,14 @@ ActiveRecord::Schema.define(version: 20160825051357) do
     t.string   "address",                default: "",                null: false
     t.string   "level",                  default: "seller"
     t.string   "introduction",           default: "안녕하세요!만나서 반가워요!"
-    t.string   "tier",                   default: "black"
+    t.string   "tier",                   default: "purple"
     t.integer  "score",                  default: 0
     t.string   "activity_area",          default: "서울"
     t.string   "brand",                  default: "없음"
     t.string   "brand_number",           default: "없음"
     t.string   "brand_place"
     t.string   "profile_image_url",      default: ""
+    t.string   "user_page",              default: "없음"
     t.string   "facebook_id",            default: "없음"
     t.string   "twitter_id",             default: "없음"
     t.string   "instagram_id",           default: "없음"

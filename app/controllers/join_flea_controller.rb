@@ -16,11 +16,17 @@ class JoinFleaController < ApplicationController
       @flea_seller = FleaSeller.new
 
       @flea_seller.user_id = current_user.id
-      @flea_seller.user_email = current_user.email
-      @flea_seller.user_name = current_user.name
-      @flea_seller.user_tier = current_user.tier
-
+      # @flea_seller.user_email = current_user.email
+      # @flea_seller.user_name = current_user.name
+      # @flea_seller.user_tier = current_user.tier
+      @flea_seller.user_name = params[:user_name]
+      @flea_seller.num_of_member = params[:num_of_member]
+      @flea_seller.card_or_not = params[:card_or_not]
+      @flea_seller.career = params[:career]
+      @flea_seller.classification = params[:classification]
       @flea_seller.flea_id = params[:flea_id]
+      @flea_seller.item = params[:item]
+      @flea_seller.motivation = params[:motivation]
 
       @flea_seller.save
 
@@ -34,7 +40,8 @@ class JoinFleaController < ApplicationController
   end
 
   def apply
-    @flea_id = Flea.find(params[:flea_id])
+    @user = User.new
+    @flea = Flea.find(params[:flea_id])
 
   end
 

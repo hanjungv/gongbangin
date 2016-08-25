@@ -13,7 +13,7 @@ class CreateProductionImages < ActiveRecord::Migration
 
       t.timestamps null: false
 
-      mount_uploader :image, TinymceS3ImageUploader
+      #mount_uploader :image, TinymceS3ImageUploader
 
     end
   end

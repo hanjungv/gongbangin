@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get 'join_flea/index'
   get 'join_flea/join' =>"join_flea#join"
-  get 'join_flea/:flea_id' => "join_flea#make"
+  post 'make/:flea_id' => "join_flea#make"
   get 'apply/:flea_id' => "join_flea#apply"
   #judge menu
   get 'judge_fleas/index'

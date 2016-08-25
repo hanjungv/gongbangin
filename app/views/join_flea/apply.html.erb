@@ -8,8 +8,8 @@
     </div>
 </section>
 <div class="container">
-    <form action="/join_flea/<%=@flea_id%>" method="get" name="formName">
-        <input type="hidden" value="<%=@flea_id%>" name=user_id>
+    <form action="/make/<%=@flea.id%>" method="post" name="formName">
+        <input type="hidden" value="<%=current_user.id%>" name="user_id" >
         <div class="page-content">
             <div class="row">
                 <div class="col-xs-offset-2 col-xs-8">
@@ -40,7 +40,7 @@
             <div class="col-xs-offset-4 col-xs-4">
                 <div class="form-group">
                     <label>&nbsp;&nbsp;이름은 무엇인가요?</label>
-                    <input type="text" class="form-control text-center" name="brand" id="brand" placeholder="이름을 입력해 주세요">
+                    <input type="text" class="form-control text-center" name="user_name" id="user_name" placeholder="이름을 입력해 주세요">
                 </div>
             </div>
         </div>
@@ -49,7 +49,7 @@
             <div class="col-xs-offset-4 col-xs-4">
                 <div class="form-group">
                     <label>&nbsp;&nbsp;구성원 수는 어떻게 되요?</label>
-                    <input type="text" class="form-control text-center" name="brand_number" id="brand_number" placeholder="구성원 수를 입력해 주세요">
+                    <input type="text" class="form-control text-center" name="num_of_member" id="num_of_member" placeholder="구성원 수를 입력해 주세요">
                 </div>
             </div>
         </div>
@@ -58,7 +58,7 @@
             <div class="col-xs-offset-4 col-xs-4">
                 <div class="form-group">
                     <label>&nbsp;&nbsp;카드 결제 가능한가요?</label>
-                    <input type="text" class="form-control text-center" name="brand_place" id="brand_place" placeholder="예/아니요 로 대답해 주세요">
+                    <input type="text" class="form-control text-center" name="card_or_not" id="card_or_not" placeholder="예/아니요 로 대답해 주세요">
                 </div>
             </div>
         </div>
@@ -67,7 +67,7 @@
             <div class="col-xs-offset-4 col-xs-4">
                 <div class="form-group">
                     <label>&nbsp;&nbsp;경력을 뽐내주세요!</label>
-                    <input type="text" class="form-control text-center" name="brand_place" id="brand_place" placeholder="경력을 입력해 주세요">
+                    <input type="text" class="form-control text-center" name="career" id="career" placeholder="경력을 입력해 주세요">
                 </div>
             </div>
         </div>
@@ -75,7 +75,7 @@
             <div class="col-xs-offset-4 col-xs-4">
                 <div class="form-group">
                     <label>&nbsp;&nbsp;품목은요?</label>
-                    <input type="text" class="form-control text-center" name="brand_place" id="brand_place" placeholder="품목을 입력해 주세요">
+                    <input type="text" class="form-control text-center" name="classification" id="classification" placeholder="품목을 입력해 주세요">
                 </div>
             </div>
         </div>
@@ -83,7 +83,7 @@
             <div class="col-xs-offset-4 col-xs-4">
                 <div class="form-group">
                     <label>&nbsp;&nbsp;판매 아이템은요?</label>
-                    <input type="text" class="form-control text-center" name="brand_place" id="brand_place" placeholder="판매 아이템을 입력해 주세요">
+                    <input type="text" class="form-control text-center" name="item" id="item" placeholder="판매 아이템을 입력해 주세요">
                 </div>
             </div>
         </div>
@@ -91,7 +91,7 @@
             <div class="col-xs-offset-4 col-xs-4">
                 <div class="form-group">
                     <label>&nbsp;&nbsp;참여동기가 어떻게 되요?</label>
-                    <textarea rows="5" class="form-control text-center" name="brand_place" id="brand_place" placeholder="참여 동기를 입력해 주세요."></textarea>
+                    <textarea rows="5" class="form-control text-center" name="motivation" id="motivation" placeholder="참여 동기를 입력해 주세요."></textarea>
                 </div>
             </div>
         </div>
@@ -105,19 +105,39 @@
 
 <script>
 function erchk() {
-  if (document.getElementById("brand").value == "") {
-    alert("?을 입력해주세요.");
-    document.getElementById("brand").focus();
+  if (document.getElementById("user_name").value == "") {
+    alert("이름을 입력해주세요.");
+    document.getElementById("user_name").focus();
     return false;
   }
-  if ( document.getElementById("brand_number").value == "") {
-    alert("?를 입력해 주세요.");
-    document.getElementById("brand_number").focus();
+  if ( document.getElementById("num_of_member").value == "") {
+    alert("구성원 수를 입력해 주세요.");
+    document.getElementById("num_of_member").focus();
     return false;
   }
-  if ( document.getElementById("brand_place").value == "") {
-    alert("?를 입력해 주세요.");
-    document.getElementById("brand_place").focus();
+  if ( document.getElementById("card_or_not").value == "") {
+    alert("카드가능 여부를 입력해 주세요.");
+    document.getElementById("card_or_not").focus();
+    return false;
+  }
+  if ( document.getElementById("career").value == "") {
+    alert("경력를 입력해 주세요.");
+    document.getElementById("career").focus();
+    return false;
+  }
+  if ( document.getElementById("classification").value == "") {
+    alert("품목을 입력해 주세요.");
+    document.getElementById("classification").focus();
+    return false;
+  }
+  if ( document.getElementById("item").value == "") {
+    alert("판매 아이템을 입력해 주세요.");
+    document.getElementById("item").focus();
+    return false;
+  }
+  if ( document.getElementById("motivation").value == "") {
+    alert("참여동기를 입력해 주세요.");
+    document.getElementById("motivation").focus();
     return false;
   }
   return confirm('신청할까요?');
