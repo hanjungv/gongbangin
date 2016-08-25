@@ -55,14 +55,23 @@ class ItemController < ApplicationController
 
   def production_process
     @item = Item.find(params[:item_id])
+
   end
 
-  def pp_create
+  def pp_edit
 
-    #@item = Item.find(params[:item_id])
-    #@pp=ProductionImage.new
-    #@pp.process = params[:production_content]
-    #@pp.save
+    @i = ProductionImage.new
+    @i.image = params[:file]
+
+    if @i.save
+    render json: {
+      image: {
+        url: @i.image.url
+      }
+    }, content_type: "text/html"
+    end
+
+
   end
 
 end

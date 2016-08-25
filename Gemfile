@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
 # editor
-gem 'tinymce-rails'
-
+gem 'tinymce-rails-imageupload', github: 'zkarpinski/tinymce-rails-imageupload', branch: 'tinymce-rails-asset-compile'
+gem 'dragonfly', '~> 1.0.12'
 # email gem
 gem 'mailgun-ruby'
 # sms gem
