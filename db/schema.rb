@@ -175,13 +175,14 @@ ActiveRecord::Schema.define(version: 20160822012100) do
     t.string   "address",                default: "",                null: false
     t.string   "level",                  default: "seller"
     t.string   "introduction",           default: "안녕하세요!만나서 반가워요!"
-    t.string   "tier",                   default: "black"
+    t.string   "tier",                   default: "purple"
     t.integer  "score",                  default: 0
     t.string   "activity_area",          default: "서울"
     t.string   "brand",                  default: "없음"
     t.string   "brand_number",           default: "없음"
     t.string   "brand_place"
     t.string   "profile_image_url",      default: ""
+    t.string   "user_page",              default: "없음"
     t.string   "facebook_id",            default: "없음"
     t.string   "twitter_id",             default: "없음"
     t.string   "instagram_id",           default: "없음"

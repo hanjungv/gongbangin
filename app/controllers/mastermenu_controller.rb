@@ -16,8 +16,7 @@ class MastermenuController < ApplicationController
   def levelup
     @user = User.find(params[:user_id])
     @user.level = "planner"
-    @user.tier = "Bronze"
-    @user.score = 0
+    @user.tier = "black"
     @user.save
     redirect_to '/mastermenu/user_manage'
   end
@@ -29,7 +28,6 @@ class MastermenuController < ApplicationController
   def leveldown
     @user = User.find(params[:user_id])
     @user.level = "seller"
-    @user.tier = "purple"
     @user.save
     redirect_to controller: 'mastermenu', action: 'write_email', id: @user.id, something: 'else'
   end
