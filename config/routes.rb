@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  mount Bootsy::Engine => '/bootsy', as: 'bootsy'
+
   get 'join_flea/index'
   get 'join_flea/join' =>"join_flea#join"
   get 'join_flea/:flea_id' => "join_flea#make"

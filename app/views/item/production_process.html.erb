@@ -5,6 +5,16 @@
     <textarea id="file" name="file" >Your content here</textarea>
     <input type="submit" value="Submit">
 </form>
+
+<%= form_for(@post) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :content %>
+  <%= f.bootsy_area :content %>
+
+  <%= f.submit %>
+<% end %>
 <!--<%= text_area_tag :content, "", :class => "tinymce", :rows => 40, :cols => 120 %>-->
 
 <script src="//your installation path/4.1/tinymce.min.js"></script>

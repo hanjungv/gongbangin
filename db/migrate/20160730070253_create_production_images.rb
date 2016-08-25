@@ -8,10 +8,12 @@ class CreateProductionImages < ActiveRecord::Migration
       # 아이템 제작 과정 단계의 설명
       t.text :process
       t.integer :item_id
+      t.text :title
+      t.text :content
 
       t.timestamps null: false
 
-      #mount_uploader :image, TinymceS3ImageUploader
+      mount_uploader :image, TinymceS3ImageUploader
 
     end
   end

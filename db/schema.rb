@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160822012100) do
+ActiveRecord::Schema.define(version: 20160825051357) do
+
+  create_table "bootsy_image_galleries", force: :cascade do |t|
+    t.integer  "bootsy_resource_id"
+    t.string   "bootsy_resource_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "bootsy_images", force: :cascade do |t|
+    t.string   "image_file"
+    t.integer  "image_gallery_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -175,14 +189,13 @@ ActiveRecord::Schema.define(version: 20160822012100) do
     t.string   "address",                default: "",                null: false
     t.string   "level",                  default: "seller"
     t.string   "introduction",           default: "안녕하세요!만나서 반가워요!"
-    t.string   "tier",                   default: "purple"
+    t.string   "tier",                   default: "black"
     t.integer  "score",                  default: 0
     t.string   "activity_area",          default: "서울"
     t.string   "brand",                  default: "없음"
     t.string   "brand_number",           default: "없음"
     t.string   "brand_place"
     t.string   "profile_image_url",      default: ""
-    t.string   "user_page",              default: "없음"
     t.string   "facebook_id",            default: "없음"
     t.string   "twitter_id",             default: "없음"
     t.string   "instagram_id",           default: "없음"
