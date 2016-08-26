@@ -9,7 +9,6 @@ class Flea < ActiveRecord::Base
   has_many :users, through: :comment_flea_markets
   has_many :flea_sellers
 
-
   validates :number_of_recruitment, presence: {message: "인원을 제대로 입력하지 않았습니다."}
   validates :city_place, presence: {message: "개최도시를 제대로 입력하지 않았습니다."}
   validates :detail_place, presence: {message: "상세정보를 제대로 입력하지 않았습니다."}

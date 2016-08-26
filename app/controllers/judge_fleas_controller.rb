@@ -23,7 +23,10 @@ class JudgeFleasController < ApplicationController
     @user = User.find(params[:user_id])
     @user.score = @user.score + 50
 
-    @isThere.destroy
+    @isThere.isSelect = "true"
+
+    @user.save
+    @isThere.save
 
     redirect_to controller: 'judge_fleas', action: 'judge', id: @flea.id, something: 'else'
 

@@ -2,7 +2,7 @@ class CreateFleaSellers < ActiveRecord::Migration
   def change
     create_table :flea_sellers do |t|
 
-      # 지원자아이디
+      # 지원자 아이디
       t.integer :user_id
       # 지원한 플리마켓
       t.integer :flea_id
@@ -28,6 +28,8 @@ class CreateFleaSellers < ActiveRecord::Migration
       t.text :review
       # 심사결과 점수
       t.integer :score, default:0
+      # 선발 여부
+      t.string :isSelect, default:"false"
 
       t.timestamps null: false
     end

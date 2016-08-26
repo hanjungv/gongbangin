@@ -52,8 +52,9 @@ ActiveRecord::Schema.define(version: 20160825051357) do
     t.string   "user_tier"
     t.text     "review"
     t.integer  "score",          default: 0
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.string   "isSelect",       default: "false"
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
   end
 
   create_table "fleas", force: :cascade do |t|
