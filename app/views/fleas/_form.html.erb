@@ -1,65 +1,157 @@
-<div class="container">
-  <h2>새로운 플리마켓 등록</h2>
-  <%= form_for(@flea) do |f| %>
-      <% if @flea.errors.any? %>
-          <div id="error_explanation">
-            <h2><%= pluralize(@flea.errors.count, 'error') %> prohibited this flea from being saved:</h2>
-            <ul>
-              <% @flea.errors.full_messages.each do |message| %>
-                  <li><%= message %></li>
-              <% end %>
-            </ul>
-          </div>
-      <% end %>
-
-      <div class="field">
-        <%= f.label :"플리마켓 명" %><br/>
-        <%= f.text_field :name %>
-      </div>
-      <div class="field">
-        <%= f.label :"접수 시작일시" %><br>
-        <%= f.datetime_select :application_start_date %>
-      </div>
-      <div class="field">
-        <%= f.label :"접수 종료일시" %><br>
-        <%= f.datetime_select :application_end_date %>
-      </div>
-      <div class="field">
-        <%= f.label :"모집 인원" %><br>
-        <%= f.number_field :number_of_recruitment %>
-      </div>
-      <div class="field">
-        <%= f.label :"플리마켓 설명" %><br>
-        <%= f.text_field :remark %>
-      </div>
-      <div class="field">
-        <%= f.label :"지역" %>
-        <%= f.select(:city_place,
-                     ['서울', '인천', '대전', '대구', '부산', '광주', '울산',
-                      '경기', '충남', '충북', '전남', '전북', '경남', '경북', '제주']) %>
-      </div>
-      <div class="field">
-        <%= f.label :"상세 주소" %><br>
-        <%= f.text_field :detail_place %>
-      </div>
-      <div class="field">
-        <%= f.label :"플리마켓 시작일시" %><br>
-        <%= f.datetime_select :event_start_date %>
-      </div>
-      <div class="field">
-        <%= f.label :"플리마켓 종료일시" %><br>
-        <%= f.datetime_select :event_end_date %>
-      </div>
-      <div class="field">
-        <%= f.label :"참가비" %><br>
-        <%= f.number_field :entrance_fee %>
-      </div>
-      <div class="field">
-        <%= f.label :"지역" %>
-        <%= f.select(:join_type, ['선착순', '심사']) %>
-        <div class="actions">
-          <%= f.submit '마켓 등록하기', :class => 'btn btn-default btn-small btn-rounded' %>
+<section class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="text-uppercase">마켓등록하기</h4>
+                <ol class="breadcrumb">
+                    <li><a href="/">Home</a></li>
+                    <li class="active">마켓등록하기</li>
+                </ol>
+            </div>
         </div>
-  <% end %>
-  </div>
+    </div>
+</section>
+<div class="wrapper">
+    <div class="container">
+        <div class="career-form ">
+            <div class="page-content text-center">
+                <%= form_for(@flea) do |f| %>
+                <% if @flea.errors.any? %>
+                <div id="error_explanation">
+                    <h2><%= pluralize(@flea.errors.count, 'error') %>
+                        prohibited this flea from being saved:</h2>
+                    <ul>
+                        <% @flea.errors.full_messages.each do |message| %>
+                        <li><%= message %></li>
+                        <% end %>
+                    </ul>
+                </div>
+                <% end %>
+                <div class="heading-title text-center">
+                    <h3 class="text-uppercase">Apply Now
+                    </h3>
+                    <span class="text-uppercase">마켓 지원하기</span>
+                </div>
+                <div class="divider divider-small d-solid d-single text-center">
+                    <span class="dot"></span>
+                </div>
+                <div class = "col-md-1"></div>
+                <div class = "col-md-10">
+                  <div class="heading-title-alt text-center">
+                      <h3 class="text-uppercase">기본정보</h3>
+                      <span class="text-uppercase">자세히 입력 해주세요!</span>
+                  </div>
+                  <br>
+                  <div class="form-group col-md-6">
+                      <%= f.label :"플리마켓 시작일시" %><br>
+                      <%= f.datetime_select :event_start_date , :class => 'form-control'%>
+                  </div>
+                  <div class="form-group col-md-6">
+                      <%= f.label :"플리마켓 종료일시" %><br>
+                      <%= f.datetime_select :event_end_date , :class => 'form-control'%>
+                  </div>
+                  <br>
+                  <div class="form-group col-md-6">
+                      <%= f.label :"플리마켓 명" %><br/>
+                      <%= f.text_field :name, :class => 'form-control' ,:placeholder=>"예)서울 밤도깨비 야시장"%>
+                  </div>
+                  <div class="form-group col-md-6">
+                      <%= f.label :"지역" %>
+                      <%= f.select(:city_place,
+                    ['서울','인천','대전','대구','부산','광주','울산',
+                      '경기','충남','충북','전남','전북','경남','경북','제주'],{}, { :class => 'form-control' })%>
+                  </div>
+                  <div class="form-group col-md-6">
+                      <%= f.label :"상세_주소" %><br>
+                      <%= f.text_field :detail_place, :class => 'form-control',:placeholder=>"예)서울 여의도, DDP, 목동운동장, 청계광장" %>
+                  </div>
+                  <div class="form-group col-md-6">
+                      <%= f.label :"플리마켓 설명" %><br>
+                      <%= f.text_field :remark , :class => 'form-control',:placeholder=>"예)신나는 공연과 핸드메이드 상품, 푸짐하게 펼쳐진 세계 각국의 음식들을 한 곳에서!"%>
+                  </div>
+                  <div class="heading-title-alt text-center">
+                      <h3 class="text-uppercase">모집정보</h3>
+                      <span class="text-uppercase">자세히 입력 해주세요!</span>
+                  </div>
+                  <br>
+                  <div class="form-group col-md-6">
+                      <%= f.label :"접수 시작일시"%><br>
+                      <%= f.datetime_select :application_start_date , :class => 'form-control'%>
+                  </div>
+                  <div class="form-group col-md-6">
+                      <%= f.label :"접수 종료일시" %><br>
+                      <%= f.datetime_select :application_end_date %>
+                  </div>
+                  <div class="form-group col-md-6">
+                      <%= f.label :"모집방식" %>
+                      <%= f.select(:join_type,['선착순','심사'],{}, { :class => 'form-control' })%>
+                  </div>
+                  <div class="form-group col-md-6">
+                      <%= f.label :"모집 인원" %><br>
+                      <%= f.number_field :number_of_recruitment, :class => 'form-control', min:"0",placeholder:"숫자를 입력하여 주세요"%>
+                  </div>
+                  <div class="form-group col-md-6">
+                      <%= f.label :"참가비" %><br>
+                      <%= f.number_field :entrance_fee, :class => 'form-control' , min:"0", step:"100", placeholder:"100원 단위에요"%>
+                  </div>
+                  <div class="form-group col-md-6">
+                      <%= f.label :"최대 지원가능한 아이템" %><br>
+                      <%= f.number_field :item_count, :class => 'form-control' , min:"0", max:"5", placeholder:"최대 5개에요"%>
+                  </div>
+                  <div class="heading-title-alt text-center">
+                      <h3 class="text-uppercase">동의사항 입력</h3>
+                      <span class="text-uppercase">더 이상 없을 경우 입력하지 마세요!</span>
+                  </div>
+                  <br>
+                  <dl class="toggle time-line">
+                      <dt>
+                          <a href="">1번째 동의사항</a>
+                      </dt>
+                      <dd>
+                              <%= f.text_field :agree1 , :class => 'form-control', :value=>"본인은 작성한 위 사항에 틀림이 없으며, 개인정보 수집 및 이용에 동의합니다."%>
+                      </dd>
+                      <dt>
+                          <a href="">2번째 동의사항</a>
+                      </dt>
+                      <dd>
+                              <%= f.text_field :agree2 , :class => 'form-control', :value=>"본인은 행사에 참여함에 있어 개장 및 폐장 시간을 엄격하게 준수합니다."%>
+                      </dd>
+                      <dt>
+                          <a href="">3번째 동의사항</a>
+                      </dt>
+                      <dd>
+                              <%= f.text_field :agree3 , :class => 'form-control',:value=>"본인은 주최 측에서 제공하는 물품의 유지 및 보안의 책임을 갖고 운영할 것이며, 행사 후 청결 상태 유지에 노력합니다."%>
+                      </dd>
+                      <dt>
+                          <a href="">4번째 동의사항</a>
+                      </dt>
+                      <dd>
+                              <%= f.text_field :agree4 , :class => 'form-control'%>
+                      </dd>
+                      <dt>
+                          <a href="">5번째 동의사항</a>
+                      </dt>
+                      <dd>
+                              <%= f.text_field :agree5 , :class => 'form-control'%>
+                      </dd>
+                  </dl>
+                  <br>
+                  <div class="heading-title-alt text-center">
+                      <h3 class="text-uppercase">마켓대표이미지</h3>
+                      <span class="text-uppercase">마켓을 잘 나타내주는 사진을 올려주세요</span>
+                  </div>
+                  <br>
+                  <div class="form-group">
+                    <%= f.file_field :poster_url , :class =>"form-control"%>
+                  </div>
+                </div>
+
+                <br>
+                <div class="actions form-group text-center m-top-30 inline-block">
+                    <%= f.submit '마켓 등록하기', :class => 'btn btn-medium  btn-theme-color btn-rounded' %>
+                </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
 </div>

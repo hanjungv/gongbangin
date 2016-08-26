@@ -2,9 +2,11 @@
 <!--<%= text_area_tag :content, "", :class => "tinymce", :rows => 40, :cols => 120 %>-->
 
 <form action="/pp_edit/<%=@item.id%>" method="post" >
-    <textarea>Your content here</textarea>
+    <textarea id="file" name="file" >Your content here</textarea>
     <input type="submit" value="Submit">
 </form>
+
+
 <!--<%= text_area_tag :content, "", :class => "tinymce", :rows => 40, :cols => 120 %>-->
 
 <script src="//your installation path/4.1/tinymce.min.js"></script>

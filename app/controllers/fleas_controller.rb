@@ -18,12 +18,35 @@ class FleasController < ApplicationController
           @past_fleas.append(p)
         elsif date <= p.event_start_date
           @future_fleas.append(p)
+          puts "orange"
+          @search_city = params[:city]
+          if @search_city == '전체'
+            @today_flea_a = Flea.all
+          elsif @search_city == nil
+            @today_flea_a = Flea.all
+          else
+            @today_flea_a = Flea.where(city_place: @search_city)
+          end
+          if params[:search] == ""
+            @search_time = Time.now
+          else
+            @search_time = params[:search]
+          end
+          date = @search_time.to_s.to_date
+          @search_flea = Array.new
+          unless @search_time.nil?
+            @today_flea_a.each do |p|
+              if date <= p.event_end_date.to_date
+                @search_flea.append(p)
+              end
+            end
+          end
+          @f = Array.new
+          @f = @now_fleas
+          # todo 정렬을 해야된다면 어떤 기준으로 정렬을 해야될지...
         end
       end
     end
-    @f = Array.new
-    @f = @now_fleas
-  # todo 정렬을 해야된다면 어떤 기준으로 정렬을 해야될지...
   end
 
 
@@ -93,6 +116,6 @@ class FleasController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def flea_params
-    params.require(:flea).permit(:name, :application_start_date, :application_end_date, :number_of_recruitment, :remark, :city_place, :detail_place, :event_start_date, :event_end_date, :entrance_fee, :user_id, :join_type)
+    params.require(:flea).permit(:name, :application_start_date, :application_end_date, :number_of_recruitment, :remark, :city_place, :detail_place, :event_start_date, :event_end_date, :entrance_fee, :user_id, :join_type, :item_count, :agree1, :agree2, :agree3, :agree4, :agree5, :poster_url)
   end
 end

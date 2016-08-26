@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160822012100) do
+ActiveRecord::Schema.define(version: 20160825051357) do
+
+  create_table "bootsy_image_galleries", force: :cascade do |t|
+    t.integer  "bootsy_resource_id"
+    t.string   "bootsy_resource_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "bootsy_images", force: :cascade do |t|
+    t.string   "image_file"
+    t.integer  "image_gallery_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -27,9 +41,20 @@ ActiveRecord::Schema.define(version: 20160822012100) do
   create_table "flea_sellers", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "flea_id"
-    t.integer  "score",      default: 0
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.string   "user_email"
+    t.string   "user_name"
+    t.string   "num_of_member"
+    t.string   "card_or_not"
+    t.string   "career"
+    t.string   "classification"
+    t.string   "item"
+    t.string   "motivation"
+    t.string   "user_tier"
+    t.text     "review"
+    t.integer  "score",          default: 0
+    t.string   "isSelect",       default: "false"
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
   end
 
   create_table "fleas", force: :cascade do |t|
@@ -43,12 +68,19 @@ ActiveRecord::Schema.define(version: 20160822012100) do
     t.date     "event_start_date"
     t.date     "event_end_date"
     t.integer  "entrance_fee"
-    t.string   "poster_url",             default: "poster.png"
+    t.string   "poster_url",             default: "gangposter.png"
     t.integer  "user_id"
     t.string   "join_type"
     t.integer  "join_member",            default: 0
-    t.datetime "created_at",                                    null: false
-    t.datetime "updated_at",                                    null: false
+    t.integer  "select_member",          default: 0
+    t.string   "agree1"
+    t.string   "agree2"
+    t.string   "agree3"
+    t.string   "agree4"
+    t.string   "agree5"
+    t.integer  "item_count"
+    t.datetime "created_at",                                        null: false
+    t.datetime "updated_at",                                        null: false
   end
 
   create_table "item_images", force: :cascade do |t|
@@ -112,9 +144,11 @@ ActiveRecord::Schema.define(version: 20160822012100) do
   end
 
   create_table "production_images", force: :cascade do |t|
-    t.string   "url"
+    t.text     "image"
     t.text     "process"
     t.integer  "item_id"
+    t.text     "title"
+    t.text     "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -165,16 +199,17 @@ ActiveRecord::Schema.define(version: 20160822012100) do
     t.string   "address",                default: "",                null: false
     t.string   "level",                  default: "seller"
     t.string   "introduction",           default: "안녕하세요!만나서 반가워요!"
-    t.string   "tier",                   default: "black"
+    t.string   "tier",                   default: "purple"
     t.integer  "score",                  default: 0
     t.string   "activity_area",          default: "서울"
     t.string   "brand",                  default: "없음"
     t.string   "brand_number",           default: "없음"
     t.string   "brand_place"
     t.string   "profile_image_url",      default: ""
-    t.string   "facebook_id",            default: ""
-    t.string   "twitter_id",             default: ""
-    t.string   "instagram_id",           default: ""
+    t.string   "user_page",              default: "없음"
+    t.string   "facebook_id",            default: "없음"
+    t.string   "twitter_id",             default: "없음"
+    t.string   "instagram_id",           default: "없음"
     t.datetime "created_at",                                         null: false
     t.datetime "updated_at",                                         null: false
   end

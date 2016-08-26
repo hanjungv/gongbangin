@@ -11,23 +11,31 @@
 </head>
 
 <body>
-
+  <!--  preloader start -->
+  <div id="tb-preloader">
+      <div class="tb-preloader-wave"></div>
+  </div>
+  <!-- preloader end -->
 <div class="wrapper">
   <!--hero section-->
   <div id="fullscreen-banner" class="full-banner vertical-align">
     <div class="container-mid">
       <div class="container">
-        <div class="banner-title light-txt">
-          <h1 class="text-uppercase">플리마켓에 참여하세요!</h1>
-          <h3 class="text-uppercase m-top-10">공방인으로 쉽게 할 수 있습니다. 지금 바로 가입하세요!</h3>
-          <div class="m-top-30 inline-block">
-            <% if user_signed_in? %>
-                <a href="/users/edit" class="btn btn-medium btn-light-border">프로필수정하기</a>
-                <a href="/fleas" class="btn btn-medium btn-light-border">마켓보러가기</a>
-            <% else %>
-                <a href="/users/sign_up" class="btn btn-medium btn-light-border">가입하기</a>
-                <a href="/users/sign_in" class="btn btn-medium btn-light-border">로그인하기</a>
-            <% end %>
+        <div class="row">
+          <div class="col-md-6 ">
+            <div class="banner-title semi-transparent bg-space-lg  light-txt " >
+              <h1 class="text-uppercase" style = "font-weight:bold">플리마켓에<br>참여해보세요!</h1>
+              <h3 class="text-uppercase m-top-10">공방인으로 쉽게 할 수 있습니다.<br>지금 바로 가입하세요!</h3>
+              <div class="m-top-30 inline-block">
+                <% if user_signed_in? %>
+                    <a href="/users/edit" class="btn btn-medium btn-light-border">프로필수정하기</a>
+                    <a href="/fleas" class="btn btn-medium btn-light-border">마켓보러가기</a>
+                <% else %>
+                    <a href="/users/sign_up" class="btn btn-medium btn-light-border">가입하기</a>
+                    <a href="/users/sign_in" class="btn btn-medium btn-light-border">로그인하기</a>
+                <% end %>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -38,60 +46,7 @@
 
   <!--body content start-->
   <section class="body-content">
-    <!--fun factor-->
-    <div class="dark dark-bg page-content ">
-      <div class="container">
-        <div class="row">
-          <div class=" inline-block">
-            <div class="col-md-3 ">
-              <div class="fun-factor fun-icon-text-parallel alt">
-                <div class="icon">
-                  <i class="icon-layers"></i>
-                  <h1 class="timer theme-color" data-from="0" data-to="14263" data-speed="1000">14263</h1>
-                </div>
-                <div class="fun-info">
-                  <span>마켓등록갯수</span>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="fun-factor fun-icon-text-parallel alt">
-                <div class="icon">
-                  <i class="icon-computer_imac_slim"></i>
-                  <h1 class="timer theme-color" data-from="0" data-to="43021" data-speed="1000">43021</h1>
-                </div>
-                <div class="fun-info">
-                  <span>총 셀러 회원수</span>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="fun-factor fun-icon-text-parallel alt">
-                <div class="icon">
-                  <i class="icon-database"></i>
-                  <h1 class="timer theme-color" data-from="0" data-to="94211" data-speed="1000">94211</h1>
-                </div>
-                <div class="fun-info">
-                  <span>등록되어있는 아이템</span>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="fun-factor fun-icon-text-parallel alt">
-                <div class="icon">
-                  <i class="icon-linegraph"></i>
-                  <h1 class="timer theme-color" data-from="0" data-to="342" data-speed="1000">342</h1>
-                </div>
-                <div class="fun-info">
-                  <span>총 카테고리 수</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--fun factor-->
+
   </section>
   <!--body content end-->
 </div>

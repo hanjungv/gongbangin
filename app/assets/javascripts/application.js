@@ -27,3 +27,4 @@
 //= require js/imagesloaded
 //= require js/scripts.js
 //= require tinymce
+//= require bootsy

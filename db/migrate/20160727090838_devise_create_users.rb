@@ -17,7 +17,6 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.datetime :last_sign_in_at
       t.string   :current_sign_in_ip
       t.string   :last_sign_in_ip
-
       ########################################################################################################
       #personal_information
       t.string :name, null: false, default: ""
@@ -28,9 +27,9 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :level, default: "seller"
       #자기소개
       t.string :introduction, default: "안녕하세요!만나서 반가워요!"
-      # tier (red-orange-yellow-green-blue-navy-purple-black, black is seller. purple is maker's default value)
+      # tier (red-orange-yellow-green-blue-navy-purple-black, black is planner. purple is seller's default value)
       # planner는 별도의 티어가 필요할 것이라 생각됨
-      t.string :tier, default: "black"
+      t.string :tier, default: "purple"
       #score
       t.integer :score, default: 0
       #주요 활동지역
@@ -43,9 +42,10 @@ class DeviseCreateUsers < ActiveRecord::Migration
       #profile_image
       t.string :profile_image_url, default: ""
       #url
-      t.string :facebook_id, default:""
-      t.string :twitter_id, default:""
-      t.string :instagram_id,default:""
+      t.string :user_page, default:"없음"
+      t.string :facebook_id, default:"없음"
+      t.string :twitter_id, default:"없음"
+      t.string :instagram_id,default:"없음"
       ########################################################################################################
       ## Confirmable
       # t.string   :confirmation_token©©

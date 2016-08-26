@@ -1,11 +1,19 @@
 Rails.application.routes.draw do
+
+  mount Bootsy::Engine => '/bootsy', as: 'bootsy'
+
   get 'join_flea/index'
-
-  get 'join_flea/join'
-
+  get 'join_flea/join' =>"join_flea#join"
+  post 'make/:flea_id' => "join_flea#make"
+  get 'apply/:flea_id' => "join_flea#apply"
   #judge menu
   get 'judge_fleas/index'
   get 'judge_fleas/judge/:flea_id' => "judge_fleas#judge"
+  get 'judge_fleas/show/:flea_id/:user_id' => "judge_fleas#show"
+  post 'confirm_join/:flea_id/:user_id' => "judge_fleas#confirm_join"
+  get 'judge_fleas/result/:flea_id/:user_id' => "judge_fleas#result"
+  get 'judge_fleas/select_up/:flea_id/:user_id' => "judge_fleas#select_up"
+  get 'judge_fleas/select_down/:flea_id/:user_id' => "judge_fleas#select_down"
 
   #master menu#
   get 'mastermenu/user_manage'
@@ -45,7 +53,8 @@ Rails.application.routes.draw do
   post 'real_update_item/:item_id'=>"item#real_update"
   get 'item/show'
   get 'production_process/:item_id' => "item#production_process"
-  post 'pp_edit/:item_id' => "item#pp_create"
+  post 'pp_edit/:item_id' => "item#pp_edit"
+  get 'pp_edit/:item_id' => "item#pp_edit"
   #info#
   get 'showinfo/:user_id' => "info#showinfo"
   get 'info/levelup'

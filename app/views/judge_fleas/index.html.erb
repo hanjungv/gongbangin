@@ -18,40 +18,67 @@
 <section class="body-content page-content">
     <div class="container">
         <div class="row">
-                <h3>내가올린마켓</h3>
-                <%@fleas.each do |f|%>
-                  <% if f.application_end_date >= Time.now%>
-                    <!--promo theme color box start-->
-                    <div class="col-md-6">
-                      <div class="promo-box theme-bg  round-5 m-bot-50">
-                        <div class="promo-info">
-                            <span class="light-txt text-uppercase m-top-0"><%=f.remark%></span>
-                            <h3 class="light-txt"><%=f.name%></h3>
-                        </div>
-                        <div class="promo-btn">
-                          <a href="/judge_fleas/judge/<%=f.id%>" class="btn btn-medium btn-dark-solid btn-rounded  btn-transparent light-txt  text-uppercase">심사하기</a>
-                        </div>
-                      </div>
-                    </div>
-                    <!--promo theme color box end-->
-                  <% else %>
-                    <!--promo default box start-->
-                    <div class="col-md-6">
-                      <div class="promo-box gray-bg round-5 m-bot-50">
-                          <div class="promo-info">
-                              <h4><%=f.name%></h4>
-                              <span><%=f.remark%></span>
-                          </div>
-                          <div class="promo-btn">
-                              <a href="#" class="btn btn-medium btn-rounded btn-dark-solid  text-uppercase">읽어보기</a>
-                          </div>
-                      </div>
-                    </div>
-                    <!--promo default box end-->
-                  <% end %>
-                <%end%>
-
+            <div class="heading-title text-center">
+                <h3 class="text-uppercase">OPEN MARKET</h3>
+                <span class="text-uppercase">모집중인 마켓입니다. 심사가 필요해요</span>
             </div>
+            <%@fleas.each do |f|%>
+              <% if f.application_end_date >= Time.now%>
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <div class="team-img">
+                              <%=image_tag("gangposter.jpg")%>
+                              <!--<%=image_tag(f.poster_url)%>-->
+                            <div class="team-intro light-txt">
+                                <h5><%=f.name%></h5>
+                                <span><%=f.city_place%></span>
+                            </div>
+                            <br>
+                        </div>
+                        <br>
+                        <div class="team-hover">
+                            <div class="desk">
+                                <h4><%=f.name%></h4>
+                                <p>
+                                  모집시작날짜 : <%=f.application_start_date%><br>
+                                  모집종료날짜 : <%=f.application_end_date%><br>
+                                  행사시작날짜 : <%=f.event_start_date%><br>
+                                  행사종료날짜 : <%=f.event_end_date%><br><br>
+                                  모집인원 : <%=f.number_of_recruitment%>명<br>
+                                  /<br>
+                                  현재지원 : <%=f.join_member%>명
+                                </p>
+                            </div>
+                            <div class="s-link">
+                                <a href="/judge_fleas/judge/<%=f.id%>">심사하기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              <%end%>
+            <%end%>
+        </div>
+        <div class="row">
+          <div class="divider divider-small d-solid d-single text-center">
+              <span class="dot"></span>
+          </div>
+          <div class="heading-title text-center">
+              <h3 class="text-uppercase">END MARKET</h3>
+              <span class="text-uppercase">종료된 마켓입니다.</span>
+          </div>
+          <%@fleas.each do |f|%>
+            <% if f.application_end_date < Time.now%>
+            <div class="col-md-4">
+              <div class="promo-box gray-bg round-5 m-bot-50 text-center">
+                <div class="promo-info">
+                  <h3 class="theme-color"><%=f.name%></h3>
+                  <span>종료시점 : <%=f.event_end_date%> / 지역 : <%=f.city_place%></span>
+                  <a href="#" class="btn btn-medium btn-rounded btn-dark-solid text-uppercase">정보보기</a>
+                </div>
+              </div>
+            </div>
+            <%end%>
+          <%end%>
         </div>
     </div>
 </section>
