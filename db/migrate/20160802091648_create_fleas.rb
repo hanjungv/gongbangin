@@ -31,7 +31,8 @@ class CreateFleas < ActiveRecord::Migration
       t.string :join_type
       # 현재 몇명 지원했는지
       t.integer :join_member, default:0
-
+      # 선택된 인원
+      t.integer :select_member,default:0
       # 동의사항 입력하기(최대 5개)
       t.string :agree1
       t.string :agree2

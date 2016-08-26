@@ -71,8 +71,8 @@
                           <% @join_user.each_with_index do |p, index| %>
                           <%= p.isSelect %>
                           <% if p.isSelect == "false" %>
-                          <% next %>
-                          <% end %>
+                            <% next %>
+                            <% end %>
                           <tr>
                               <th scope="row"><%= index+1 %></th>
                               <td style="color:<%= p.user_tier %>"><%= p.user_tier %></td>
@@ -88,7 +88,7 @@
                               </td>
                               <td><%=p.score%>점</td>
                               <td id="select">
-                                  <a href="/judge_fleas/select/<%=@flea.id%>/<%=p.user_id%>">선발하기</a>
+                                  <a href="/judge_fleas/select_down/<%=@flea.id%>/<%=p.user_id%>">선발취소</a>
                               </td>
                           </tr>
                           <% end %>
@@ -121,7 +121,7 @@
                         <tbody>
                             <% @join_user.each_with_index do |p, index| %>
                             <% if p.isSelect == "true" %>
-                            <% next %>
+                              <% next %>
                             <% end %>
                             <tr>
                                 <th scope="row"><%= index+1 %></th>
@@ -137,9 +137,13 @@
                                     <a href="/judge_fleas/show/<%=@flea.id%>/<%=p.user_id%>">심사하러가기</a>
                                 </td>
                                 <td><%=p.score%>점</td>
-                                <td id="select">
-                                    <a href="/judge_fleas/select/<%=@flea.id%>/<%=p.user_id%>">선발하기</a>
-                                </td>
+                                    <%if @flea.select_member == @flea.number_of_recruitment %>
+                                      <td>선발완료</td>
+                                    <%else%>
+                                    <td id="select">
+                                      <a href="/judge_fleas/select_up/<%=@flea.id%>/<%=p.user_id%>">선발하기</a>
+                                    </td>
+                                    <%end%>
                             </tr>
                             <% end %>
                         </tbody>

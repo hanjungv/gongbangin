@@ -12,7 +12,9 @@ Rails.application.routes.draw do
   get 'judge_fleas/show/:flea_id/:user_id' => "judge_fleas#show"
   post 'confirm_join/:flea_id/:user_id' => "judge_fleas#confirm_join"
   get 'judge_fleas/result/:flea_id/:user_id' => "judge_fleas#result"
-  get 'judge_fleas/select/:flea_id/:user_id' => "judge_fleas#select"
+  get 'judge_fleas/select_up/:flea_id/:user_id' => "judge_fleas#select_up"
+  get 'judge_fleas/select_down/:flea_id/:user_id' => "judge_fleas#select_down"
+
   #master menu#
   get 'mastermenu/user_manage'
   get 'mastermenu/levelup/:user_id' => 'mastermenu#levelup'

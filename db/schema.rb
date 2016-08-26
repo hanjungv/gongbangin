@@ -72,6 +72,7 @@ ActiveRecord::Schema.define(version: 20160825051357) do
     t.integer  "user_id"
     t.string   "join_type"
     t.integer  "join_member",            default: 0
+    t.integer  "select_member",          default: 0
     t.string   "agree1"
     t.string   "agree2"
     t.string   "agree3"
