@@ -18,40 +18,83 @@
 <section class="body-content page-content">
     <div class="container">
         <div class="row">
-                <h3>내가올린마켓</h3>
-                <%@fleas.each do |f|%>
-                  <% if f.application_end_date >= Time.now%>
-                    <!--promo theme color box start-->
-                    <div class="col-md-6">
-                      <div class="promo-box theme-bg  round-5 m-bot-50">
-                        <div class="promo-info">
-                            <span class="light-txt text-uppercase m-top-0"><%=f.remark%></span>
-                            <h3 class="light-txt"><%=f.name%></h3>
-                        </div>
-                        <div class="promo-btn">
-                          <a href="/judge_fleas/judge/<%=f.id%>" class="btn btn-medium btn-dark-solid btn-rounded  btn-transparent light-txt  text-uppercase">심사하기</a>
-                        </div>
-                      </div>
-                    </div>
-                    <!--promo theme color box end-->
-                  <% else %>
-                    <!--promo default box start-->
-                    <div class="col-md-6">
-                      <div class="promo-box gray-bg round-5 m-bot-50">
-                          <div class="promo-info">
-                              <h4><%=f.name%></h4>
-                              <span><%=f.remark%></span>
-                          </div>
-                          <div class="promo-btn">
-                              <a href="#" class="btn btn-medium btn-rounded btn-dark-solid  text-uppercase">읽어보기</a>
-                          </div>
-                      </div>
-                    </div>
-                    <!--promo default box end-->
-                  <% end %>
-                <%end%>
-
+            <div class="heading-title text-center">
+                <h3 class="text-uppercase">현재 열려있는 마켓</h3>
+                <span class="text-uppercase">모집중인 마켓입니다. 심사가 필요해요</span>
             </div>
+            <%@fleas.each do |f|%>
+              <% if f.application_end_date >= Time.now%>
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <div class="team-img">
+                            <%= image_tag("gangposter.jpg")%>
+                            <div class="team-intro light-txt">
+                                <h5><%=f.name%></h5>
+                                <span>founder & ceo</span>
+                            </div>
+                            <br>
+                        </div>
+                        <br>
+                        <div class="team-hover">
+                            <div class="desk">
+                                <h4>I love to desing</h4>
+                                <p>We are a team of multi-skilled and curious digital specialists who are always up for a challenge and learning as fast as digital is changing.</p>
+                                    <a href="/judge_fleas/judge/<%=f.id%>" class="btn btn-medium btn-dark-solid btn-rounded  btn-transparent light-txt  text-uppercase">심사하기</a>
+                            </div>
+                            <div class="s-link">
+                                <a href="#">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              <%end%>
+            <%end%>
         </div>
     </div>
+    <div class="container">
+        <div class="row">
+            <h3>내가올린마켓</h3>
+            <%@fleas.each do |f|%>
+            <% if f.application_end_date >= Time.now%>
+            <!--promo theme color box start-->
+            <div class="col-md-6">
+                <div class="promo-box theme-bg  round-5 m-bot-50">
+                    <div class="promo-info">
+                        <span class="light-txt text-uppercase m-top-0"><%=f.remark%></span>
+                        <h3 class="light-txt"><%=f.name%></h3>
+                    </div>
+                    <div class="promo-btn">
+                        <a href="/judge_fleas/judge/<%=f.id%>" class="btn btn-medium btn-dark-solid btn-rounded  btn-transparent light-txt  text-uppercase">심사하기</a>
+                    </div>
+                </div>
+            </div>
+            <!--promo theme color box end-->
+        <% else %>
+            <!--promo default box start-->
+            <div class="col-md-6">
+                <div class="promo-box gray-bg round-5 m-bot-50">
+                    <div class="promo-info">
+                        <h4><%=f.name%></h4>
+                        <span><%=f.remark%></span>
+                    </div>
+                    <div class="promo-btn">
+                        <a href="#" class="btn btn-medium btn-rounded btn-dark-solid  text-uppercase">읽어보기</a>
+                    </div>
+                </div>
+            </div>
+            <!--promo default box end-->
+            <% end %>
+            <%end%>
+
+        </div>
+    </div>
+</div>
 </section>

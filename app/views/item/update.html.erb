@@ -1,4 +1,17 @@
-<p>수정하는 곳</p>
+<section class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="text-uppercase">아이템수정하기</h4>
+                <ol class="breadcrumb">
+          	        <li><a href="/">Home</a></li>
+                    <li><a href="/">Item</a></li>
+          	        <li class="active">아이템수정하기</li>
+          	    </ol>
+            </div>
+        </div>
+    </div>
+</section>
 <div class ="container">
   <form action = "/real_update_item/<%=@item.id%>" method="post" enctype="multipart/form-data">
     <input type = "hidden" value = "<%=current_user.id%>" name =user_id>
