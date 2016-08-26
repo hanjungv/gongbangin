@@ -23,6 +23,26 @@ class JudgeFleasController < ApplicationController
     @user = User.find(params[:user_id])
     @user.score = @user.score + 50
 
+    if ( @user.score >= 100 )
+      @user.tier = "navy"
+    end
+    if ( @user.score >= 200 )
+      @user.tier = "blue"
+    end
+    if ( @user.score >= 350 )
+      @user.tier = "green"
+    end
+    if ( @user.score >= 500 )
+      @user.tier = "yellow"
+    end
+    if ( @user.score >= 650 )
+      @user.tier = "orange"
+    end
+    if ( @user.score >= 800 )
+      @user.tier = "red"
+    end
+
+    @isThere.user_tier = @user.tier
     @isThere.isSelect = "true"
 
     @user.save
