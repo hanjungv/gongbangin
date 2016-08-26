@@ -61,6 +61,9 @@ class ItemController < ApplicationController
 
   def pp_edit
 
+    @pi = ProductionImage.new
+    @pi.process = params[:file]
+
     # @i = ProductionImage.new
     # @i.image = params[:file]
     #
