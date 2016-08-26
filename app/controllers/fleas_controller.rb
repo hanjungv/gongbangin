@@ -3,47 +3,60 @@ class FleasController < ApplicationController
   # GET /fleas
   # GET /fleas.json
   def index
-    @fleas = Flea.all
-    @current_time = Time.now
-    date = @current_time.to_s.to_date
-    @now_fleas = Array.new
-    @past_fleas = Array.new
-    @future_fleas = Array.new
-    # 전체 플리마켓들을 뽑은 뒤, 행사날짜를 기준으로 오늘 날짜와 비교하여 (현재, 과거, 미래)플리마켓으로 분류
-    unless @current_time.nil?
-      @fleas.each do |p|
-        if p.event_start_date.to_date <= date && date <= p.event_end_date.to_date
-          @now_fleas.append(p)
-        elsif p.event_end_date.to_date <= date
-          @past_fleas.append(p)
-        elsif date <= p.event_start_date
-          @future_fleas.append(p)
+    @search_flea = Array.new
+    @option = params[:option]
+    if @option == ''
+      # 지역이랑 날짜로 검색
+      @search_city = params[:city]
+      @search_time = params[:search]
+      if @search_time == ''
+        @search_time = Time.now
+      end
+
+      if @search_city == '전체'
+        fleas = Flea.all
+      else
+        fleas = Flea.where(city_place: @search_city)
+      end
+
+      date = @search_time.to_s.to_date
+      fleas.each do |p|
+        if p.event_start_date.to_date <= date && date <= p.event_end_date
+          @search_flea.append(p)
         end
       end
-    end
 
-    # 지역이랑 날짜로 검색
-    @search_city = params[:city]
-    @search_time = params[:search]
-    if @search_time == ''
-      @search_time = Time.now
-    end
-
-    if @search_city == '전체'
-      @today_flea_a = Flea.all
     else
-      @today_flea_a = Flea.where(city_place: @search_city)
-    end
+      fleas = Flea.all
+      date = Date.today
 
-    @search_flea = Array.new
-    date = @search_time.to_s.to_date
-    @today_flea_a.each do |p|
-      if p.event_start_date.to_date <= date && date <= p.event_end_date
-        @search_flea.append(p)
+      if @option.nil? || @option == 'now'
+        fleas.each do |p|
+          if p.event_start_date.to_date <= date && date <= p.event_end_date.to_date
+            @search_flea.append(p)
+          end
+        end
+        @title_ko = '오늘의 마켓'
+        @title_eng = 'TODAY MARKET'
+      elsif @option == 'future'
+        fleas.each do |p|
+          if date <= p.event_start_date.to_date
+            @search_flea.append(p)
+          end
+        end
+        @title_ko = '내일의 마켓'
+        @title_eng = 'ONCOMING MARKET'
+      elsif @option == 'past'
+        fleas.each do |p|
+          if p.event_end_date.to_date <= date
+            @search_flea.append(p)
+          end
+        end
+        @title_ko = '어제의 마켓'
+        @title_eng = 'FINISHED MARKET'
       end
     end
   end
-
 
   def show
     @has_like = @flea.like_flea_markets.where(flea_id: @flea.id, user_id: current_user.id).blank? if current_user
