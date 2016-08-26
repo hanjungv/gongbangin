@@ -16,9 +16,9 @@ class JoinFleaController < ApplicationController
       @flea_seller = FleaSeller.new
 
       @flea_seller.user_id = current_user.id
-      # @flea_seller.user_email = current_user.email
-      # @flea_seller.user_name = current_user.name
-      # @flea_seller.user_tier = current_user.tier
+      @flea_seller.user_email = current_user.email
+      @flea_seller.user_name = current_user.name
+      @flea_seller.user_tier = current_user.tier
       @flea_seller.user_name = params[:user_name]
       @flea_seller.num_of_member = params[:num_of_member]
       @flea_seller.card_or_not = params[:card_or_not]
