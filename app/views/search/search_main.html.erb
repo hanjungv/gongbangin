@@ -30,7 +30,7 @@
         <li class="nav-item"><a href="/search/seller" class="nav-link">seller</a></li>
       </ul>
     </div>
-    <table class="table cart-table">
+    <table class="table table-striped" id="searchTable">
       <thead>
       <tr>
         <th style="width:6%;">등수</th>
@@ -60,16 +60,12 @@
       <% end %>
       </tbody>
     </table>
-    <div class="text-center col-md-12">
-        <ul class="pagination custom-pagination">
-            <li><a href="#">Prev</a></li>
-            <li class="active"><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#">Next</a></li>
-        </ul>
-    </div>
   </div>
 </div>
+
+<script>
+$(document).ready(function(){
+  $table = $('#searchTable').DataTable({
+  });
+});
+</script>
