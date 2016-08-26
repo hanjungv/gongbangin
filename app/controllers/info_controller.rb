@@ -1,9 +1,9 @@
 class InfoController < ApplicationController
   def showinfo
     @user = User.find(params[:user_id])
-    @items = Item.where(user_id:params[:user_id])
-    @prize = UserPrize.where(user_id:params[:user_id])
-    @activity = MainActivity.where(user_id:params[:user_id]).order('percentage desc')
+    @items = Item.where(user_id: params[:user_id])
+    @prize = UserPrize.where(user_id: params[:user_id])
+    @activity = MainActivity.where(user_id: params[:user_id]).order('percentage desc')
     render '/info/show'
   end
 

@@ -14,14 +14,15 @@
  * MIT license
  */
 
-(function(window) {
+(function (window) {
 
 
 
     // -------------------------- utils -------------------------- //
     var slice = Array.prototype.slice;
 
-    function noop() {}
+    function noop() {
+    }
 
     // -------------------------- definition -------------------------- //
 
@@ -45,7 +46,7 @@
             }
 
             // option setter
-            PluginClass.prototype.option = function(opts) {
+            PluginClass.prototype.option = function (opts) {
                 // bail out if not an object
                 if (!$.isPlainObject(opts)) {
                     return;
@@ -57,7 +58,7 @@
         // -------------------------- plugin bridge -------------------------- //
         // helper function for logging errors
         // $.error breaks jQuery chaining
-        var logError = typeof console === 'undefined' ? noop : function(message) {
+        var logError = typeof console === 'undefined' ? noop : function (message) {
             console.error(message);
         };
 
@@ -69,7 +70,7 @@
 
         function bridge(namespace, PluginClass) {
             // add to jQuery fn namespace
-            $.fn[namespace] = function(options) {
+            $.fn[namespace] = function (options) {
                 if (typeof options === 'string') {
                     // call plugin method when first argument is a string
                     // get arguments for method
@@ -98,7 +99,7 @@
                     // return this if no return value
                     return this;
                 } else {
-                    return this.each(function() {
+                    return this.each(function () {
                         var instance = $.data(this, namespace);
                         if (instance) {
                             // apply options & init
@@ -122,7 +123,7 @@
          * @param {String} namespace - plugin name, used in $().pluginName
          * @param {Function} PluginClass - constructor class
          */
-        $.bridget = function(namespace, PluginClass) {
+        $.bridget = function (namespace, PluginClass) {
             addOptionMethod(PluginClass);
             bridge(namespace, PluginClass);
         };
@@ -155,13 +156,13 @@
 /*jshint browser: true, undef: true, unused: true */
 /*global define: false, module: false */
 
-(function(window) {
-
+(function (window) {
 
 
     var docElem = document.documentElement;
 
-    var bind = function() {};
+    var bind = function () {
+    };
 
     function getIEEvent(obj) {
         var event = window.event;
@@ -171,16 +172,16 @@
     }
 
     if (docElem.addEventListener) {
-        bind = function(obj, type, fn) {
+        bind = function (obj, type, fn) {
             obj.addEventListener(type, fn, false);
         };
     } else if (docElem.attachEvent) {
-        bind = function(obj, type, fn) {
+        bind = function (obj, type, fn) {
             obj[type + fn] = fn.handleEvent ?
-                function() {
+                function () {
                     var event = getIEEvent(obj);
                     fn.handleEvent.call(fn, event);
-                } : function() {
+                } : function () {
                 var event = getIEEvent(obj);
                 fn.call(obj, event);
             };
@@ -188,14 +189,15 @@
         };
     }
 
-    var unbind = function() {};
+    var unbind = function () {
+    };
 
     if (docElem.removeEventListener) {
-        unbind = function(obj, type, fn) {
+        unbind = function (obj, type, fn) {
             obj.removeEventListener(type, fn, false);
         };
     } else if (docElem.detachEvent) {
-        unbind = function(obj, type, fn) {
+        unbind = function (obj, type, fn) {
             obj.detachEvent("on" + type, obj[type + fn]);
             try {
                 delete obj[type + fn];
@@ -233,7 +235,7 @@
  */
 
 ;
-(function() {
+(function () {
 
 
     /**
@@ -243,7 +245,8 @@
      * @class EventEmitter Manages event registering and emitting.
      */
 
-    function EventEmitter() {}
+    function EventEmitter() {
+    }
 
     // Shortcuts to improve speed and size
     var proto = EventEmitter.prototype;
@@ -684,7 +687,7 @@
 
     // Expose the class either via AMD, CommonJS or the global object
     if (typeof define === 'function' && define.amd) {
-        define('eventEmitter/EventEmitter', [], function() {
+        define('eventEmitter/EventEmitter', [], function () {
             return EventEmitter;
         });
     } else if (typeof module === 'object' && module.exports) {
@@ -704,8 +707,7 @@
 /*jshint browser: true, strict: true, undef: true */
 /*global define: false, exports: false, module: false */
 
-(function(window) {
-
+(function (window) {
 
 
     var prefixes = 'Webkit Moz ms Ms O'.split(' ');
@@ -737,7 +739,7 @@
     // transport
     if (typeof define === 'function' && define.amd) {
         // AMD
-        define('get-style-property/get-style-property', [], function() {
+        define('get-style-property/get-style-property', [], function () {
             return getStyleProperty;
         });
     } else if (typeof exports === 'object') {
@@ -759,7 +761,7 @@
 /*jshint browser: true, strict: true, undef: true, unused: true */
 /*global define: false, exports: false, require: false, module: false, console: false */
 
-(function(window, undefined) {
+(function (window, undefined) {
 
 
 
@@ -774,9 +776,10 @@
         return isValid && num;
     }
 
-    function noop() {}
+    function noop() {
+    }
 
-    var logError = typeof console === 'undefined' ? noop : function(message) {
+    var logError = typeof console === 'undefined' ? noop : function (message) {
         console.error(message);
     };
 
@@ -800,7 +803,6 @@
     }
 
 
-
     function defineGetSize(getStyleProperty) {
 
         // -------------------------- setup -------------------------- //
@@ -822,11 +824,11 @@
             isSetup = true;
 
             var getComputedStyle = window.getComputedStyle;
-            getStyle = (function() {
+            getStyle = (function () {
                 var getStyleFn = getComputedStyle ?
-                    function(elem) {
+                    function (elem) {
                         return getComputedStyle(elem, null);
-                    } : function(elem) {
+                    } : function (elem) {
                     return elem.currentStyle;
                 };
 
@@ -890,7 +892,7 @@
             size.width = elem.offsetWidth;
             size.height = elem.offsetHeight;
 
-            var isBorderBox = size.isBorderBox = !! (boxSizingProp && style[boxSizingProp] && style[boxSizingProp] === 'border-box');
+            var isBorderBox = size.isBorderBox = !!(boxSizingProp && style[boxSizingProp] && style[boxSizingProp] === 'border-box');
 
             // get all measurements
             for (var i = 0, len = measurements.length; i < len; i++) {
@@ -916,14 +918,14 @@
             if (styleWidth !== false) {
                 size.width = styleWidth +
                     // add padding and border unless it's already including it
-                (isBorderBoxSizeOuter ? 0 : paddingWidth + borderWidth);
+                    (isBorderBoxSizeOuter ? 0 : paddingWidth + borderWidth);
             }
 
             var styleHeight = getStyleSize(style.height);
             if (styleHeight !== false) {
                 size.height = styleHeight +
                     // add padding and border unless it's already including it
-                (isBorderBoxSizeOuter ? 0 : paddingHeight + borderHeight);
+                    (isBorderBoxSizeOuter ? 0 : paddingHeight + borderHeight);
             }
 
             size.innerWidth = size.width - (paddingWidth + borderWidth);
@@ -993,8 +995,7 @@
 /*jshint browser: true, strict: true, undef: true, unused: true*/
 /*global define: false, require: false, module: false */
 
-(function(window) {
-
+(function (window) {
 
 
     var document = window.document;
@@ -1076,11 +1077,10 @@
 /*jshint browser: true, strict: true, undef: true, unused: true */
 /*global define: false, module: false */
 
-(function(ElemProto) {
+(function (ElemProto) {
 
 
-
-    var matchesMethod = (function() {
+    var matchesMethod = (function () {
         // check for the standard method name first
         if (ElemProto.matches) {
             return 'matches';
@@ -1162,7 +1162,7 @@
     // transport
     if (typeof define === 'function' && define.amd) {
         // AMD
-        define('matches-selector/matches-selector', [], function() {
+        define('matches-selector/matches-selector', [], function () {
             return matchesSelector;
         });
     } else if (typeof exports === 'object') {
@@ -1181,12 +1181,12 @@
 
 /*jshint browser: true, undef: true, unused: true, strict: true */
 
-(function(window, factory) { /*global define: false, module: false, require: false */
+(function (window, factory) { /*global define: false, module: false, require: false */
 
     // universal module definition
     if (typeof define == 'function' && define.amd) {
         // AMD
-        define('fizzy-ui-utils/utils', ['doc-ready/doc-ready', 'matches-selector/matches-selector'], function(docReady, matchesSelector) {
+        define('fizzy-ui-utils/utils', ['doc-ready/doc-ready', 'matches-selector/matches-selector'], function (docReady, matchesSelector) {
             return factory(window, docReady, matchesSelector);
         });
     } else if (typeof exports == 'object') {
@@ -1202,12 +1202,11 @@
 }(window, function factory(window, docReady, matchesSelector) {
 
 
-
     var utils = {};
 
     // ----- extend ----- //
     // extends objects
-    utils.extend = function(a, b) {
+    utils.extend = function (a, b) {
         for (var prop in b) {
             a[prop] = b[prop];
         }
@@ -1215,19 +1214,19 @@
     };
 
     // ----- modulo ----- //
-    utils.modulo = function(num, div) {
+    utils.modulo = function (num, div) {
         return ((num % div) + div) % div;
     };
 
     // ----- isArray ----- //
     var objToString = Object.prototype.toString;
-    utils.isArray = function(obj) {
+    utils.isArray = function (obj) {
         return objToString.call(obj) == '[object Array]';
     };
 
     // ----- makeArray ----- //
     // turn element or nodeList into an array
-    utils.makeArray = function(obj) {
+    utils.makeArray = function (obj) {
         var ary = [];
         if (utils.isArray(obj)) {
             // use object if already an array
@@ -1247,9 +1246,9 @@
     // ----- indexOf ----- //
     // index of helper cause IE8
     utils.indexOf = Array.prototype.indexOf ?
-        function(ary, obj) {
+        function (ary, obj) {
             return ary.indexOf(obj);
-        } : function(ary, obj) {
+        } : function (ary, obj) {
         for (var i = 0, len = ary.length; i < len; i++) {
             if (ary[i] === obj) {
                 return i;
@@ -1259,7 +1258,7 @@
     };
 
     // ----- removeFrom ----- //
-    utils.removeFrom = function(ary, obj) {
+    utils.removeFrom = function (ary, obj) {
         var index = utils.indexOf(ary, obj);
         if (index != -1) {
             ary.splice(index, 1);
@@ -1276,7 +1275,7 @@
     };
 
     // ----- setText ----- //
-    utils.setText = (function() {
+    utils.setText = (function () {
         var setTextProperty;
 
         function setText(elem, text) {
@@ -1284,11 +1283,12 @@
             setTextProperty = setTextProperty || (document.documentElement.textContent !== undefined ? 'textContent' : 'innerText');
             elem[setTextProperty] = text;
         }
+
         return setText;
     })();
 
     // ----- getParent ----- //
-    utils.getParent = function(elem, selector) {
+    utils.getParent = function (elem, selector) {
         while (elem != document.body) {
             elem = elem.parentNode;
             if (matchesSelector(elem, selector)) {
@@ -1299,7 +1299,7 @@
 
     // ----- getQueryElement ----- //
     // use element as selector string
-    utils.getQueryElement = function(elem) {
+    utils.getQueryElement = function (elem) {
         if (typeof elem == 'string') {
             return document.querySelector(elem);
         }
@@ -1308,7 +1308,7 @@
 
     // ----- handleEvent ----- //
     // enable .ontype to trigger from .addEventListener( elem, 'type' )
-    utils.handleEvent = function(event) {
+    utils.handleEvent = function (event) {
         var method = 'on' + event.type;
         if (this[method]) {
             this[method](event);
@@ -1316,7 +1316,7 @@
     };
 
     // ----- filterFindElements ----- //
-    utils.filterFindElements = function(elems, selector) {
+    utils.filterFindElements = function (elems, selector) {
         // make array of elems
         elems = utils.makeArray(elems);
         var ffElems = [];
@@ -1348,12 +1348,12 @@
     };
 
     // ----- debounceMethod ----- //
-    utils.debounceMethod = function(_class, methodName, threshold) {
+    utils.debounceMethod = function (_class, methodName, threshold) {
         // original method
         var method = _class.prototype[methodName];
         var timeoutName = methodName + 'Timeout';
 
-        _class.prototype[methodName] = function() {
+        _class.prototype[methodName] = function () {
             var timeout = this[timeoutName];
             if (timeout) {
                 clearTimeout(timeout);
@@ -1361,7 +1361,7 @@
             var args = arguments;
 
             var _this = this;
-            this[timeoutName] = setTimeout(function() {
+            this[timeoutName] = setTimeout(function () {
                 method.apply(_this, args);
                 delete _this[timeoutName];
             }, threshold || 100);
@@ -1370,8 +1370,8 @@
 
     // ----- htmlInit ----- //
     // http://jamesroberts.name/blog/2010/02/22/string-functions-for-javascript-trim-to-camel-case-to-dashed-and-to-underscore/
-    utils.toDashed = function(str) {
-        return str.replace(/(.)([A-Z])/g, function(match, $1, $2) {
+    utils.toDashed = function (str) {
+        return str.replace(/(.)([A-Z])/g, function (match, $1, $2) {
             return $1 + '-' + $2;
         }).toLowerCase();
     };
@@ -1382,8 +1382,8 @@
      * htmlInit( Widget, 'widgetName' )
      * options are parsed from data-namespace-option attribute
      */
-    utils.htmlInit = function(WidgetClass, namespace) {
-        docReady(function() {
+    utils.htmlInit = function (WidgetClass, namespace) {
+        docReady(function () {
             var dashedNamespace = utils.toDashed(namespace);
             var elems = document.querySelectorAll('.js-' + dashedNamespace);
             var dataAttr = 'data-' + dashedNamespace + '-options';
@@ -1421,12 +1421,12 @@
  * Outlayer Item
  */
 
-(function(window, factory) {
+(function (window, factory) {
 
     // universal module definition
     if (typeof define === 'function' && define.amd) {
         // AMD
-        define('outlayer/item', ['eventEmitter/EventEmitter', 'get-size/get-size', 'get-style-property/get-style-property', 'fizzy-ui-utils/utils'], function(EventEmitter, getSize, getStyleProperty, utils) {
+        define('outlayer/item', ['eventEmitter/EventEmitter', 'get-size/get-size', 'get-style-property/get-style-property', 'fizzy-ui-utils/utils'], function (EventEmitter, getSize, getStyleProperty, utils) {
             return factory(window, EventEmitter, getSize, getStyleProperty, utils);
         });
     } else if (typeof exports === 'object') {
@@ -1446,9 +1446,9 @@
     // ----- helpers ----- //
     var getComputedStyle = window.getComputedStyle;
     var getStyle = getComputedStyle ?
-        function(elem) {
+        function (elem) {
             return getComputedStyle(elem, null);
-        } : function(elem) {
+        } : function (elem) {
         return elem.currentStyle;
     };
 
@@ -1465,7 +1465,7 @@
     var transitionProperty = getStyleProperty('transition');
     var transformProperty = getStyleProperty('transform');
     var supportsCSS3 = transitionProperty && transformProperty;
-    var is3d = !! getStyleProperty('perspective');
+    var is3d = !!getStyleProperty('perspective');
 
     var transitionEndEvent = {
         WebkitTransition: 'webkitTransitionEnd',
@@ -1478,7 +1478,7 @@
     var prefixableProperties = ['transform', 'transition', 'transitionDuration', 'transitionProperty'];
 
     // cache all vendor properties
-    var vendorProperties = (function() {
+    var vendorProperties = (function () {
         var cache = {};
         for (var i = 0, len = prefixableProperties.length; i < len; i++) {
             var prop = prefixableProperties[i];
@@ -1511,7 +1511,7 @@
     // inherit EventEmitter
     utils.extend(Item.prototype, EventEmitter.prototype);
 
-    Item.prototype._create = function() {
+    Item.prototype._create = function () {
         // transition objects
         this._transn = {
             ingProperties: {},
@@ -1525,14 +1525,14 @@
     };
 
     // trigger specified handler for event type
-    Item.prototype.handleEvent = function(event) {
+    Item.prototype.handleEvent = function (event) {
         var method = 'on' + event.type;
         if (this[method]) {
             this[method](event);
         }
     };
 
-    Item.prototype.getSize = function() {
+    Item.prototype.getSize = function () {
         this.size = getSize(this.element);
     };
 
@@ -1540,7 +1540,7 @@
      * apply CSS styles to element
      * @param {Object} style
      */
-    Item.prototype.css = function(style) {
+    Item.prototype.css = function (style) {
         var elemStyle = this.element.style;
 
         for (var prop in style) {
@@ -1551,7 +1551,7 @@
     };
 
     // measure position, and sets it
-    Item.prototype.getPosition = function() {
+    Item.prototype.getPosition = function () {
         var style = getStyle(this.element);
         var layoutOptions = this.layout.options;
         var isOriginLeft = layoutOptions.isOriginLeft;
@@ -1572,7 +1572,7 @@
     };
 
     // set settled position, apply padding
-    Item.prototype.layoutPosition = function() {
+    Item.prototype.layoutPosition = function () {
         var layoutSize = this.layout.size;
         var layoutOptions = this.layout.options;
         var style = {};
@@ -1608,14 +1608,14 @@
 
     // transform translate function
     var translate = is3d ?
-        function(x, y) {
+        function (x, y) {
             return 'translate3d(' + x + 'px, ' + y + 'px, 0)';
-        } : function(x, y) {
+        } : function (x, y) {
         return 'translate(' + x + 'px, ' + y + 'px)';
     };
 
 
-    Item.prototype._transitionTo = function(x, y) {
+    Item.prototype._transitionTo = function (x, y) {
         this.getPosition();
         // get current x & y from top/left
         var curX = this.position.x;
@@ -1653,7 +1653,7 @@
     };
 
     // non transition + transform support
-    Item.prototype.goTo = function(x, y) {
+    Item.prototype.goTo = function (x, y) {
         this.setPosition(x, y);
         this.layoutPosition();
     };
@@ -1661,7 +1661,7 @@
     // use transition and transforms if supported
     Item.prototype.moveTo = supportsCSS3 ? Item.prototype._transitionTo : Item.prototype.goTo;
 
-    Item.prototype.setPosition = function(x, y) {
+    Item.prototype.setPosition = function (x, y) {
         this.position.x = parseInt(x, 10);
         this.position.y = parseInt(y, 10);
     };
@@ -1672,8 +1672,8 @@
      * @param {Function} onTransitionEnd
      */
 
-        // non transition, just trigger callback
-    Item.prototype._nonTransition = function(args) {
+    // non transition, just trigger callback
+    Item.prototype._nonTransition = function (args) {
         this.css(args.to);
         if (args.isCleaning) {
             this._removeStyles(args.to);
@@ -1691,7 +1691,7 @@
      *   @param {Boolean} isCleaning - removes transition styles after transition
      *   @param {Function} onTransitionEnd - callback
      */
-    Item.prototype._transition = function(args) {
+    Item.prototype._transition = function (args) {
         // redirect to nonTransition if no transition duration
         if (!parseFloat(this.layout.options.transitionDuration)) {
             this._nonTransition(args);
@@ -1731,7 +1731,7 @@
 
     var itemTransitionProperties = transformProperty && (utils.toDashed(transformProperty) + ',opacity');
 
-    Item.prototype.enableTransition = function( /* style */ ) {
+    Item.prototype.enableTransition = function (/* style */) {
         // only enable if not already transitioning
         // bug in IE10 were re-setting transition style will prevent
         // transitionend event from triggering
@@ -1759,11 +1759,11 @@
     Item.prototype.transition = Item.prototype[transitionProperty ? '_transition' : '_nonTransition'];
 
     // ----- events ----- //
-    Item.prototype.onwebkitTransitionEnd = function(event) {
+    Item.prototype.onwebkitTransitionEnd = function (event) {
         this.ontransitionend(event);
     };
 
-    Item.prototype.onotransitionend = function(event) {
+    Item.prototype.onotransitionend = function (event) {
         this.ontransitionend(event);
     };
 
@@ -1774,7 +1774,7 @@
         '-o-transform': 'transform'
     };
 
-    Item.prototype.ontransitionend = function(event) {
+    Item.prototype.ontransitionend = function (event) {
         // disregard bubbled events from children
         if (event.target !== this.element) {
             return;
@@ -1806,7 +1806,7 @@
         this.emitEvent('transitionEnd', [this]);
     };
 
-    Item.prototype.disableTransition = function() {
+    Item.prototype.disableTransition = function () {
         this.removeTransitionStyles();
         this.element.removeEventListener(transitionEndEvent, this, false);
         this.isTransitioning = false;
@@ -1816,7 +1816,7 @@
      * removes style property from element
      * @param {Object} style
      **/
-    Item.prototype._removeStyles = function(style) {
+    Item.prototype._removeStyles = function (style) {
         // clean up transition styles
         var cleanStyle = {};
         for (var prop in style) {
@@ -1830,14 +1830,14 @@
         transitionDuration: ''
     };
 
-    Item.prototype.removeTransitionStyles = function() {
+    Item.prototype.removeTransitionStyles = function () {
         // remove transition
         this.css(cleanTransitionStyle);
     };
 
     // ----- show/hide/remove ----- //
     // remove element from DOM
-    Item.prototype.removeElem = function() {
+    Item.prototype.removeElem = function () {
         this.element.parentNode.removeChild(this.element);
         // remove display: none
         this.css({
@@ -1846,7 +1846,7 @@
         this.emitEvent('remove', [this]);
     };
 
-    Item.prototype.remove = function() {
+    Item.prototype.remove = function () {
         // just remove element if no transition support or no transition
         if (!transitionProperty || !parseFloat(this.layout.options.transitionDuration)) {
             this.removeElem();
@@ -1855,13 +1855,13 @@
 
         // start transition
         var _this = this;
-        this.once('transitionEnd', function() {
+        this.once('transitionEnd', function () {
             _this.removeElem();
         });
         this.hide();
     };
 
-    Item.prototype.reveal = function() {
+    Item.prototype.reveal = function () {
         delete this.isHidden;
         // remove display: none
         this.css({
@@ -1882,7 +1882,7 @@
         });
     };
 
-    Item.prototype.onRevealTransitionEnd = function() {
+    Item.prototype.onRevealTransitionEnd = function () {
         // check if still visible
         // during transition, item may have been hidden
         if (!this.isHidden) {
@@ -1895,7 +1895,7 @@
      * @param {String} styleProperty - hiddenStyle/visibleStyle
      * @returns {String}
      */
-    Item.prototype.getHideRevealTransitionEndProperty = function(styleProperty) {
+    Item.prototype.getHideRevealTransitionEndProperty = function (styleProperty) {
         var optionStyle = this.layout.options[styleProperty];
         // use opacity
         if (optionStyle.opacity) {
@@ -1907,7 +1907,7 @@
         }
     };
 
-    Item.prototype.hide = function() {
+    Item.prototype.hide = function () {
         // set flag
         this.isHidden = true;
         // remove display: none
@@ -1930,7 +1930,7 @@
         });
     };
 
-    Item.prototype.onHideTransitionEnd = function() {
+    Item.prototype.onHideTransitionEnd = function () {
         // check if still hidden
         // during transition, item may have been un-hidden
         if (this.isHidden) {
@@ -1941,7 +1941,7 @@
         }
     };
 
-    Item.prototype.destroy = function() {
+    Item.prototype.destroy = function () {
         this.css({
             position: '',
             left: '',
@@ -1963,12 +1963,12 @@
  * MIT license
  */
 
-(function(window, factory) {
+(function (window, factory) {
 
     // universal module definition
     if (typeof define == 'function' && define.amd) {
         // AMD
-        define('outlayer/outlayer', ['eventie/eventie', 'eventEmitter/EventEmitter', 'get-size/get-size', 'fizzy-ui-utils/utils', './item'], function(eventie, EventEmitter, getSize, utils, Item) {
+        define('outlayer/outlayer', ['eventie/eventie', 'eventEmitter/EventEmitter', 'get-size/get-size', 'fizzy-ui-utils/utils', './item'], function (eventie, EventEmitter, getSize, utils, Item) {
             return factory(window, eventie, EventEmitter, getSize, utils, Item);
         });
     } else if (typeof exports == 'object') {
@@ -1987,7 +1987,8 @@
     // ----- vars ----- //
     var console = window.console;
     var jQuery = window.jQuery;
-    var noop = function() {};
+    var noop = function () {
+    };
 
     // -------------------------- Outlayer -------------------------- //
     // globally unique identifiers
@@ -2065,11 +2066,11 @@
      * set options
      * @param {Object} opts
      */
-    Outlayer.prototype.option = function(opts) {
+    Outlayer.prototype.option = function (opts) {
         utils.extend(this.options, opts);
     };
 
-    Outlayer.prototype._create = function() {
+    Outlayer.prototype._create = function () {
         // get items from children
         this.reloadItems();
         // elements that affect layout, but are not laid out
@@ -2085,7 +2086,7 @@
     };
 
     // goes through all children again and gets bricks in proper order
-    Outlayer.prototype.reloadItems = function() {
+    Outlayer.prototype.reloadItems = function () {
         // collection of item elements
         this.items = this._itemize(this.element.children);
     };
@@ -2096,7 +2097,7 @@
      * @param {Array or NodeList or HTMLElement} elems
      * @returns {Array} items - collection of new Outlayer Items
      */
-    Outlayer.prototype._itemize = function(elems) {
+    Outlayer.prototype._itemize = function (elems) {
 
         var itemElems = this._filterFindItemElements(elems);
         var Item = this.constructor.Item;
@@ -2117,7 +2118,7 @@
      * @param {Array or NodeList or HTMLElement} elems
      * @returns {Array} items - item elements
      */
-    Outlayer.prototype._filterFindItemElements = function(elems) {
+    Outlayer.prototype._filterFindItemElements = function (elems) {
         return utils.filterFindElements(elems, this.options.itemSelector);
     };
 
@@ -2125,7 +2126,7 @@
      * getter method for getting item elements
      * @returns {Array} elems - collection of item elements
      */
-    Outlayer.prototype.getItemElements = function() {
+    Outlayer.prototype.getItemElements = function () {
         var elems = [];
         for (var i = 0, len = this.items.length; i < len; i++) {
             elems.push(this.items[i].element);
@@ -2137,7 +2138,7 @@
     /**
      * lays out all items
      */
-    Outlayer.prototype.layout = function() {
+    Outlayer.prototype.layout = function () {
         this._resetLayout();
         this._manageStamps();
 
@@ -2155,12 +2156,12 @@
     /**
      * logic before any new layout
      */
-    Outlayer.prototype._resetLayout = function() {
+    Outlayer.prototype._resetLayout = function () {
         this.getSize();
     };
 
 
-    Outlayer.prototype.getSize = function() {
+    Outlayer.prototype.getSize = function () {
         this.size = getSize(this.element);
     };
 
@@ -2174,7 +2175,7 @@
      * @param {String} size - width or height
      * @private
      */
-    Outlayer.prototype._getMeasurement = function(measurement, size) {
+    Outlayer.prototype._getMeasurement = function (measurement, size) {
         var option = this.options[measurement];
         var elem;
         if (!option) {
@@ -2196,7 +2197,7 @@
      * layout a collection of item elements
      * @api public
      */
-    Outlayer.prototype.layoutItems = function(items, isInstant) {
+    Outlayer.prototype.layoutItems = function (items, isInstant) {
         items = this._getItemsForLayout(items);
 
         this._layoutItems(items, isInstant);
@@ -2210,7 +2211,7 @@
      * @param {Array} items
      * @returns {Array} items
      */
-    Outlayer.prototype._getItemsForLayout = function(items) {
+    Outlayer.prototype._getItemsForLayout = function (items) {
         var layoutItems = [];
         for (var i = 0, len = items.length; i < len; i++) {
             var item = items[i];
@@ -2226,7 +2227,7 @@
      * @param {Array} items
      * @param {Boolean} isInstant
      */
-    Outlayer.prototype._layoutItems = function(items, isInstant) {
+    Outlayer.prototype._layoutItems = function (items, isInstant) {
         this._emitCompleteOnItems('layout', items);
 
         if (!items || !items.length) {
@@ -2254,7 +2255,7 @@
      * @param {Outlayer.Item} item
      * @returns {Object} x and y position
      */
-    Outlayer.prototype._getItemLayoutPosition = function( /* item */ ) {
+    Outlayer.prototype._getItemLayoutPosition = function (/* item */) {
         return {
             x: 0,
             y: 0
@@ -2267,7 +2268,7 @@
      * thx @paul_irish
      * @param {Array} queue
      */
-    Outlayer.prototype._processLayoutQueue = function(queue) {
+    Outlayer.prototype._processLayoutQueue = function (queue) {
         for (var i = 0, len = queue.length; i < len; i++) {
             var obj = queue[i];
             this._positionItem(obj.item, obj.x, obj.y, obj.isInstant);
@@ -2281,7 +2282,7 @@
      * @param {Number} y - vertical position
      * @param {Boolean} isInstant - disables transitions
      */
-    Outlayer.prototype._positionItem = function(item, x, y, isInstant) {
+    Outlayer.prototype._positionItem = function (item, x, y, isInstant) {
         if (isInstant) {
             // if not transition, just set CSS
             item.goTo(x, y);
@@ -2294,11 +2295,11 @@
      * Any logic you want to do after each layout,
      * i.e. size the container
      */
-    Outlayer.prototype._postLayout = function() {
+    Outlayer.prototype._postLayout = function () {
         this.resizeContainer();
     };
 
-    Outlayer.prototype.resizeContainer = function() {
+    Outlayer.prototype.resizeContainer = function () {
         if (!this.options.isResizingContainer) {
             return;
         }
@@ -2321,7 +2322,7 @@
      * @param {Number} measure - size of width or height
      * @param {Boolean} isWidth
      */
-    Outlayer.prototype._setContainerMeasure = function(measure, isWidth) {
+    Outlayer.prototype._setContainerMeasure = function (measure, isWidth) {
         if (measure === undefined) {
             return;
         }
@@ -2341,7 +2342,7 @@
      * @param {String} eventName
      * @param {Array} items - Outlayer.Items
      */
-    Outlayer.prototype._emitCompleteOnItems = function(eventName, items) {
+    Outlayer.prototype._emitCompleteOnItems = function (eventName, items) {
         var _this = this;
 
         function onComplete() {
@@ -2377,7 +2378,7 @@
      * ignored items do not get skipped in layout
      * @param {Element} elem
      */
-    Outlayer.prototype.ignore = function(elem) {
+    Outlayer.prototype.ignore = function (elem) {
         var item = this.getItem(elem);
         if (item) {
             item.isIgnored = true;
@@ -2388,7 +2389,7 @@
      * return item to layout collection
      * @param {Element} elem
      */
-    Outlayer.prototype.unignore = function(elem) {
+    Outlayer.prototype.unignore = function (elem) {
         var item = this.getItem(elem);
         if (item) {
             delete item.isIgnored;
@@ -2399,7 +2400,7 @@
      * adds elements to stamps
      * @param {NodeList, Array, Element, or String} elems
      */
-    Outlayer.prototype.stamp = function(elems) {
+    Outlayer.prototype.stamp = function (elems) {
         elems = this._find(elems);
         if (!elems) {
             return;
@@ -2417,7 +2418,7 @@
      * removes elements to stamps
      * @param {NodeList, Array, or Element} elems
      */
-    Outlayer.prototype.unstamp = function(elems) {
+    Outlayer.prototype.unstamp = function (elems) {
         elems = this._find(elems);
         if (!elems) {
             return;
@@ -2437,7 +2438,7 @@
      * @param {NodeList, Array, Element, or String} elems
      * @returns {Array} elems
      */
-    Outlayer.prototype._find = function(elems) {
+    Outlayer.prototype._find = function (elems) {
         if (!elems) {
             return;
         }
@@ -2449,7 +2450,7 @@
         return elems;
     };
 
-    Outlayer.prototype._manageStamps = function() {
+    Outlayer.prototype._manageStamps = function () {
         if (!this.stamps || !this.stamps.length) {
             return;
         }
@@ -2463,7 +2464,7 @@
     };
 
     // update boundingLeft / Top
-    Outlayer.prototype._getBoundingRect = function() {
+    Outlayer.prototype._getBoundingRect = function () {
         // get bounding rect for container element
         var boundingRect = this.element.getBoundingClientRect();
         var size = this.size;
@@ -2485,7 +2486,7 @@
      * @param {Element} elem
      * @returns {Object} offset - has left, top, right, bottom
      */
-    Outlayer.prototype._getElementOffset = function(elem) {
+    Outlayer.prototype._getElementOffset = function (elem) {
         var boundingRect = elem.getBoundingClientRect();
         var thisRect = this._boundingRect;
         var size = getSize(elem);
@@ -2501,7 +2502,7 @@
     // -------------------------- resize -------------------------- //
     // enable event handlers for listeners
     // i.e. resize -> onresize
-    Outlayer.prototype.handleEvent = function(event) {
+    Outlayer.prototype.handleEvent = function (event) {
         var method = 'on' + event.type;
         if (this[method]) {
             this[method](event);
@@ -2511,7 +2512,7 @@
     /**
      * Bind layout to window resizing
      */
-    Outlayer.prototype.bindResize = function() {
+    Outlayer.prototype.bindResize = function () {
         // bind just one listener
         if (this.isResizeBound) {
             return;
@@ -2523,7 +2524,7 @@
     /**
      * Unbind layout to window resizing
      */
-    Outlayer.prototype.unbindResize = function() {
+    Outlayer.prototype.unbindResize = function () {
         if (this.isResizeBound) {
             eventie.unbind(window, 'resize', this);
         }
@@ -2533,7 +2534,7 @@
     // original debounce by John Hann
     // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
     // this fires every resize
-    Outlayer.prototype.onresize = function() {
+    Outlayer.prototype.onresize = function () {
         if (this.resizeTimeout) {
             clearTimeout(this.resizeTimeout);
         }
@@ -2549,7 +2550,7 @@
     };
 
     // debounced, layout on resize
-    Outlayer.prototype.resize = function() {
+    Outlayer.prototype.resize = function () {
         // don't trigger if size did not change
         // or if resize was unbound. See #9
         if (!this.isResizeBound || !this.needsResizeLayout()) {
@@ -2563,7 +2564,7 @@
      * check if layout is needed post layout
      * @returns Boolean
      */
-    Outlayer.prototype.needsResizeLayout = function() {
+    Outlayer.prototype.needsResizeLayout = function () {
         var size = getSize(this.element);
         // check that this.size and size are there
         // IE8 triggers resize on body size change, so they might not be
@@ -2577,7 +2578,7 @@
      * @param {Array or NodeList or Element} elems
      * @returns {Array} items - Outlayer.Items
      **/
-    Outlayer.prototype.addItems = function(elems) {
+    Outlayer.prototype.addItems = function (elems) {
         var items = this._itemize(elems);
         // add items to collection
         if (items.length) {
@@ -2590,7 +2591,7 @@
      * Layout newly-appended item elements
      * @param {Array or NodeList or Element} elems
      */
-    Outlayer.prototype.appended = function(elems) {
+    Outlayer.prototype.appended = function (elems) {
         var items = this.addItems(elems);
         if (!items.length) {
             return;
@@ -2604,7 +2605,7 @@
      * Layout prepended elements
      * @param {Array or NodeList or Element} elems
      */
-    Outlayer.prototype.prepended = function(elems) {
+    Outlayer.prototype.prepended = function (elems) {
         var items = this._itemize(elems);
         if (!items.length) {
             return;
@@ -2626,7 +2627,7 @@
      * reveal a collection of items
      * @param {Array of Outlayer.Items} items
      */
-    Outlayer.prototype.reveal = function(items) {
+    Outlayer.prototype.reveal = function (items) {
         this._emitCompleteOnItems('reveal', items);
 
         var len = items && items.length;
@@ -2640,7 +2641,7 @@
      * hide a collection of items
      * @param {Array of Outlayer.Items} items
      */
-    Outlayer.prototype.hide = function(items) {
+    Outlayer.prototype.hide = function (items) {
         this._emitCompleteOnItems('hide', items);
 
         var len = items && items.length;
@@ -2654,7 +2655,7 @@
      * reveal item elements
      * @param {Array}, {Element}, {NodeList} items
      */
-    Outlayer.prototype.revealItemElements = function(elems) {
+    Outlayer.prototype.revealItemElements = function (elems) {
         var items = this.getItems(elems);
         this.reveal(items);
     };
@@ -2663,7 +2664,7 @@
      * hide item elements
      * @param {Array}, {Element}, {NodeList} items
      */
-    Outlayer.prototype.hideItemElements = function(elems) {
+    Outlayer.prototype.hideItemElements = function (elems) {
         var items = this.getItems(elems);
         this.hide(items);
     };
@@ -2674,7 +2675,7 @@
      * @param {Function} callback
      * @returns {Outlayer.Item} item
      */
-    Outlayer.prototype.getItem = function(elem) {
+    Outlayer.prototype.getItem = function (elem) {
         // loop through items to get the one that matches
         for (var i = 0, len = this.items.length; i < len; i++) {
             var item = this.items[i];
@@ -2690,7 +2691,7 @@
      * @param {Array} elems
      * @returns {Array} items - Outlayer.Items
      */
-    Outlayer.prototype.getItems = function(elems) {
+    Outlayer.prototype.getItems = function (elems) {
         elems = utils.makeArray(elems);
         var items = [];
         for (var i = 0, len = elems.length; i < len; i++) {
@@ -2708,7 +2709,7 @@
      * remove element(s) from instance and DOM
      * @param {Array or NodeList or Element} elems
      */
-    Outlayer.prototype.remove = function(elems) {
+    Outlayer.prototype.remove = function (elems) {
         var removeItems = this.getItems(elems);
 
         this._emitCompleteOnItems('remove', removeItems);
@@ -2728,7 +2729,7 @@
 
     // ----- destroy ----- //
     // remove and disable Outlayer instance
-    Outlayer.prototype.destroy = function() {
+    Outlayer.prototype.destroy = function () {
         // clean up dynamic styles
         var style = this.element.style;
         style.height = '';
@@ -2758,7 +2759,7 @@
      * @param {Element} elem
      * @returns {Outlayer}
      */
-    Outlayer.data = function(elem) {
+    Outlayer.data = function (elem) {
         elem = utils.getQueryElement(elem);
         var id = elem && elem.outlayerGUID;
         return id && instances[id];
@@ -2770,13 +2771,14 @@
      * create a layout class
      * @param {String} namespace
      */
-    Outlayer.create = function(namespace, options) {
+    Outlayer.create = function (namespace, options) {
         // sub-class Outlayer
 
 
         function Layout() {
             Outlayer.apply(this, arguments);
         }
+
         // inherit Outlayer prototype, use Object.create if there
         if (Object.create) {
             Layout.prototype = Object.create(Outlayer.prototype);
@@ -2828,7 +2830,7 @@
  * Isotope Item
  **/
 
-(function(window, factory) {
+(function (window, factory) {
 
     // universal module definition
     if (typeof define == 'function' && define.amd) {
@@ -2858,14 +2860,14 @@
 
     Item.prototype = new Outlayer.Item();
 
-    Item.prototype._create = function() {
+    Item.prototype._create = function () {
         // assign id, used for original-order sorting
         this.id = this.layout.itemGUID++;
         Outlayer.Item.prototype._create.call(this);
         this.sortData = {};
     };
 
-    Item.prototype.updateSortData = function() {
+    Item.prototype.updateSortData = function () {
         if (this.isIgnored) {
             return;
         }
@@ -2884,7 +2886,7 @@
     };
 
     var _destroy = Item.prototype.destroy;
-    Item.prototype.destroy = function() {
+    Item.prototype.destroy = function () {
         // call super
         _destroy.apply(this, arguments);
         // reset display, #741
@@ -2901,7 +2903,7 @@
  * Isotope LayoutMode
  */
 
-(function(window, factory) {
+(function (window, factory) {
 
     // universal module definition
     if (typeof define == 'function' && define.amd) {
@@ -2939,7 +2941,7 @@
      * some methods should just defer to default Outlayer method
      * and reference the Isotope instance as `this`
      **/
-    (function() {
+    (function () {
         var facadeMethods = ['_resetLayout', '_getItemLayoutPosition', '_manageStamp', '_getContainerSize', '_getElementOffset', 'needsResizeLayout'];
 
         for (var i = 0, len = facadeMethods.length; i < len; i++) {
@@ -2948,7 +2950,7 @@
         }
 
         function getOutlayerMethod(methodName) {
-            return function() {
+            return function () {
                 return Outlayer.prototype[methodName].apply(this.isotope, arguments);
             };
         }
@@ -2956,7 +2958,7 @@
 
     // -----  ----- //
     // for horizontal layout modes, check vertical size
-    LayoutMode.prototype.needsVerticalResizeLayout = function() {
+    LayoutMode.prototype.needsVerticalResizeLayout = function () {
         // don't trigger if size did not change
         var size = getSize(this.isotope.element);
         // check that this.size and size are there
@@ -2966,15 +2968,15 @@
     };
 
     // ----- measurements ----- //
-    LayoutMode.prototype._getMeasurement = function() {
+    LayoutMode.prototype._getMeasurement = function () {
         this.isotope._getMeasurement.apply(this, arguments);
     };
 
-    LayoutMode.prototype.getColumnWidth = function() {
+    LayoutMode.prototype.getColumnWidth = function () {
         this.getSegmentSize('column', 'Width');
     };
 
-    LayoutMode.prototype.getRowHeight = function() {
+    LayoutMode.prototype.getRowHeight = function () {
         this.getSegmentSize('row', 'Height');
     };
 
@@ -2983,7 +2985,7 @@
      * segment: 'column' or 'row'
      * size 'Width' or 'Height'
      **/
-    LayoutMode.prototype.getSegmentSize = function(segment, size) {
+    LayoutMode.prototype.getSegmentSize = function (segment, size) {
         var segmentName = segment + size;
         var outerSize = 'outer' + size;
         // columnWidth / outerWidth // rowHeight / outerHeight
@@ -2996,20 +2998,20 @@
         var firstItemSize = this.getFirstItemSize();
         this[segmentName] = firstItemSize && firstItemSize[outerSize] ||
             // or size of container
-        this.isotope.size['inner' + size];
+            this.isotope.size['inner' + size];
     };
 
-    LayoutMode.prototype.getFirstItemSize = function() {
+    LayoutMode.prototype.getFirstItemSize = function () {
         var firstItem = this.isotope.filteredItems[0];
         return firstItem && firstItem.element && getSize(firstItem.element);
     };
 
     // ----- methods that should reference isotope ----- //
-    LayoutMode.prototype.layout = function() {
+    LayoutMode.prototype.layout = function () {
         this.isotope.layout.apply(this.isotope, arguments);
     };
 
-    LayoutMode.prototype.getSize = function() {
+    LayoutMode.prototype.getSize = function () {
         this.isotope.getSize();
         this.size = this.isotope.size;
     };
@@ -3017,7 +3019,7 @@
     // -------------------------- create -------------------------- //
     LayoutMode.modes = {};
 
-    LayoutMode.create = function(namespace, options) {
+    LayoutMode.create = function (namespace, options) {
 
         function Mode() {
             LayoutMode.apply(this, arguments);
@@ -3049,7 +3051,7 @@
  * by David DeSandro
  */
 
-(function(window, factory) {
+(function (window, factory) {
 
     // universal module definition
     if (typeof define === 'function' && define.amd) {
@@ -3073,7 +3075,7 @@
     // create an Outlayer layout class
     var Masonry = Outlayer.create('masonry');
 
-    Masonry.prototype._resetLayout = function() {
+    Masonry.prototype._resetLayout = function () {
         this.getSize();
         this._getMeasurement('columnWidth', 'outerWidth');
         this._getMeasurement('gutter', 'outerWidth');
@@ -3089,7 +3091,7 @@
         this.maxY = 0;
     };
 
-    Masonry.prototype.measureColumns = function() {
+    Masonry.prototype.measureColumns = function () {
         this.getContainerWidth();
         // if columnWidth is 0, default to outerWidth of first item
         if (!this.columnWidth) {
@@ -3098,7 +3100,7 @@
             // columnWidth fall back to item of first element
             this.columnWidth = firstItemElem && getSize(firstItemElem).outerWidth ||
                 // if first elem has no width, default to size of container
-            this.containerWidth;
+                this.containerWidth;
         }
 
         var columnWidth = this.columnWidth += this.gutter;
@@ -3114,7 +3116,7 @@
         this.cols = Math.max(cols, 1);
     };
 
-    Masonry.prototype.getContainerWidth = function() {
+    Masonry.prototype.getContainerWidth = function () {
         // container is parent if fit width
         var container = this.options.isFitWidth ? this.element.parentNode : this.element;
         // check that this.size and size are there
@@ -3123,7 +3125,7 @@
         this.containerWidth = size && size.innerWidth;
     };
 
-    Masonry.prototype._getItemLayoutPosition = function(item) {
+    Masonry.prototype._getItemLayoutPosition = function (item) {
         item.getSize();
         // how many columns does this brick span
         var remainder = item.size.outerWidth % this.columnWidth;
@@ -3157,7 +3159,7 @@
      * @param {Number} colSpan - number of columns the element spans
      * @returns {Array} colGroup
      */
-    Masonry.prototype._getColGroup = function(colSpan) {
+    Masonry.prototype._getColGroup = function (colSpan) {
         if (colSpan < 2) {
             // if brick spans only one column, use all the column Ys
             return this.colYs;
@@ -3176,7 +3178,7 @@
         return colGroup;
     };
 
-    Masonry.prototype._manageStamp = function(stamp) {
+    Masonry.prototype._manageStamp = function (stamp) {
         var stampSize = getSize(stamp);
         var offset = this._getElementOffset(stamp);
         // get the columns that this stamp affects
@@ -3195,7 +3197,7 @@
         }
     };
 
-    Masonry.prototype._getContainerSize = function() {
+    Masonry.prototype._getContainerSize = function () {
         this.maxY = Math.max.apply(Math, this.colYs);
         var size = {
             height: this.maxY
@@ -3208,7 +3210,7 @@
         return size;
     };
 
-    Masonry.prototype._getContainerFitWidth = function() {
+    Masonry.prototype._getContainerFitWidth = function () {
         var unusedCols = 0;
         // count unused columns
         var i = this.cols;
@@ -3222,7 +3224,7 @@
         return (this.cols - unusedCols) * this.columnWidth - this.gutter;
     };
 
-    Masonry.prototype.needsResizeLayout = function() {
+    Masonry.prototype.needsResizeLayout = function () {
         var previousWidth = this.containerWidth;
         this.getContainerWidth();
         return previousWidth !== this.containerWidth;
@@ -3238,7 +3240,7 @@
  * http://masonry.desandro.com
  */
 
-(function(window, factory) {
+(function (window, factory) {
 
     // universal module definition
     if (typeof define == 'function' && define.amd) {
@@ -3286,7 +3288,7 @@
     MasonryMode.prototype._getMeasurement = _getMeasurement;
 
     var measureColumns = MasonryMode.prototype.measureColumns;
-    MasonryMode.prototype.measureColumns = function() {
+    MasonryMode.prototype.measureColumns = function () {
         // set items, used if measuring first item
         this.items = this.isotope.filteredItems;
         measureColumns.call(this);
@@ -3294,7 +3296,7 @@
 
     // HACK copy over isOriginLeft/Top options
     var _manageStamp = MasonryMode.prototype._manageStamp;
-    MasonryMode.prototype._manageStamp = function() {
+    MasonryMode.prototype._manageStamp = function () {
         this.options.isOriginLeft = this.isotope.options.isOriginLeft;
         this.options.isOriginTop = this.isotope.options.isOriginTop;
         _manageStamp.apply(this, arguments);
@@ -3308,7 +3310,7 @@
  * fitRows layout mode
  */
 
-(function(window, factory) {
+(function (window, factory) {
 
     // universal module definition
     if (typeof define == 'function' && define.amd) {
@@ -3329,14 +3331,14 @@
 
     var FitRows = LayoutMode.create('fitRows');
 
-    FitRows.prototype._resetLayout = function() {
+    FitRows.prototype._resetLayout = function () {
         this.x = 0;
         this.y = 0;
         this.maxY = 0;
         this._getMeasurement('gutter', 'outerWidth');
     };
 
-    FitRows.prototype._getItemLayoutPosition = function(item) {
+    FitRows.prototype._getItemLayoutPosition = function (item) {
         item.getSize();
 
         var itemWidth = item.size.outerWidth + this.gutter;
@@ -3358,7 +3360,7 @@
         return position;
     };
 
-    FitRows.prototype._getContainerSize = function() {
+    FitRows.prototype._getContainerSize = function () {
         return {
             height: this.maxY
         };
@@ -3372,7 +3374,7 @@
  * vertical layout mode
  */
 
-(function(window, factory) {
+(function (window, factory) {
 
     // universal module definition
     if (typeof define == 'function' && define.amd) {
@@ -3395,11 +3397,11 @@
         horizontalAlignment: 0
     });
 
-    Vertical.prototype._resetLayout = function() {
+    Vertical.prototype._resetLayout = function () {
         this.y = 0;
     };
 
-    Vertical.prototype._getItemLayoutPosition = function(item) {
+    Vertical.prototype._getItemLayoutPosition = function (item) {
         item.getSize();
         var x = (this.isotope.size.innerWidth - item.size.outerWidth) * this.options.horizontalAlignment;
         var y = this.y;
@@ -3410,7 +3412,7 @@
         };
     };
 
-    Vertical.prototype._getContainerSize = function() {
+    Vertical.prototype._getContainerSize = function () {
         return {
             height: this.y
         };
@@ -3430,14 +3432,14 @@
  * Copyright 2015 Metafizzy
  */
 
-(function(window, factory) {
+(function (window, factory) {
 
     // universal module definition
     if (typeof define == 'function' && define.amd) {
         // AMD
         define(['outlayer/outlayer', 'get-size/get-size', 'matches-selector/matches-selector', 'fizzy-ui-utils/utils', 'isotope/js/item', 'isotope/js/layout-mode',
             // include default layout modes
-            'isotope/js/layout-modes/masonry', 'isotope/js/layout-modes/fit-rows', 'isotope/js/layout-modes/vertical'], function(Outlayer, getSize, matchesSelector, utils, Item, LayoutMode) {
+            'isotope/js/layout-modes/masonry', 'isotope/js/layout-modes/fit-rows', 'isotope/js/layout-modes/vertical'], function (Outlayer, getSize, matchesSelector, utils, Item, LayoutMode) {
             return factory(window, Outlayer, getSize, matchesSelector, utils, Item, LayoutMode);
         });
     } else if (typeof exports == 'object') {
@@ -3461,18 +3463,18 @@
 
     // -------------------------- helpers -------------------------- //
     var trim = String.prototype.trim ?
-        function(str) {
+        function (str) {
             return str.trim();
-        } : function(str) {
+        } : function (str) {
         return str.replace(/^\s+|\s+$/g, '');
     };
 
     var docElem = document.documentElement;
 
     var getText = docElem.textContent ?
-        function(elem) {
+        function (elem) {
             return elem.textContent;
-        } : function(elem) {
+        } : function (elem) {
         return elem.innerText;
     };
 
@@ -3487,7 +3489,7 @@
     Isotope.Item = Item;
     Isotope.LayoutMode = LayoutMode;
 
-    Isotope.prototype._create = function() {
+    Isotope.prototype._create = function () {
         this.itemGUID = 0;
         // functions that sort items
         this._sorters = {};
@@ -3507,14 +3509,14 @@
         }
     };
 
-    Isotope.prototype.reloadItems = function() {
+    Isotope.prototype.reloadItems = function () {
         // reset item ID counter
         this.itemGUID = 0;
         // call super
         Outlayer.prototype.reloadItems.call(this);
     };
 
-    Isotope.prototype._itemize = function() {
+    Isotope.prototype._itemize = function () {
         var items = Outlayer.prototype._itemize.apply(this, arguments);
         // assign ID for original-order
         for (var i = 0, len = items.length; i < len; i++) {
@@ -3527,7 +3529,7 @@
 
 
     // -------------------------- layout -------------------------- //
-    Isotope.prototype._initLayoutMode = function(name) {
+    Isotope.prototype._initLayoutMode = function (name) {
         var Mode = LayoutMode.modes[name];
         // set mode options
         // HACK extend initial options, back-fill in default options
@@ -3538,7 +3540,7 @@
     };
 
 
-    Isotope.prototype.layout = function() {
+    Isotope.prototype.layout = function () {
         // if first time doing layout, do all magic
         if (!this._isLayoutInited && this.options.isInitLayout) {
             this.arrange();
@@ -3548,7 +3550,7 @@
     };
 
     // private method to be used in layout() & magic()
-    Isotope.prototype._layout = function() {
+    Isotope.prototype._layout = function () {
         // don't animate first layout
         var isInstant = this._getIsInstant();
         // layout flow
@@ -3561,7 +3563,7 @@
     };
 
     // filter + sort + layout
-    Isotope.prototype.arrange = function(opts) {
+    Isotope.prototype.arrange = function (opts) {
         // set any options pass
         this.option(opts);
         this._getIsInstant();
@@ -3594,7 +3596,7 @@
     // HACK
     // Don't animate/transition first layout
     // Or don't animate/transition other layouts
-    Isotope.prototype._getIsInstant = function() {
+    Isotope.prototype._getIsInstant = function () {
         var isInstant = this.options.isLayoutInstant !== undefined ? this.options.isLayoutInstant : !this._isLayoutInited;
         this._isInstant = isInstant;
         return isInstant;
@@ -3602,7 +3604,7 @@
 
     // listen for layoutComplete, hideComplete and revealComplete
     // to trigger arrangeComplete
-    Isotope.prototype._bindArrangeComplete = function() {
+    Isotope.prototype._bindArrangeComplete = function () {
         // listen for 3 events to trigger arrangeComplete
         var isLayoutComplete, isHideComplete, isRevealComplete;
         var _this = this;
@@ -3612,22 +3614,23 @@
                 _this.emitEvent('arrangeComplete', [_this.filteredItems]);
             }
         }
-        this.once('layoutComplete', function() {
+
+        this.once('layoutComplete', function () {
             isLayoutComplete = true;
             arrangeParallelCallback();
         });
-        this.once('hideComplete', function() {
+        this.once('hideComplete', function () {
             isHideComplete = true;
             arrangeParallelCallback();
         });
-        this.once('revealComplete', function() {
+        this.once('revealComplete', function () {
             isRevealComplete = true;
             arrangeParallelCallback();
         });
     };
 
     // -------------------------- filter -------------------------- //
-    Isotope.prototype._filter = function(items) {
+    Isotope.prototype._filter = function (items) {
         var filter = this.options.filter;
         filter = filter || '*';
         var matches = [];
@@ -3666,21 +3669,21 @@
     };
 
     // get a jQuery, function, or a matchesSelector test given the filter
-    Isotope.prototype._getFilterTest = function(filter) {
+    Isotope.prototype._getFilterTest = function (filter) {
         if (jQuery && this.options.isJQueryFiltering) {
             // use jQuery
-            return function(item) {
+            return function (item) {
                 return jQuery(item.element).is(filter);
             };
         }
         if (typeof filter == 'function') {
             // use filter as function
-            return function(item) {
+            return function (item) {
                 return filter(item.element);
             };
         }
         // default, use filter as selector string
-        return function(item) {
+        return function (item) {
             return matchesSelector(item.element, filter);
         };
     };
@@ -3690,7 +3693,7 @@
      * @params {Array} elems
      * @public
      */
-    Isotope.prototype.updateSortData = function(elems) {
+    Isotope.prototype.updateSortData = function (elems) {
         // get items
         var items;
         if (elems) {
@@ -3705,7 +3708,7 @@
         this._updateItemsSortData(items);
     };
 
-    Isotope.prototype._getSorters = function() {
+    Isotope.prototype._getSorters = function () {
         var getSortData = this.options.getSortData;
         for (var key in getSortData) {
             var sorter = getSortData[key];
@@ -3717,7 +3720,7 @@
      * @params {Array} items - of Isotope.Items
      * @private
      */
-    Isotope.prototype._updateItemsSortData = function(items) {
+    Isotope.prototype._updateItemsSortData = function (items) {
         // do not update if no items
         var len = items && items.length;
 
@@ -3730,7 +3733,7 @@
     // ----- munge sorter ----- //
     // encapsulate this, as we just need mungeSorter
     // other functions in here are just for munging
-    var mungeSorter = (function() {
+    var mungeSorter = (function () {
         // add a magic layer to sorters for convienent shorthands
         // `.foo-bar` will use the text of .foo-bar querySelector
         // `[foo-bar]` will use attribute
@@ -3754,13 +3757,13 @@
             var parser = Isotope.sortDataParsers[args[1]];
             // parse the value, if there was a parser
             sorter = parser ?
-                function(elem) {
+                function (elem) {
                     return elem && parser(getValue(elem));
                 } :
                 // otherwise just return value
 
 
-                function(elem) {
+                function (elem) {
                     return elem && getValue(elem);
                 };
 
@@ -3774,12 +3777,12 @@
             var getValue;
             // if query looks like [foo-bar], get attribute
             if (attr) {
-                getValue = function(elem) {
+                getValue = function (elem) {
                     return elem.getAttribute(attr);
                 };
             } else {
                 // otherwise, assume its a querySelector, and get its text
-                getValue = function(elem) {
+                getValue = function (elem) {
                     var child = elem.querySelector(query);
                     return child && getText(child);
                 };
@@ -3792,17 +3795,17 @@
 
     // parsers used in getSortData shortcut strings
     Isotope.sortDataParsers = {
-        'parseInt': function(val) {
+        'parseInt': function (val) {
             return parseInt(val, 10);
         },
-        'parseFloat': function(val) {
+        'parseFloat': function (val) {
             return parseFloat(val);
         }
     };
 
     // ----- sort method ----- //
     // sort filteredItem order
-    Isotope.prototype._sort = function() {
+    Isotope.prototype._sort = function () {
         var sortByOpt = this.options.sortBy;
         if (!sortByOpt) {
             return;
@@ -3842,7 +3845,7 @@
 
     // -------------------------- methods -------------------------- //
     // get layout mode
-    Isotope.prototype._mode = function() {
+    Isotope.prototype._mode = function () {
         var layoutMode = this.options.layoutMode;
         var mode = this.modes[layoutMode];
         if (!mode) {
@@ -3855,31 +3858,31 @@
         return mode;
     };
 
-    Isotope.prototype._resetLayout = function() {
+    Isotope.prototype._resetLayout = function () {
         // trigger original reset layout
         Outlayer.prototype._resetLayout.call(this);
         this._mode()._resetLayout();
     };
 
-    Isotope.prototype._getItemLayoutPosition = function(item) {
+    Isotope.prototype._getItemLayoutPosition = function (item) {
         return this._mode()._getItemLayoutPosition(item);
     };
 
-    Isotope.prototype._manageStamp = function(stamp) {
+    Isotope.prototype._manageStamp = function (stamp) {
         this._mode()._manageStamp(stamp);
     };
 
-    Isotope.prototype._getContainerSize = function() {
+    Isotope.prototype._getContainerSize = function () {
         return this._mode()._getContainerSize();
     };
 
-    Isotope.prototype.needsResizeLayout = function() {
+    Isotope.prototype.needsResizeLayout = function () {
         return this._mode().needsResizeLayout();
     };
 
     // -------------------------- adding & removing -------------------------- //
     // HEADS UP overwrites default Outlayer appended
-    Isotope.prototype.appended = function(elems) {
+    Isotope.prototype.appended = function (elems) {
         var items = this.addItems(elems);
         if (!items.length) {
             return;
@@ -3891,7 +3894,7 @@
     };
 
     // HEADS UP overwrites default Outlayer prepended
-    Isotope.prototype.prepended = function(elems) {
+    Isotope.prototype.prepended = function (elems) {
         var items = this._itemize(elems);
         if (!items.length) {
             return;
@@ -3908,7 +3911,7 @@
         this.items = items.concat(this.items);
     };
 
-    Isotope.prototype._filterRevealAdded = function(items) {
+    Isotope.prototype._filterRevealAdded = function (items) {
         var filtered = this._filter(items);
         this.hide(filtered.needHide);
         // reveal all new items
@@ -3922,7 +3925,7 @@
      * Filter, sort, and layout newly-appended item elements
      * @param {Array or NodeList or Element} elems
      */
-    Isotope.prototype.insert = function(elems) {
+    Isotope.prototype.insert = function (elems) {
         var items = this.addItems(elems);
         if (!items.length) {
             return;
@@ -3949,7 +3952,7 @@
     };
 
     var _remove = Isotope.prototype.remove;
-    Isotope.prototype.remove = function(elems) {
+    Isotope.prototype.remove = function (elems) {
         elems = utils.makeArray(elems);
         var removeItems = this.getItems(elems);
         // do regular thing
@@ -3967,7 +3970,7 @@
         }
     };
 
-    Isotope.prototype.shuffle = function() {
+    Isotope.prototype.shuffle = function () {
         // update random sortData
         for (var i = 0, len = this.items.length; i < len; i++) {
             var item = this.items[i];
@@ -3985,7 +3988,7 @@
      * @returns ret
      * @private
      */
-    Isotope.prototype._noTransition = function(fn) {
+    Isotope.prototype._noTransition = function (fn) {
         // save transitionDuration before disabling
         var transitionDuration = this.options.transitionDuration;
         // disable transition
@@ -4002,7 +4005,7 @@
      * getter method for getting filtered item elements
      * @returns {Array} elems - collection of item elements
      */
-    Isotope.prototype.getFilteredItemElements = function() {
+    Isotope.prototype.getFilteredItemElements = function () {
         var elems = [];
         for (var i = 0, len = this.filteredItems.length; i < len; i++) {
             elems.push(this.filteredItems[i].element);

@@ -1,71 +1,71 @@
 <section class="page-title">
-    <div class="container">
-        <h4 class="text-uppercase">
-            <a href="/search/search_main">Total Ranking</a> / planner</h4>
-    </div>
+  <div class="container">
+    <h4 class="text-uppercase">
+      <a href="/search/search_main">Total Ranking</a> / planner</h4>
+  </div>
 </section>
 <div class="container">
-    <div class="col-md-4"></div>
-    <div class="col-md-4" style="margin-top:20px;">
-        <%= form_tag("/user", method: "get") do %>
+  <div class="col-md-4"></div>
+  <div class="col-md-4" style="margin-top:20px;">
+    <%= form_tag("/user", method: "get") do %>
         <div class="input-group">
-            <%= text_field_tag "search",nil,:placeholder => 'Search for..', :class =>'form-control'%>
-            <div class="input-group-btn">
-                <%= button_tag(type: 'submit', class: "btn btn-warning") do %>
+          <%= text_field_tag "search", nil, :placeholder => 'Search for..', :class => 'form-control' %>
+          <div class="input-group-btn">
+            <%= button_tag(type: 'submit', class: "btn btn-warning") do %>
                 <span class="glyphicon glyphicon-search"></span>
-                <% end %>
-            </div>
+            <% end %>
+          </div>
         </div>
-        <% end %>
+    <% end %>
+  </div>
+  <div class="col-md-4"></div>
+  <div class="col-md-12" style="margin-top:20px;">
+    <div class="text-center" style="margin-bottom:15px;">
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="/search/search_main" class="nav-link active">All</a></li>
+        <li class="nav-item"><a href="/search/planner" class="nav-link">planner</a></li>
+        <li class="nav-item"><a href="/search/seller" class="nav-link">seller</a></li>
+      </ul>
     </div>
-    <div class="col-md-4"></div>
-    <div class="col-md-12" style="margin-top:20px;">
-      <div class="text-center" style = "margin-bottom:15px;">
-        <ul class="nav nav-pills">
-          <li class="nav-item"><a href="/search/search_main" class="nav-link active">All</a></li>
-          <li class="nav-item"><a href="/search/planner" class="nav-link">planner</a></li>
-          <li class="nav-item"><a href="/search/seller" class="nav-link">seller</a></li>
+    <div class="table-responsive">
+      <table class="table cart-table">
+        <thead>
+        <tr>
+          <th style="width:6%;">등수</th>
+          <th style="width:15%;">닉네임</th>
+          <th style="width:10%;">Who?</th>
+          <th style="width:49%">자기소개</th>
+          <th style="width:10%;">티어</th>
+          <th style="width:10%;">점수</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @all_user.each_with_index do |p, index| %>
+            <tr>
+              <th scope="row"><%= index+1 %></th>
+              <td>
+                <a href="/showinfo/<%= p.id %>" , style="font-weight: bold; color:<%= p.tier %>">
+                  <%= p.nickname %></a>
+              </td>
+              <td><%= p.level %></td>
+              <td><%= p.introduction %></td>
+              <td style="color:<%= p.tier %>"><%= p.tier %></td>
+              <td><%= p.score %></td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+      <div class="text-center col-md-12">
+        <ul class="pagination custom-pagination">
+          <li><a href="#">Prev</a></li>
+          <li class="active"><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">Next</a></li>
         </ul>
       </div>
-      <div class="table-responsive">
-        <table class="table cart-table">
-          <thead>
-                <tr>
-                    <th style="width:6%;">등수</th>
-                    <th style="width:15%;">닉네임</th>
-                    <th style="width:10%;">Who?</th>
-                    <th style="width:49%">자기소개</th>
-                    <th style="width:10%;">티어</th>
-                    <th style="width:10%;">점수</th>
-                </tr>
-            </thead>
-            <tbody>
-                <% @all_user.each_with_index do |p,index| %>
-                <tr>
-                    <th scope="row"><%=index+1%></th>
-                    <td>
-                        <a href="/showinfo/<%=p.id%>" , style="font-weight: bold; color:<%=p.tier%>">
-                          <%=p.nickname%></a>
-                    </td>
-                    <td><%=p.level%></td>
-                    <td><%=p.introduction%></td>
-                    <td style="color:<%=p.tier%>"><%=p.tier%></td>
-                    <td><%=p.score%></td>
-                </tr>
-                <% end %>
-            </tbody>
-        </table>
-        <div class="text-center col-md-12">
-            <ul class="pagination custom-pagination">
-                <li><a href="#">Prev</a></li>
-                <li class="active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">Next</a></li>
-            </ul>
-        </div>
     </div>
   </div>
 </div>

@@ -634,14 +634,20 @@
 
             var target = $(this).attr("action");
             var that = this;
-            $.post(target, {name:name,subject:subject,email:sender,phone:phone,comments:message},function(data){
-                if($(that).find(".mailstatus").length==0){
+            $.post(target, {
+                name: name,
+                subject: subject,
+                email: sender,
+                phone: phone,
+                comments: message
+            }, function (data) {
+                if ($(that).find(".mailstatus").length == 0) {
                     $(that).append($("<div/>").addClass("mailstatus"));
                 }
                 $(".mailstatus").html(data).show();
-                setTimeout(function(){
+                setTimeout(function () {
                     $(".mailstatus").empty().hide();
-                },5000)
+                }, 5000)
             });
         })
 

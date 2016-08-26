@@ -8,9 +8,9 @@ class MastermenuController < ApplicationController
 
   def user_manage
     @master_user = User.where(level: "master")
-    @standby_user = User.where(level:"standby")
-    @planner_user  =User.where(level:"planner")
-    @seller_user  =User.where(level:"seller")
+    @standby_user = User.where(level: "standby")
+    @planner_user =User.where(level: "planner")
+    @seller_user =User.where(level: "seller")
   end
 
   def levelup
@@ -49,12 +49,12 @@ class MastermenuController < ApplicationController
 
     mg_client = Mailgun::Client.new('key-7deeff1d41a305f9f58c09a0875254a8')
 
-    message_params =  {
-                       from: 'www.gongbang.in',
-                       to: @receiver,
-                       subject: @content,
-                       text:    @content
-                      }
+    message_params = {
+        from: 'www.gongbang.in',
+        to: @receiver,
+        subject: @content,
+        text: @content
+    }
 
     # result = mg_client.send_message('sandbox26b79ff589344c698b5c3cf747823d47.mailgun.org', message_params).to_h!
     result = mg_client.send_message('www.gongbang.in', message_params).to_h!
@@ -82,7 +82,6 @@ class MastermenuController < ApplicationController
   end
 
 
-
   def create_notice
     @notice = Notice.new
     @notice.title = params[:title]
@@ -96,7 +95,7 @@ class MastermenuController < ApplicationController
     if @notice.save
       redirect_to '/home/faq'
     else
-      render :show, notice:"실패했어요! 다시 한번 해보는게 어때요?"
+      render :show, notice: "실패했어요! 다시 한번 해보는게 어때요?"
     end
   end
 
@@ -126,7 +125,7 @@ class MastermenuController < ApplicationController
     if @notice.save
       redirect_to '/home/faq'
     else
-      render :show, notice:"실패했어요! 다시 한번 해보는게 어때요?"
+      render :show, notice: "실패했어요! 다시 한번 해보는게 어때요?"
     end
   end
 

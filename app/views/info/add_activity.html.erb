@@ -1,86 +1,86 @@
 <!--page title start-->
 <section class="page-title">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h4 class="text-uppercase">Skills</h4>
-                <ol class="breadcrumb">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="#">개인정보</a></li>
-                    <li class="active">스킬추가하기</li>
-                </ol>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h4 class="text-uppercase">Skills</h4>
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li><a href="#">개인정보</a></li>
+          <li class="active">스킬추가하기</li>
+        </ol>
+      </div>
     </div>
+  </div>
 </section>
 <div class="container">
-    <form action="/create_activity/<%=current_user.id%>" method="post" enctype="multipart/form-data">
-        <div class="page-content">
-          <h3 class="text-center">기술을 %로 수치화 해보세요</h3>
-            <div class="row">
-                <div class="col-xs-offset-4 col-xs-4">
-                    <div class="form-group">
-                        <label>분야를 골라주세요</label>
-                        <select class="form-control" id="period" name="skill_name" onChange="checkTest1(this.value)">
-                            <option>도자</option>
-                            <option>유리</option>
-                            <option>석/금속</option>
-                            <option>목/죽세</option>
-                            <option>귀금속</option>
-                            <option>종이/한지</option>
-                            <option>섬유</option>
-                            <option>가죽</option>
-                            <option value="etc1">기타</option>
-                        </select>
-                        <input name="tipe1" class="form-control" type="text" disabled="disabled" id="tipe1">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-offset-4 col-xs-4">
-                    <div class="form-group">
-                        <label>분야를 골라주세요</label>
-                        <select class="form-control" id="period" name="skill_part" onChange="checkTest2(this.value)">
-                            <option>디자인</option>
-                            <option>제 작</option>
-                            <option value="etc2">기 타</option>
-                        </select>
-                        <input name="tipe2" class="form-control" type="text" disabled="disabled" id="tipe2">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-offset-4 col-xs-4">
-                    <div class="form-group">
-                        <label>100점 만점의 몇점의 실력을 가지셨나요?</label>
-                        <input type="number" class="form-control text-center" name="percentage" id="skill_percentage" min="0" max="100" placeholder="주관적인 평가 환영합니다!">
-                    </div>
-                </div>
-            </div>
-            <div class ="text-center">
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
+  <form action="/create_activity/<%= current_user.id %>" method="post" enctype="multipart/form-data">
+    <div class="page-content">
+      <h3 class="text-center">기술을 %로 수치화 해보세요</h3>
+      <div class="row">
+        <div class="col-xs-offset-4 col-xs-4">
+          <div class="form-group">
+            <label>분야를 골라주세요</label>
+            <select class="form-control" id="period" name="skill_name" onChange="checkTest1(this.value)">
+              <option>도자</option>
+              <option>유리</option>
+              <option>석/금속</option>
+              <option>목/죽세</option>
+              <option>귀금속</option>
+              <option>종이/한지</option>
+              <option>섬유</option>
+              <option>가죽</option>
+              <option value="etc1">기타</option>
+            </select>
+            <input name="tipe1" class="form-control" type="text" disabled="disabled" id="tipe1">
           </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-offset-4 col-xs-4">
+          <div class="form-group">
+            <label>분야를 골라주세요</label>
+            <select class="form-control" id="period" name="skill_part" onChange="checkTest2(this.value)">
+              <option>디자인</option>
+              <option>제 작</option>
+              <option value="etc2">기 타</option>
+            </select>
+            <input name="tipe2" class="form-control" type="text" disabled="disabled" id="tipe2">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-offset-4 col-xs-4">
+          <div class="form-group">
+            <label>100점 만점의 몇점의 실력을 가지셨나요?</label>
+            <input type="number" class="form-control text-center" name="percentage" id="skill_percentage" min="0" max="100" placeholder="주관적인 평가 환영합니다!">
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
 
-    </form>
+  </form>
 </div>
 
 <script>
-function checkTest1(value) {
-  if(value == 'etc1') {
-    document.getElementById('tipe1').disabled = false;
-  } else {
-    document.getElementById('tipe1').value = '';
-    document.getElementById('tipe1').disabled = true;
+  function checkTest1(value) {
+    if (value == 'etc1') {
+      document.getElementById('tipe1').disabled = false;
+    } else {
+      document.getElementById('tipe1').value = '';
+      document.getElementById('tipe1').disabled = true;
+    }
   }
-}
 
-function checkTest2(value) {
-  if(value == 'etc2') {
-    document.getElementById('tipe2').disabled = false;
-  } else {
-    document.getElementById('tipe2').value = '';
-    document.getElementById('tipe2').disabled = true;
+  function checkTest2(value) {
+    if (value == 'etc2') {
+      document.getElementById('tipe2').disabled = false;
+    } else {
+      document.getElementById('tipe2').value = '';
+      document.getElementById('tipe2').disabled = true;
+    }
   }
-}
 </script>

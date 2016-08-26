@@ -1,6 +1,6 @@
 class JoinFleaController < ApplicationController
   def index
-    @fleas = Flea.where('application_end_date > ?',Time.now).order("application_end_date desc")
+    @fleas = Flea.where('application_end_date > ?', Time.now).order("application_end_date desc")
   end
 
   def join
@@ -8,7 +8,7 @@ class JoinFleaController < ApplicationController
   end
 
   def make
-    @isThere = FleaSeller.where(flea_id:params[:flea_id]).find_by(user_id: current_user.id)
+    @isThere = FleaSeller.where(flea_id: params[:flea_id]).find_by(user_id: current_user.id)
 
     unless @isThere.blank?
       redirect_to "/join_flea/join"
