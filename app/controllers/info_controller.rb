@@ -10,7 +10,7 @@ class InfoController < ApplicationController
   def levelup
     if current_user.level == 'standby'
       redirect_to '/'
-    e
+    end
   end
 
 
