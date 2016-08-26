@@ -15,6 +15,23 @@ class JudgeFleasController < ApplicationController
     @join_user = FleaSeller.where(flea_id:params[:flea_id]).order('score desc')
   end
 
+
+  def select
+    @flea = Flea.find(params[:flea_id])
+    @isThere = FleaSeller.where(flea_id:params[:flea_id]).find_by(user_id:params[:user_id])
+
+    @user = User.find(params[:user_id])
+    @user.score = @user.score + 50
+
+    @isThere.isSelect = "true"
+
+    @user.save
+    @isThere.save
+
+    redirect_to controller: 'judge_fleas', action: 'judge', id: @flea.id, something: 'else'
+
+  end
+
   def confirm_join
     @flea = Flea.find(params[:flea_id])
     @user = User.find(params[:user_id])
