@@ -16,36 +16,40 @@ class JudgeFleasController < ApplicationController
   end
 
 
-  def select_up
+  def select
     @flea = Flea.find(params[:flea_id])
     @isThere = FleaSeller.where(flea_id:params[:flea_id]).find_by(user_id:params[:user_id])
 
-
     @user = User.find(params[:user_id])
     @user.score = @user.score + 50
-    @flea.select_member = @flea.select_member+1
+
+    if ( @user.score >= 100 )
+      @user.tier = "navy"
+    end
+    if ( @user.score >= 200 )
+      @user.tier = "blue"
+    end
+    if ( @user.score >= 350 )
+      @user.tier = "green"
+    end
+    if ( @user.score >= 500 )
+      @user.tier = "yellow"
+    end
+    if ( @user.score >= 650 )
+      @user.tier = "orange"
+    end
+    if ( @user.score >= 800 )
+      @user.tier = "red"
+    end
+
+    @isThere.user_tier = @user.tier
     @isThere.isSelect = "true"
 
     @user.save
     @isThere.save
 
     redirect_to controller: 'judge_fleas', action: 'judge', id: @flea.id, something: 'else'
-  end
 
-  def select_down
-    @flea = Flea.find(params[:flea_id])
-    @isThere = FleaSeller.where(flea_id:params[:flea_id]).find_by(user_id:params[:user_id])
-    @flea.select_member = @flea.select_member-1
-
-    @user = User.find(params[:user_id])
-    @user.score = @user.score - 50
-
-    @isThere.isSelect = "false"
-
-    @user.save
-    @isThere.save
-
-    redirect_to controller: 'judge_fleas', action: 'judge', id: @flea.id, something: 'else'
   end
 
   def confirm_join
