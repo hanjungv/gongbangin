@@ -1,46 +1,67 @@
+<section class="page-header">
+  <button id="now_fleas">진행중인 플리마켓</button>
+  <button id="future_fleas">행사예정 플리마켓</button>
+  <button id="past_fleas">종료된 플리마켓</button>
+</section>
+
 <section class="page-title">
-  <div class="container">
-    <h4 class="text-uppercase">
-      Today market</h4>
-    <p>진행중인 플리마켓</p>
+  <div class="container" id="title">
+    <h4 class="text-uppercase" id="title_eng">Today market</h4>
+    <p id="title_ko">진행중인 플리마켓</p>
   </div>
 </section>
-  <section class="body-content">
-    <div class="page-content product-grid">
-        <div class="container">
-<% @today_flea.each do |p| %>
 
+<section class="body-content">
+  <div class="page-content product-grid">
+    <div id="" class="container">
+      <% @f.each do |p| %>
           <div class="col-md-3">
-              <!--product list-->
-              <div class="product-list">
-                  <div>
-                      <a href="#"><%=image_tag p.poster_url, size: '260x400' %></a>
-                  </div>
-                  <br />
-                  <div class="product-title">
-                      <h4><a href="#"><%=p.name%></a></h4>
-                  </div>
-                  <div class="product-title">
-                      <%=p.event_start_date%> ~ <%=p.event_end_date%>
-                  </div>
-                  <div class="product-rating">
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star-half-o"></i>
-                  </div>
-                  <!--
-                  일반유저 노쓸모
-                  <div class="product-btn">
-                      <a href="#" class="btn btn-extra-small btn-dark-border  "><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                  </div> -->
-
+            <!--product list-->
+            <div class="product-list">
+              <div>
+                <a href="#"><%= image_tag p.poster_url, size: '260x400' %></a>
               </div>
+              <br/>
+              <div class="product-title">
+                <h4><a href="#"><%= p.name %></a></h4>
+              </div>
+              <div class="product-title">
+                <%= p.event_start_date %> ~ <%= p.event_end_date %>
+              </div>
+              <div class="product-rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+              </div>
+              <!--
+              일반유저 노쓸모
+              <div class="product-btn">
+                  <a href="#" class="btn btn-extra-small btn-dark-border  "><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              </div> -->
             </div>
-<%end%>
-</div>
+          </div>
+      <% end %>
+    </div>
 
-</div>
+  </div>
 
 </section>
+
+<script>
+  $(document).ready(function () {
+    $("#now_fleas").click(function () {
+      $("#title_eng").text("Today market");
+      $("#title_ko").text("진행중인 플리마켓");
+    });
+    $("#past_fleas").click(function () {
+      $("#title_eng").text("Finished market");
+      $("#title_ko").text("종료된 플리마켓");
+    });
+    $("#future_fleas").click(function () {
+      $("#title_eng").text("Oncoming market");
+      $("#title_ko").text("행사예정 플리마켓");
+    });
+  });
+</script>

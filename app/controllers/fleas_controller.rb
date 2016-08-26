@@ -6,15 +6,24 @@ class FleasController < ApplicationController
     @fleas = Flea.all
     @current_time = Time.now
     date = @current_time.to_s.to_date
-    @today_flea_a = Flea.all
-    @today_flea = Array.new
+    @now_fleas = Array.new
+    @past_fleas = Array.new
+    @future_fleas = Array.new
+    # 전체 플리마켓들을 뽑은 뒤, 행사날짜를 기준으로 오늘 날짜와 비교하여 (현재, 과거, 미래)플리마켓으로 분류
     unless @current_time.nil?
-      @today_flea_a.each do |p|
+      @fleas.each do |p|
         if p.event_start_date.to_date <= date && date <= p.event_end_date.to_date
-          @today_flea.append(p)
+          @now_fleas.append(p)
+        elsif p.event_end_date.to_date <= date
+          @past_fleas.append(p)
+        elsif date <= p.event_start_date
+          @future_fleas.append(p)
         end
       end
     end
+    @f = Array.new
+    @f = @now_fleas
+  # todo 정렬을 해야된다면 어떤 기준으로 정렬을 해야될지...
   end
 
 
@@ -84,6 +93,6 @@ class FleasController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def flea_params
-    params.require(:flea).permit(:name, :application_start_date, :application_end_date, :number_of_recruitment, :remark, :city_place, :detail_place, :event_start_date, :event_end_date, :entrance_fee,:user_id, :join_type)
+    params.require(:flea).permit(:name, :application_start_date, :application_end_date, :number_of_recruitment, :remark, :city_place, :detail_place, :event_start_date, :event_end_date, :entrance_fee, :user_id, :join_type)
   end
 end

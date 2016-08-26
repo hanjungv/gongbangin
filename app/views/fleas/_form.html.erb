@@ -13,15 +13,15 @@
       <% end %>
 
       <div class="field">
-        <%= f.label :"플리마켓 명" %><br />
+        <%= f.label :"플리마켓 명" %><br/>
         <%= f.text_field :name %>
       </div>
       <div class="field">
-        <%= f.label :"접수 시작일시"%><br>
+        <%= f.label :"접수 시작일시" %><br>
         <%= f.datetime_select :application_start_date %>
       </div>
       <div class="field">
-      <%= f.label :"접수 종료일시" %><br>
+        <%= f.label :"접수 종료일시" %><br>
         <%= f.datetime_select :application_end_date %>
       </div>
       <div class="field">
@@ -34,9 +34,9 @@
       </div>
       <div class="field">
         <%= f.label :"지역" %>
-          <%= f.select(:city_place,
-          ['서울','인천','대전','대구','부산','광주','울산',
-            '경기','충남','충북','전남','전북','경남','경북','제주']) %>
+        <%= f.select(:city_place,
+                     ['서울', '인천', '대전', '대구', '부산', '광주', '울산',
+                      '경기', '충남', '충북', '전남', '전북', '경남', '경북', '제주']) %>
       </div>
       <div class="field">
         <%= f.label :"상세 주소" %><br>
@@ -56,9 +56,10 @@
       </div>
       <div class="field">
         <%= f.label :"지역" %>
-          <%= f.select(:join_type,['선착순','심사']) %>
-      <div class="actions">
-        <%= f.submit '마켓 등록하기', :class => 'btn btn-default btn-small btn-rounded' %>
-      </div>
+        <%= f.select(:join_type, ['선착순', '심사']) %>
+        <div class="actions">
+          <%= f.submit '마켓 등록하기', :class => 'btn btn-default btn-small btn-rounded' %>
+        </div>
   <% end %>
+  </div>
 </div>
