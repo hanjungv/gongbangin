@@ -61,6 +61,7 @@
                             <th style="width:10%;">정보보기</th>
                             <th style="width:15%;">심사하러가기</th>
                             <th style="width:10%;">심사결과</th>
+                            <th style="width:10%;">선발하기</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -79,6 +80,9 @@
                                 <a href="/judge_fleas/show/<%=@flea.id%>/<%=p.user_id%>">심사하러가기</a>
                             </td>
                             <td><%=p.score%>점</td>
+                            <td id="select">
+                                <a href="/judge_fleas/select/<%=@flea.id%>/<%=p.user_id%>">선발하기</a>
+                            </td>
                             </tr>
                             <% end %>
                         </tbody>
@@ -89,3 +93,10 @@
         </div>
     </div>
 </div>
+
+
+<script type="text/javascript">
+  $('#select').on('click', function () {
+      return confirm('선발할까요?');
+  });
+</script>

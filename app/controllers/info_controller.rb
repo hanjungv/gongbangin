@@ -82,4 +82,3 @@ class InfoController < ApplicationController
     redirect_to controller: 'info', action: 'showinfo', id: @user.id, something: 'else'
   end
 end
-end
