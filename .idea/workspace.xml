@@ -6,7 +6,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="970265b4-fe78-4acf-9e82-1aa57482fee9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gongbangin.iml" afterPath="$PROJECT_DIR$/.idea/gongbangin.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/item/production_process.html.erb" afterPath="$PROJECT_DIR$/app/views/item/production_process.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/item/show.html.erb" afterPath="$PROJECT_DIR$/app/views/item/show.html.erb" />
     </list>
     <ignored path="gongbangin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,11 +74,118 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
               <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="environment.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/environment.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="production.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="31" column="31" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="production_process.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/item/production_process.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="372">
+              <caret line="112" column="46" selection-start-line="112" selection-start-column="46" selection-end-line="112" selection-end-column="46" />
+              <folding>
+                <marker date="1472276114000" expanded="true" signature="189:320" ph="..." />
+                <marker date="1472276114000" expanded="true" signature="659:6008" ph="..." />
+                <marker date="1472276114000" expanded="true" signature="681:5993" ph="{&quot;selector&quot;: &quot;textarea&quot;...}" />
+                <marker date="1472276114000" expanded="true" signature="791:5987" ph="{...}" />
+                <marker date="1472276114000" expanded="true" signature="830:5977" ph="{&quot;text&quot;: &quot;IMAGE&quot;...}" />
+                <marker date="1472276114000" expanded="true" signature="912:5967" ph="{...}" />
+                <marker date="1472276114000" expanded="true" signature="1009:2621" ph="{...}" />
+                <marker date="1472276114000" expanded="true" signature="1190:1355" ph="{...}" />
+                <marker date="1472276114000" expanded="true" signature="1322:1334" ph="..." />
+                <marker date="1472276114000" expanded="true" signature="1467:2605" ph="{...}" />
+                <marker date="1472276114000" expanded="true" signature="1572:1695" ph="{...}" />
+                <marker date="1472276114000" expanded="true" signature="1793:1879" ph="{...}" />
+                <marker date="1472276114000" expanded="true" signature="1919:2040" ph="{...}" />
+                <marker date="1472276114000" expanded="true" signature="2083:2174" ph="{...}" />
+                <marker date="1472276114000" expanded="true" signature="2196:2382" ph="{...}" />
+                <marker date="1472276114000" expanded="true" signature="2422:2589" ph="{...}" />
+                <marker date="1472276114000" expanded="true" signature="2676:4263" ph="{...}" />
+                <marker date="1472276114000" expanded="true" signature="2765:2997" ph="{...}" />
+                <marker date="1472276114000" expanded="true" signature="2964:2976" ph="..." />
+                <marker date="1472276114000" expanded="true" signature="3109:4247" ph="{...}" />
+                <marker date="1472276114000" expanded="true" signature="3214:3337" ph="{...}" />
+                <marker date="1472276114000" expanded="true" signature="3435:3521" ph="{...}" />
+                <marker date="1472276114000" expanded="true" signature="3561:3682" ph="{...}" />
+                <marker date="1472276114000" expanded="true" signature="3725:3816" ph="{...}" />
+                <marker date="1472276114000" expanded="true" signature="3838:4024" ph="{...}" />
+                <marker date="1472276114000" expanded="true" signature="4064:4231" ph="{...}" />
+                <marker date="1472276114000" expanded="true" signature="4316:5955" ph="{...}" />
+                <marker date="1472276114000" expanded="true" signature="4515:4689" ph="{...}" />
+                <marker date="1472276114000" expanded="true" signature="4656:4668" ph="..." />
+                <marker date="1472276114000" expanded="true" signature="4801:5939" ph="{...}" />
+                <marker date="1472276114000" expanded="true" signature="4906:5029" ph="{...}" />
+                <marker date="1472276114000" expanded="true" signature="5127:5213" ph="{...}" />
+                <marker date="1472276114000" expanded="true" signature="5253:5374" ph="{...}" />
+                <marker date="1472276114000" expanded="true" signature="5417:5508" ph="{...}" />
+                <marker date="1472276114000" expanded="true" signature="5530:5716" ph="{...}" />
+                <marker date="1472276114000" expanded="true" signature="5756:5923" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20160730070253_create_production_images.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20160730070253_create_production_images.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/item/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -100,9 +210,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/helpers/fleas_helper.rb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/error-404.css" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/featured-box.css" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/career.css" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/css/shortcodes/footer.css" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/css/linea-icon.css" />
@@ -151,6 +258,9 @@
         <option value="$PROJECT_DIR$/app/controllers/fleas_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/fleas/index.html.erb" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+        <option value="$PROJECT_DIR$/app/views/item/production_process.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/item/show.html.erb" />
       </list>
     </option>
   </component>
@@ -283,6 +393,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="environments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gongbangin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gongbangin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -310,6 +438,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gongbangin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gongbangin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="item" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -364,6 +514,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gongbangin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gongbangin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -762,12 +930,12 @@
       <workItem from="1471849826421" duration="5029000" />
       <workItem from="1471976146578" duration="1649000" />
       <workItem from="1472217358009" duration="3308000" />
-      <workItem from="1472233453594" duration="8251000" />
+      <workItem from="1472233453594" duration="8670000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87770000" />
+    <option name="totallyTimeSpent" value="88189000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -786,7 +954,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287858" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43650794" sideWeight="0.5129241" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32671958" sideWeight="0.496875" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23544973" sideWeight="0.496875" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287858" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4484127" sideWeight="0.48707592" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -832,61 +1000,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/info_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/item_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/join_flea_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/judge_fleas_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/mastermenu_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/fleas/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/boot.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -1239,6 +1352,99 @@
         <state relative-caret-position="180">
           <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environment.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="31" column="31" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/item/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20160730070253_create_production_images.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/item/production_process.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="112" column="46" selection-start-line="112" selection-start-column="46" selection-end-line="112" selection-end-column="46" />
+          <folding>
+            <marker date="1472276114000" expanded="true" signature="189:320" ph="..." />
+            <marker date="1472276114000" expanded="true" signature="659:6008" ph="..." />
+            <marker date="1472276114000" expanded="true" signature="681:5993" ph="{&quot;selector&quot;: &quot;textarea&quot;...}" />
+            <marker date="1472276114000" expanded="true" signature="791:5987" ph="{...}" />
+            <marker date="1472276114000" expanded="true" signature="830:5977" ph="{&quot;text&quot;: &quot;IMAGE&quot;...}" />
+            <marker date="1472276114000" expanded="true" signature="912:5967" ph="{...}" />
+            <marker date="1472276114000" expanded="true" signature="1009:2621" ph="{...}" />
+            <marker date="1472276114000" expanded="true" signature="1190:1355" ph="{...}" />
+            <marker date="1472276114000" expanded="true" signature="1322:1334" ph="..." />
+            <marker date="1472276114000" expanded="true" signature="1467:2605" ph="{...}" />
+            <marker date="1472276114000" expanded="true" signature="1572:1695" ph="{...}" />
+            <marker date="1472276114000" expanded="true" signature="1793:1879" ph="{...}" />
+            <marker date="1472276114000" expanded="true" signature="1919:2040" ph="{...}" />
+            <marker date="1472276114000" expanded="true" signature="2083:2174" ph="{...}" />
+            <marker date="1472276114000" expanded="true" signature="2196:2382" ph="{...}" />
+            <marker date="1472276114000" expanded="true" signature="2422:2589" ph="{...}" />
+            <marker date="1472276114000" expanded="true" signature="2676:4263" ph="{...}" />
+            <marker date="1472276114000" expanded="true" signature="2765:2997" ph="{...}" />
+            <marker date="1472276114000" expanded="true" signature="2964:2976" ph="..." />
+            <marker date="1472276114000" expanded="true" signature="3109:4247" ph="{...}" />
+            <marker date="1472276114000" expanded="true" signature="3214:3337" ph="{...}" />
+            <marker date="1472276114000" expanded="true" signature="3435:3521" ph="{...}" />
+            <marker date="1472276114000" expanded="true" signature="3561:3682" ph="{...}" />
+            <marker date="1472276114000" expanded="true" signature="3725:3816" ph="{...}" />
+            <marker date="1472276114000" expanded="true" signature="3838:4024" ph="{...}" />
+            <marker date="1472276114000" expanded="true" signature="4064:4231" ph="{...}" />
+            <marker date="1472276114000" expanded="true" signature="4316:5955" ph="{...}" />
+            <marker date="1472276114000" expanded="true" signature="4515:4689" ph="{...}" />
+            <marker date="1472276114000" expanded="true" signature="4656:4668" ph="..." />
+            <marker date="1472276114000" expanded="true" signature="4801:5939" ph="{...}" />
+            <marker date="1472276114000" expanded="true" signature="4906:5029" ph="{...}" />
+            <marker date="1472276114000" expanded="true" signature="5127:5213" ph="{...}" />
+            <marker date="1472276114000" expanded="true" signature="5253:5374" ph="{...}" />
+            <marker date="1472276114000" expanded="true" signature="5417:5508" ph="{...}" />
+            <marker date="1472276114000" expanded="true" signature="5530:5716" ph="{...}" />
+            <marker date="1472276114000" expanded="true" signature="5756:5923" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
