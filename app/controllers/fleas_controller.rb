@@ -3,38 +3,50 @@ class FleasController < ApplicationController
   # GET /fleas
   # GET /fleas.json
   def index
-    @search_time = Time.now.to_s.to_date
     @search_flea = Array.new
     @option = params[:option]
     if @option.nil?
-      # 지역이랑 날짜로 검색
-      @search_city = params[:city]
-      @search_time = params[:search]
-      if @search_time.nil?
-        @search_time = Time.now.to_s.to_date
-      end
-
-      if @search_city == '전체'
-        @today_flea_a = Flea.all.order(:event_end_date)
-      elsif @search_city == nil
-        @today_flea_a = Flea.all.order(:event_end_date)
+      if params[:city].nil? && params[:search].nil?
+        # 페이지 처음 로딩했을 때
+        fleas = Flea.all.order(:event_end_date)
+        date = Date.today
+        countasdas = fleas.count
+        fleas.each do |p|
+          if p.event_start_date.to_date <= date && date <= p.event_end_date.to_date
+            @search_flea.append(p)
+          end
+        end
       else
-        @today_flea_a = Flea.where(city_place: @search_city).order(:event_end_date)
-      end
-      date = @search_time.to_s.to_date
-      unless @today_flea_a.nil?
-      @today_flea_a.each do |p|
-        if p.event_start_date.to_date <= date && date <= p.event_end_date
-          @search_flea.append(p)
+        # 지역이랑 날짜로 검색
+        @search_city = params[:city]
+        @search_time = params[:search]
+        if @search_time.nil?
+          @search_time = Time.now.to_s.to_date
+        end
+
+        if @search_city == '전체'
+          fleas = Flea.all.order(:event_end_date)
+        elsif @search_city == nil
+          fleas = Flea.all.order(:event_end_date)
+        else
+          fleas = Flea.where(city_place: @search_city).order(:event_end_date)
+        end
+
+        date = @search_time.to_s.to_date
+        unless fleas.nil?
+          fleas.each do |p|
+            if p.event_start_date.to_date <= date && date <= p.event_end_date.to_date
+              @search_flea.append(p)
+            end
+          end
         end
       end
-      end
-
     else
-      fleas = Flea.all
+      # 과거 현재 미래 검색
+      fleas = Flea.all.order(:event_end_date)
       date = Date.today
 
-      if @option.nil? || @option == 'now'
+      if @option == 'now'
         fleas.each do |p|
           if p.event_start_date.to_date <= date && date <= p.event_end_date.to_date
             @search_flea.append(p)
@@ -60,12 +72,11 @@ class FleasController < ApplicationController
         @title_eng = 'FINISHED MARKET'
       end
     end
-
     count = @search_flea.count
     if count >= 4
-	      @recently_flea = @search_flea.take(4)
+      @recently_flea = @search_flea.take(4)
     else
-	      @recently_flea = @search_flea.take(count)
+      @recently_flea = @search_flea.take(count)
     end
   end
 
@@ -135,6 +146,6 @@ class FleasController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def flea_params
-    params.require(:flea).permit(:name, :application_start_date, :application_end_date, :number_of_recruitment, :remark, :city_place, :detail_place, :event_start_date, :event_end_date, :entrance_fee,:user_id, :join_type, :item_count, :agree1,:agree2,:agree3,:agree4,:agree5,:poster_url)
+    params.require(:flea).permit(:name, :application_start_date, :application_end_date, :number_of_recruitment, :remark, :city_place, :detail_place, :event_start_date, :event_end_date, :entrance_fee, :user_id, :join_type, :item_count, :agree1, :agree2, :agree3, :agree4, :agree5, :poster_url)
   end
 end
