@@ -21,7 +21,6 @@ class FleasController < ApplicationController
       else
         @today_flea_a = Flea.where(city_place: @search_city).order(:event_end_date)
       end
-
       date = @search_time.to_s.to_date
       unless @today_flea_a.nil?
       @today_flea_a.each do |p|
