@@ -37,7 +37,7 @@
                         <!--title-->
                         <div class="col-md-1"></div>
                         <div class="table-responsive col-md-10">
-                            <table class="table cart-table">
+                            <table class="table cart-table" id="faqTable">
                                 <thead>
                                     <tr>
                                         <th style="width:10%;">#</th>
@@ -66,6 +66,8 @@
                             <% end %>
                         </div>
                         <div class="col-md-1"></div>
+<<<<<<< HEAD
+=======
                         <div class="text-center col-md-12">
                             <ul class="pagination custom-pagination">
                                 <li>
@@ -91,6 +93,7 @@
                                 </li>
                             </ul>
                         </div>
+>>>>>>> b067ce7755a14bdaab37617c6d4266c84d71cb8f
                     </div>
 
                     <div class="container">
@@ -238,3 +241,10 @@
     </section>
     <!--body content end-->
 </div>
+
+<script>
+$(document).ready(function(){
+  $table = $('#faqTable').DataTable({
+  });
+});
+</script>

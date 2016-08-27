@@ -18,9 +18,11 @@
 //= require js/menuzord
 //= require js/jquery.flexslider-min
 //= require js/owl.carousel.min
+//= require js/jquery.countdown
+//= require js/jquery.countTo
+//= require js/jquery.easing.1.3
 //= require js/jquery.isotope
 //= require js/jquery.magnific-popup.min
-//= require js/jquery.countTo
 //= require js/visible
 //= require js/smooth
 //= require js/wow.min
