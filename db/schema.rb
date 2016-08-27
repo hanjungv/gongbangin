@@ -73,11 +73,11 @@ ActiveRecord::Schema.define(version: 20160825051357) do
     t.string   "join_type"
     t.integer  "join_member",            default: 0
     t.integer  "select_member",          default: 0
-    t.string   "agree1"
-    t.string   "agree2"
-    t.string   "agree3"
-    t.string   "agree4"
-    t.string   "agree5"
+    t.string   "agree1",                 default: ""
+    t.string   "agree2",                 default: ""
+    t.string   "agree3",                 default: ""
+    t.string   "agree4",                 default: ""
+    t.string   "agree5",                 default: ""
     t.integer  "item_count"
     t.datetime "created_at",                                        null: false
     t.datetime "updated_at",                                        null: false
