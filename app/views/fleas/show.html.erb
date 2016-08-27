@@ -9,7 +9,7 @@
                     <div class="col-md-5">
                         <div class="post-img title-img">
                             <img src="<%=@flea.poster_url%>" alt=""/>
-                            <div class="info">We work together for fun</div>
+                            <div class="info">이미지요</div>
                         </div>
                     </div>
                     <div class="col-md-7">
@@ -17,7 +17,7 @@
                             <ul class="post-cat">
                               <h3>
                                 <%= "좋아요>< #{@flea.like_flea_markets.count}" %>
-                                <%=  likeBtn(@has_like) %>
+                                <%= likeBtn(@has_like) %>
                               </h3>
                             </ul>
                             <table class="table">
