@@ -1,79 +1,80 @@
 <p id="notice"><%= notice %></p>
 
 <section class="body-content page-content">
-      <div class="container">
-        <div class="row">
-            <!--post style 3 start-->
-            <div class="post-list-aside">
-                <div class="post-single">
-                    <div class="col-md-5">
-                        <div class="post-img title-img">
-                            <%=image_tag('gangposter.jpg')%>
-                        </div>
-                    </div>
-                    <div class="col-md-7">
-                        <div class="post-desk">
-                            <ul class="post-cat">
-                              <h3>
-                                <%= "좋아요>< #{@flea.like_flea_markets.count}" %>
-                                <%=  likeBtn(@has_like) %>
-                              </h3>
-                            </ul>
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                  <th scope="row"><h3><%= @flea.name %></h3></th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <th scope="row">모집기간</th>
-                                    <td><%= @flea.application_start_date %>~<%= @flea.application_end_date %></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">행사기간</th>
-                                    <td><%= @flea.event_start_date %>~<%= @flea.event_end_date %></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">모집인원</th>
-                                    <td><%= @flea.number_of_recruitment %></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">장소</th>
-                                    <td><%= @flea.city_place %> <%= @flea.detail_place %></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">참가비</th>
-                                    <td><%= @flea.entrance_fee %></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">비고</th>
-                                    <td><%= @flea.remark %></td>
-                                </tr>
-
-                                </tbody>
-                            </table>
-
-
-                              <div class="container">
-                                <div class="row">
-                                    <div class="count-down-alt light-bg circle">
-                                      <div class="clock"></div>
-                                    </div>
-                                </div>
-                              </div>
-
-                        </div>
-                    </div>
-                </div>
+  <div class="container">
+    <div class="row">
+      <!--post style 3 start-->
+      <div class="post-list-aside">
+        <div class="post-single">
+          <div class="col-md-5">
+            <div class="post-img title-img">
+              <%= image_tag('gangposter.jpg') %>
             </div>
-            <!--post style 3 end-->
+          </div>
+          <div class="col-md-7">
+            <div class="post-desk">
+              <ul class="post-cat">
+                <h3>
+                  <%= "좋아요>< #{@flea.like_flea_markets.count}" %>
+                  <%= likeBtn(@has_like) %>
+                </h3>
+              </ul>
+              <table class="table">
+                <thead>
+                <tr>
+                  <th scope="row"><h3><%= @flea.name %></h3></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <th scope="row">모집기간</th>
+                  <td><%= @flea.application_start_date %>~<%= @flea.application_end_date %></td>
+                </tr>
+                <tr>
+                  <th scope="row">행사기간</th>
+                  <td><%= @flea.event_start_date %>~<%= @flea.event_end_date %></td>
+                </tr>
+                <tr>
+                  <th scope="row">모집인원</th>
+                  <td><%= @flea.number_of_recruitment %></td>
+                </tr>
+                <tr>
+                  <th scope="row">장소</th>
+                  <td><%= @flea.city_place %> <%= @flea.detail_place %></td>
+                </tr>
+                <tr>
+                  <th scope="row">참가비</th>
+                  <td><%= @flea.entrance_fee %></td>
+                </tr>
+                <tr>
+                  <th scope="row">비고</th>
+                  <td><%= @flea.remark %></td>
+                </tr>
+
+                </tbody>
+              </table>
+
+
+              <div class="container">
+                <div class="row">
+                  <div class="count-down-alt light-bg circle">
+                    <div class="clock"></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
+      </div>
+      <!--post style 3 end-->
+    </div>
 
-        &nbsp;&nbsp;&nbsp;<div class="btn btn-extra-small btn-dark-border"><%= link_to '뒤로가기', fleas_path %></div>
-        <div class="btn btn-extra-small btn-dark-border"><%= link_to '수정하기', edit_flea_path(@flea) %></div>
+    &nbsp;&nbsp;&nbsp;
+    <div class="btn btn-extra-small btn-dark-border"><%= link_to '뒤로가기', fleas_path %></div>
+    <div class="btn btn-extra-small btn-dark-border"><%= link_to '수정하기', edit_flea_path(@flea) %></div>
 
-</div>
+  </div>
 </section>
 
 <script>
@@ -84,7 +85,7 @@
         + '<span class="c-grid"> <span class="c-value">%H</span> <span class="c-title"><br>hours</span> </span> '
         + '<span class="c-grid"> <span class="c-value">%M</span> <span class="c-title"><br>minutes</span> </span> '
         + '<span class="c-grid"> <span class="c-value">%S</span> <span class="c-title"><br>seconds</span> </span> '));
-        $('.count-down .c-grid, .count-down-alt .c-grid').css({"margin":"0px 0px"});
+    $('.count-down .c-grid, .count-down-alt .c-grid').css({"margin": "0px 0px"});
   });
 
 </script>
