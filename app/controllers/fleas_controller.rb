@@ -10,7 +10,6 @@ class FleasController < ApplicationController
         # 페이지 처음 로딩했을 때
         fleas = Flea.all.order(:event_end_date)
         date = Date.today
-        countasdas = fleas.count
         fleas.each do |p|
           if p.event_start_date.to_date <= date && date <= p.event_end_date.to_date
             @search_flea.append(p)
