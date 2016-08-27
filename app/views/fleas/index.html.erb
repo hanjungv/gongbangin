@@ -15,11 +15,9 @@
     <% end %>
   </div>
 </section>
+<h1><%= @search_city %></h1>
 <div class="container">
 
-<<<<<<< HEAD
-			<div class="form-group col-md-10" style="margin-top: 50px">
-=======
   <div class="form-group col-md-10" style="margin-top: 50px">
     <section class="page-header">
       <span>
@@ -29,13 +27,11 @@
 				</span>
 
         <form>
-          <button type="submit" name="option" value="now" id="now_fleas">진행중인 플리마켓</button>
-          <button type="submit" name="option" value="future" id="future_fleas">행사예정 플리마켓</button>
-          <button type="submit" name="option" value="past" id="past_fleas">종료된 플리마켓</button>
+          <button class="btn" type="submit" name="option" value="now" id="now_fleas">진행중인 플리마켓</button>
+          <button class="btn" type="submit" name="option" value="future" id="future_fleas">행사예정 플리마켓</button>
+          <button class="btn" type="submit" name="option" value="past" id="past_fleas">종료된 플리마켓</button>
         </form>
     </section>
-
->>>>>>> b067ce7755a14bdaab37617c6d4266c84d71cb8f
 
     <span>
 				<p style="margin-bottom: 0px; font-size:20px;">
@@ -55,18 +51,18 @@
         <input type="radio" name="city" value="경북"/>경북 <input type="radio" name="city" value="제주"/>제주
       </div>
       <hr/>
-      <div class="inline-group">
         <p class="labels">날짜</p>
+
         <div class="input-group">
           <% if @search_time.nil? %>
-              <%= date_field_tag(:search, :date, value: Date.today.to_s) %>
+              <%= date_field_tag(:search,  :date, value: Date.today.to_s) %>
           <% else %>
-              <%= date_field_tag(:search, :date, value: @search_time) %>
+              <%= date_field_tag(:search,  :date, value: @search_time) %>
           <% end %>
         </div>
-      </div>
+        <p>
       <div class="input-group-btn">
-        <button type="submit" style="background-color:#fff; border:1px solid black" id="searchbtn" class="btn">
+        <button type="submit" id="searchbtn" class="btn">
           <span>해당조건으로 검색</span>
         </button>
       </div>
@@ -84,7 +80,7 @@
 						<div class="product-list">
 							<div>
 								<a href="#">
-									<%=image_tag h.poster_url, size: '195x300', class: 'postersImage' %>
+									<%=image_tag h.poster_url, size: '200x320', class: 'postersImage' %>
 								</a>
 							</div>
 							<br />
@@ -112,7 +108,7 @@
                   <div class="product-list">
                     <div>
                       <a href="#">
-                        <%= image_tag p.poster_url, size: '260x400' %>
+                        <%= image_tag p.poster_url, size: '200x320' %>
                       </a>
                     </div>
                     <br/>
@@ -133,18 +129,18 @@
       </div>
     </div>
   </section>
-
-
+</div>
 </div>
 <script>
+
   $(document).ready(function () {
+    
     $('input[type=date]').css({"line-height": "20px", "margin-top": "10px"});
     $('.labels').css({"margin": "8px 2px 0px", "font-weight": "bold"});
     $('.inline-group').css({"padding": "20px 0px"});
-    $('.postersImage').css({"margin-right":"25px"});
-  });
+    $('.postersImage').css({"margin-right":"18px"});
+    $('.btn').css({"background-color":"#fff","border":"1px solid black"});
 
-  $(document).ready(function () {
     $("#now_fleas").click(function () {
       $("#title_eng").val("Today market");
       $("#title_ko").val("오늘의 마켓");
