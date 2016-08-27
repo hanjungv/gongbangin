@@ -56,7 +56,7 @@ Rails.application.routes.draw do
   post 'pp_edit/:item_id' => "item#pp_edit"
   get 'pp_edit/:item_id' => "item#pp_edit"
   #info#
-  get 'showinfo/:user_id' => "info#showinfo"
+  get 'show_info/:user_id' => "info#show_info"
   get 'info/levelup'
   get 'standby/:user_id' => "info#standby"
 

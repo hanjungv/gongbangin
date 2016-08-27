@@ -1,10 +1,10 @@
 <!--header start-->
-<div class="header">
+<!--<div class="header">-->
   <header id="header" class=" header-full-width  transparent-header ">
 
     <div class="header-sticky dark-header">
       <div class="container">
-        <div class="menuzord">
+        <div id="massive-menu" class="menuzord">
           <!--logo start-->
           <a href="/" class="logo-brand">
             <img class="retina" src="img/logo-dark.png" alt=""/>
@@ -63,7 +63,7 @@
                   <a href="/users/sign_out">로그아웃</a>
                 </li>
                 <li>
-                  <a href="/showinfo/<%= current_user.id %>"><%= current_user.level %>
+                  <a href="/show_info/<%= current_user.id %>"><%= current_user.level %>
                     <%= current_user.nickname %>님</a>
                 </li>
             <% else %>
@@ -80,4 +80,4 @@
     </div>
   </header>
   <!--header end-->
-</div>
+<!--</div>-->
