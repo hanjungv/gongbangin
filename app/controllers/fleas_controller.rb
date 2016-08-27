@@ -3,7 +3,6 @@ class FleasController < ApplicationController
   # GET /fleas
   # GET /fleas.json
   def index
-<<<<<<< HEAD
     @search_city = params[:city]
     if @search_city == '전체'
       @today_flea_a = Flea.all.order(:event_end_date)
@@ -12,16 +11,17 @@ class FleasController < ApplicationController
     else
       @today_flea_a = Flea.where(city_place: @search_city).order(:event_end_date)
     end
+
     if params[:search] == ""
       @search_time = Time.now
     else
       @search_time = params[:search]
     end
+
     date = @search_time.to_s.to_date
-=======
->>>>>>> b067ce7755a14bdaab37617c6d4266c84d71cb8f
     @search_flea = Array.new
     @option = params[:option]
+
     if @option == ''
       # 지역이랑 날짜로 검색
       @search_city = params[:city]
@@ -36,7 +36,6 @@ class FleasController < ApplicationController
         fleas = Flea.where(city_place: @search_city)
       end
 
-      date = @search_time.to_s.to_date
       fleas.each do |p|
         if p.event_start_date.to_date <= date && date <= p.event_end_date
           @search_flea.append(p)
