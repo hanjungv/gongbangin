@@ -1,25 +1,25 @@
 <section class="page-title">
-    <div class="container">
-        <h4 class="text-uppercase"><a href="/mastermenu/index">manage</a> / 유저관리 / 심사하기</h4>
-    </div>
+  <div class="container">
+    <h4 class="text-uppercase"><a href="/mastermenu/index">manage</a> / 유저관리 / 심사하기</h4>
+  </div>
 </section>
 
-<div class = "wrapper text-center">
-  <div class = "container" style = "margin-top:25px;">
+<div class="wrapper text-center">
+  <div class="container" style="margin-top:25px;">
 
     <div class="row">
-        <div class="col-xs-offset-2 col-xs-8">
-            <div class="alert danger-border text-center">
-                <i class="fa fa-lg fa-warning"></i>
-                <strong style="font-size:20px;">심사하실때요!</strong><br/><br/>
-            <li>순서대로 진행해주세요.</li>
-            <li>
-                <strong>인스타, 페북을 제외한 정보는 모두 입력이 되어있어야 합니다.</strong>
-            </li>
-            <li>강등하기를 누를 경우 왜 강등이 되었는지 메일로 안내해 주셔야 합니다.</li>
-            <li>사이트의 신뢰성은 여러분의 심사에 달려있습니다!</li>
-          </div>
+      <div class="col-xs-offset-2 col-xs-8">
+        <div class="alert danger-border text-center">
+          <i class="fa fa-lg fa-warning"></i>
+          <strong style="font-size:20px;">심사하실때요!</strong><br/><br/>
+          <li>순서대로 진행해주세요.</li>
+          <li>
+            <strong>인스타, 페북을 제외한 정보는 모두 입력이 되어있어야 합니다.</strong>
+          </li>
+          <li>강등하기를 누를 경우 왜 강등이 되었는지 메일로 안내해 주셔야 합니다.</li>
+          <li>사이트의 신뢰성은 여러분의 심사에 달려있습니다!</li>
         </div>
+      </div>
     </div>
 
     <div class="divider divider-small d-solid d-single text-center">
@@ -30,17 +30,17 @@
       <h6 style="color:red;">올바른 정보인지 확인해야 합니다!</h6>
       <h3>사업자명 / 사업자 등록번호 확인</h3><br/>
     </div>
-      <div class="row">
-          <div class="col-xs-offset-4 col-xs-4">
-              <div class="form-group">
-                <form name="frm1">
-                  <p>사업자명 : <%=@user.brand%> 위치 : <%=@user.brand_place%></p>
-                  <input name="wrkr_no" type="text" class = "form-control" value="<%=@user.brand_number%>"/><br/>
-                  <input type="button" value="확인하기" onclick="onopen();"/>
-                </form>
-              </div>
-          </div>
+    <div class="row">
+      <div class="col-xs-offset-4 col-xs-4">
+        <div class="form-group">
+          <form name="frm1">
+            <p>사업자명 : <%= @user.brand %> 위치 : <%= @user.brand_place %></p>
+            <input name="wrkr_no" type="text" class="form-control" value="<%= @user.brand_number %>"/><br/>
+            <input type="button" value="확인하기" onclick="onopen();"/>
+          </form>
+        </div>
       </div>
+    </div>
 
 
     <div class="divider divider-small d-solid d-single text-center">
@@ -54,15 +54,17 @@
     <div class="row">
       <div class="col-xs-offset-4 col-xs-4">
         <div class="form-group text-center">
-          <p style = "color:black ">
-            이름 : <%=@user.name%><br/>
-            이메일 : <%=@user.email%><br/>
-            닉네임 : <%=@user.nickname%><br>
-            핸드폰 : <%=@user.phone_number%><br>
-            주소 : <%=@user.address%><br>
+          <p style="color:black ">
+            이름 : <%= @user.name %><br/>
+            이메일 : <%= @user.email %><br/>
+            닉네임 : <%= @user.nickname %><br>
+            핸드폰 : <%= @user.phone_number %><br>
+            주소 : <%= @user.address %><br>
             -------------------------------<br>
-            페이스북 : <a href = "https://www.facebook.com/<%=@user.facebook_id%>">https://www.facebook.com/<%=@user.facebook_id%></a><br>
-            인스타 : <a href="https://www.instagram.com/<%=@user.instagram_id%>">https://www.instagram.com/<%=@user.instagram_id%></a><br>
+            페이스북 :
+            <a href="https://www.facebook.com/<%= @user.facebook_id %>">https://www.facebook.com/<%= @user.facebook_id %></a><br>
+            인스타 :
+            <a href="https://www.instagram.com/<%= @user.instagram_id %>">https://www.instagram.com/<%= @user.instagram_id %></a><br>
             개인페이지 :
           </p>
         </div>
@@ -75,7 +77,7 @@
     <div class="heading-title-alt">
       <h3>강등 시 심사 내용을 여기에 적어서 복사해서 보내세요!</h3><br/>
     </div>
-    <textarea class="form-control" name = "content" rows="10" id="emailcontent">
+    <textarea class="form-control" name="content" rows="10" id="emailcontent">
       안녕하세요!
       편리한 플리마켓 매칭 서비스를 제공하는 공방인(https://gongbangin.me)입니다.
       ----------------------------------------------------------------------
@@ -85,12 +87,12 @@
       아쉬운점을 보강하여 다시 신청해 주세요
 
       -----------------------------------------------------------------------
-      <%=Time.now%>, Thanks. 즐거운 하루 보내세요! 공방인.
+      <%= Time.now %>, Thanks. 즐거운 하루 보내세요! 공방인.
 
     </textarea>
-    <div class = "continer" style = "margin-bottom:20px;">
-      <a href="/mastermenu/leveldown/<%=@user.id%>" class="btn btn-lg btn-danger confirmation">강등하기</a>
-      <a href="/mastermenu/levelup/<%=@user.id%>" class="btn btn-lg btn-info confirmation">승급하기</a>
+    <div class="continer" style="margin-bottom:20px;">
+      <a href="/mastermenu/leveldown/<%= @user.id %>" class="btn btn-lg btn-danger confirmation">강등하기</a>
+      <a href="/mastermenu/levelup/<%= @user.id %>" class="btn btn-lg btn-info confirmation">승급하기</a>
     </div>
   </div>
 </div>
@@ -98,16 +100,15 @@
 
 <script type="text/javascript">
   $('.confirmation').on('click', function () {
-      return confirm('Are you sure?');
+    return confirm('Are you sure?');
   });
 </script>
 
 
 <script language="JavaScript">
-function onopen()
-{
-  var url =
-  "http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no="+frm1.wrkr_no.value;
-  window.open(url, "communicationViewPopup", "width=750, height=700;");
-}
+  function onopen() {
+    var url =
+        "http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=" + frm1.wrkr_no.value;
+    window.open(url, "communicationViewPopup", "width=750, height=700;");
+  }
 </script>

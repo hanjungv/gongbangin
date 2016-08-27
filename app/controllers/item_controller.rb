@@ -1,6 +1,7 @@
 class ItemController < ApplicationController
   def create
   end
+
   def create_item
     @item = Item.new
 
@@ -19,10 +20,11 @@ class ItemController < ApplicationController
     if @item.save
       redirect_to '/item/show'
     else
-      render :show, notice:"실패했어요! 다시 한번 해보는게 어때요?"
+      render :show, notice: "실패했어요! 다시 한번 해보는게 어때요?"
     end
 
   end
+
   def show
 
   end
@@ -43,7 +45,7 @@ class ItemController < ApplicationController
     if @item.save
       redirect_to '/item/show'
     else
-      render :show, notice:"실패했어요! 다시 한번 해보는게 어때요?"
+      render :show, notice: "실패했어요! 다시 한번 해보는게 어때요?"
     end
   end
 

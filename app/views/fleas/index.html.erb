@@ -1,53 +1,77 @@
-	<section class="page-title">
-		<div class="container">
-			<h4 class="text-uppercase">Today market</h4>
-			<ol class="breadcrumb">
-	        <li><a href="/">Home</a></li>
-	        <li class="active">오늘의 마켓</li>
-	    </ol>
-		</div>
-	</section>
-	<div class="container">
-		<form>
+<section class="page-title">
+  <div class="container">
+    <% if @option.nil? %>
+        <h4 id="title_eng" class="text-uppercase">Today market</h4>
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li id="title_ko" class="active">오늘의 마켓</li>
+        </ol>
+    <% else %>
+        <h4 id="title_eng" class="text-uppercase"><%= @title_eng %></h4>
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li id="title_ko" class="active"><%= @title_ko %></li>
+        </ol>
+    <% end %>
+  </div>
+</section>
+<div class="container">
 
+<<<<<<< HEAD
 			<div class="form-group col-md-10" style="margin-top: 50px">
-
-				<!--  '서울','인천','대전','대구','부산','광주','울산',
-      '경기','충남','충북','전남','전북','경남','경북','제주' -->
-				<sapn>
-				<p style="margin-bottom: 0px; font-size:20px;">
-					<i class="fa fa-search" aria-hidden="true"></i>검색하기
+=======
+  <div class="form-group col-md-10" style="margin-top: 50px">
+    <section class="page-header">
+      <span>
+				<p style="margin-bottom: 20px; font-size:20px;">
+					<i class="fa fa-search" aria-hidden="true"></i>빠른 검색
 				</p>
 				</span>
-				<div class="inline-group">
-            <p class="labels">지역</p>
-					<input type="radio" name="city" checked="true" value="전체" />전체 <input type="radio" name="city" value="서울" />서울
-					<input type="radio" name="city" value="인천" />인천 <input type="radio" name="city" value="대전" />대전
-					<input type="radio" name="city" value="대구" />대구 <input type="radio" name="city" value="부산" />부산
-					<input type="radio" name="city" value="광주" />광주 <input type="radio" name="city" value="울산" />울산
-					<input type="radio" name="city" value="경기" />경기 <input type="radio" name="city" value="충남" />충남
-					<input type="radio" name="city" value="충북" />충북 <input type="radio" name="city" value="전남" />전남
-					<input type="radio" name="city" value="전북" />전북 <input type="radio" name="city" value="경남" />경남
-					<input type="radio" name="city" value="경북" />경북 <input type="radio" name="city" value="제주" />제주
-				</div>
-				<hr />
-				<div class="inline-group">
-          <p class="labels">날짜</p>
-          <div class="input-group">
-            <% if @search_time.nil? %>
-                <%= date_field_tag(:search, :date, value: Date.today.to_s) %>
-            <% else %>
-                <%= date_field_tag(:search, :date, value: @search_time) %>
-            <% end %>
-          </div>
-				</div>
-        <div class="input-group-btn">
-          <%= button_tag(type: 'submit', style: 'background-color:#fff; border:1px solid black',id: 'searchbtn', class: 'btn') do %>
-              <span >해당조건으로 검색</span>
+
+        <form>
+          <button type="submit" name="option" value="now" id="now_fleas">진행중인 플리마켓</button>
+          <button type="submit" name="option" value="future" id="future_fleas">행사예정 플리마켓</button>
+          <button type="submit" name="option" value="past" id="past_fleas">종료된 플리마켓</button>
+        </form>
+    </section>
+
+>>>>>>> b067ce7755a14bdaab37617c6d4266c84d71cb8f
+
+    <span>
+				<p style="margin-bottom: 0px; font-size:20px;">
+					<i class="fa fa-search" aria-hidden="true"></i>상세 검색
+				</p>
+				</span>
+    <form>
+      <div class="inline-group">
+        <p class="labels">지역</p>
+        <input type="radio" name="city" checked="true" value="전체"/>전체<input type="radio" name="city" value="서울"/>서울
+        <input type="radio" name="city" value="인천"/>인천 <input type="radio" name="city" value="대전"/>대전
+        <input type="radio" name="city" value="대구"/>대구 <input type="radio" name="city" value="부산"/>부산
+        <input type="radio" name="city" value="광주"/>광주 <input type="radio" name="city" value="울산"/>울산
+        <input type="radio" name="city" value="경기"/>경기 <input type="radio" name="city" value="충남"/>충남
+        <input type="radio" name="city" value="충북"/>충북 <input type="radio" name="city" value="전남"/>전남
+        <input type="radio" name="city" value="전북"/>전북 <input type="radio" name="city" value="경남"/>경남
+        <input type="radio" name="city" value="경북"/>경북 <input type="radio" name="city" value="제주"/>제주
+      </div>
+      <hr/>
+      <div class="inline-group">
+        <p class="labels">날짜</p>
+        <div class="input-group">
+          <% if @search_time.nil? %>
+              <%= date_field_tag(:search, :date, value: Date.today.to_s) %>
+          <% else %>
+              <%= date_field_tag(:search, :date, value: @search_time) %>
           <% end %>
         </div>
-			</div>
-		</form>
+      </div>
+      <div class="input-group-btn">
+        <button type="submit" style="background-color:#fff; border:1px solid black" id="searchbtn" class="btn">
+          <span>해당조건으로 검색</span>
+        </button>
+      </div>
+    </form>
+  </div>
 
 		<section class="body-content">
 			<div class="product-grid">
@@ -79,39 +103,59 @@
 						<div class="divider divider-small d-solid d-single text-center">
 								<span class="dot"></span>
 						</div>
-						<div class="container">
-					<% unless @search_flea.nil? %>
-					<% @search_flea.each do |p| %>
-					<div class="col-md-3">
-						<!--product list-->
-						<div class="product-list">
-							<div>
-								<a href="#">
-									<%=image_tag p.poster_url, size: '195x300' %>
-								</a>
-							</div>
-							<br />
-							<div class="product-title">
-								<h4>
-									<a href="#"><%=p.name%></a>
-								</h4>
-							</div>
-							<div class="product-title"><%=p.event_start_date%> ~ <%=p.event_end_date%></div>
-						</div>
-					</div>
-					<%end%>
-					<%end%>
-				</div>
-		</section>
 
-	</div>
-	<script>
-  $(document).ready(function() {
-    $('input[type=date]').css({"line-height":"20px","margin-top":"10px"});
-    $('.labels').css({"margin":"8px 2px 0px","font-weight":"bold"});
-		$('.inline-group').css({"padding":"20px 0px"});
-		$('.postersImage').css({"margin-right":"25px"});
+      <div class="container">
+        <% unless @search_flea.nil? %>
+            <% @search_flea.each do |p| %>
+                <div class="col-md-3">
+                  <!--product list-->
+                  <div class="product-list">
+                    <div>
+                      <a href="#">
+                        <%= image_tag p.poster_url, size: '260x400' %>
+                      </a>
+                    </div>
+                    <br/>
+                    <div class="product-title">
+                      <h4>
+                        <a href="#"><%= p.name %></a>
+                      </h4>
+                    </div>
+                    <div class="product-title"><%= p.event_start_date %> ~ <%= p.event_end_date %></div>
+                    <div class="product-rating">
+                      <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i> <i class="fa fa-star-half-o"></i>
+                    </div>
+                  </div>
+                </div>
+            <% end %>
+        <% end %>
+      </div>
+    </div>
+  </section>
 
+
+</div>
+<script>
+  $(document).ready(function () {
+    $('input[type=date]').css({"line-height": "20px", "margin-top": "10px"});
+    $('.labels').css({"margin": "8px 2px 0px", "font-weight": "bold"});
+    $('.inline-group').css({"padding": "20px 0px"});
+    $('.postersImage').css({"margin-right":"25px"});
+  });
+
+  $(document).ready(function () {
+    $("#now_fleas").click(function () {
+      $("#title_eng").val("Today market");
+      $("#title_ko").val("오늘의 마켓");
     });
-
-  </script>
+    $("#past_fleas").click(function () {
+      $("#title_eng").val("Finished market");
+      $("#title_ko").val("어제의 마켓");
+    });
+    $("#future_fleas").click(function () {
+      $("#title_eng").val("Oncoming market");
+      $("#title_ko").val("내일의 마켓");
+    });
+  });
+</script>

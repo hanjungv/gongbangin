@@ -34,11 +34,11 @@ class CreateFleas < ActiveRecord::Migration
       # 선택된 인원
       t.integer :select_member,default:0
       # 동의사항 입력하기(최대 5개)
-      t.string :agree1
-      t.string :agree2
-      t.string :agree3
-      t.string :agree4
-      t.string :agree5
+      t.string :agree1 ,default:""
+      t.string :agree2 ,default:""
+      t.string :agree3 ,default:""
+      t.string :agree4 ,default:""
+      t.string :agree5 ,default:""
       # 최대 몇개의 아이템 지원가능한지(최대 5개)
       t.integer :item_count
 

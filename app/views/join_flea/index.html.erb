@@ -1,46 +1,46 @@
 <section class="page-title">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h4 class="text-uppercase">셀러 지원하기</h4>
-                <ol class="breadcrumb">
-          	        <li><a href="/">Home</a></li>
-          	        <li class="active">셀러지원하기</li>
-          	    </ol>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h4 class="text-uppercase">셀러 지원하기</h4>
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li class="active">셀러지원하기</li>
+        </ol>
+      </div>
     </div>
+  </div>
 </section>
 <section class="body-content">
-    <div class="page-content product-grid">
-        <div class="container">
-            <% @fleas.each do |p| %>
-            <div class="col-md-3">
-                <div>
-                    <a href="#"><%=image_tag p.poster_url, size: '260x400' %></a>
-                </div>
-                <div class="product-title">
-                    <h4>
-                        <a href="#"><%=p.name%></a>
-                    </h4>
-                </div>
-                <div class="product-title">
-                    <%=p.application_start_date%>
-                    ~
-                    <%=p.application_end_date%>
-                    <a href="/apply/<%=p.id%>" class="confirmation">
-                      지원하기
-                    </a>
-                </div>
+  <div class="page-content product-grid">
+    <div class="container">
+      <% @fleas.each do |p| %>
+          <div class="col-md-3">
+            <div>
+              <a href="#"><%= image_tag p.poster_url, size: '260x400' %></a>
             </div>
-            <% end %>
-        </div>
+            <div class="product-title">
+              <h4>
+                <a href="#"><%= p.name %></a>
+              </h4>
+            </div>
+            <div class="product-title">
+              <%= p.application_start_date %>
+              ~
+              <%= p.application_end_date %>
+              <a href="/apply/<%= p.id %>" class="confirmation">
+                지원하기
+              </a>
+            </div>
+          </div>
+      <% end %>
     </div>
+  </div>
 </section>
 
 
 <script type="text/javascript">
   $('.confirmation').on('click', function () {
-      return confirm('Are you sure?');
+    return confirm('Are you sure?');
   });
 </script>

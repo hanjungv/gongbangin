@@ -1,13 +1,13 @@
 class InfoController < ApplicationController
-  def showinfo
+  def show_info
     @user = User.find(params[:user_id])
-    @items = Item.where(user_id:params[:user_id])
-    @prize = UserPrize.where(user_id:params[:user_id])
-    @activity = MainActivity.where(user_id:params[:user_id]).order('percentage desc')
+    @items = Item.where(user_id: params[:user_id])
+    @prize = UserPrize.where(user_id: params[:user_id])
+    @activity = MainActivity.where(user_id: params[:user_id]).order('percentage desc')
     render '/info/show'
   end
 
-  def levelup
+  def level_up
     if current_user.level == 'standby'
       redirect_to '/'
     end
@@ -42,7 +42,7 @@ class InfoController < ApplicationController
 
     @activity.save
 
-    redirect_to controller: 'info', action: 'showinfo', id: @user.id, something: 'else'
+    redirect_to controller: 'info', action: 'show_info', id: @user.id, something: 'else'
   end
 
   def destroy_activity
@@ -51,7 +51,7 @@ class InfoController < ApplicationController
     @activity = MainActivity.find(params[:activity_id])
     @activity.destroy
 
-    redirect_to controller: 'info', action: 'showinfo', id: @user.id, something: 'else'
+    redirect_to controller: 'info', action: 'show_info', id: @user.id, something: 'else'
   end
 
   def add_prize
@@ -70,7 +70,7 @@ class InfoController < ApplicationController
 
     @prize.save
 
-    redirect_to controller: 'info', action: 'showinfo', id: @user.id, something: 'else'
+    redirect_to controller: 'info', action: 'show_info', id: @user.id, something: 'else'
   end
 
   def destroy_prize
@@ -79,6 +79,6 @@ class InfoController < ApplicationController
     @prize = UserPrize.find(params[:prize_id])
     @prize.destroy
 
-    redirect_to controller: 'info', action: 'showinfo', id: @user.id, something: 'else'
+    redirect_to controller: 'info', action: 'show_info', id: @user.id, something: 'else'
   end
 end

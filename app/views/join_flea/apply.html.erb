@@ -1,174 +1,173 @@
 <section class="page-title">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h4 class="text-uppercase">마켓지원하기</h4>
-                <ol class="breadcrumb">
-          	        <li><a href="/">Home</a></li>
-          	        <li class="active">마켓지원하기</li>
-          	    </ol>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h4 class="text-uppercase">마켓지원하기</h4>
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li class="active">마켓지원하기</li>
+        </ol>
+      </div>
     </div>
+  </div>
 </section>
 <div class="container">
-    <form action="/make/<%=@flea.id%>" method="post" name="formName">
-        <input type="hidden" value="<%=current_user.id%>" name="user_id" >
-        <div class="page-content">
-            <div class="row">
-                <div class="col-xs-offset-2 col-xs-8">
-                    <div class="alert danger-border text-center">
-                        <i class="fa fa-lg fa-warning"></i>
-                        <strong style="font-size:20px;">읽어주세요!</strong><br/><br/>
-                    <li>심사는 저희 공방인 마스터들이 입력 정보에 따른 확인 작업을 진행합니다.</li>
-                    <li>
-                        <strong>지금 수집되는 정보 외에 개인정보란에 빈칸이 있을 경우 지원이 되지 않을 수 있습니다</li>
-                        <li>허위정보를 입력하신 경우 다음 지원 시 영구 제외가 될 수 있음을 아셔야 합니다.</strong>
-                    </li>
-                    <%unless @flea.agree1 == ""%>
-                      <li><%=@flea.agree1%></li>
-                    <%end%>
-                    <%unless @flea.agree2 == ""%>
-                      <li><%=@flea.agree2%></li>
-                    <%end%>
-                    <%unless @flea.agree3 == ""%>
-                      <li><%=@flea.agree3%></li>
-                    <%end%>
-                    <%unless @flea.agree4 == ""%>
-                      <li><%=@flea.agree4%></li>
-                    <%end%>
-                    <%unless @flea.agree5 == ""%>
-                      <li><%=@flea.agree5%></li>
-                    <%end%>
-                    <li>심사는 하루에서 이틀정도 걸릴 수 있습니다!</li>
-                    <div class="checkbox">
-                        <label>
-                            <form>
-                                <input type="radio" name="agree" id="check1">　동의 해주세요 :)
-                                <input type="radio" name="agree" id="check2">ㅤㅤ  동의 안해요 :(
-                            </form>
-                        </label>
-                    </div>
-                </div>
+  <form action="/make/<%= @flea.id %>" method="post" name="formName">
+    <input type="hidden" value="<%= current_user.id %>" name="user_id">
+    <div class="page-content">
+      <div class="row">
+        <div class="col-xs-offset-2 col-xs-8">
+          <div class="alert danger-border text-center">
+            <i class="fa fa-lg fa-warning"></i>
+            <strong style="font-size:20px;">읽어주세요!</strong><br/><br/>
+            <li>심사는 저희 공방인 마스터들이 입력 정보에 따른 확인 작업을 진행합니다.</li>
+              <strong>지금 수집되는 정보 외에 개인정보란에 빈칸이 있을 경우 지원이 되지 않을 수 있습니다</strong>
+            <li>허위정보를 입력하신 경우 다음 지원 시 영구 제외가 될 수 있음을 아셔야 합니다.</li>
+            </li>
+            <% unless @flea.agree1 == "" %>
+                <li><%= @flea.agree1 %></li>
+            <% end %>
+            <% unless @flea.agree2 == "" %>
+                <li><%= @flea.agree2 %></li>
+            <% end %>
+            <% unless @flea.agree3 == "" %>
+                <li><%= @flea.agree3 %></li>
+            <% end %>
+            <% unless @flea.agree4 == "" %>
+                <li><%= @flea.agree4 %></li>
+            <% end %>
+            <% unless @flea.agree5 == "" %>
+                <li><%= @flea.agree5 %></li>
+            <% end %>
+            <li>심사는 하루에서 이틀정도 걸릴 수 있습니다!</li>
+            <div class="checkbox">
+              <label>
+                <form>
+                  <input type="radio" name="agree" id="check1">　동의 해주세요 :)
+                  <input type="radio" name="agree" id="check2">ㅤㅤ 동의 안해요 :(
+                </form>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-offset-4 col-xs-4">
+          <div class="form-group">
+            <label>&nbsp;&nbsp;이름은 무엇인가요?</label>
+            <input type="text" class="form-control text-center" name="user_name" id="user_name" placeholder="이름을 입력해 주세요">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-offset-4 col-xs-4">
+          <div class="form-group">
+            <label>&nbsp;&nbsp;구성원 수는 어떻게 되요?</label>
+            <input type="text" class="form-control text-center" name="num_of_member" id="num_of_member" placeholder="구성원 수를 입력해 주세요">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-offset-4 col-xs-4">
+          <div class="form-group">
+            <label>&nbsp;&nbsp;카드 결제 가능한가요?</label>
+            <input type="text" class="form-control text-center" name="card_or_not" id="card_or_not" placeholder="예/아니요 로 대답해 주세요">
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="row">
+          <div class="col-xs-offset-4 col-xs-4">
+              <div class="form-group">
+                  <label>&nbsp;&nbsp;경력을 뽐내주세요!</label>
+                  <input type="text" class="form-control text-center" name="career" id="career" placeholder="경력을 입력해 주세요">
               </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-xs-offset-4 col-xs-4">
+              <div class="form-group">
+                  <label>&nbsp;&nbsp;품목은요?</label>
+                  <input type="text" class="form-control text-center" name="classification" id="classification" placeholder="품목을 입력해 주세요">
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-xs-offset-4 col-xs-4">
+              <div class="form-group">
+                  <label>&nbsp;&nbsp;판매 아이템은요?</label>
+                  <input type="text" class="form-control text-center" name="item" id="item" placeholder="판매 아이템을 입력해 주세요">
+              </div>
+          </div>
+      </div> -->
+      <div class="row">
+        <div class="col-xs-offset-4 col-xs-4">
+          <div class="form-group">
+            <label>&nbsp;&nbsp;참여동기가 어떻게 되요?</label>
+            <textarea rows="5" class="form-control text-center" name="motivation" id="motivation" placeholder="참여 동기를 입력해 주세요."></textarea>
+          </div>
         </div>
-        <div class="row">
-            <div class="col-xs-offset-4 col-xs-4">
-                <div class="form-group">
-                    <label>&nbsp;&nbsp;이름은 무엇인가요?</label>
-                    <input type="text" class="form-control text-center" name="user_name" id="user_name" placeholder="이름을 입력해 주세요">
-                </div>
-            </div>
-        </div>
+      </div>
+      <div class="text-center">
+        <button type="submit" name="subMit" class="btn btn-primary confirmation" disabled="true" id="sub" onclick="return erchk();">Submit</button>
 
-        <div class="row">
-            <div class="col-xs-offset-4 col-xs-4">
-                <div class="form-group">
-                    <label>&nbsp;&nbsp;구성원 수는 어떻게 되요?</label>
-                    <input type="text" class="form-control text-center" name="num_of_member" id="num_of_member" placeholder="구성원 수를 입력해 주세요">
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-xs-offset-4 col-xs-4">
-                <div class="form-group">
-                    <label>&nbsp;&nbsp;카드 결제 가능한가요?</label>
-                    <input type="text" class="form-control text-center" name="card_or_not" id="card_or_not" placeholder="예/아니요 로 대답해 주세요">
-                </div>
-            </div>
-        </div>
-
-        <!-- <div class="row">
-            <div class="col-xs-offset-4 col-xs-4">
-                <div class="form-group">
-                    <label>&nbsp;&nbsp;경력을 뽐내주세요!</label>
-                    <input type="text" class="form-control text-center" name="career" id="career" placeholder="경력을 입력해 주세요">
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-offset-4 col-xs-4">
-                <div class="form-group">
-                    <label>&nbsp;&nbsp;품목은요?</label>
-                    <input type="text" class="form-control text-center" name="classification" id="classification" placeholder="품목을 입력해 주세요">
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-offset-4 col-xs-4">
-                <div class="form-group">
-                    <label>&nbsp;&nbsp;판매 아이템은요?</label>
-                    <input type="text" class="form-control text-center" name="item" id="item" placeholder="판매 아이템을 입력해 주세요">
-                </div>
-            </div>
-        </div> -->
-        <div class="row">
-            <div class="col-xs-offset-4 col-xs-4">
-                <div class="form-group">
-                    <label>&nbsp;&nbsp;참여동기가 어떻게 되요?</label>
-                    <textarea rows="5" class="form-control text-center" name="motivation" id="motivation" placeholder="참여 동기를 입력해 주세요."></textarea>
-                </div>
-            </div>
-        </div>
-        <div class="text-center">
-            <button type="submit" name="subMit" class="btn btn-primary confirmation" disabled="true" id="sub" onclick="return erchk();">Submit</button>
-
-        </div>
+      </div>
     </div>
   </form>
 </div>
 
 <script>
-function erchk() {
-  if (document.getElementById("user_name").value == "") {
-    alert("이름을 입력해주세요.");
-    document.getElementById("user_name").focus();
-    return false;
+  function erchk() {
+    if (document.getElementById("user_name").value == "") {
+      alert("이름을 입력해주세요.");
+      document.getElementById("user_name").focus();
+      return false;
+    }
+    if (document.getElementById("num_of_member").value == "") {
+      alert("구성원 수를 입력해 주세요.");
+      document.getElementById("num_of_member").focus();
+      return false;
+    }
+    if (document.getElementById("card_or_not").value == "") {
+      alert("카드가능 여부를 입력해 주세요.");
+      document.getElementById("card_or_not").focus();
+      return false;
+    }
+    if (document.getElementById("career").value == "") {
+      alert("경력를 입력해 주세요.");
+      document.getElementById("career").focus();
+      return false;
+    }
+    if (document.getElementById("classification").value == "") {
+      alert("품목을 입력해 주세요.");
+      document.getElementById("classification").focus();
+      return false;
+    }
+    if (document.getElementById("item").value == "") {
+      alert("판매 아이템을 입력해 주세요.");
+      document.getElementById("item").focus();
+      return false;
+    }
+    if (document.getElementById("motivation").value == "") {
+      alert("참여동기를 입력해 주세요.");
+      document.getElementById("motivation").focus();
+      return false;
+    }
+    return confirm('신청할까요?');
   }
-  if ( document.getElementById("num_of_member").value == "") {
-    alert("구성원 수를 입력해 주세요.");
-    document.getElementById("num_of_member").focus();
-    return false;
-  }
-  if ( document.getElementById("card_or_not").value == "") {
-    alert("카드가능 여부를 입력해 주세요.");
-    document.getElementById("card_or_not").focus();
-    return false;
-  }
-  if ( document.getElementById("career").value == "") {
-    alert("경력를 입력해 주세요.");
-    document.getElementById("career").focus();
-    return false;
-  }
-  if ( document.getElementById("classification").value == "") {
-    alert("품목을 입력해 주세요.");
-    document.getElementById("classification").focus();
-    return false;
-  }
-  if ( document.getElementById("item").value == "") {
-    alert("판매 아이템을 입력해 주세요.");
-    document.getElementById("item").focus();
-    return false;
-  }
-  if ( document.getElementById("motivation").value == "") {
-    alert("참여동기를 입력해 주세요.");
-    document.getElementById("motivation").focus();
-    return false;
-  }
-  return confirm('신청할까요?');
-}
-$("#check1").click(function () {
+  $("#check1").click(function () {
     $("#sub").attr("disabled", false);
-});
-$("#check2").click(function () {
+  });
+  $("#check2").click(function () {
     $("#sub").attr("disabled", true);
-});
+  });
 
 </script>
 
 <script type="text/javascript">
   $('.#').on('click', function () {
-      return confirm('신청할까요?');
+    return confirm('신청할까요?');
   });
 </script>

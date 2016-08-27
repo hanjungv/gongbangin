@@ -1,7 +1,7 @@
-<div class = "container text-center">
+<div class="container text-center">
   <p>이메일 보내기 페이지</p>
-  <form action = "/send_email/<%=@receiver.id%>" method = "post">
-    <textarea class="form-control" name = "content" rows="25" id="emailcontent">
+  <form action="/send_email/<%= @receiver.id %>" method="post">
+    <textarea class="form-control" name="content" rows="25" id="emailcontent">
 안녕하세요!
 편리한 플리마켓 매칭 서비스를 제공하는 공방인(https://gongbangin.me)입니다.
 ----------------------------------------------------------------------
@@ -10,12 +10,12 @@
 
 
 내용을 입력한다.
-<%=@receiver.email%>
+      <%= @receiver.email %>
 
 
 
------------------------------------------------------------------------
-<%=Time.now%>, Thanks. 즐거운 하루 보내세요! 공방인.
+      -----------------------------------------------------------------------
+      <%= Time.now %>, Thanks. 즐거운 하루 보내세요! 공방인.
     </textarea>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>
