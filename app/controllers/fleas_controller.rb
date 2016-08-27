@@ -3,6 +3,23 @@ class FleasController < ApplicationController
   # GET /fleas
   # GET /fleas.json
   def index
+<<<<<<< HEAD
+    @search_city = params[:city]
+    if @search_city == '전체'
+      @today_flea_a = Flea.all.order(:event_end_date)
+    elsif @search_city == nil
+      @today_flea_a = Flea.all.order(:event_end_date)
+    else
+      @today_flea_a = Flea.where(city_place: @search_city).order(:event_end_date)
+    end
+    if params[:search] == ""
+      @search_time = Time.now
+    else
+      @search_time = params[:search]
+    end
+    date = @search_time.to_s.to_date
+=======
+>>>>>>> b067ce7755a14bdaab37617c6d4266c84d71cb8f
     @search_flea = Array.new
     @option = params[:option]
     if @option == ''
@@ -55,6 +72,13 @@ class FleasController < ApplicationController
         @title_ko = '어제의 마켓'
         @title_eng = 'FINISHED MARKET'
       end
+    end
+
+    count = @search_flea.count
+    if count >= 4
+	      @recently_flea = @search_flea.take(4)
+    else
+	      @recently_flea = @search_flea.take(count)
     end
   end
 

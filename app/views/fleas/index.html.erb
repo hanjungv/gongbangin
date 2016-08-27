@@ -17,6 +17,9 @@
 </section>
 <div class="container">
 
+<<<<<<< HEAD
+			<div class="form-group col-md-10" style="margin-top: 50px">
+=======
   <div class="form-group col-md-10" style="margin-top: 50px">
     <section class="page-header">
       <span>
@@ -32,6 +35,7 @@
         </form>
     </section>
 
+>>>>>>> b067ce7755a14bdaab37617c6d4266c84d71cb8f
 
     <span>
 				<p style="margin-bottom: 0px; font-size:20px;">
@@ -69,9 +73,37 @@
     </form>
   </div>
 
+		<section class="body-content">
+			<div class="product-grid">
+				<div class="container">
+					<h4>종료 임박 플리 마켓</h4>
+					<% unless @recently_flea.nil? %>
+					<% @recently_flea.each do |h| %>
+					<div class="col-md-3">
+						<!--product list-->
+						<div class="product-list">
+							<div>
+								<a href="#">
+									<%=image_tag h.poster_url, size: '195x300', class: 'postersImage' %>
+								</a>
+							</div>
+							<br />
+							<div class="product-title">
+								<h4>
+									<a href="#"><%=h.name%></a>
+								</h4>
+							</div>
+							<div class="product-title"><%=h.event_start_date%> ~ <%=h.event_end_date%></div>
+						</div>
+					</div>
+					<%end%>
+					<%end%>
+				</div>
 
-  <section class="body-content">
-    <div class="page-content product-grid">
+						<div class="divider divider-small d-solid d-single text-center">
+								<span class="dot"></span>
+						</div>
+
       <div class="container">
         <% unless @search_flea.nil? %>
             <% @search_flea.each do |p| %>
@@ -102,12 +134,14 @@
     </div>
   </section>
 
+
 </div>
 <script>
   $(document).ready(function () {
     $('input[type=date]').css({"line-height": "20px", "margin-top": "10px"});
     $('.labels').css({"margin": "8px 2px 0px", "font-weight": "bold"});
     $('.inline-group').css({"padding": "20px 0px"});
+    $('.postersImage').css({"margin-right":"25px"});
   });
 
   $(document).ready(function () {

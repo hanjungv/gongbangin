@@ -1,55 +1,66 @@
 <p id="notice"><%= notice %></p>
 
-<h1>
-  <%= "좋아요 갯수 #{@flea.like_flea_markets.count}" %>
-</h1>
+<div class="page-content">
+    <div class="container">
+        <div class="row">
+            <!--post style 3 start-->
+            <div class="post-list-aside">
+                <div class="post-single">
+                    <div class="col-md-5">
+                        <div class="post-img title-img">
+                            <img src="<%=@flea.poster_url%>" alt=""/>
+                            <div class="info">We work together for fun</div>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="post-desk">
+                            <ul class="post-cat">
+                              <h3>
+                                <%= "좋아요>< #{@flea.like_flea_markets.count}" %>
+                                <%=  likeBtn(@has_like) %>
+                              </h3>
+                            </ul>
+                            <table class="table">
 
-<%= likeBtn(@has_like) %>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">모집기간</th>
+                                    <td><%= @flea.application_start_date %>~<%= @flea.application_end_date %></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">행사기간</th>
+                                    <td><%= @flea.event_start_date %>~<%= @flea.event_end_date %></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">모집인원</th>
+                                    <td><%= @flea.number_of_recruitment %></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">장소</th>
+                                    <td><%= @flea.city_place %> <%= @flea.detail_place %></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">참가비</th>
+                                    <td><%= @flea.entrance_fee %></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">비고</th>
+                                    <td><%= @flea.remark %></td>
+                                </tr>
 
-<p>
-  <strong>Application date:</strong>
-  <%= @flea.application_start_date %>
-</p>
+                                </tbody>
+                            </table>
 
-<p>
-  <strong>Application date:</strong>
-  <%= @flea.application_end_date %>
-</p>
 
-<p>
-  <strong>Number of recruitment:</strong>
-  <%= @flea.number_of_recruitment %>
-</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--post style 3 end-->
+        </div>
+    </div>
+</div>
 
-<p>
-  <strong>Remark:</strong>
-  <%= @flea.remark %>
-</p>
-
-<p>
-  <strong>city_Place:</strong>
-  <%= @flea.city_place %>
-</p>
-
-<p>
-  <strong>detail_Place:</strong>
-  <%= @flea.detail_place %>
-</p>
-
-<p>
-  <strong>Event start date:</strong>
-  <%= @flea.event_start_date %>
-</p>
-
-<p>
-  <strong>Event end date:</strong>
-  <%= @flea.event_end_date %>
-</p>
-
-<p>
-  <strong>Entrance fee:</strong>
-  <%= @flea.entrance_fee %>
-</p>
 
 <%= link_to 'Edit', edit_flea_path(@flea) %> |
 <%= link_to 'Back', fleas_path %>
