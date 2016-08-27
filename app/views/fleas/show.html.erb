@@ -20,7 +20,11 @@
                               </h3>
                             </ul>
                             <table class="table">
-
+                                <thead>
+                                <tr>
+                                  <th scope="row"><h3><%= @flea.name %></h3></th>
+                                </tr>
+                                </thead>
                                 <tbody>
                                 <tr>
                                     <th scope="row">모집기간</th>
@@ -66,13 +70,11 @@
             <!--post style 3 end-->
         </div>
 
-        <%= link_to 'Edit', edit_flea_path(@flea) %> |
-        <%= link_to 'Back', fleas_path %>
+        &nbsp;&nbsp;&nbsp;<div class="btn btn-extra-small btn-dark-border"><%= link_to '뒤로가기', fleas_path %></div>
+        <div class="btn btn-extra-small btn-dark-border"><%= link_to '수정하기', edit_flea_path(@flea) %></div>
+
 </div>
-
 </section>
-
-
 
 <script>
   $('.clock').countdown('<%= @flea.application_end_date.to_date %>', function (event) {
