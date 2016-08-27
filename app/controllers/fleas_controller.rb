@@ -3,14 +3,13 @@ class FleasController < ApplicationController
   # GET /fleas
   # GET /fleas.json
   def index
-    puts "orange"
     @search_city = params[:city]
     if @search_city == '전체'
-      @today_flea_a = Flea.all
+      @today_flea_a = Flea.all.order(:event_end_date)
     elsif @search_city == nil
-      @today_flea_a = Flea.all
+      @today_flea_a = Flea.all.order(:event_end_date)
     else
-      @today_flea_a = Flea.where(city_place: @search_city)
+      @today_flea_a = Flea.where(city_place: @search_city).order(:event_end_date)
     end
     if params[:search] == ""
       @search_time = Time.now
@@ -25,6 +24,13 @@ class FleasController < ApplicationController
           @search_flea.append(p)
         end
       end
+    end
+
+    count = @search_flea.count
+    if count >= 4
+	      @recently_flea = @search_flea.take(4)
+    else
+	      @recently_flea = @search_flea.take(count)
     end
   end
 
