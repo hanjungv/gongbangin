@@ -137,12 +137,12 @@
               <% @activity.each do |a| %>
                   <div class="progress massive-progress">
                     <div class="progress-bar" role="progressbar" aria-valuenow="<%= a.percentage %>" aria-valuemin="0" aria-valuemax="100">
-                      <% if a.name == "etc1" %>
+                      <% if a.name == 'etc1' %>
                           <%= a.etc_name %>
                       <% else %>
                           <%= a.name %>
                       <% end %>
-                      <% if a.skill_part == "etc2" %>
+                      <% if a.skill_part == 'etc2' %>
                           <%= a.etc_part %>
                       <% else %>
                           <%= a.skill_part %>
@@ -188,7 +188,7 @@
                         <th scope="row"><%= index+1 %></th>
                         <td><%= p.contest_name %></td>
                         <td><%= p.prize_name %></td>
-                        <td><%= p.prize_date.strftime("%Y-%m-%d") %></td>
+                        <td><%= p.prize_date.strftime('%Y-%m-%d') %></td>
                       </tr>
                   <% end %>
                   </tbody>

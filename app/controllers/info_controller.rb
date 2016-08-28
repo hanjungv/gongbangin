@@ -16,13 +16,13 @@ class InfoController < ApplicationController
 
   def standby
     @user = User.find(params[:user_id])
-    @user.level = "standby"
+    @user.level = 'standby'
     @user.brand = params[:brand]
     @user.brand_number = params[:brand_number]
     @user.brand_place = params[:brand_place]
     @user.save
 
-    redirect_to "/"
+    redirect_to '/'
   end
 
   def add_activity

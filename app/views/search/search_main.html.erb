@@ -10,11 +10,11 @@
 <div class="container">
   <div class="col-md-4"></div>
   <div class="col-md-4" style="margin-top:20px;">
-    <%= form_tag("/user", method: "get") do %>
+    <%= form_tag('/user', method: 'get') do %>
         <div class="input-group">
-          <%= text_field_tag "search", nil, :placeholder => 'Search for..', :class => 'form-control' %>
+          <%= text_field_tag 'search', nil, :placeholder => 'Search for..', :class => 'form-control' %>
           <div class="input-group-btn">
-            <%= button_tag(type: 'submit', class: "btn btn-warning") do %>
+            <%= button_tag(type: 'submit', class: 'btn btn-warning') do %>
                 <span class="glyphicon glyphicon-search"></span>
             <% end %>
           </div>
@@ -46,7 +46,7 @@
           <tr>
             <th scope="row"><%= index+1 %></th>
             <td>
-              <a href="/show_info/<%= p.id %>" , style="font-weight: bold; color:<%= p.tier %>">
+              <a href="/show_info/<%= p.id %>" style="font-weight: bold; color:<%= p.tier %>">
                 <% if index < 5 %>
                     <%= image_tag('medal.png', height: '20', width: '20') %>
                 <% end %>

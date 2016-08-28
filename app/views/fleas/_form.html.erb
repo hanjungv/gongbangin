@@ -43,31 +43,31 @@
               </div>
               <br>
               <div class="form-group col-md-6">
-                <%= f.label :"플리마켓 시작일시" %><br>
+                <%= f.label :'플리마켓 시작일시' %><br>
                 <%= f.datetime_select :event_start_date, :class => 'form-control' %>
               </div>
               <div class="form-group col-md-6">
-                <%= f.label :"플리마켓 종료일시" %><br>
+                <%= f.label :'플리마켓 종료일시' %><br>
                 <%= f.datetime_select :event_end_date, :class => 'form-control' %>
               </div>
               <br>
               <div class="form-group col-md-6">
-                <%= f.label :"플리마켓 명" %><br/>
-                <%= f.text_field :name, :class => 'form-control', :placeholder => "예)서울 밤도깨비 야시장" %>
+                <%= f.label :'플리마켓 명' %><br/>
+                <%= f.text_field :name, :class => 'form-control', :placeholder => '예)서울 밤도깨비 야시장' %>
               </div>
               <div class="form-group col-md-6">
-                <%= f.label :"지역" %>
+                <%= f.label :'지역' %>
                 <%= f.select(:city_place,
                              ['서울', '인천', '대전', '대구', '부산', '광주', '울산',
                               '경기', '충남', '충북', '전남', '전북', '경남', '경북', '제주'], {}, {:class => 'form-control'}) %>
               </div>
               <div class="form-group col-md-6">
-                <%= f.label :"상세_주소" %><br>
-                <%= f.text_field :detail_place, :class => 'form-control', :placeholder => "예)서울 여의도, DDP, 목동운동장, 청계광장" %>
+                <%= f.label :'상세_주소' %><br>
+                <%= f.text_field :detail_place, :class => 'form-control', :placeholder => '예)서울 여의도, DDP, 목동운동장, 청계광장' %>
               </div>
               <div class="form-group col-md-6">
-                <%= f.label :"플리마켓 설명" %><br>
-                <%= f.text_field :remark, :class => 'form-control', :placeholder => "예)신나는 공연과 핸드메이드 상품, 푸짐하게 펼쳐진 세계 각국의 음식들을 한 곳에서!" %>
+                <%= f.label :'플리마켓 설명' %><br>
+                <%= f.text_field :remark, :class => 'form-control', :placeholder => '예)신나는 공연과 핸드메이드 상품, 푸짐하게 펼쳐진 세계 각국의 음식들을 한 곳에서!' %>
               </div>
               <div class="heading-title-alt text-center">
                 <h3 class="text-uppercase">모집정보</h3>
@@ -75,28 +75,28 @@
               </div>
               <br>
               <div class="form-group col-md-6">
-                <%= f.label :"접수 시작일시" %><br>
+                <%= f.label :'접수 시작일시' %><br>
                 <%= f.datetime_select :application_start_date, :class => 'form-control' %>
               </div>
               <div class="form-group col-md-6">
-                <%= f.label :"접수 종료일시" %><br>
+                <%= f.label :'접수 종료일시' %><br>
                 <%= f.datetime_select :application_end_date %>
               </div>
               <div class="form-group col-md-6">
-                <%= f.label :"모집방식" %>
+                <%= f.label :'모집방식' %>
                 <%= f.select(:join_type, ['선착순', '심사'], {}, {:class => 'form-control'}) %>
               </div>
               <div class="form-group col-md-6">
-                <%= f.label :"모집 인원" %><br>
-                <%= f.number_field :number_of_recruitment, :class => 'form-control', min: "0", placeholder: "숫자를 입력하여 주세요" %>
+                <%= f.label :'모집 인원' %><br>
+                <%= f.number_field :number_of_recruitment, :class => 'form-control', min: '0', placeholder: '숫자를 입력하여 주세요' %>
               </div>
               <div class="form-group col-md-6">
-                <%= f.label :"참가비" %><br>
-                <%= f.number_field :entrance_fee, :class => 'form-control', min: "0", step: "100", placeholder: "100원 단위에요" %>
+                <%= f.label :'참가비' %><br>
+                <%= f.number_field :entrance_fee, :class => 'form-control', min: '0', step: '100', placeholder: '100원 단위에요' %>
               </div>
               <div class="form-group col-md-6">
-                <%= f.label :"최대 지원가능한 아이템" %><br>
-                <%= f.number_field :item_count, :class => 'form-control', min: "0", max: "5", placeholder: "최대 5개에요" %>
+                <%= f.label :'최대 지원가능한 아이템' %><br>
+                <%= f.number_field :item_count, :class => 'form-control', min: '0', max: '5', placeholder: '최대 5개에요' %>
               </div>
               <div class="heading-title-alt text-center">
                 <h3 class="text-uppercase">동의사항 입력</h3>
@@ -108,19 +108,19 @@
                   <a href="">1번째 동의사항</a>
                 </dt>
                 <dd>
-                  <%= f.text_field :agree1, :class => 'form-control', :value => "본인은 작성한 위 사항에 틀림이 없으며, 개인정보 수집 및 이용에 동의합니다." %>
+                  <%= f.text_field :agree1, :class => 'form-control', :value => '본인은 작성한 위 사항에 틀림이 없으며, 개인정보 수집 및 이용에 동의합니다.' %>
                 </dd>
                 <dt>
                   <a href="">2번째 동의사항</a>
                 </dt>
                 <dd>
-                  <%= f.text_field :agree2, :class => 'form-control', :value => "본인은 행사에 참여함에 있어 개장 및 폐장 시간을 엄격하게 준수합니다." %>
+                  <%= f.text_field :agree2, :class => 'form-control', :value => '본인은 행사에 참여함에 있어 개장 및 폐장 시간을 엄격하게 준수합니다.' %>
                 </dd>
                 <dt>
                   <a href="">3번째 동의사항</a>
                 </dt>
                 <dd>
-                  <%= f.text_field :agree3, :class => 'form-control', :value => "본인은 주최 측에서 제공하는 물품의 유지 및 보안의 책임을 갖고 운영할 것이며, 행사 후 청결 상태 유지에 노력합니다." %>
+                  <%= f.text_field :agree3, :class => 'form-control', :value => '본인은 주최 측에서 제공하는 물품의 유지 및 보안의 책임을 갖고 운영할 것이며, 행사 후 청결 상태 유지에 노력합니다.' %>
                 </dd>
                 <dt>
                   <a href="">4번째 동의사항</a>
@@ -142,7 +142,7 @@
               </div>
               <br>
               <div class="form-group">
-                <%= f.file_field :poster_url, :class => "form-control" %>
+                <%= f.file_field :poster_url, :class => 'form-control' %>
               </div>
             </div>
 

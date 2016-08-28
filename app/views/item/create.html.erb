@@ -97,7 +97,7 @@
 <script type="text/javascript">
   //이메일 입력방식 선택
   $('#ic_select').change(function () {
-    $("#ic_select option:selected").each(function () {
+    $("#ic_select").find("option:selected").each(function () {
 
       if ($(this).val() == '1') { //직접입력일 경우
         $("#item_classification").val('');                        //값 초기화
