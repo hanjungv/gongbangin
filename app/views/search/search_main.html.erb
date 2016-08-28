@@ -65,6 +65,8 @@
 
 <script>
   $(document).ready(function () {
-    $table = $('#searchTable').DataTable({});
+    $table = $('#searchTable').DataTable({
+      "lengthMenu": [[20, 50, 100, -1], [20, 50, 100, "All"]]
+    });
   });
 </script>

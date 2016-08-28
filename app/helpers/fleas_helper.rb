@@ -1,9 +1,7 @@
 module FleasHelper
   def likeBtn(hasLike)
     if hasLike.nil?
-      content_tag :h3 do
-        link_to '로그인해 주세요.', new_user_session_path
-      end
+        link_to 'Log IN!', new_user_session_path
     elsif hasLike
         link_to like_flea_path(@flea), method: :post do
           content_tag :i, nil, class: 'fa fa-thumbs-o-up', 'aria-hidden' => 'true'
