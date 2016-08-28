@@ -29,10 +29,10 @@
           <div class="col-md-7">
             <div class="post-desk">
               <div class="heading-title-alt text-left">
-                            <h2 class="text-uppercase"><%=@flea.name%></h2>
-                            <span><%=@user.email%> / <a href = "show_info/<%=@user.id%>"><%=@user.nickname%></a></span>
-                            <br><br><br>
-                        </div>
+                <h2 class="text-uppercase"><%= @flea.name %></h2>
+                <span><%= @user.email %> / <a href="show_info/<%= @user.id %>"><%= @user.nickname %></a></span>
+                <br><br><br>
+              </div>
               <table class="table">
                 <thead>
                 <tr>
@@ -40,7 +40,7 @@
                 </thead>
                 <tbody>
                 <tr>
-                  <th scope="row" style = "width:30%">모집기간</th>
+                  <th scope="row" style="width:30%">모집기간</th>
                   <td><%= @flea.application_start_date %>~<%= @flea.application_end_date %></td>
                 </tr>
                 <tr>
@@ -73,13 +73,13 @@
                   </div>
                 </div>
               </div>
-                <br><br>
-                <h4>
-                  <%= "좋아요! #{@flea.like_flea_markets.count}개"%>
-                  <div class="btn btn-extra-small btn-dark-border"><%= likeBtn(@has_like) %></div>
-                  <div class="btn btn-extra-small btn-dark-border"><%= link_to '뒤로가기', fleas_path %></div>
-                  <div class="btn btn-extra-small btn-dark-border"><%= link_to '수정하기', edit_flea_path(@flea) %></div>
-                </h4>
+              <br><br>
+              <h4>
+                <%= "좋아요! #{@flea.like_flea_markets.count}개" %>
+                <div class="btn btn-extra-small btn-dark-border"><%= likeBtn(@has_like) %></div>
+                <div class="btn btn-extra-small btn-dark-border"><%= link_to '뒤로가기', fleas_path %></div>
+                <div class="btn btn-extra-small btn-dark-border"><%= link_to '수정하기', edit_flea_path(@flea) %></div>
+              </h4>
             </div>
           </div>
         </div>

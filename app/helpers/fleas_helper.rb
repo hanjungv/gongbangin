@@ -5,13 +5,13 @@ module FleasHelper
         link_to '로그인해 주세요.', new_user_session_path
       end
     elsif hasLike
-        link_to like_flea_path(@flea), method: :post do
-          content_tag :i, nil, class: 'fa fa-thumbs-o-up', 'aria-hidden' => 'true'
-        end
-    else
-        link_to dislike_flea_path(@flea), method: :post do
-          content_tag :i, nil, class: 'fa fa-thumbs-o-down', 'aria-hidden' => 'true'
-        end
+      link_to like_flea_path(@flea), method: :post do
+        content_tag :i, nil, class: 'fa fa-thumbs-o-up', 'aria-hidden' => 'true'
       end
+    else
+      link_to dislike_flea_path(@flea), method: :post do
+        content_tag :i, nil, class: 'fa fa-thumbs-o-down', 'aria-hidden' => 'true'
+      end
+    end
   end
 end
