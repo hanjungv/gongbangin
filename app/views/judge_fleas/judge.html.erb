@@ -68,7 +68,7 @@
               <tbody>
               <% @join_user.each_with_index do |p, index| %>
                   <%= p.isSelect %>
-                  <% if p.isSelect == "false" %>
+                  <% if p.isSelect == 'false' %>
                       <% next %>
                   <% end %>
                   <tr>
@@ -118,7 +118,7 @@
               </thead>
               <tbody>
               <% @join_user.each_with_index do |p, index| %>
-                  <% if p.isSelect == "true" %>
+                  <% if p.isSelect == 'true' %>
                       <% next %>
                   <% end %>
                   <tr>

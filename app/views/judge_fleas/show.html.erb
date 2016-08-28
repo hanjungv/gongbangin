@@ -43,7 +43,7 @@
               <i class="fa fa-lg fa-check-circle-o"></i> <strong>트위터</strong> : <%= @user.twitter_id %><br>
             </div>
             <div class="col-xs-offset-4 col-xs-4 text-center">
-              <select class="form-control text-center" onblur="findTotal()" type="number" name="qty" id="qty2">
+              <select class="form-control text-center" onblur="findTotal()" name="qty" id="qty2">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -80,14 +80,14 @@
                     <th scope="row"><%= index+1 %></th>
                     <td><%= p.contest_name %></td>
                     <td><%= p.prize_name %></td>
-                    <td><%= p.prize_date.strftime("%Y-%m-%d") %></td>
+                    <td><%= p.prize_date.strftime('%Y-%m-%d') %></td>
                   </tr>
               <% end %>
               </tbody>
             </table>
 
             <div class="col-xs-offset-4 col-xs-4 text-center">
-              <select class="form-control text-center" onblur="findTotal()" type="number" name="qty" id="qty3">
+              <select class="form-control text-center" onblur="findTotal()" name="qty" id="qty3">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -160,7 +160,7 @@
               </table>
             </div>
             <div class="col-xs-offset-4 col-xs-4 text-center">
-              <select class="form-control" onblur="findTotal()" type="number" name="qty" id="qty4">
+              <select class="form-control" onblur="findTotal()" name="qty" id="qty4">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>

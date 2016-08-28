@@ -24,7 +24,7 @@
           <%= simple_format(@notice.content, {}, :sanitize => false) %>
         </p>
         <% if user_signed_in? %>
-            <% if current_user.level == "master" %>
+            <% if current_user.level == 'master' %>
                 <a href="/destroy_notice/<%= @notice.id %>" class="btn btn-xs btn-light-solid">삭제하기</a>
                 <a href="/mastermenu/update_notice/<%= @notice.id %>" class="btn btn-xs btn-light-solid ">수정하기</a>
             <% end %>
@@ -59,14 +59,14 @@
                 <td>
                   <a href="/show_notice/<%= p.id %>"><%= p.title %></a>
                 </td>
-                <td><%= p.created_at.strftime("%Y-%m-%d %H:%M") %></td>
+                <td><%= p.created_at.strftime('%Y-%m-%d %H:%M') %></td>
                 <td><%= p.view_count %></td>
               </tr>
           <% end %>
           </tbody>
         </table>
         <% if user_signed_in? %>
-            <% if current_user.level == "master" %>
+            <% if current_user.level == 'master' %>
                 <a href="/mastermenu/write_notice" class="btn btn-xs btn-light-solid ">공지작성</a>
             <% end %>
         <% end %>

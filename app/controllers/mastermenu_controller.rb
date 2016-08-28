@@ -1,22 +1,22 @@
 require 'mailgun'
 class MastermenuController < ApplicationController
   def index
-    if current_user.level != "master"
-      redirect_to "/"
+    if current_user.level !='master'
+      redirect_to '/'
     end
   end
 
   def user_manage
-    @master_user = User.where(level: "master")
-    @standby_user = User.where(level: "standby")
-    @planner_user =User.where(level: "planner")
-    @seller_user =User.where(level: "seller")
+    @master_user = User.where(level: 'master')
+    @standby_user = User.where(level: 'standby')
+    @planner_user =User.where(level: 'planner')
+    @seller_user =User.where(level: 'seller')
   end
 
   def levelup
     @user = User.find(params[:user_id])
-    @user.level = "planner"
-    @user.tier = "black"
+    @user.level = 'planner'
+    @user.tier = 'black'
     @user.save
     redirect_to '/mastermenu/user_manage'
   end
@@ -27,7 +27,7 @@ class MastermenuController < ApplicationController
 
   def leveldown
     @user = User.find(params[:user_id])
-    @user.level = "seller"
+    @user.level = 'seller'
     @user.save
     redirect_to controller: 'mastermenu', action: 'write_email', id: @user.id, something: 'else'
   end
@@ -73,7 +73,7 @@ class MastermenuController < ApplicationController
     @content = params[:content]
 
     client = Coolsms::Client.new :api_key => '',
-                                 :api_secret => '', :sender => ""
+                                 :api_secret => '', :sender => ''
 
     client.send_message :to => @receiver, :text => @content
 
@@ -95,7 +95,7 @@ class MastermenuController < ApplicationController
     if @notice.save
       redirect_to '/home/faq'
     else
-      render :show, notice: "실패했어요! 다시 한번 해보는게 어때요?"
+      render :show, notice: '실패했어요! 다시 한번 해보는게 어때요?'
     end
   end
 
@@ -125,7 +125,7 @@ class MastermenuController < ApplicationController
     if @notice.save
       redirect_to '/home/faq'
     else
-      render :show, notice: "실패했어요! 다시 한번 해보는게 어때요?"
+      render :show, notice: '실패했어요! 다시 한번 해보는게 어때요?'
     end
   end
 
