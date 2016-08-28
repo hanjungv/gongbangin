@@ -18,7 +18,7 @@ class JudgeFleasController < ApplicationController
 
   def select
     @flea = Flea.find(params[:flea_id])
-    @isThere = FleaSeller.where(flea_id: params[:flea_id]).find_by(user_id: params[:user_id])
+    is_there = FleaSeller.where(flea_id: params[:flea_id]).find_by(user_id: params[:user_id])
 
     @user = User.find(params[:user_id])
     @user.score = @user.score + 50
@@ -42,11 +42,11 @@ class JudgeFleasController < ApplicationController
       @user.tier = "red"
     end
 
-    @isThere.user_tier = @user.tier
-    @isThere.isSelect = "true"
+    is_there.user_tier = @user.tier
+    is_there.isSelect = "true"
 
     @user.save
-    @isThere.save
+    is_there.save
 
     redirect_to controller: 'judge_fleas', action: 'judge', id: @flea.id, something: 'else'
 

@@ -25,7 +25,7 @@ class HomeController < ApplicationController
     }
 
     # result = mg_client.send_message('sandbox26b79ff589344c698b5c3cf747823d47.mailgun.org', message_params).to_h!
-    result = mg_client.send_message('www.gongbang.in', message_params).to_h!
+    result = mg_client.send_message('gongbang.in', message_params).to_h!
 
     message_id = result['id']
     message = result['message']
