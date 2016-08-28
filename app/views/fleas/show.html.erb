@@ -1,5 +1,20 @@
-<p id="notice"><%= notice %></p>
-
+<section class="page-title">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h4 class="text-uppercase">마켓보기</h4>
+        <ol class="breadcrumb">
+          <li>
+            <a>오늘의마켓</a>
+          </li>
+          <li class="active">
+            <a>마켓정보</a>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="body-content page-content">
   <div class="container">
     <div class="row">
@@ -13,21 +28,19 @@
           </div>
           <div class="col-md-7">
             <div class="post-desk">
-              <ul class="post-cat">
-                <h3>
-                  <%= "좋아요>< #{@flea.like_flea_markets.count}" %>
-                  <%= likeBtn(@has_like) %>
-                </h3>
-              </ul>
+              <div class="heading-title-alt text-left">
+                            <h2 class="text-uppercase"><%=@flea.name%></h2>
+                            <span><%=@user.email%> / <a href = "show_info/<%=@user.id%>"><%=@user.nickname%></a></span>
+                            <br><br><br>
+                        </div>
               <table class="table">
                 <thead>
                 <tr>
-                  <th scope="row"><h3><%= @flea.name %></h3></th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                  <th scope="row">모집기간</th>
+                  <th scope="row" style = "width:30%">모집기간</th>
                   <td><%= @flea.application_start_date %>~<%= @flea.application_end_date %></td>
                 </tr>
                 <tr>
@@ -50,10 +63,8 @@
                   <th scope="row">비고</th>
                   <td><%= @flea.remark %></td>
                 </tr>
-
                 </tbody>
               </table>
-
 
               <div class="container">
                 <div class="row">
@@ -62,7 +73,13 @@
                   </div>
                 </div>
               </div>
-
+                <br><br>
+                <h4>
+                  <%= "좋아요! #{@flea.like_flea_markets.count}개"%>
+                  <div class="btn btn-extra-small btn-dark-border"><%= likeBtn(@has_like) %></div>
+                  <div class="btn btn-extra-small btn-dark-border"><%= link_to '뒤로가기', fleas_path %></div>
+                  <div class="btn btn-extra-small btn-dark-border"><%= link_to '수정하기', edit_flea_path(@flea) %></div>
+                </h4>
             </div>
           </div>
         </div>
@@ -70,9 +87,6 @@
       <!--post style 3 end-->
     </div>
 
-    &nbsp;&nbsp;&nbsp;
-    <div class="btn btn-extra-small btn-dark-border"><%= link_to '뒤로가기', fleas_path %></div>
-    <div class="btn btn-extra-small btn-dark-border"><%= link_to '수정하기', edit_flea_path(@flea) %></div>
 
   </div>
 </section>

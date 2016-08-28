@@ -81,6 +81,7 @@ class FleasController < ApplicationController
 
   def show
     @has_like = @flea.like_flea_markets.where(flea_id: @flea.id, user_id: current_user.id).blank? if current_user
+    @user = User.find(@flea.user_id)
   end
 
   def like
