@@ -8,20 +8,7 @@
   </div>
 </section>
 <div class="container">
-  <div class="col-md-4"></div>
-  <div class="col-md-4" style="margin-top:20px;">
-    <%= form_tag("/user", method: "get") do %>
-        <div class="input-group">
-          <%= text_field_tag "search", nil, :placeholder => 'Search for..', :class => 'form-control' %>
-          <div class="input-group-btn">
-            <%= button_tag(type: 'submit', class: "btn btn-warning") do %>
-                <span class="glyphicon glyphicon-search"></span>
-            <% end %>
-          </div>
-        </div>
-    <% end %>
-  </div>
-  <div class="col-md-4"></div>
+
   <div class="col-md-12" style="margin-top:20px;">
     <table class="table able table-striped table-bordered">
       <thead>
@@ -39,7 +26,7 @@
           <tr>
             <th scope="row"><%= index+1 %></th>
             <td><%= p.level %></td>
-            <td><a href="/showinfo/<%= p.id %>" , style="font-weight: bold; color:<%= p.tier %>"><%= p.nickname %></a>
+            <td><a href="/show_info/<%= p.id %>" style="font-weight: bold; color:<%= p.tier %>"><%= p.nickname %></a>
             </td>
             <td><%= p.introduction %></td>
             <td style="color:<%= p.tier %>"><%= p.tier %></td>
@@ -48,5 +35,6 @@
       <% end %>
       </tbody>
     </table>
+    <br>
   </div>
 </div>

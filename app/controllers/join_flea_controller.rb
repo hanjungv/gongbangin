@@ -1,6 +1,7 @@
 class JoinFleaController < ApplicationController
   def index
-    @fleas = Flea.where('application_end_date > ?', Time.now).order("application_end_date desc")
+    @fleas = Flea.where('application_end_date > ?', Time.now)
+    @near_fleas = Flea.where('application_end_date > ?', Time.now).order('application_end_date desc').take(4)
   end
 
   def join
@@ -8,13 +9,10 @@ class JoinFleaController < ApplicationController
   end
 
   def make
-    @isThere = FleaSeller.where(flea_id: params[:flea_id]).find_by(user_id: current_user.id)
+    is_there = FleaSeller.where(flea_id: params[:flea_id]).find_by(user_id: current_user.id)
 
-    unless @isThere.blank?
-      redirect_to "/join_flea/join"
-    else
+    if is_there.blank?
       @flea_seller = FleaSeller.new
-
       @flea_seller.user_id = current_user.id
       @flea_seller.user_email = current_user.email
       @flea_seller.user_name = current_user.name
@@ -34,8 +32,9 @@ class JoinFleaController < ApplicationController
       @flea.join_member = @flea.join_member + 1
 
       @flea.save
-
-      redirect_to "/join_flea/index"
+      redirect_to '/join_flea/index'
+    else
+      redirect_to "/join_flea/join"
     end
   end
 

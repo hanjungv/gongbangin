@@ -1,6 +1,6 @@
 class JudgeFleasController < ApplicationController
   def index
-    @fleas = Flea.where(user_id: current_user.id).order("application_end_date desc")
+    @fleas = Flea.where(user_id: current_user.id).order('application_end_date desc')
   end
 
   def show
@@ -18,35 +18,35 @@ class JudgeFleasController < ApplicationController
 
   def select
     @flea = Flea.find(params[:flea_id])
-    @isThere = FleaSeller.where(flea_id: params[:flea_id]).find_by(user_id: params[:user_id])
+    is_there = FleaSeller.where(flea_id: params[:flea_id]).find_by(user_id: params[:user_id])
 
     @user = User.find(params[:user_id])
     @user.score = @user.score + 50
 
-    if (@user.score >= 100)
-      @user.tier = "navy"
+    if @user.score >= 100
+      @user.tier = 'navy'
     end
-    if (@user.score >= 200)
-      @user.tier = "blue"
+    if @user.score >= 200
+      @user.tier = 'blue'
     end
-    if (@user.score >= 350)
-      @user.tier = "green"
+    if @user.score >= 350
+      @user.tier = 'green'
     end
-    if (@user.score >= 500)
-      @user.tier = "yellow"
+    if @user.score >= 500
+      @user.tier = 'yellow'
     end
-    if (@user.score >= 650)
-      @user.tier = "orange"
+    if @user.score >= 650
+      @user.tier = 'orange'
     end
-    if (@user.score >= 800)
-      @user.tier = "red"
+    if @user.score >= 800
+      @user.tier = 'red'
     end
 
-    @isThere.user_tier = @user.tier
-    @isThere.isSelect = "true"
+    is_there.user_tier = @user.tier
+    is_there.isSelect = 'true'
 
     @user.save
-    @isThere.save
+    is_there.save
 
     redirect_to controller: 'judge_fleas', action: 'judge', id: @flea.id, something: 'else'
 
@@ -56,7 +56,7 @@ class JudgeFleasController < ApplicationController
     @flea = Flea.find(params[:flea_id])
     @user = User.find(params[:user_id])
 
-    @flea_seller = FleaSeller.where("flea_id = ? AND user_id = ?", params[:flea_id], params[:user_id])
+    @flea_seller = FleaSeller.where('flea_id = ? AND user_id = ?', params[:flea_id], params[:user_id])
     @sh = @flea_seller.first
     @sh.score = params[:total]
     @sh.review = params[:content]

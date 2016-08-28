@@ -27,7 +27,7 @@
           <th style="color:<%= p.tier %>"><%= p.tier %></th>
           <th><%= p.score %></th>
           <th>
-            <a href="/showinfo/<%= p.id %>">정보 보러가기</a>
+            <a href="/show_info/<%= p.id %>">정보 보러가기</a>
           </th>
           <th>강등불가</th>
           <th>삭제불가</th>
@@ -61,13 +61,13 @@
           <th style="color:<%= p.tier %>"><%= p.tier %></th>
           <th><%= p.score %></th>
           <th>
-            <a href="/showinfo/<%= p.id %>">정보 보러가기</a>
+            <a href="/show_info/<%= p.id %>">정보 보러가기</a>
           </th>
           <th>
             <a href="/mastermenu/leveldown/<%= p.id %>">강등하기</a>
           </th>
           <th>
-            <a href="/mastermenu/destroy/<%= p.id %>" , class="confirmation">삭제하기</a>
+            <a href="/mastermenu/destroy/<%= p.id %>" class="confirmation">삭제하기</a>
           </th>
         </tr>
     <% end %>
@@ -98,7 +98,7 @@
           <th style="color:<%= p.tier %>"><%= p.tier %></th>
           <th><%= p.score %></th>
           <th>
-            <a href="/showinfo/<%= p.id %>">정보 보러가기</a>
+            <a href="/show_info/<%= p.id %>">정보 보러가기</a>
           </th>
           <th>
             <a href="/mastermenu/judge/<%= p.id %>">심사하러가기</a>
@@ -107,7 +107,7 @@
             <a href="/mastermenu/leveldown/<%= p.id %>">강등하기</a>
           </th>
           <th>
-            <a href="/mastermenu/destroy/<%= p.id %>" , class="confirmation">삭제하기</a>
+            <a href="/mastermenu/destroy/<%= p.id %>" class="confirmation">삭제하기</a>
           </th>
         </tr>
     <% end %>
@@ -137,11 +137,11 @@
           <th style="color:<%= p.tier %>"><%= p.tier %></th>
           <th><%= p.score %></th>
           <th>
-            <a href="/showinfo/<%= p.id %>">정보 보러가기</a>
+            <a href="/show_info/<%= p.id %>">정보 보러가기</a>
           </th>
           <th>강등불가</th>
           <th>
-            <a href="/mastermenu/destroy/<%= p.id %>" , class="confirmation">삭제하기</a>
+            <a href="/mastermenu/destroy/<%= p.id %>" class="confirmation">삭제하기</a>
           </th>
         </tr>
     <% end %>

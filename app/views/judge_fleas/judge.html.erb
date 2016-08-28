@@ -68,7 +68,7 @@
               <tbody>
               <% @join_user.each_with_index do |p, index| %>
                   <%= p.isSelect %>
-                  <% if p.isSelect == "false" %>
+                  <% if p.isSelect == 'false' %>
                       <% next %>
                   <% end %>
                   <tr>
@@ -79,7 +79,7 @@
                     </td>
                     <td><%= p.user_email %></td>
                     <td>
-                      <a href="/showinfo/<%= p.user_id %>">정보보기</a>
+                      <a href="/show_info/<%= p.user_id %>">정보보기</a>
                     </td>
                     <td>
                       <a href="/judge_fleas/show/<%= @flea.id %>/<%= p.user_id %>">심사하러가기</a>
@@ -118,7 +118,7 @@
               </thead>
               <tbody>
               <% @join_user.each_with_index do |p, index| %>
-                  <% if p.isSelect == "true" %>
+                  <% if p.isSelect == 'true' %>
                       <% next %>
                   <% end %>
                   <tr>
@@ -129,7 +129,7 @@
                     </td>
                     <td><%= p.user_email %></td>
                     <td>
-                      <a href="/showinfo/<%= p.user_id %>">정보보기</a>
+                      <a href="/show_info/<%= p.user_id %>">정보보기</a>
                     </td>
                     <td>
                       <a href="/judge_fleas/show/<%= @flea.id %>/<%= p.user_id %>">심사하러가기</a>

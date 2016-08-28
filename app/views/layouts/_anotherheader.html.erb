@@ -7,7 +7,7 @@
       <div id="massive-menu" class="menuzord">
         <!--logo start-->
         <a href="/" class="logo-brand">
-          <img class="retina" src="img/logo-dark.png" alt=""/>
+          <%= image_tag('blacklogo.png', style: 'height: 80px; width:auto;') %>
         </a>
         <!--logo end-->
         <!--mega menu start-->
@@ -63,7 +63,7 @@
                 <a href="/users/sign_out">로그아웃</a>
               </li>
               <li>
-                <a href="/showinfo/<%= current_user.id %>"><%= current_user.level %>
+                <a href="/show_info/<%= current_user.id %>"><%= current_user.level %>
                   <%= current_user.nickname %>님</a>
               </li>
           <% else %>

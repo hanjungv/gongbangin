@@ -24,10 +24,10 @@
       </div>
       <% @fleas.each do |f| %>
           <% if f.application_end_date >= Time.now %>
-              <div class="col-md-4">
+              <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="team-member">
                   <div class="team-img">
-                    <%= image_tag("gangposter.jpg") %>
+                    <%= image_tag f.poster_url %>
                     <!--<%= image_tag(f.poster_url) %>-->
                     <div class="team-intro light-txt">
                       <h5><%= f.name %></h5>
@@ -38,6 +38,7 @@
                   <br>
                   <div class="team-hover">
                     <div class="desk">
+                      <br><br>
                       <h4><%= f.name %></h4>
                       <p>
                         모집시작날짜 : <%= f.application_start_date %><br>
@@ -68,7 +69,7 @@
       </div>
       <% @fleas.each do |f| %>
           <% if f.application_end_date < Time.now %>
-              <div class="col-md-4">
+              <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="promo-box gray-bg round-5 m-bot-50 text-center">
                   <div class="promo-info">
                     <h3 class="theme-color"><%= f.name %></h3>
