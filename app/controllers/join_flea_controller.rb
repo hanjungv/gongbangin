@@ -1,6 +1,7 @@
 class JoinFleaController < ApplicationController
   def index
-    @fleas = Flea.where('application_end_date > ?', Time.now).order('application_end_date desc')
+    @fleas = Flea.where('application_end_date > ?', Time.now)
+    @near_fleas = Flea.where('application_end_date > ?', Time.now).order('application_end_date desc').take(4)
   end
 
   def join

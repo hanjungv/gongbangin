@@ -8,20 +8,7 @@
   </div>
 </section>
 <div class="container">
-  <div class="col-md-4"></div>
-  <div class="col-md-4" style="margin-top:20px;">
-    <%= form_tag('/user', method: 'get') do %>
-        <div class="input-group">
-          <%= text_field_tag 'search', nil, :placeholder => 'Search for..', :class => 'form-control' %>
-          <div class="input-group-btn">
-            <%= button_tag(type: 'submit', class: 'btn btn-warning') do %>
-                <span class="glyphicon glyphicon-search"></span>
-            <% end %>
-          </div>
-        </div>
-    <% end %>
-  </div>
-  <div class="col-md-4"></div>
+
   <div class="col-md-12" style="margin-top:20px;">
     <div class="text-center" style="margin-bottom:15px;">
       <ul class="nav nav-pills">
@@ -31,7 +18,7 @@
       </ul>
     </div>
     <div class="table-responsive">
-      <table class="table cart-table">
+      <table class="table cart-table" id = "searchTable">
         <thead>
         <tr>
           <th style="width:6%;">등수</th>
@@ -58,17 +45,14 @@
         <% end %>
         </tbody>
       </table>
-      <div class="text-center col-md-12">
-        <ul class="pagination custom-pagination">
-          <li><a href="#">Prev</a></li>
-          <li class="active"><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li><a href="#">Next</a></li>
-        </ul>
-      </div>
+      <br>
     </div>
   </div>
 </div>
+<script>
+  $(document).ready(function () {
+    $table = $('#searchTable').DataTable({
+      "lengthMenu": [[20, 50, 100, -1], [20, 50, 100, "All"]]
+    });
+  });
+</script>

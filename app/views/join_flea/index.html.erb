@@ -1,48 +1,121 @@
 <section class="page-title">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h4 class="text-uppercase">셀러 지원하기</h4>
-        <ol class="breadcrumb">
-          <li><a href="/">Home</a></li>
-          <li class="active">셀러지원하기</li>
-        </ol>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="body-content">
-  <div class="page-content product-grid">
     <div class="container">
-      <% @fleas.each do |p| %>
-          <div class="col-md-3">
-            <div>
-              <a href="#"><%= image_tag p.poster_url, size: '260x400' %></a>
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="text-uppercase">셀러 지원하기</h4>
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li class="active">셀러지원하기</li>
+                </ol>
             </div>
-            <div class="product-title">
-              <h4>
-                <a href="#"><%= p.name %></a>
-              </h4>
-            </div>
-            <div class="product-title">
-              <%= p.application_start_date %>
-              ~
-              <%= p.application_end_date %>
-              </br>
-              <a class="btn btn-extra-small btn-circle btn-dark-border" href="/apply/<%= p.id %>" class="confirmation">
-                => 지원하기
-              </a>
-            </div>
-            </br>
-          </div>
-      <% end %>
+        </div>
     </div>
-  </div>
 </section>
+<section class="body-content page-content">
+  <div class="container">
+    <div class="heading-title text-center">
+      <h3 class="text-uppercase" style ="font-weight:bold;">"near The Deadline"</h3>
+      <span class="text-uppercase">지금 바로 지원해주세요! 종료가 임박했습니다.</span>
+    </div>
+      <div class="row">
+          <% @near_fleas.each do |f| %>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="team-member">
+                  <div class="team-img2">
+                      <%= image_tag f.poster_url %>
+                      <!--<%= image_tag("gangposter.jpg") %>-->
+                      <div class="team-intro light-txt">
+                          <h5><%= f.name %></h5>
+                          <span><%= f.city_place %></span>
+                      </div>
+                      <br>
+                  </div>
+                  <br>
+                  <div class="team-hover">
+                      <div class="desk">
+                          <br><br>
+                          <h4><%= f.name %></h4>
+                          <p>
+                              모집인원 :
+                              <%= f.number_of_recruitment %>명<br>
+                              /<br>
+                              현재지원 :
+                              <%= f.join_member %>명
+                          </p>
+                      </div>
+                      <div class="s-link">
+                          <a class="btn btn-extra-small btn-circle btn-dark-border" href="/apply/<%= f.id %>" class="confirmation">
+                              지원하기
+                          </a>
+                      </div>
+                  </div>
+              </div>
+              <br>
+          </div>
+          <% end %>
+      </div>
+      <div class="divider divider-small d-solid d-single text-center">
+        <span class="dot"></span>
+      </div>
+  </div>
 
+    <div class="container">
+      <div class="heading-title text-center">
+        <h3 class="text-uppercase" style ="font-weight:bold;">"Seller recruitment"</h3>
+        <span class="text-uppercase">지원가능한 마켓입니다.</span>
+      </div>
+        <div class="row">
+            <% @fleas.each do |f| %>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="team-member">
+                    <div class="team-img">
+                        <%= image_tag f.poster_url %>
+                        <!--<%= image_tag(f.poster_url) %>-->
+                        <div class="team-intro light-txt">
+                            <h5><%= f.name %></h5>
+                            <span><%= f.city_place %></span>
+                        </div>
+                        <br>
+                    </div>
+                    <br>
+                    <div class="team-hover">
+                        <div class="desk">
+                            <br><br>
+                            <h4><%= f.name %></h4>
+                            <p>
+                                모집시작날짜 :
+                                <%= f.application_start_date %><br>
+                                모집종료날짜 :
+                                <%= f.application_end_date %><br>
+                                행사시작날짜 :
+                                <%= f.event_start_date %><br>
+                                행사종료날짜 :
+                                <%= f.event_end_date %><br><br>
+                                모집인원 :
+                                <%= f.number_of_recruitment %>명<br>
+                                /<br>
+                                현재지원 :
+                                <%= f.join_member %>명
+                            </p>
+                        </div>
+                        <div class="s-link">
+                            <a class="btn btn-extra-small btn-circle btn-dark-border" href="/apply/<%= f.id %>" class="confirmation">
+                                지원하기
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
+            <% end %>
+        </div>
+    </div>
+</section>
 
 <script type="text/javascript">
-  $('.confirmation').on('click', function () {
-    return confirm('Are you sure?');
-  });
+    $('.confirmation').on('click', function () {
+        return confirm('Are you sure?');
+    });
 </script>
