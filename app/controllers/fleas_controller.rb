@@ -34,7 +34,7 @@ class FleasController < ApplicationController
       fleas = Flea.all
       date = Date.today
 
-      if @option.nil? || @option == 'now'
+      if @option == 'now'
         fleas.each do |p|
           if p.event_start_date.to_date <= date && date <= p.event_end_date.to_date
             @search_flea.append(p)
