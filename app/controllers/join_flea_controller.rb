@@ -8,9 +8,9 @@ class JoinFleaController < ApplicationController
   end
 
   def make
-    @isThere = FleaSeller.where(flea_id: params[:flea_id]).find_by(user_id: current_user.id)
+    is_there = FleaSeller.where(flea_id: params[:flea_id]).find_by(user_id: current_user.id)
 
-    unless @isThere.blank?
+    unless is_there.blank?
       redirect_to "/join_flea/join"
     else
       @flea_seller = FleaSeller.new
