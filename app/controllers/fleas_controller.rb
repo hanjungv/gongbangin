@@ -8,10 +8,11 @@ class FleasController < ApplicationController
     if @option.nil?
       if params[:city].nil? && params[:search].nil?
         # 페이지 처음 로딩했을 때
-        fleas = Flea.all.order(:event_end_date)
+        # .order(:event_end_date)
+        fleas = Flea.all
         date = Date.today
         fleas.each do |p|
-          if p.event_start_date.to_date <= date && date <= p.event_end_date.to_date
+          if p.event_start_date <= date && date <= p.event_end_date
             @search_flea.append(p)
           end
         end
@@ -34,7 +35,7 @@ class FleasController < ApplicationController
         date = @search_time.to_s.to_date
         unless fleas.nil?
           fleas.each do |p|
-            if p.event_start_date.to_date <= date && date <= p.event_end_date.to_date
+            if p.event_start_date <= date && date <= p.event_end_date
               @search_flea.append(p)
             end
           end
@@ -47,7 +48,7 @@ class FleasController < ApplicationController
 
       if @option == 'now'
         fleas.each do |p|
-          if p.event_start_date.to_date <= date && date <= p.event_end_date.to_date
+          if p.event_start_date <= date && date <= p.event_end_date
             @search_flea.append(p)
           end
         end
@@ -55,7 +56,7 @@ class FleasController < ApplicationController
         @title_eng = 'TODAY MARKET'
       elsif @option == 'future'
         fleas.each do |p|
-          if date <= p.event_start_date.to_date
+          if date <= p.event_start_date
             @search_flea.append(p)
           end
         end
@@ -63,7 +64,7 @@ class FleasController < ApplicationController
         @title_eng = 'ONCOMING MARKET'
       elsif @option == 'past'
         fleas.each do |p|
-          if p.event_end_date.to_date <= date
+          if p.event_end_date <= date
             @search_flea.append(p)
           end
         end
