@@ -85,7 +85,7 @@
                       <a href="/judge_fleas/show/<%= @flea.id %>/<%= p.user_id %>">심사하러가기</a>
                     </td>
                     <td><%= p.score %>점</td>
-                    <td id="select">
+                    <td id="select2">
                       <a href="/judge_fleas/select_down/<%= @flea.id %>/<%= p.user_id %>">선발취소</a>
                     </td>
                   </tr>
@@ -156,5 +156,8 @@
 <script type="text/javascript">
   $('#select').on('click', function () {
     return confirm('선발할까요?');
+  });
+  $('#select2').on('click', function () {
+    return confirm('취소할까요?');
   });
 </script>

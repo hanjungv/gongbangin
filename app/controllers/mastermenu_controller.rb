@@ -13,7 +13,6 @@ class MastermenuController < ApplicationController
     @seller_user =User.where(level: 'seller')
   end
 
-<<<<<<< HEAD
   def flea_manage
     @flea = Flea.all
     @master_user = User.where(level: 'master')
@@ -22,10 +21,7 @@ class MastermenuController < ApplicationController
     @seller_user =User.where(level: 'seller')
   end
 
-  def levelup
-=======
   def level_up
->>>>>>> 48e19ccaedc280e673db093f07b667e5ee8d32c2
     @user = User.find(params[:user_id])
     @user.level = 'planner'
     @user.tier = 'black'
