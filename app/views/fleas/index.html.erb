@@ -1,7 +1,7 @@
 <section class="page-title">
     <div class="container">
         <% if @option.nil? %>
-        <h4 id="title_eng" class="text-uppercase">Today market</h4>
+        <h4 id="title_eng" class="text-uppercase">Today's market</h4>
         <ol class="breadcrumb">
             <li>
                 <a href="/">Home</a>
@@ -75,11 +75,8 @@
                             <br>
                             <h4><%= h.name %></h4>
                             <p>
-                                모집인원 :
-                                <%= h.number_of_recruitment %>명<br>
-                                /<br>
-                                현재지원 :
-                                <%= h.join_member %>명
+                                <%= h.city_place %>시<br>
+                                <%= h.detail_place %>
                             </p>
                         </div>
                         <div class="s-link">
