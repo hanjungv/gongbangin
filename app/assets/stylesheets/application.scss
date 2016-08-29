@@ -11,6 +11,8 @@
  * file per style scope.
  *
  *= require_tree .
+ *= require_tree ./css/
+ *= require_tree /css/shortcodes/
  *= require_self
  *= require font-awesome
  *= require css/bootstrap.min.css
@@ -23,6 +25,4 @@
  *= require css/default-theme.css
  *= require bootsy
  *= require css/shortcodes/countdown.css
- *= require_tree ./css/
- *= require_tree /css/shortcodes/
  */
