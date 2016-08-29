@@ -24,7 +24,7 @@ class FleasController < ApplicationController
      date = @search_time.to_s.to_date
      unless @today_flea_a.nil?
      @today_flea_a.each do |p|
-       if p.event_start_date.to_date <= date && date <= p.event_end_date
+       if p.event_start_date.to_date <= date && date <= p.event_end_date.to_date
          @search_flea.append(p)
        end
      end
