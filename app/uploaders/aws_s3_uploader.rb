@@ -34,13 +34,13 @@ class AwsS3Uploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
 
-  version :thumb_middle do
-    process :resize_to_fit => [300, 300]
-  end
+  #version :thumb_middle do
+  #  process :resize_to_fit => [300, 300]
+  #end
 
-  version :thumb_large do
-    process :resize_to_fit => [600, 600]
-  end
+  #version :thumb_large do
+  #  process :resize_to_fit => [600, 600]
+  #end
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
@@ -54,6 +54,7 @@ class AwsS3Uploader < CarrierWave::Uploader::Base
   #   "something.jpg" if original_filename
   # end
   def filename
+    original_filename
     # u = current_user
     # current_user.email + file.extention if original_filename
     # Time.now.to_f.to_s + "." + file.extension if original_filename

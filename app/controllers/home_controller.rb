@@ -6,7 +6,7 @@ class HomeController < ApplicationController
   end
 
   def make_master
-    if user_signed_in ?
+    if user_signed_in?
       if current_user.id == 1
         current_user.level = "master"
         current_user.save

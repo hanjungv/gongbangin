@@ -28,7 +28,9 @@
             <div class="post-list-aside">
               <div class="post-single">
                 <div class="post-slider-thumb post-img text-center">
-                  <a href="javascript:;" title="Freshness Photo"><%= image_tag('product.jpg') %></a>
+                  <a href="javascript:;" title="Freshness Photo">
+                    <%= image_tag @user.profile_image_url %>
+                  </a>
                 </div>
               </div>
             </div>
