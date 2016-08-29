@@ -41,7 +41,7 @@ class ItemController < ApplicationController
     @item.material = params[:item_material]
     @item.period = params[:item_period]
     @item.user_id = params[:user_id]
-    @item.url = params[:file]
+    @item.url = params[:pic]
 
     if @item.save
       redirect_to '/item/show'
