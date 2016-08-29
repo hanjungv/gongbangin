@@ -1,13 +1,13 @@
 require 'test_helper'
 
 class MastermenuControllerTest < ActionController::TestCase
-  test "should get levelup" do
+  test "should get level_up" do
     get :level_up
     assert_response :success
   end
 
-  test "should get leveldown" do
-    get :leveldown
+  test "should get level_down" do
+    get :level_down
     assert_response :success
   end
 
