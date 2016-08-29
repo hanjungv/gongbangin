@@ -40,7 +40,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :brand_number, default:"없음"
       t.string :brand_place, dafault:"없음"
       #profile_image
-      t.string :profile_image_url, default: ""
+      t.string :profile_image_url, default: "gangposter.jpg"
       #url
       t.string :user_page, default:"없음"
       t.string :facebook_id, default:"없음"

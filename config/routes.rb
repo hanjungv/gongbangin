@@ -24,8 +24,10 @@ Rails.application.routes.draw do
   get 'mastermenu/level_down/:user_id' =>"mastermenu#level_down"
   get 'mastermenu/otherinfo/:user_id' =>"info#otherinfo"
   get 'mastermenu/destroy/:user_id' =>"mastermenu#destroy"
+  get 'mastermenu/flea_destroy/:flea_id' => "mastermenu#flea_destroy"
   get 'mastermenu/judge/:user_id' => "mastermenu#judge"
   get 'mastermenu/index'
+  get 'mastermenu/flea_manage' => "mastermenu#flea_manage"
 
   get 'mastermenu/write_email/:user_id' => "mastermenu#write_email"
   post 'send_email/:user_id'=>'mastermenu#send_email'
