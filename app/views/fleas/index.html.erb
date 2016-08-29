@@ -1,134 +1,163 @@
 <section class="page-title">
-  <div class="container">
-    <% if @option.nil? %>
+    <div class="container">
+        <% if @option.nil? %>
         <h4 id="title_eng" class="text-uppercase">Today market</h4>
         <ol class="breadcrumb">
-          <li><a href="/">Home</a></li>
-          <li id="title_ko" class="active">오늘의 마켓</li>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li id="title_ko" class="active">오늘의 마켓</li>
         </ol>
     <% else %>
         <h4 id="title_eng" class="text-uppercase"><%= @title_eng %></h4>
         <ol class="breadcrumb">
-          <li><a href="/">Home</a></li>
-          <li id="title_ko" class="active"><%= @title_ko %></li>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li id="title_ko" class="active"><%= @title_ko %></li>
         </ol>
-    <% end %>
-  </div>
-</section>
-<div class="container">
-
-  <div class="form-group col-md-10" style="margin-top: 50px">
-    <section class="page-header">
-      <span>
-        <i class="fa fa-search" aria-hidden="true"></i>빠른 검색
-      </span>
-
-      <form>
-        <button class="btn" type="submit" name="option" value="now" id="now_fleas">진행중인 플리마켓</button>
-        <button class="btn" type="submit" name="option" value="future" id="future_fleas">행사예정 플리마켓</button>
-        <button class="btn" type="submit" name="option" value="past" id="past_fleas">종료된 플리마켓</button>
-      </form>
-    </section>
-
-    <span>
-      <i class="fa fa-search" aria-hidden="true"></i>상세 검색
-    </span>
-    <form>
-      <div class="inline-group">
-        <p class="labels">지역</p>
-        <input type="radio" name="city" checked="true" value="전체"/>전체<input type="radio" name="city" value="서울"/>서울
-        <input type="radio" name="city" value="인천"/>인천 <input type="radio" name="city" value="대전"/>대전
-        <input type="radio" name="city" value="대구"/>대구 <input type="radio" name="city" value="부산"/>부산
-        <input type="radio" name="city" value="광주"/>광주 <input type="radio" name="city" value="울산"/>울산
-        <input type="radio" name="city" value="경기"/>경기 <input type="radio" name="city" value="충남"/>충남
-        <input type="radio" name="city" value="충북"/>충북 <input type="radio" name="city" value="전남"/>전남
-        <input type="radio" name="city" value="전북"/>전북 <input type="radio" name="city" value="경남"/>경남
-        <input type="radio" name="city" value="경북"/>경북 <input type="radio" name="city" value="제주"/>제주
-      </div>
-      <hr/>
-      <p class="labels">날짜</p>
-
-      <div class="input-group">
-        <% if @search_time.nil? %>
-            <%= date_field_tag(:search, :date, value: Date.today.to_s) %>
-        <% else %>
-            <%= date_field_tag(:search, :date, value: @search_time) %>
         <% end %>
-      </div>
-      <p>
-      <div class="input-group-btn">
-        <button type="submit" id="searchbtn" class="btn">
-          <span>해당조건으로 검색</span>
-        </button>
-      </div>
-    </form>
-  </div>
-
-  <section class="body-content">
-    <div class="product-grid">
-      <div class="container">
-        <h4>종료 임박 플리 마켓</h4>
-        <% unless @recently_flea.nil? %>
-            <% @recently_flea.each do |h| %>
-                <div class="col-md-3">
-                  <!--product list-->
-                  <div class="product-list">
-                    <div>
-                      <a href="#">
-                        <%= image_tag h.poster_url, size: '200x320', class: 'postersImage' %>
-                      </a>
-                    </div>
-                    <br/>
-                    <div class="product-title">
-                      <h4>
-                        <a href="#"><%= h.name %></a>
-                      </h4>
-                    </div>
-                    <div class="product-title"><%= h.event_start_date %> ~ <%= h.event_end_date %></div>
-                  </div>
-                </div>
-            <% end %>
-        <% end %>
-      </div>
-
-      <div class="divider divider-small d-solid d-single text-center">
-        <span class="dot"></span>
-      </div>
-
-      <div class="container">
-        <% unless @search_flea.nil? %>
-            <% @search_flea.each do |p| %>
-                <div class="col-md-3">
-                  <!--product list-->
-                  <div class="product-list">
-                    <div>
-                      <a href="#">
-                        <%= image_tag p.poster_url, size: '200x320' %>
-                      </a>
-                    </div>
-                    <br/>
-                    <div class="product-title">
-                      <h4>
-                        <a href="#"><%= p.name %></a>
-                      </h4>
-                    </div>
-                    <div class="product-title"><%= p.event_start_date %> ~ <%= p.event_end_date %></div>
-                    <div class="product-rating">
-                      <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i> <i class="fa fa-star-half-o"></i>
-                    </div>
-                  </div>
-                </div>
-            <% end %>
-        <% end %>
-      </div>
     </div>
-  </section>
-</div>
-</div>
+</section>
+<section class="body-content page-content">
+    <div class="container">
+        <div class="heading-title text-center">
+            <h3 class="text-uppercase" style="font-weight:bold;">Open Market</h3>
+            <span class="text-uppercase">클릭해서 정보를 확인해보세요!</span>
+            <form style = "text-center">
+                <div class="inline-group">
+                    <input type="radio" name="city" checked="true" value="전체"/>전체<input type="radio" name="city" value="서울"/>서울
+                    <input type="radio" name="city" value="인천"/>인천
+                    <input type="radio" name="city" value="대전"/>대전
+                    <input type="radio" name="city" value="대구"/>대구
+                    <input type="radio" name="city" value="부산"/>부산
+                    <input type="radio" name="city" value="광주"/>광주
+                    <input type="radio" name="city" value="울산"/>울산
+                    <input type="radio" name="city" value="경기"/>경기
+                    <input type="radio" name="city" value="충남"/>충남
+                    <input type="radio" name="city" value="충북"/>충북
+                    <input type="radio" name="city" value="전남"/>전남
+                    <input type="radio" name="city" value="전북"/>전북
+                    <input type="radio" name="city" value="경남"/>경남
+                    <input type="radio" name="city" value="경북"/>경북
+                    <input type="radio" name="city" value="제주"/>제주
+                    <span> | </span>
+                    <% if @search_time.nil? %>
+                      <%= date_field_tag(:search, :date, value: Date.today.to_s) %>
+                    <% else %>
+                      <%= date_field_tag(:search, :date, value: @search_time) %>
+                    <% end %>
+                    <span> | </span>
+                    <button type="submit" id="searchbtn" class="btn">해당조건으로 검색</button>
+                </div>
+                <div class="input-group-btn">
+                    <button class="btn" type="submit" name="option" value="future" id="future_fleas">진행예정</button>
+                    <button class="btn" type="submit" name="option" value="now" id="now_fleas">진행중</button>
+                    <button class="btn" type="submit" name="option" value="past" id="past_fleas">종료</button>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <% unless @recently_flea.nil? %>
+            <% @recently_flea.each do |h| %>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="team-member">
+                    <div class="team-img2">
+                      <%= image_tag h.poster_url %>
+                        <div class="team-intro light-txt">
+                          <h5><%= h.name %></h5>
+                          <span><%= h.city_place %></span>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="team-hover">
+                        <div class="desk">
+                            <br>
+                            <h4><%= h.name %></h4>
+                            <p>
+                                모집인원 :
+                                <%= h.number_of_recruitment %>명<br>
+                                /<br>
+                                현재지원 :
+                                <%= h.join_member %>명
+                            </p>
+                        </div>
+                        <div class="s-link">
+                            <a class="btn btn-extra-small btn-circle btn-dark-border" href="/fleas/<%=h.id%>">
+                                보러가기
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% end %>
+          <% end %>
+        </div>
+        <div class="divider divider-small d-solid d-single text-center">
+            <span class="dot"></span>
+        </div>
+      </div>
+
+
+
+        <div class="container">
+          <div class="heading-title text-center">
+              <h3 class="text-uppercase" style="font-weight:bold;">Market list</h3>
+              <span class="text-uppercase">클릭해서 정보를 확인해보세요!</span>
+            </div>
+            <div class="row">
+            <% unless @search_flea.nil? %>
+              <% @search_flea.each do |f| %>
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                  <div class="team-member">
+                      <div class="team-img">
+                          <%= image_tag f.poster_url%>
+                          <div class="team-intro light-txt">
+                              <h5><%= f.name %></h5>
+                              <span><%= f.city_place %></span>
+                          </div>
+                          <br>
+                      </div>
+                      <br>
+                      <div class="team-hover">
+                          <div class="desk">
+                              <br><br>
+                              <h4><%= f.name %></h4>
+                              <p>
+                                  모집시작날짜 :
+                                  <%= f.application_start_date %><br>
+                                  모집종료날짜 :
+                                  <%= f.application_end_date %><br>
+                                  행사시작날짜 :
+                                  <%= f.event_start_date %><br>
+                                  행사종료날짜 :
+                                  <%= f.event_end_date %><br><br>
+                                  상세장소 :
+                                  <%=f.city_place%> / <%= f.detail_place %><br>
+                                  현재지원 :
+                                  <%= f.join_member %>명
+                                  비고 :
+                                  <%=f.remark%>
+                              </p>
+                          </div>
+                          <div class="s-link">
+                              <a class="btn btn-extra-small btn-circle btn-dark-border" href="/fleas/<%= f.id %>" class="confirmation">
+                                  보러가기
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+    </div>
+</section>
+
 <script>
 
-  $(document).ready(function () {
+$(document).ready(function () {
 
     $('input[type=date]').css({"line-height": "20px", "margin-top": "10px"});
     $('.labels').css({"margin": "8px 2px 0px", "font-weight": "bold"});
@@ -137,16 +166,16 @@
     $('.btn').css({"background-color": "#fff", "border": "1px solid black"});
 
     $("#now_fleas").click(function () {
-      $("#title_eng").val("Today market");
-      $("#title_ko").val("오늘의 마켓");
+        $("#title_eng").val("Today market");
+        $("#title_ko").val("오늘의 마켓");
     });
     $("#past_fleas").click(function () {
-      $("#title_eng").val("Finished market");
-      $("#title_ko").val("어제의 마켓");
+        $("#title_eng").val("Finished market");
+        $("#title_ko").val("어제의 마켓");
     });
     $("#future_fleas").click(function () {
-      $("#title_eng").val("Oncoming market");
-      $("#title_ko").val("내일의 마켓");
+        $("#title_eng").val("Oncoming market");
+        $("#title_ko").val("내일의 마켓");
     });
-  });
+});
 </script>
