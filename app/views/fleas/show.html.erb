@@ -92,7 +92,7 @@
 </section>
 
 <script>
-  $('.clock').countdown('<%= @flea.application_end_date.to_date %>', function (event) {
+  $('.clock').countdown('<%= @flea.application_end_date %>', function (event) {
     var $this = $(this).html(event.strftime(''
 //                 + '<span>%w</span> weeks '
         + '<span class="c-grid"> <span class="c-value">%D</span> <span class="c-title"><br>days</span> </span> '
