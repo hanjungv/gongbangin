@@ -17,8 +17,8 @@ Rails.application.routes.draw do
 
   #master menu#
   get 'mastermenu/user_manage'
-  get 'mastermenu/levelup/:user_id' => 'mastermenu#levelup'
-  get 'mastermenu/leveldown/:user_id' =>"mastermenu#leveldown"
+  get 'mastermenu/level_up/:user_id' => 'mastermenu#level_up'
+  get 'mastermenu/level_down/:user_id' =>"mastermenu#level_down"
   get 'mastermenu/otherinfo/:user_id' =>"info#otherinfo"
   get 'mastermenu/destroy/:user_id' =>"mastermenu#destroy"
   get 'mastermenu/judge/:user_id' => "mastermenu#judge"
@@ -57,10 +57,10 @@ Rails.application.routes.draw do
   get 'pp_edit/:item_id' => "item#pp_edit"
   #info#
   get 'show_info/:user_id' => "info#show_info"
-  get 'info/levelup'
+  get 'info/level_up'
   get 'standby/:user_id' => "info#standby"
 
-  get 'levelupForm' => "info#levelupForm"
+  # get 'level_upForm' => "info#level_upForm"
   get 'info/add_prize/:user_id' =>"info#add_prize"
   post 'create_prize/:user_id' => "info#create_prize"
   get 'info/add_activity/:user_id' =>"info#add_activity"

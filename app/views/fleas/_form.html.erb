@@ -44,11 +44,11 @@
               <br>
               <div class="form-group col-md-6">
                 <%= f.label :'플리마켓 시작일시' %><br>
-                <%= f.datetime_select :event_start_date, :class => 'form-control' %>
+                <%= f.date_select :event_start_date, :class => 'form-control' %>
               </div>
               <div class="form-group col-md-6">
                 <%= f.label :'플리마켓 종료일시' %><br>
-                <%= f.datetime_select :event_end_date, :class => 'form-control' %>
+                <%= f.date_select :event_end_date, :class => 'form-control' %>
               </div>
               <br>
               <div class="form-group col-md-6">
@@ -76,11 +76,11 @@
               <br>
               <div class="form-group col-md-6">
                 <%= f.label :'접수 시작일시' %><br>
-                <%= f.datetime_select :application_start_date, :class => 'form-control' %>
+                <%= f.date_select :application_start_date, :class => 'form-control' %>
               </div>
               <div class="form-group col-md-6">
                 <%= f.label :'접수 종료일시' %><br>
-                <%= f.datetime_select :application_end_date %>
+                <%= f.date_select :application_end_date %>
               </div>
               <div class="form-group col-md-6">
                 <%= f.label :'모집방식' %>

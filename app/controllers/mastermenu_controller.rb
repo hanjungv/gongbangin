@@ -13,7 +13,7 @@ class MastermenuController < ApplicationController
     @seller_user =User.where(level: 'seller')
   end
 
-  def levelup
+  def level_up
     @user = User.find(params[:user_id])
     @user.level = 'planner'
     @user.tier = 'black'
@@ -25,7 +25,7 @@ class MastermenuController < ApplicationController
     @user = User.find(params[:user_id])
   end
 
-  def leveldown
+  def level_down
     @user = User.find(params[:user_id])
     @user.level = 'seller'
     @user.save
