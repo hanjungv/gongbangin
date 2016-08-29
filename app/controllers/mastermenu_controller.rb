@@ -13,6 +13,14 @@ class MastermenuController < ApplicationController
     @seller_user =User.where(level: 'seller')
   end
 
+  def flea_manage
+    @flea = Flea.all
+    @master_user = User.where(level: 'master')
+    @standby_user = User.where(level: 'standby')
+    @planner_user =User.where(level: 'planner')
+    @seller_user =User.where(level: 'seller')
+  end
+
   def levelup
     @user = User.find(params[:user_id])
     @user.level = 'planner'
@@ -35,6 +43,12 @@ class MastermenuController < ApplicationController
   def destroy
     @user = User.find(params[:user_id])
     @user.destroy
+    redirect_to '/mastermenu/user_manage'
+  end
+
+  def flea_destroy
+    @flea = Flea.find(params[:flea_id])
+    @flea.destroy
     redirect_to '/mastermenu/user_manage'
   end
 

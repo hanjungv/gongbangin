@@ -7,6 +7,8 @@ class InfoController < ApplicationController
     render '/info/show'
   end
 
+
+
   def level_up
     if current_user.level == 'standby'
       redirect_to '/'

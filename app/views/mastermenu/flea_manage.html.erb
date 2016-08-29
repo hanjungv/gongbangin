@@ -1,0 +1,56 @@
+<section class="page-title">
+  <div class="container">
+    <h4 class="text-uppercase"><a href="/mastermenu/index">manage</a> / 유저관리</h4>
+  </div>
+</section>
+<div class="container">
+  <h4>마스터</h4>
+  <table class="table able table-striped table-bordered">
+    <thead>
+    <tr>
+      <th style="width:9%;">마켓이름</th>
+      <th style="width:15%;">모집기간</th>
+      <th style="width:10%;">모집장소</th>
+      <th style="width:15%">행사날짜</th>
+      <th style="width:5%">참가비</th>
+      <th style="width:6%">심사방법</th>
+      <th style="width:6%;">모집인원</th>
+      <th style="width:6%">지원현황</th>
+      <th style="width:6%">선택현황</th>
+      <th style="width:8%">아이템개수</th>
+      <th style="width:6%">삭제하기</th>
+      <th style="width:5%"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @flea.each do |p| %>
+        <tr>
+          <th><%= p.name %></th>
+          <th><%= p.application_start_date %>~<%= p.application_end_date %></th>
+          <th><%= p.city_place %> <%= p.detail_place %></th>
+          <th><%= p.event_start_date %>~<%= p.event_end_date %></th>
+          <th><%= p.entrance_fee %></th>
+          <th><%= p.join_type %></th>
+          <th><%= p.number_of_recruitment %></th>
+          <th><%= p.join_member %></th>
+          <th><%= p.select_member %></th>
+          <th><%= p.item_count %></th>
+          <th>
+          <a href="/mastermenu/flea_destroy/<%= p.id %>" class="confirmation">삭제</a>
+          </th>
+          <th>
+            <a href="/fleas/<%=p.id%>">정보</a>
+          </th>
+
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+<hr>
+
+<script type="text/javascript">
+  $('.confirmation').on('click', function () {
+    return confirm('Are you sure?');
+  });
+</script>
