@@ -48,7 +48,6 @@ User.create(:email => 'seller10@gmail.com', :password => 'abcabc', :password_con
 
 
 
-
 #공지사항 seed
 Notice.create(title:"[공지사항]안녕하세요! 사이트가 오픈했습니다.",content:"플래너와 셀러들의 매칭을 편리하게 해주는 사이트를 오픈했습니다.
 플래너분들은 셀러들의 지원을 편하게 받을 수 있을 뿐만 아니라 셀러들의 정보를 손쉽게 확인하실 수 있습니다.
@@ -91,3 +90,8 @@ MainActivity.create(name:"도자", skill_part:"디자인", percentage:85,user_id
 MainActivity.create(name:"유리", skill_part:"디자인", percentage:15,user_id:16)
 MainActivity.create(name:"귀금속", skill_part:"제작", percentage:35,user_id:18)
 MainActivity.create(name:"유리", skill_part:"제작", percentage:90,user_id:17)
+
+Flea.create(name:"경기문화재단아트플리마켓", application_start_date:"2016-08-12",application_start_date:"2016-09-17",number_of_recruitment:10, remark:"많이 참여해주세요",
+city_place:"경기", detail_place:"경기문화재단", event_start_date:"2016-09-18",event_end_date:"2016-09-23", poster_url:"경기문화재단아트플리마켓.jpg", user_id:2, join_type:"심사",
+join_member:5, select_member:10, item_count:5,agree1:"본인은 작성한 위 사항에 틀림이 없으며, 개인정보 수집 및 이용에 동의합니다.",
+agree2:"본인은 행사에 참여함에 있어 개장 및 폐장 시간을 엄격하게 준수합니다.",agree3:"본인은 주최 측에서 제공하는 물품의 유지 및 보안의 책임을 갖고 운영할 것이며, 행사 후 청결 상태 유지에 노력합니다."  )
