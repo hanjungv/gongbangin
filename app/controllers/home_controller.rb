@@ -5,6 +5,17 @@ class HomeController < ApplicationController
     @fleas = Flea.all
   end
 
+  def make_master
+    if user_signed_in ?
+      if current_user.id == 1
+        current_user.level = "master"
+        current_user.save
+        redirect_to '/'
+      end
+    end
+  end
+
+
   def faq
     @notice = Notice.all.order('created_at desc')
   end
