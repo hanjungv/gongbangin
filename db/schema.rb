@@ -205,7 +205,7 @@ ActiveRecord::Schema.define(version: 20160825051357) do
     t.string   "brand",                  default: "없음"
     t.string   "brand_number",           default: "없음"
     t.string   "brand_place"
-    t.string   "profile_image_url",      default: ""
+    t.string   "profile_image_url",      default: "gangposter.jpg"
     t.string   "user_page",              default: "없음"
     t.string   "facebook_id",            default: "없음"
     t.string   "twitter_id",             default: "없음"
