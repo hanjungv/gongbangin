@@ -15,8 +15,43 @@ class JudgeFleasController < ApplicationController
     @join_user = FleaSeller.where(flea_id: params[:flea_id]).order('score desc')
   end
 
+  def select_down
+    @flea = Flea.find(params[:flea_id])
+    is_there = FleaSeller.where(flea_id: params[:flea_id]).find_by(user_id: params[:user_id])
 
-  def select
+    @user = User.find(params[:user_id])
+    @user.score = @user.score - 50
+
+    if @user.score >= 100
+      @user.tier = 'navy'
+    end
+    if @user.score >= 200
+      @user.tier = 'blue'
+    end
+    if @user.score >= 350
+      @user.tier = 'green'
+    end
+    if @user.score >= 500
+      @user.tier = 'yellow'
+    end
+    if @user.score >= 650
+      @user.tier = 'orange'
+    end
+    if @user.score >= 800
+      @user.tier = 'red'
+    end
+
+    is_there.user_tier = @user.tier
+    is_there.isSelect = 'false'
+
+    @user.save
+    is_there.save
+
+    redirect_to controller: 'judge_fleas', action: 'judge', id: @flea.id, something: 'else'
+
+  end
+
+  def select_up
     @flea = Flea.find(params[:flea_id])
     is_there = FleaSeller.where(flea_id: params[:flea_id]).find_by(user_id: params[:user_id])
 

@@ -1,4 +1,4 @@
-#User
+ㅇㅇ#User
 ##master
 User.create(:email => 'master@gmail.com', :password => 'abcabc', :password_confirmation => 'abcabc', :nickname => '대장', :level => 'master',
 :name=>"손아람", :phone_number=>"01045726873",:introduction=>"안녕하세요! 마스터입니다. 공방인 많이 사용해주세요~", :activity_area =>"서울, 부산",:tier=>"red", :score=>"0", :address=>"천안시")
