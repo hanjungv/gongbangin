@@ -53,7 +53,7 @@
         <entry file="file://$PROJECT_DIR$/app/controllers/info_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="288">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -92,8 +92,8 @@
       <file leaf-file-name="aws.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/initializers/aws.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
+            <state relative-caret-position="162">
+              <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -112,9 +112,13 @@
       <file leaf-file-name="mastermenu_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/mastermenu_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-              <folding />
+            <state relative-caret-position="522">
+              <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+              <folding>
+                <marker date="1472462561000" expanded="true" signature="80:153" ph=" ... end" />
+                <marker date="1472462561000" expanded="true" signature="85:147" ph="if ... end" />
+                <marker date="1472462561000" expanded="true" signature="172:368" ph=" ... end" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -133,7 +137,7 @@
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="181">
-              <caret line="132" column="21" selection-start-line="131" selection-start-column="26" selection-end-line="131" selection-end-column="28" />
+              <caret line="134" column="21" selection-start-line="133" selection-start-column="26" selection-end-line="133" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -817,12 +821,12 @@
       <workItem from="1471976146578" duration="1649000" />
       <workItem from="1472217358009" duration="3308000" />
       <workItem from="1472233453594" duration="11082000" />
-      <workItem from="1472281347391" duration="21720000" />
+      <workItem from="1472281347391" duration="21806000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112321000" />
+    <option name="totallyTimeSpent" value="112407000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1256,16 +1260,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/mastermenu_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-          <folding />
+        <state relative-caret-position="522">
+          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+          <folding>
+            <marker date="1472462561000" expanded="true" signature="80:153" ph=" ... end" />
+            <marker date="1472462561000" expanded="true" signature="85:147" ph="if ... end" />
+            <marker date="1472462561000" expanded="true" signature="172:368" ph=" ... end" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/info_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1273,7 +1281,7 @@
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
-          <caret line="132" column="21" selection-start-line="131" selection-start-column="26" selection-end-line="131" selection-end-column="28" />
+          <caret line="134" column="21" selection-start-line="133" selection-start-column="26" selection-end-line="133" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -1312,8 +1320,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/initializers/aws.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
+        <state relative-caret-position="162">
+          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
           <folding />
         </state>
       </provider>
