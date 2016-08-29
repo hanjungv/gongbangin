@@ -15,10 +15,6 @@ class MastermenuController < ApplicationController
 
   def flea_manage
     @flea = Flea.all
-    @master_user = User.where(level: 'master')
-    @standby_user = User.where(level: 'standby')
-    @planner_user =User.where(level: 'planner')
-    @seller_user =User.where(level: 'seller')
   end
 
   def level_up
