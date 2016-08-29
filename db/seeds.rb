@@ -91,7 +91,20 @@ MainActivity.create(name:"유리", skill_part:"디자인", percentage:15,user_id
 MainActivity.create(name:"귀금속", skill_part:"제작", percentage:35,user_id:18)
 MainActivity.create(name:"유리", skill_part:"제작", percentage:90,user_id:17)
 
+<<<<<<< HEAD
 Flea.create(name:"경기문화재단아트플리마켓", application_start_date:"2016-08-12",application_start_date:"2016-09-17",number_of_recruitment:10, remark:"많이 참여해주세요",
 city_place:"경기", detail_place:"경기문화재단", event_start_date:"2016-09-18",event_end_date:"2016-09-23", poster_url:"경기문화재단아트플리마켓.jpg", user_id:2, join_type:"심사",
 join_member:5, select_member:10, item_count:5,agree1:"본인은 작성한 위 사항에 틀림이 없으며, 개인정보 수집 및 이용에 동의합니다.",
 agree2:"본인은 행사에 참여함에 있어 개장 및 폐장 시간을 엄격하게 준수합니다.",agree3:"본인은 주최 측에서 제공하는 물품의 유지 및 보안의 책임을 갖고 운영할 것이며, 행사 후 청결 상태 유지에 노력합니다."  )
+=======
+
+
+#Item
+Item.create(name:"핸드폰고리", price:5000, material:"가죽", period:"1일~2일", classification:"가죽", url:"핸드폰고리.jpg", user_id:12)
+Item.create(name:"반지", price:35000, material:"은", period:"1일~2일", classification:"귀금속보석", url:"반지.jpg", user_id:12)
+Item.create(name:"벨트", price:2000, material:"가죽", period:"3일~7일", classification:"가죽", url:"벨트.jpg", user_id:12)
+Item.create(name:"가죽팔찌", price:25000, material:"가죽", period:"1일~2일", classification:"가죽", url:"가죽팔찌.jpg", user_id:12)
+Item.create(name:"수제가구", price:50000, material:"나무", period:"3일~7일", classification:"목/죽세", url:"수제가구.jpg", user_id:12)
+Item.create(name:"카드지갑", price:10000, material:"가죽", period:"1일~2일", classification:"가죽", url:"카드지갑.jpg", user_id:12)
+Item.create(name:"에코백", price:10000, material:"섬유", period:"3일~7일", classification:"천", url:"에코백.jpg", user_id:12)
+>>>>>>> d41f152b9bf1441ef34f01c32f0b45e46754c459
