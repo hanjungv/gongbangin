@@ -277,11 +277,13 @@
             <br/><br/>
             <!--image carousel-->
             <div id="img-carousel">
-              <div class="item"><a href="#"><%= image_tag('product.jpg') %></a></div>
-              <div class="item"><a href="#"><%= image_tag('product.jpg') %></a></div>
-              <div class="item"><a href="#"><%= image_tag('product.jpg') %></a></div>
-              <div class="item"><a href="#"><%= image_tag('product.jpg') %></a></div>
-              <div class="item"><a href="#"><%= image_tag('product.jpg') %></a></div>
+              <% @flea_seller.each do |s|%>
+                <% @flea.each do |v|%>
+                  <%if s.id == v.id%>
+                    <div class="item"><a href="#"><%= image_tag v.poster_url %></a></div>
+                  <%end%>
+              <%end%>
+              <%end%>
             </div>
             <!--image carousel-->
           </div>

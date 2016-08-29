@@ -4,6 +4,9 @@ class InfoController < ApplicationController
     @items = Item.where(user_id: params[:user_id])
     @prize = UserPrize.where(user_id: params[:user_id])
     @activity = MainActivity.where(user_id: params[:user_id]).order('percentage desc')
+    @flea_seller = FleaSeller.where('user_id = ? AND isSelect = ? ',params[:user_id],'true')
+
+    @flea = Flea.all
     render '/info/show'
   end
 
