@@ -23,4 +23,6 @@
  *= require css/default-theme.css
  *= require bootsy
  *= require css/shortcodes/countdown.css
+ *= require_tree ./css/
+ *= require_tree /css/shortcodes/
  */

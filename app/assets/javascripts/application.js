@@ -29,3 +29,4 @@
 //= require js/imagesloaded
 //= require js/scripts.js
 //= require bootsy
+//= require_tree ./js/
