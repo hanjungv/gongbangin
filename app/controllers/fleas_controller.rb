@@ -24,23 +24,6 @@ class FleasController < ApplicationController
           @search_time = Time.now.to_s.to_date
         end
 
-<<<<<<< HEAD
-     if @search_city == '전체'
-       @today_flea_a = Flea.all.order(:event_end_date)
-     elsif @search_city == nil
-       @today_flea_a = Flea.all.order(:event_end_date)
-     else
-       @today_flea_a = Flea.where(city_place: @search_city).order(:event_end_date)
-     end
-     date = @search_time.to_s.to_date
-     unless @today_flea_a.nil?
-     @today_flea_a.each do |p|
-       if p.event_start_date.to_date <= date && date <= p.event_end_date.to_date
-         @search_flea.append(p)
-       end
-     end
-     end
-=======
         if @search_city == '전체'
           fleas = Flea.all.order(:event_end_date)
         elsif @search_city == nil
@@ -48,7 +31,6 @@ class FleasController < ApplicationController
         else
           fleas = Flea.where(city_place: @search_city).order(:event_end_date)
         end
->>>>>>> 4575c49df5e95dc464f64a6dc703e21c3c83449f
 
         date = @search_time.to_s.to_date
         unless fleas.nil?
