@@ -91,3 +91,14 @@ MainActivity.create(name:"도자", skill_part:"디자인", percentage:85,user_id
 MainActivity.create(name:"유리", skill_part:"디자인", percentage:15,user_id:16)
 MainActivity.create(name:"귀금속", skill_part:"제작", percentage:35,user_id:18)
 MainActivity.create(name:"유리", skill_part:"제작", percentage:90,user_id:17)
+
+
+
+#Item
+Item.create(name:"핸드폰고리", price:5000, material:"가죽", period:"1일~2일", classification:"가죽", url:"핸드폰고리.jpg", user_id:12)
+Item.create(name:"반지", price:35000, material:"은", period:"1일~2일", classification:"귀금속보석", url:"반지.jpg", user_id:12)
+Item.create(name:"벨트", price:2000, material:"가죽", period:"3일~7일", classification:"가죽", url:"벨트.jpg", user_id:12)
+Item.create(name:"가죽팔찌", price:25000, material:"가죽", period:"1일~2일", classification:"가죽", url:"가죽팔찌.jpg", user_id:12)
+Item.create(name:"수제가구", price:50000, material:"나무", period:"3일~7일", classification:"목/죽세", url:"수제가구.jpg", user_id:12)
+Item.create(name:"카드지갑", price:10000, material:"가죽", period:"1일~2일", classification:"가죽", url:"카드지갑.jpg", user_id:12)
+Item.create(name:"에코백", price:10000, material:"섬유", period:"3일~7일", classification:"천", url:"에코백.jpg", user_id:12)
